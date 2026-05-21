@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NOTICE decoding="ita" type="object">
+   <EXPRESSION>
+      <URI>
+         <VALUE>http://publications.europa.eu/resource/cellar/3e485e15-11bd-11e6-ba9a-01aa75ed71a1.0013</VALUE>
+         <IDENTIFIER>3e485e15-11bd-11e6-ba9a-01aa75ed71a1.0013</IDENTIFIER>
+         <TYPE>cellar</TYPE>
+      </URI>
+      <SAMEAS>
+         <URI>
+            <VALUE>http://publications.europa.eu/resource/oj/JOL_2016_119_R_0001.ITA</VALUE>
+            <IDENTIFIER>JOL_2016_119_R_0001.ITA</IDENTIFIER>
+            <TYPE>oj</TYPE>
+         </URI>
+      </SAMEAS>
+      <SAMEAS>
+         <URI>
+            <VALUE>http://publications.europa.eu/resource/uriserv/OJ.L_.2016.119.01.0001.01.ITA</VALUE>
+            <IDENTIFIER>OJ.L_.2016.119.01.0001.01.ITA</IDENTIFIER>
+            <TYPE>uriserv</TYPE>
+         </URI>
+      </SAMEAS>
+      <SAMEAS>
+         <URI>
+            <VALUE>http://publications.europa.eu/resource/celex/32016R0679.ITA</VALUE>
+            <IDENTIFIER>32016R0679.ITA</IDENTIFIER>
+            <TYPE>celex</TYPE>
+         </URI>
+      </SAMEAS>
+      <EXPRESSION_MANIFESTED_BY_MANIFESTATION type="link">
+         <URI>
+            <VALUE>http://publications.europa.eu/resource/cellar/3e485e15-11bd-11e6-ba9a-01aa75ed71a1.0013.03</VALUE>
+            <IDENTIFIER>3e485e15-11bd-11e6-ba9a-01aa75ed71a1.0013.03</IDENTIFIER>
+            <TYPE>cellar</TYPE>
+         </URI>
+         <SAMEAS>
+            <URI>
+               <VALUE>http://publications.europa.eu/resource/oj/JOL_2016_119_R_0001.ITA.xhtml</VALUE>
+               <IDENTIFIER>JOL_2016_119_R_0001.ITA.xhtml</IDENTIFIER>
+               <TYPE>oj</TYPE>
+            </URI>
+         </SAMEAS>
+         <SAMEAS>
+            <URI>
+               <VALUE>http://publications.europa.eu/resource/uriserv/OJ.L_.2016.119.01.0001.01.ITA.xhtml</VALUE>
+               <IDENTIFIER>OJ.L_.2016.119.01.0001.01.ITA.xhtml</IDENTIFIER>
+               <TYPE>uriserv</TYPE>
+            </URI>
+         </SAMEAS>
+      </EXPRESSION_MANIFESTED_BY_MANIFESTATION>
+      <EXPRESSION_BELONGS_TO_WORK type="link">
+         <URI>
+            <VALUE>http://publications.europa.eu/resource/cellar/3e485e15-11bd-11e6-ba9a-01aa75ed71a1</VALUE>
+            <IDENTIFIER>3e485e15-11bd-11e6-ba9a-01aa75ed71a1</IDENTIFIER>
+            <TYPE>cellar</TYPE>
+         </URI>
+         <SAMEAS>
+            <URI>
+               <VALUE>http://publications.europa.eu/resource/celex/32016R0679</VALUE>
+               <IDENTIFIER>32016R0679</IDENTIFIER>
+               <TYPE>celex</TYPE>
+            </URI>
+         </SAMEAS>
+         <SAMEAS>
+            <URI>
+               <VALUE>http://publications.europa.eu/resource/eli/reg/2016/679/oj</VALUE>
+               <IDENTIFIER>reg:2016:679:oj</IDENTIFIER>
+               <TYPE>eli</TYPE>
+            </URI>
+         </SAMEAS>
+         <SAMEAS>
+            <URI>
+               <VALUE>http://publications.europa.eu/resource/oj/JOL_2016_119_R_0001</VALUE>
+               <IDENTIFIER>JOL_2016_119_R_0001</IDENTIFIER>
+               <TYPE>oj</TYPE>
+            </URI>
+         </SAMEAS>
+      </EXPRESSION_BELONGS_TO_WORK>
+      <EXPRESSION_TITLE type="data">
+         <VALUE>Regolamento (UE) 2016/679 del Parlamento europeo e del Consiglio, del 27 aprile 2016, relativo alla protezione delle persone fisiche con riguardo al trattamento dei dati personali, nonché alla libera circolazione di tali dati e che abroga la direttiva 95/46/CE (regolamento generale sulla protezione dei dati) (Testo rilevante ai fini del SEE)</VALUE>
+      </EXPRESSION_TITLE>
+      <LANG type="data">
+         <VALUE>it</VALUE>
+      </LANG>
+      <LASTMODIFICATIONDATE type="date">
+         <VALUE>2025-02-17T14:43:34.850+01:00</VALUE>
+         <YEAR>2025</YEAR>
+         <MONTH>02</MONTH>
+         <DAY>17</DAY>
+      </LASTMODIFICATIONDATE>
+      <EXPRESSION_MANIFESTED_BY_MANIFESTATION type="link">
+         <URI>
+            <VALUE>http://publications.europa.eu/resource/cellar/3e485e15-11bd-11e6-ba9a-01aa75ed71a1.0013.02</VALUE>
+            <IDENTIFIER>3e485e15-11bd-11e6-ba9a-01aa75ed71a1.0013.02</IDENTIFIER>
+            <TYPE>cellar</TYPE>
+         </URI>
+         <SAMEAS>
+            <URI>
+               <VALUE>http://publications.europa.eu/resource/uriserv/OJ.L_.2016.119.01.0001.01.ITA.fmx4</VALUE>
+               <IDENTIFIER>OJ.L_.2016.119.01.0001.01.ITA.fmx4</IDENTIFIER>
+               <TYPE>uriserv</TYPE>
+            </URI>
+         </SAMEAS>
+         <SAMEAS>
+            <URI>
+               <VALUE>http://publications.europa.eu/resource/oj/JOL_2016_119_R_0001.ITA.fmx4</VALUE>
+               <IDENTIFIER>JOL_2016_119_R_0001.ITA.fmx4</IDENTIFIER>
+               <TYPE>oj</TYPE>
+            </URI>
+         </SAMEAS>
+      </EXPRESSION_MANIFESTED_BY_MANIFESTATION>
+      <TITLE type="data">
+         <VALUE>GDPR, Tutela dei dati personali</VALUE>
+      </TITLE>
+      <LANG type="data">
+         <VALUE>ita</VALUE>
+      </LANG>
+      <EXPRESSION_USES_LANGUAGE type="concept">
+         <URI>
+            <VALUE>http://publications.europa.eu/resource/authority/language/ITA</VALUE>
+            <IDENTIFIER>ITA</IDENTIFIER>
+            <TYPE>language</TYPE>
+         </URI>
+         <OP-CODE>ITA</OP-CODE>
+         <IDENTIFIER>ITA</IDENTIFIER>
+         <PREFLABEL>italiano</PREFLABEL>
+         <ALTLABEL>italiano</ALTLABEL>
+      </EXPRESSION_USES_LANGUAGE>
+      <CREATIONDATE type="date">
+         <VALUE>1001-01-01T00:00:00.000+00:00</VALUE>
+         <YEAR>1001</YEAR>
+         <MONTH>01</MONTH>
+         <DAY>01</DAY>
+      </CREATIONDATE>
+      <TITLE type="data">
+         <VALUE>Regolamento (UE) 2016/679 del Parlamento europeo e del Consiglio, del 27 aprile 2016, relativo alla protezione delle persone fisiche con riguardo al trattamento dei dati personali, nonché alla libera circolazione di tali dati e che abroga la direttiva 95/46/CE (regolamento generale sulla protezione dei dati) (Testo rilevante ai fini del SEE)</VALUE>
+      </TITLE>
+      <EXPRESSION_MANIFESTED_BY_MANIFESTATION type="link">
+         <URI>
+            <VALUE>http://publications.europa.eu/resource/cellar/3e485e15-11bd-11e6-ba9a-01aa75ed71a1.0013.01</VALUE>
+            <IDENTIFIER>3e485e15-11bd-11e6-ba9a-01aa75ed71a1.0013.01</IDENTIFIER>
+            <TYPE>cellar</TYPE>
+         </URI>
+         <SAMEAS>
+            <URI>
+               <VALUE>http://publications.europa.eu/resource/uriserv/OJ.L_.2016.119.01.0001.01.ITA.pdfa1a</VALUE>
+               <IDENTIFIER>OJ.L_.2016.119.01.0001.01.ITA.pdfa1a</IDENTIFIER>
+               <TYPE>uriserv</TYPE>
+            </URI>
+         </SAMEAS>
+         <SAMEAS>
+            <URI>
+               <VALUE>http://publications.europa.eu/resource/oj/JOL_2016_119_R_0001.ITA.pdfa1a</VALUE>
+               <IDENTIFIER>JOL_2016_119_R_0001.ITA.pdfa1a</IDENTIFIER>
+               <TYPE>oj</TYPE>
+            </URI>
+         </SAMEAS>
+      </EXPRESSION_MANIFESTED_BY_MANIFESTATION>
+      <EXPRESSION_TITLE_SHORT type="data">
+         <VALUE>GDPR, Tutela dei dati personali</VALUE>
+      </EXPRESSION_TITLE_SHORT>
+   </EXPRESSION>
+</NOTICE>

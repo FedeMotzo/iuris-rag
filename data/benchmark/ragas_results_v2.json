@@ -1,0 +1,826 @@
+{
+  "metadata": {
+    "date": "2026-05-21",
+    "judge": "claude-sonnet-4-6",
+    "embeddings": "BAAI/bge-m3",
+    "metrics": [
+      "faithfulness",
+      "answer_relevancy"
+    ],
+    "n_samples": 100,
+    "wall_time_s": 4541.4,
+    "cost_usd": 6.8175,
+    "n_llm_calls": 293,
+    "input_tokens": 921384,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 0,
+    "output_tokens": 270226,
+    "prompt_caching": "disabled",
+    "status": "completed",
+    "batch_size": 10,
+    "skip_existing_used": false,
+    "finished_utc": "2026-05-21T10:33:32.555971+00:00"
+  },
+  "results": [
+    {
+      "qid": "Q1",
+      "query_type": "positive",
+      "faithfulness": 0.8823529411764706,
+      "answer_relevancy": 0.9475043557579428,
+      "has_corpus_limit_declaration": false,
+      "use_case": "AI Act high-risk HR screening"
+    },
+    {
+      "qid": "Q2",
+      "query_type": "positive",
+      "faithfulness": 0.45454545454545453,
+      "answer_relevancy": 1.0000000000000002,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Timeline AI Act credit scoring"
+    },
+    {
+      "qid": "Q3",
+      "query_type": "positive",
+      "faithfulness": 0.85,
+      "answer_relevancy": 0.8256512228424652,
+      "has_corpus_limit_declaration": false,
+      "use_case": "DPIA vs FRIA"
+    },
+    {
+      "qid": "Q4",
+      "query_type": "negative",
+      "faithfulness": 0.7777777777777778,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Garante riconoscimento facciale lavoro (negative)"
+    },
+    {
+      "qid": "Q5",
+      "query_type": "edge",
+      "faithfulness": 0.7692307692307693,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": false,
+      "use_case": "231 + AI decisioni HR"
+    },
+    {
+      "qid": "Q6",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.724874804328565,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Compiti del DPO"
+    },
+    {
+      "qid": "Q7",
+      "query_type": "positive",
+      "faithfulness": 0.9047619047619048,
+      "answer_relevancy": 0.8655021862097784,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Quando DPIA è obbligatoria"
+    },
+    {
+      "qid": "Q8",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7243738279390273,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Cos'è FRIA e quando si fa"
+    },
+    {
+      "qid": "Q9",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": true,
+      "use_case": "Reati 231 trattamento illecito dati"
+    },
+    {
+      "qid": "Q10",
+      "query_type": "positive",
+      "faithfulness": 0.6818181818181818,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": false,
+      "use_case": "NIS2 soggetti essenziali/importanti"
+    },
+    {
+      "qid": "Q11",
+      "query_type": "positive",
+      "faithfulness": 0.8888888888888888,
+      "answer_relevancy": 0.9199439434999657,
+      "has_corpus_limit_declaration": false,
+      "use_case": "AI Act high-risk credit scoring"
+    },
+    {
+      "qid": "Q12",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7384431017094352,
+      "has_corpus_limit_declaration": true,
+      "use_case": "AI Act high-risk emotion recognition scuole"
+    },
+    {
+      "qid": "Q13",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.793935742936414,
+      "has_corpus_limit_declaration": true,
+      "use_case": "AI Act Allegato III biometria"
+    },
+    {
+      "qid": "Q14",
+      "query_type": "positive",
+      "faithfulness": 0.8235294117647058,
+      "answer_relevancy": 0.8498673033304229,
+      "has_corpus_limit_declaration": false,
+      "use_case": "AI Act GPAI vs high-risk obblighi"
+    },
+    {
+      "qid": "Q15",
+      "query_type": "positive",
+      "faithfulness": 0.9,
+      "answer_relevancy": 0.9585989605945299,
+      "has_corpus_limit_declaration": true,
+      "use_case": "AI Act timeline divieti"
+    },
+    {
+      "qid": "Q16",
+      "query_type": "positive",
+      "faithfulness": 0.8571428571428571,
+      "answer_relevancy": 0.8900563836768044,
+      "has_corpus_limit_declaration": false,
+      "use_case": "AI Act timeline GPAI già immessi"
+    },
+    {
+      "qid": "Q17",
+      "query_type": "positive",
+      "faithfulness": 0.8666666666666667,
+      "answer_relevancy": 0.7137881110531926,
+      "has_corpus_limit_declaration": false,
+      "use_case": "AI Act art 113 stress"
+    },
+    {
+      "qid": "Q18",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9349351879536145,
+      "has_corpus_limit_declaration": false,
+      "use_case": "AI Act timeline sanzioni"
+    },
+    {
+      "qid": "Q19",
+      "query_type": "positive",
+      "faithfulness": 0.5555555555555556,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": false,
+      "use_case": "DPIA + FRIA scoring bancario"
+    },
+    {
+      "qid": "Q20",
+      "query_type": "negative",
+      "faithfulness": 0.8571428571428571,
+      "answer_relevancy": 0.9922266767586847,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Garante sanzioni biometria dipendenti"
+    },
+    {
+      "qid": "Q21",
+      "query_type": "negative",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Garante riconoscimento facciale aeroporti"
+    },
+    {
+      "qid": "Q22",
+      "query_type": "negative",
+      "faithfulness": 0.6666666666666666,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Garante riconoscimento facciale presenze"
+    },
+    {
+      "qid": "Q23",
+      "query_type": "negative",
+      "faithfulness": 0.6153846153846154,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": false,
+      "use_case": "231 + GDPR + AI selezione fornitori"
+    },
+    {
+      "qid": "Q24",
+      "query_type": "positive",
+      "faithfulness": 0.8947368421052632,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": true,
+      "use_case": "231 modello organizzativo + AI HR"
+    },
+    {
+      "qid": "Q25",
+      "query_type": "positive",
+      "faithfulness": 0.75,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": true,
+      "use_case": "231 fattispecie informatica art 24-bis"
+    },
+    {
+      "qid": "Q26",
+      "query_type": "positive",
+      "faithfulness": 0.5,
+      "answer_relevancy": 0.7369941978961443,
+      "has_corpus_limit_declaration": true,
+      "use_case": "stress: art 24-bis 231"
+    },
+    {
+      "qid": "Q27",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.671106654134618,
+      "has_corpus_limit_declaration": true,
+      "use_case": "stress: art 25-undecies"
+    },
+    {
+      "qid": "Q28",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8180756975361083,
+      "has_corpus_limit_declaration": false,
+      "use_case": "stress: art 5 GDPR"
+    },
+    {
+      "qid": "Q29",
+      "query_type": "positive",
+      "faithfulness": 0.8,
+      "answer_relevancy": 0.7962881691593426,
+      "has_corpus_limit_declaration": false,
+      "use_case": "stress: considerando 84 GDPR"
+    },
+    {
+      "qid": "Q30",
+      "query_type": "positive",
+      "faithfulness": 0.9285714285714286,
+      "answer_relevancy": 0.7279089221739069,
+      "has_corpus_limit_declaration": false,
+      "use_case": "stress: Allegato III punto 4 AI Act"
+    },
+    {
+      "qid": "Q31",
+      "query_type": "positive",
+      "faithfulness": 0.9333333333333333,
+      "answer_relevancy": 0.8476498486659518,
+      "has_corpus_limit_declaration": false,
+      "use_case": "stress: art 22 GDPR"
+    },
+    {
+      "qid": "Q32",
+      "query_type": "positive",
+      "faithfulness": 0.9285714285714286,
+      "answer_relevancy": 0.8119453322952989,
+      "has_corpus_limit_declaration": false,
+      "use_case": "stress: art 6 NIS2"
+    },
+    {
+      "qid": "Q33",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6389208842785459,
+      "has_corpus_limit_declaration": false,
+      "use_case": "stress: art 35 disambiguation"
+    },
+    {
+      "qid": "Q34",
+      "query_type": "positive",
+      "faithfulness": 0.9545454545454546,
+      "answer_relevancy": 0.860018335326478,
+      "has_corpus_limit_declaration": false,
+      "use_case": "stress: art 9 GDPR"
+    },
+    {
+      "qid": "Q35",
+      "query_type": "positive",
+      "faithfulness": 0.25,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": false,
+      "use_case": "stress: art 27 AI Act FRIA"
+    },
+    {
+      "qid": "Q36",
+      "query_type": "positive",
+      "faithfulness": 0.9166666666666666,
+      "answer_relevancy": 0.6633899107507245,
+      "has_corpus_limit_declaration": false,
+      "use_case": "stress: art 111 AI Act"
+    },
+    {
+      "qid": "Q37",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8386708180142757,
+      "has_corpus_limit_declaration": false,
+      "use_case": "stress: considerando 71 vs art 22 GDPR"
+    },
+    {
+      "qid": "Q38",
+      "query_type": "positive",
+      "faithfulness": 0.6666666666666666,
+      "answer_relevancy": 0.8454001901085156,
+      "has_corpus_limit_declaration": false,
+      "use_case": "stress: L. 132/2025 art 11"
+    },
+    {
+      "qid": "Q39",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7790780446271449,
+      "has_corpus_limit_declaration": false,
+      "use_case": "stress: art 6 GDPR base giuridica"
+    },
+    {
+      "qid": "Q40",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7743159565322236,
+      "has_corpus_limit_declaration": false,
+      "use_case": "stress: NIS2 obblighi notifica naturale"
+    },
+    {
+      "qid": "Q41",
+      "query_type": "negative",
+      "faithfulness": 0.4,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": false,
+      "use_case": "edge: Data Act off-corpus"
+    },
+    {
+      "qid": "Q42",
+      "query_type": "negative",
+      "faithfulness": 0.8333333333333334,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": false,
+      "use_case": "edge: ISO 27001 off-scope"
+    },
+    {
+      "qid": "Q43",
+      "query_type": "positive",
+      "faithfulness": 0.7894736842105263,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": true,
+      "use_case": "edge: query troppo generica"
+    },
+    {
+      "qid": "Q44",
+      "query_type": "negative",
+      "faithfulness": 0.9375,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": false,
+      "use_case": "edge: EDPB off-corpus"
+    },
+    {
+      "qid": "Q45",
+      "query_type": "positive",
+      "faithfulness": 0.7142857142857143,
+      "answer_relevancy": 0.7233019873447767,
+      "has_corpus_limit_declaration": true,
+      "use_case": "edge: query vaga multi-doc"
+    },
+    {
+      "qid": "Q46",
+      "query_type": "edge",
+      "faithfulness": 0.3076923076923077,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": false,
+      "use_case": "edge: operativa ChatGPT"
+    },
+    {
+      "qid": "Q47",
+      "query_type": "negative",
+      "faithfulness": 0.5,
+      "answer_relevancy": 0.8536181143825322,
+      "has_corpus_limit_declaration": false,
+      "use_case": "edge: art inesistente"
+    },
+    {
+      "qid": "Q48",
+      "query_type": "negative",
+      "faithfulness": 0.375,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": false,
+      "use_case": "edge: ePrivacy off-corpus"
+    },
+    {
+      "qid": "Q49",
+      "query_type": "positive",
+      "faithfulness": 0.8,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": true,
+      "use_case": "edge: mix in/off corpus"
+    },
+    {
+      "qid": "Q50",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7126474576729231,
+      "has_corpus_limit_declaration": false,
+      "use_case": "edge: vaga ma con anchor lessicale"
+    },
+    {
+      "qid": "Q51",
+      "query_type": "positive",
+      "faithfulness": 0.6428571428571429,
+      "answer_relevancy": 0.8437804738542577,
+      "has_corpus_limit_declaration": false,
+      "use_case": "NIS2 governance organi amministrativi"
+    },
+    {
+      "qid": "Q52",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6670055534647613,
+      "has_corpus_limit_declaration": false,
+      "use_case": "NIS2 misure gestione rischio multi-rischio"
+    },
+    {
+      "qid": "Q53",
+      "query_type": "positive",
+      "faithfulness": 0.72,
+      "answer_relevancy": 0.9297507818231153,
+      "has_corpus_limit_declaration": false,
+      "use_case": "NIS2 supply chain ICT responsabilità"
+    },
+    {
+      "qid": "Q54",
+      "query_type": "positive",
+      "faithfulness": 0.8571428571428571,
+      "answer_relevancy": 0.8517646302507876,
+      "has_corpus_limit_declaration": false,
+      "use_case": "NIS2 comunicazione destinatari servizio"
+    },
+    {
+      "qid": "Q55",
+      "query_type": "positive",
+      "faithfulness": 0.7142857142857143,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": false,
+      "use_case": "NIS2 sanzioni soggetti essenziali"
+    },
+    {
+      "qid": "Q56",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9019277057999823,
+      "has_corpus_limit_declaration": false,
+      "use_case": "NIS2 sospensione dirigenti"
+    },
+    {
+      "qid": "Q57",
+      "query_type": "positive",
+      "faithfulness": 0.9473684210526315,
+      "answer_relevancy": 0.8642281194948114,
+      "has_corpus_limit_declaration": false,
+      "use_case": "NIS2+GDPR data breach tempistiche doppia notifica"
+    },
+    {
+      "qid": "Q58",
+      "query_type": "positive",
+      "faithfulness": 0.7272727272727273,
+      "answer_relevancy": 0.926815429110228,
+      "has_corpus_limit_declaration": false,
+      "use_case": "NIS2+GDPR misure sicurezza preventive"
+    },
+    {
+      "qid": "Q59",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9766896947458861,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Garante poteri ispettivi"
+    },
+    {
+      "qid": "Q60",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9104987657470842,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Garante composizione collegio"
+    },
+    {
+      "qid": "Q61",
+      "query_type": "positive",
+      "faithfulness": 0.8,
+      "answer_relevancy": 0.881938417110558,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Trattamento condanne penali in gare pubbliche"
+    },
+    {
+      "qid": "Q62",
+      "query_type": "positive",
+      "faithfulness": 0.9,
+      "answer_relevancy": 0.9160241366623544,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Reclusione art.167 trattamento illecito"
+    },
+    {
+      "qid": "Q63",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9867699339706717,
+      "has_corpus_limit_declaration": true,
+      "use_case": "Trattamento dati forze di polizia"
+    },
+    {
+      "qid": "Q64",
+      "query_type": "positive",
+      "faithfulness": 0.9375,
+      "answer_relevancy": 0.9867007437759651,
+      "has_corpus_limit_declaration": false,
+      "use_case": "L.132 IA in ambito sanitario"
+    },
+    {
+      "qid": "Q65",
+      "query_type": "positive",
+      "faithfulness": 0.5,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": false,
+      "use_case": "L.132 coordinamento con AI Act"
+    },
+    {
+      "qid": "Q66",
+      "query_type": "positive",
+      "faithfulness": 0.5555555555555556,
+      "answer_relevancy": 0.9241803955187377,
+      "has_corpus_limit_declaration": true,
+      "use_case": "L.132 deepfake fattispecie penale"
+    },
+    {
+      "qid": "Q67",
+      "query_type": "positive",
+      "faithfulness": 0.9444444444444444,
+      "answer_relevancy": 0.9069941788078819,
+      "has_corpus_limit_declaration": false,
+      "use_case": "L.132 trattamento dati per sviluppo IA"
+    },
+    {
+      "qid": "Q68",
+      "query_type": "positive",
+      "faithfulness": 0.5416666666666666,
+      "answer_relevancy": 0.9034933048718216,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Sanità chatbot AI triage paziente"
+    },
+    {
+      "qid": "Q69",
+      "query_type": "positive",
+      "faithfulness": 0.625,
+      "answer_relevancy": 0.8998426519412493,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Pharma IA farmacovigilanza"
+    },
+    {
+      "qid": "Q70",
+      "query_type": "positive",
+      "faithfulness": 0.7857142857142857,
+      "answer_relevancy": 0.6729551612058554,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Banca outsourcing IA AML extra-UE"
+    },
+    {
+      "qid": "Q71",
+      "query_type": "positive",
+      "faithfulness": 0.45,
+      "answer_relevancy": 0.8223138444961713,
+      "has_corpus_limit_declaration": false,
+      "use_case": "PA regionale IA graduatorie sociali"
+    },
+    {
+      "qid": "Q72",
+      "query_type": "positive",
+      "faithfulness": 0.9444444444444444,
+      "answer_relevancy": 0.8001150770008632,
+      "has_corpus_limit_declaration": true,
+      "use_case": "Industria IA monitoraggio lavoratori"
+    },
+    {
+      "qid": "Q73",
+      "query_type": "positive",
+      "faithfulness": 0.5185185185185185,
+      "answer_relevancy": 0.8720111092052494,
+      "has_corpus_limit_declaration": false,
+      "use_case": "AI Act+GDPR deployer vs titolare"
+    },
+    {
+      "qid": "Q74",
+      "query_type": "positive",
+      "faithfulness": 0.6842105263157895,
+      "answer_relevancy": 0.8356462198596775,
+      "has_corpus_limit_declaration": false,
+      "use_case": "AI Act+GDPR informativa"
+    },
+    {
+      "qid": "Q75",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8521030372978152,
+      "has_corpus_limit_declaration": false,
+      "use_case": "NIS2+GDPR comunicazione interessato"
+    },
+    {
+      "qid": "Q76",
+      "query_type": "positive",
+      "faithfulness": 0.9285714285714286,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": true,
+      "use_case": "231+GDPR integrazione modello accesso abusivo"
+    },
+    {
+      "qid": "Q77",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8574444673166598,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Diritto accesso tempi e modalità"
+    },
+    {
+      "qid": "Q78",
+      "query_type": "positive",
+      "faithfulness": 0.9583333333333334,
+      "answer_relevancy": 0.9271670614097088,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Oblio vs finalità giornalistica"
+    },
+    {
+      "qid": "Q79",
+      "query_type": "positive",
+      "faithfulness": 0.42857142857142855,
+      "answer_relevancy": 0.9525678807057346,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Portabilità dati derivati"
+    },
+    {
+      "qid": "Q80",
+      "query_type": "positive",
+      "faithfulness": 0.95,
+      "answer_relevancy": 0.7387502613350495,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Opposizione marketing diretto"
+    },
+    {
+      "qid": "Q81",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9350924714306237,
+      "has_corpus_limit_declaration": false,
+      "use_case": "GDPR sanzione violazione diritto accesso"
+    },
+    {
+      "qid": "Q82",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8899184740904678,
+      "has_corpus_limit_declaration": false,
+      "use_case": "231 sanzioni interdittive condizioni"
+    },
+    {
+      "qid": "Q83",
+      "query_type": "positive",
+      "faithfulness": 0.7142857142857143,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": false,
+      "use_case": "NIS2 sanzioni soggetti importanti"
+    },
+    {
+      "qid": "Q84",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9662421521452835,
+      "has_corpus_limit_declaration": false,
+      "use_case": "AI Act sanzioni GPAI rischio sistemico"
+    },
+    {
+      "qid": "Q85",
+      "query_type": "positive",
+      "faithfulness": 0.96,
+      "answer_relevancy": 0.9153096777436416,
+      "has_corpus_limit_declaration": true,
+      "use_case": "231 corruzione fattispecie"
+    },
+    {
+      "qid": "Q86",
+      "query_type": "positive",
+      "faithfulness": 0.6666666666666666,
+      "answer_relevancy": 0.8340487847006121,
+      "has_corpus_limit_declaration": true,
+      "use_case": "231 riciclaggio condotte e cornici"
+    },
+    {
+      "qid": "Q87",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9363133465741549,
+      "has_corpus_limit_declaration": true,
+      "use_case": "231 sicurezza lavoro omicidio colposo"
+    },
+    {
+      "qid": "Q88",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8264421418023326,
+      "has_corpus_limit_declaration": true,
+      "use_case": "Procedura DPIA passi e contenuti"
+    },
+    {
+      "qid": "Q89",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9286819673249339,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Registro trattamenti art.30 contenuti"
+    },
+    {
+      "qid": "Q90",
+      "query_type": "negative",
+      "faithfulness": 0.875,
+      "answer_relevancy": 0.9017572812733974,
+      "has_corpus_limit_declaration": false,
+      "use_case": "AI Act art.220 inesistente"
+    },
+    {
+      "qid": "Q91",
+      "query_type": "negative",
+      "faithfulness": 0.875,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Decreto NIS2 art.75 inesistente"
+    },
+    {
+      "qid": "Q92",
+      "query_type": "negative",
+      "faithfulness": 0.7333333333333333,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Cod.Privacy art.33 misure minime abrogato"
+    },
+    {
+      "qid": "Q93",
+      "query_type": "negative",
+      "faithfulness": 0.8333333333333334,
+      "answer_relevancy": 0.9707265969764372,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Cod.Privacy art.7 diritti abrogato"
+    },
+    {
+      "qid": "Q94",
+      "query_type": "negative",
+      "faithfulness": 0.8,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": true,
+      "use_case": "ISO 27701 corpus mancante"
+    },
+    {
+      "qid": "Q95",
+      "query_type": "negative",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": true,
+      "use_case": "EDPB linee guida 5/2020 corpus mancante"
+    },
+    {
+      "qid": "Q96",
+      "query_type": "negative",
+      "faithfulness": 0.8,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": true,
+      "use_case": "Garante provvedimento ChatGPT 2023"
+    },
+    {
+      "qid": "Q97",
+      "query_type": "negative",
+      "faithfulness": 0.8571428571428571,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": true,
+      "use_case": "Garante decisione TikTok 2024"
+    },
+    {
+      "qid": "Q98",
+      "query_type": "negative",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6738468787886787,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Omonimia art.6 par.1 GDPR vs AI Act"
+    },
+    {
+      "qid": "Q99",
+      "query_type": "negative",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6452388642122473,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Omonimia art.35 valutazione GDPR vs FRIA"
+    },
+    {
+      "qid": "Q100",
+      "query_type": "edge",
+      "faithfulness": 0.8947368421052632,
+      "answer_relevancy": 0.8781058297012598,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Edge vaga privacy e AI obblighi aziende"
+    }
+  ]
+}

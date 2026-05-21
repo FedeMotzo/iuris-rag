@@ -1,0 +1,161 @@
+# Italian Legal RAG — Graph multi-normativa
+# Disclaimer: link curati manualmente, NOT legally validated. Servono come
+# guida al retrieval cross-norma, non come fonte di interpretazione
+# giuridica autonoma. Validazione legale formale rimandata a v1.1.
+#
+# Schema: lista di link con campi from, to, relation, note, source,
+# validated_by, validated_at.
+# Le chiavi from e to sono chunk_id reali della collection
+# italian_legal_v1_hybrid.
+#
+# Versione: v1 (chiusura curatela 2026-05-19) — 22 link confermati.
+# Note brevi (1-2 frasi). Documentazione estesa con use_case mapping e
+# caveat in docs/methodology/graph_curation_notes.md.
+
+# ============================================================================
+# Tema B — Triangolo responsabilità d'impresa (231 ↔ GDPR ↔ AI Act)
+# ============================================================================
+
+- from: akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_24-bis
+  to:   eli/reg/2016/679/oj__art_32
+  relation: presupposto_di
+  note: "Violazione sicurezza GDPR può integrare condotta materiale di reati informatici, reato presupposto 231 se commesso nell'interesse dell'ente"
+  source: curated
+
+- from: akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_6
+  to:   eli/reg/2024/1689/oj__art_9
+  relation: complementare
+  note: "Per ente che usa AI high-risk, il risk management AI Act è componente naturale del modello 231 idoneo: si integrano, non si sostituiscono"
+  source: curated
+
+- from: eli/reg/2024/1689/oj__annex_III__point_4
+  to:   eli/reg/2016/679/oj__art_22
+  relation: complementare
+  note: "Sistemi AI high-risk per HR (Allegato III punto 4) realizzano tipicamente decisioni automatizzate ex art. 22 GDPR: obblighi AI Act e diritti GDPR cumulativi"
+  source: curated
+
+# ============================================================================
+# Tema A — Interfaccia principale privacy/AI (GDPR ↔ AI Act)
+# ============================================================================
+
+- from: eli/reg/2024/1689/oj__art_27
+  to:   eli/reg/2016/679/oj__art_35
+  relation: complementare
+  note: "FRIA e DPIA coprono dimensioni diverse (diritti fondamentali destinatario vs rischio per interessato): per AI high-risk che tratta dati personali vanno fatte entrambe, in coordinamento ma non in sostituzione"
+  source: curated
+
+- from: eli/reg/2024/1689/oj__art_10
+  to:   eli/reg/2016/679/oj__art_5
+  relation: complementare
+  note: "Requisiti qualità dataset AI Act (pertinenza, accuratezza, completezza) si cumulano con principi GDPR art. 5, in particolare esattezza (5.1.d) e minimizzazione (5.1.c)"
+  source: curated
+
+- from: eli/reg/2024/1689/oj__art_26
+  to:   eli/reg/2016/679/oj__art_35
+  relation: rinvia_a
+  note: "Art. 26(9) AI Act: il deployer usa le informazioni ex art. 13 AI Act per assolvere alla DPIA ex art. 35 GDPR. Rinvio formale esplicito"
+  source: curated
+
+- from: eli/reg/2024/1689/oj__art_14
+  to:   eli/reg/2016/679/oj__art_22
+  relation: complementare
+  note: "Sorveglianza umana AI Act (obbligo di design ex ante su fornitore/deployer) è la precondizione tecnica che rende esercitabile il diritto soggettivo ex post dell'art. 22 GDPR (intervento umano significativo)"
+  source: curated
+
+- from: eli/reg/2024/1689/oj__art_13
+  to:   eli/reg/2016/679/oj__art_13
+  relation: complementare
+  note: "Trasparenza AI Act B2B (fornitore→deployer) alimenta la trasparenza GDPR B2C (titolare→interessato): senza la prima il deployer non ha gli elementi sostanziali per l'informativa"
+  source: curated
+
+- from: eli/reg/2024/1689/oj__art_6
+  to:   eli/reg/2016/679/oj__art_22
+  relation: complementare
+  note: "Classificazione high-risk ex art. 6 + Allegato III coincide spesso con scenari di decisione automatizzata ex art. 22 GDPR (occupazione, credito, servizi essenziali, giustizia)"
+  source: curated
+
+- from: eli/reg/2024/1689/oj__art_10
+  to:   eli/reg/2016/679/oj__art_6
+  relation: complementare
+  note: "Art. 10 AI Act non fornisce base giuridica per il trattamento dei dati di training: la base lecita resta governata dall'art. 6 GDPR. AI Act presuppone GDPR, non lo sostituisce"
+  source: curated
+
+- from: eli/reg/2024/1689/oj__art_10
+  to:   eli/reg/2016/679/oj__art_9
+  relation: deroga
+  note: "Art. 10 comma 5 AI Act: i fornitori high-risk possono trattare dati particolari ex art. 9 GDPR per rilevare bias, con garanzie rafforzate. Deroga settoriale al divieto generale art. 9.1"
+  source: curated
+
+- from: eli/reg/2024/1689/oj__art_99
+  to:   eli/reg/2016/679/oj__art_83
+  relation: complementare
+  note: "Sanzioni AI Act (35M€/7% per pratiche vietate, 15M€/3% per altre violazioni) si cumulano con sanzioni GDPR ex art. 83 (20M€/4%) per stessa condotta, nei limiti del principio di proporzionalità CGUE"
+  source: curated
+
+# ============================================================================
+# Tema C — NIS2 trasversale (cybersecurity ↔ privacy ↔ AI ↔ 231)
+# ============================================================================
+
+- from: akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_24
+  to:   eli/reg/2016/679/oj__art_32
+  relation: complementare
+  note: "Misure cyber NIS2 (perimetro sistemi/servizi ICT) e misure sicurezza GDPR (perimetro dati personali) si sovrappongono ampiamente ma non coincidono: mappare distintamente nelle rispettive evidence di compliance"
+  source: curated
+
+- from: akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_25
+  to:   eli/reg/2016/679/oj__art_33
+  relation: complementare
+  note: "Incidente cyber che compromette dati personali attiva doppia notifica: CSIRT/ACN ex NIS2 (24h+72h+1mese) e Garante ex GDPR (72h). Destinatari e tempistiche differenti"
+  source: curated
+
+- from: akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_25
+  to:   eli/reg/2016/679/oj__art_34
+  relation: complementare
+  note: "NIS2 art. 25 disciplina notifica all'autorità; GDPR art. 34 disciplina comunicazione all'interessato per violazione ad alto rischio. NIS2 non ha obbligo equivalente verso utenti finali"
+  source: curated
+
+- from: eli/reg/2024/1689/oj__annex_III__point_2
+  to:   akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_24
+  relation: complementare
+  note: "Allegato III punto 2 AI Act (infrastrutture critiche) e perimetro NIS2 (Allegato I D.Lgs 138/2024) si sovrappongono in energia, trasporti, acqua, digital infrastructure: requisiti AI Act sui sistemi + misure NIS2 sull'infrastruttura ICT"
+  source: curated
+
+- from: eli/reg/2024/1689/oj__art_73
+  to:   akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_25
+  relation: complementare
+  note: "Fornitori AI high-risk segnalano incidenti gravi ad autorità di sorveglianza del mercato (AgID/ACN); soggetti NIS2 notificano incidenti significativi al CSIRT. Due flussi paralleli con definizioni di incidente sovrapposte ma non identiche"
+  source: curated
+
+- from: akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_23
+  to:   akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_6
+  relation: complementare
+  note: "Responsabilità apicale ex NIS2 art. 23 sulla governance cyber alimenta l'idoneità del modello 231 a prevenire reati informatici: integrazione operativa, non testuale"
+  source: curated
+
+- from: akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_24
+  to:   akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_24-bis
+  relation: complementare
+  note: "Misure cyber NIS2 art. 24 costituiscono parametro di diligenza settoriale per valutare l'idoneità del modello 231 a prevenire reati informatici. Parallelo a GDPR art. 32, ma con granularità settoriale NIS2"
+  source: curated
+
+# ============================================================================
+# Tema D — L. 132/2025 + Codice Privacy ↔ GDPR/AI Act
+# ============================================================================
+
+- from: akn/it/act/legge/stato/2025-09-23/132__art_11
+  to:   eli/reg/2024/1689/oj__annex_III__point_4
+  relation: attua
+  note: "Art. 11 L. 132/2025 disciplina l'uso AI in materia di lavoro (tutela integrità psicofisica, sicurezza, informativa su sistemi decisionali automatizzati): attuazione e specificazione italiana dell'Allegato III punto 4 AI Act"
+  source: curated
+
+- from: akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_2-ter
+  to:   eli/reg/2016/679/oj__art_6
+  relation: deroga
+  note: "Art. 2-ter Cod. Privacy specifica per soggetti pubblici italiani le fonti che costituiscono base giuridica del trattamento ex art. 6 GDPR (legge, regolamento, atto amministrativo generale): declinazione nazionale del 'diritto degli Stati membri'"
+  source: curated
+
+- from: akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_2-sexies
+  to:   eli/reg/2016/679/oj__art_9
+  relation: deroga
+  note: "Art. 2-sexies Cod. Privacy elenca tassativamente le finalità di interesse pubblico rilevante che autorizzano in Italia il trattamento di dati particolari ex art. 9.2.g GDPR (sanità, welfare, lavoro, immigrazione, prevenzione frodi)"
+  source: curated

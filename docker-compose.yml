@@ -1,0 +1,10 @@
+services:
+  qdrant:
+    image: qdrant/qdrant:v1.18.0
+    container_name: italian-legal-qdrant
+    ports:
+      - "6333:6333"
+      - "6334:6334"  # gRPC, non usato ora ma comodo
+    volumes:
+      - ./data/qdrant:/qdrant/storage
+    restart: unless-stopped

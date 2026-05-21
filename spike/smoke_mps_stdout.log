@@ -1,0 +1,181 @@
+2026-05-19 17:16:48,382 INFO smoke_mps: Smoke MPS coabitation — start
+2026-05-19 17:16:48,382 INFO smoke_mps: Verifico modello Ollama qwen2.5:14b su http://localhost:11434
+2026-05-19 17:16:48,431 INFO httpx: HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-05-19 17:16:48,434 INFO smoke_mps: Query target: ['Q6', 'Q7', 'Q1']
+2026-05-19 17:16:48,434 INFO smoke_mps: Warmup Ollama (carica qwen2.5:14b in memoria)
+2026-05-19 17:16:48,853 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:16:49,495 INFO smoke_mps: ======================================================================
+2026-05-19 17:16:49,495 INFO smoke_mps: SCENARIO S1 — bge-m3 MPS + reranker MPS + Ollama attivo (tutto residente)
+2026-05-19 17:16:49,495 INFO smoke_mps: ======================================================================
+2026-05-19 17:16:51,524 INFO smoke_mps: Carico reranker BAAI/bge-reranker-v2-m3 su device=mps
+2026-05-19 17:16:51,528 INFO sentence_transformers.base.model: No modules.json found for BAAI/bge-reranker-v2-m3, initializing a new CrossEncoder model.
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 9776.06it/s]
+2026-05-19 17:16:54,580 INFO smoke_mps: Warmup query Q6 (scartata)
+2026-05-19 17:16:54,580 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:16:54,580 INFO core.embedding.bge_m3: Loading BAAI/bge-m3 on mps (first call)
+2026-05-19 17:16:54,581 INFO sentence_transformers.base.model: Loading SentenceTransformer model from BAAI/bge-m3.
+2026-05-19 17:16:54,588 INFO httpx: HTTP Request: GET http://localhost:6333 "HTTP/1.1 200 OK"
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 89532.83it/s]
+2026-05-19 17:16:57,392 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:17:13,608 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:17:28,162 INFO smoke_mps: [Q6] retr=2814ms rerank=1976ms TTFT=14239ms gen=28792ms tok=344 tok/s=23.6 e2e=33582ms
+2026-05-19 17:17:28,169 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:17:28,263 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:17:30,132 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:17:43,269 INFO smoke_mps: [Q6] retr=95ms rerank=1720ms TTFT=148ms gen=13285ms tok=312 tok/s=23.7 e2e=15100ms
+2026-05-19 17:17:43,270 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:17:43,349 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:17:45,230 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:17:57,258 INFO smoke_mps: [Q6] retr=79ms rerank=1729ms TTFT=152ms gen=12180ms tok=285 tok/s=23.7 e2e=13988ms
+2026-05-19 17:17:57,259 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:17:57,339 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:17:59,223 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:18:11,431 INFO smoke_mps: [Q6] retr=81ms rerank=1736ms TTFT=148ms gen=12355ms tok=289 tok/s=23.7 e2e=14172ms
+2026-05-19 17:18:11,431 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:18:11,531 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:18:27,578 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:18:43,233 INFO smoke_mps: [Q7] retr=100ms rerank=1748ms TTFT=14300ms gen=29954ms tok=353 tok/s=22.6 e2e=31802ms
+2026-05-19 17:18:43,234 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:18:43,314 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:18:45,298 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:19:01,416 INFO smoke_mps: [Q7] retr=81ms rerank=1835ms TTFT=150ms gen=16267ms tok=379 tok/s=23.5 e2e=18183ms
+2026-05-19 17:19:01,417 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:19:01,497 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:19:03,398 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:19:19,326 INFO smoke_mps: [Q7] retr=81ms rerank=1751ms TTFT=150ms gen=16077ms tok=375 tok/s=23.5 e2e=17909ms
+2026-05-19 17:19:19,326 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:19:19,427 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:19:42,641 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:20:03,916 INFO smoke_mps: [Q1] retr=102ms rerank=1744ms TTFT=21469ms gen=42744ms tok=500 tok/s=23.5 e2e=44590ms
+2026-05-19 17:20:03,917 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:20:03,992 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:20:27,532 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:20:49,153 INFO smoke_mps: [Q1] retr=76ms rerank=1722ms TTFT=21817ms gen=43438ms tok=500 tok/s=23.1 e2e=45236ms
+2026-05-19 17:20:49,153 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:20:49,231 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:21:12,749 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:21:18,176 INFO smoke_mps: [Q1] retr=79ms rerank=1787ms TTFT=21731ms gen=27156ms tok=126 tok/s=23.2 e2e=29022ms
+2026-05-19 17:21:18,390 INFO smoke_mps: S1 non passa — proseguo con S2
+2026-05-19 17:21:18,391 INFO smoke_mps: ======================================================================
+2026-05-19 17:21:18,391 INFO smoke_mps: SCENARIO S2 — bge-m3 MPS + reranker CPU + Ollama attivo
+2026-05-19 17:21:18,391 INFO smoke_mps: ======================================================================
+2026-05-19 17:21:18,391 INFO smoke_mps: Carico reranker BAAI/bge-reranker-v2-m3 su device=cpu
+2026-05-19 17:21:18,392 INFO sentence_transformers.base.model: No modules.json found for BAAI/bge-reranker-v2-m3, initializing a new CrossEncoder model.
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 9781.98it/s]
+2026-05-19 17:21:21,016 INFO smoke_mps: Warmup query Q6 (scartata)
+2026-05-19 17:21:21,016 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:21:21,022 INFO httpx: HTTP Request: GET http://localhost:6333 "HTTP/1.1 200 OK"
+2026-05-19 17:21:21,101 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:21:37,961 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:21:53,882 INFO smoke_mps: [Q6] retr=86ms rerank=2952ms TTFT=13907ms gen=29828ms tok=376 tok/s=23.6 e2e=32866ms
+2026-05-19 17:21:53,889 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:21:53,969 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:21:57,001 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:22:07,478 INFO smoke_mps: [Q6] retr=82ms rerank=2881ms TTFT=150ms gen=10627ms tok=248 tok/s=23.7 e2e=13590ms
+2026-05-19 17:22:07,480 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:22:07,544 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:22:10,565 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:22:22,593 INFO smoke_mps: [Q6] retr=65ms rerank=2858ms TTFT=162ms gen=12190ms tok=286 tok/s=23.8 e2e=15113ms
+2026-05-19 17:22:22,593 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:22:22,682 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:22:25,711 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:22:39,873 INFO smoke_mps: [Q6] retr=89ms rerank=2871ms TTFT=158ms gen=14320ms tok=336 tok/s=23.7 e2e=17280ms
+2026-05-19 17:22:39,874 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:22:39,945 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:22:56,618 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:23:17,798 INFO smoke_mps: [Q7] retr=73ms rerank=2898ms TTFT=13774ms gen=34953ms tok=500 tok/s=23.6 e2e=37924ms
+2026-05-19 17:23:17,799 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:23:17,873 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:23:20,905 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:23:42,041 INFO smoke_mps: [Q7] retr=75ms rerank=2876ms TTFT=156ms gen=21292ms tok=500 tok/s=23.7 e2e=24242ms
+2026-05-19 17:23:42,042 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:23:42,121 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:23:45,171 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:24:06,357 INFO smoke_mps: [Q7] retr=80ms rerank=2900ms TTFT=149ms gen=21335ms tok=500 tok/s=23.6 e2e=24315ms
+2026-05-19 17:24:06,357 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:24:06,436 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:24:30,873 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:24:52,359 INFO smoke_mps: [Q1] retr=80ms rerank=2921ms TTFT=21516ms gen=43001ms tok=500 tok/s=23.3 e2e=46002ms
+2026-05-19 17:24:52,360 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:24:52,439 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:25:17,149 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:25:38,411 INFO smoke_mps: [Q1] retr=81ms rerank=2988ms TTFT=21721ms gen=42982ms tok=500 tok/s=23.5 e2e=46051ms
+2026-05-19 17:25:38,412 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:25:38,489 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:26:03,122 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:26:12,892 INFO smoke_mps: [Q1] retr=79ms rerank=2844ms TTFT=21788ms gen=31557ms tok=226 tok/s=23.1 e2e=34480ms
+2026-05-19 17:26:13,086 INFO smoke_mps: S2 non passa — proseguo con S3
+2026-05-19 17:26:13,086 INFO smoke_mps: ======================================================================
+2026-05-19 17:26:13,086 INFO smoke_mps: SCENARIO S3 — bge-m3 MPS + reranker MPS load/unload + Ollama attivo
+2026-05-19 17:26:13,086 INFO smoke_mps: ======================================================================
+2026-05-19 17:26:13,086 INFO smoke_mps: Carico reranker BAAI/bge-reranker-v2-m3 su device=mps
+2026-05-19 17:26:13,087 INFO sentence_transformers.base.model: No modules.json found for BAAI/bge-reranker-v2-m3, initializing a new CrossEncoder model.
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 23403.92it/s]
+2026-05-19 17:26:16,288 INFO smoke_mps: Warmup query Q6 (scartata)
+2026-05-19 17:26:16,288 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:26:16,300 INFO httpx: HTTP Request: GET http://localhost:6333 "HTTP/1.1 200 OK"
+2026-05-19 17:26:16,445 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:26:32,195 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:26:45,036 INFO smoke_mps: [Q6] retr=158ms rerank=1705ms TTFT=14045ms gen=26885ms tok=304 tok/s=23.7 e2e=28747ms
+2026-05-19 17:26:45,043 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:26:45,189 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:26:47,179 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:27:02,003 INFO smoke_mps: [Q6] retr=147ms rerank=1839ms TTFT=151ms gen=14973ms tok=351 tok/s=23.7 e2e=16959ms
+2026-05-19 17:27:02,138 INFO smoke_mps: Carico reranker BAAI/bge-reranker-v2-m3 su device=mps
+2026-05-19 17:27:02,139 INFO sentence_transformers.base.model: No modules.json found for BAAI/bge-reranker-v2-m3, initializing a new CrossEncoder model.
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 13862.38it/s]
+2026-05-19 17:27:04,975 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:27:05,358 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:27:07,287 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:27:24,052 INFO smoke_mps: [Q6] retr=384ms rerank=1723ms TTFT=205ms gen=16969ms tok=395 tok/s=23.6 e2e=19076ms
+2026-05-19 17:27:24,199 INFO smoke_mps: Carico reranker BAAI/bge-reranker-v2-m3 su device=mps
+2026-05-19 17:27:24,201 INFO sentence_transformers.base.model: No modules.json found for BAAI/bge-reranker-v2-m3, initializing a new CrossEncoder model.
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 13474.16it/s]
+2026-05-19 17:27:27,296 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:27:27,698 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:27:29,609 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:27:39,061 INFO smoke_mps: [Q6] retr=403ms rerank=1728ms TTFT=183ms gen=9634ms tok=224 tok/s=23.7 e2e=11765ms
+2026-05-19 17:27:39,191 INFO smoke_mps: Carico reranker BAAI/bge-reranker-v2-m3 su device=mps
+2026-05-19 17:27:39,193 INFO sentence_transformers.base.model: No modules.json found for BAAI/bge-reranker-v2-m3, initializing a new CrossEncoder model.
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 15934.67it/s]
+2026-05-19 17:27:42,162 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:27:42,543 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:27:58,627 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:28:19,160 INFO smoke_mps: [Q7] retr=382ms rerank=1754ms TTFT=14330ms gen=34862ms tok=479 tok/s=23.3 e2e=36998ms
+2026-05-19 17:28:19,292 INFO smoke_mps: Carico reranker BAAI/bge-reranker-v2-m3 su device=mps
+2026-05-19 17:28:19,293 INFO sentence_transformers.base.model: No modules.json found for BAAI/bge-reranker-v2-m3, initializing a new CrossEncoder model.
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 13781.36it/s]
+2026-05-19 17:28:22,250 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:28:22,671 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:28:24,571 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:28:44,835 INFO smoke_mps: [Q7] retr=422ms rerank=1726ms TTFT=173ms gen=20436ms tok=473 tok/s=23.3 e2e=22585ms
+2026-05-19 17:28:44,971 INFO smoke_mps: Carico reranker BAAI/bge-reranker-v2-m3 su device=mps
+2026-05-19 17:28:44,973 INFO sentence_transformers.base.model: No modules.json found for BAAI/bge-reranker-v2-m3, initializing a new CrossEncoder model.
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 14356.05it/s]
+2026-05-19 17:28:47,962 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:28:48,362 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:28:50,253 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:29:05,587 INFO smoke_mps: [Q7] retr=401ms rerank=1713ms TTFT=177ms gen=15511ms tok=361 tok/s=23.5 e2e=17625ms
+2026-05-19 17:29:05,688 INFO smoke_mps: Carico reranker BAAI/bge-reranker-v2-m3 su device=mps
+2026-05-19 17:29:05,689 INFO sentence_transformers.base.model: No modules.json found for BAAI/bge-reranker-v2-m3, initializing a new CrossEncoder model.
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 10797.32it/s]
+2026-05-19 17:29:08,737 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:29:09,126 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:29:32,339 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:29:39,757 INFO smoke_mps: [Q1] retr=391ms rerank=1731ms TTFT=21482ms gen=28899ms tok=171 tok/s=23.1 e2e=31021ms
+2026-05-19 17:29:39,882 INFO smoke_mps: Carico reranker BAAI/bge-reranker-v2-m3 su device=mps
+2026-05-19 17:29:39,884 INFO sentence_transformers.base.model: No modules.json found for BAAI/bge-reranker-v2-m3, initializing a new CrossEncoder model.
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 15547.21it/s]
+2026-05-19 17:29:42,880 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:29:43,296 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:29:45,192 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:30:06,496 INFO smoke_mps: [Q1] retr=419ms rerank=1720ms TTFT=174ms gen=21477ms tok=500 tok/s=23.5 e2e=23616ms
+2026-05-19 17:30:06,634 INFO smoke_mps: Carico reranker BAAI/bge-reranker-v2-m3 su device=mps
+2026-05-19 17:30:06,638 INFO sentence_transformers.base.model: No modules.json found for BAAI/bge-reranker-v2-m3, initializing a new CrossEncoder model.
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 16397.53it/s]
+2026-05-19 17:30:09,587 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:30:09,971 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:30:33,303 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 17:30:54,597 INFO smoke_mps: [Q1] retr=385ms rerank=1712ms TTFT=21619ms gen=42912ms tok=500 tok/s=23.5 e2e=45009ms
+2026-05-19 17:30:55,046 INFO smoke_mps: Risultati scritti su /Users/fmotzo/progetti/italian-legal-rag/spike/MPS_COABITATION_RESULTS.md
+2026-05-19 17:30:55,046 INFO smoke_mps: Smoke completato in 847 s

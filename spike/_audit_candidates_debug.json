@@ -1,0 +1,1061 @@
+{
+  "audit_rows": [
+    {
+      "qid": "C008",
+      "cluster": "NIS2 mono-norma",
+      "confidence": "bassa",
+      "query_type": "positive",
+      "n_proposed": 1,
+      "n_existing": 0,
+      "gap": 1,
+      "missing": [
+        "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_38"
+      ],
+      "note": ""
+    },
+    {
+      "qid": "C009",
+      "cluster": "NIS2 mono-norma",
+      "confidence": "bassa",
+      "query_type": "positive",
+      "n_proposed": 2,
+      "n_existing": 1,
+      "gap": 1,
+      "missing": [
+        "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_38"
+      ],
+      "note": ""
+    },
+    {
+      "qid": "C050",
+      "cluster": "Sanzionatorio puro",
+      "confidence": "bassa",
+      "query_type": "positive",
+      "n_proposed": 1,
+      "n_existing": 0,
+      "gap": 1,
+      "missing": [
+        "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_38"
+      ],
+      "note": ""
+    },
+    {
+      "qid": "C001",
+      "cluster": "NIS2 mono-norma",
+      "confidence": "bassa",
+      "query_type": "positive",
+      "n_proposed": 2,
+      "n_existing": 2,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C002",
+      "cluster": "NIS2 mono-norma",
+      "confidence": "bassa",
+      "query_type": "positive",
+      "n_proposed": 2,
+      "n_existing": 2,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C003",
+      "cluster": "NIS2 mono-norma",
+      "confidence": "bassa",
+      "query_type": "positive",
+      "n_proposed": 2,
+      "n_existing": 2,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C004",
+      "cluster": "NIS2 mono-norma",
+      "confidence": "bassa",
+      "query_type": "positive",
+      "n_proposed": 1,
+      "n_existing": 1,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C005",
+      "cluster": "NIS2 mono-norma",
+      "confidence": "bassa",
+      "query_type": "positive",
+      "n_proposed": 2,
+      "n_existing": 2,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C006",
+      "cluster": "NIS2 mono-norma",
+      "confidence": "bassa",
+      "query_type": "positive",
+      "n_proposed": 2,
+      "n_existing": 2,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C007",
+      "cluster": "NIS2 mono-norma",
+      "confidence": "bassa",
+      "query_type": "positive",
+      "n_proposed": 1,
+      "n_existing": 1,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C010",
+      "cluster": "NIS2 mono-norma",
+      "confidence": "bassa",
+      "query_type": "positive",
+      "n_proposed": 1,
+      "n_existing": 1,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C011",
+      "cluster": "NIS2 mono-norma",
+      "confidence": "bassa",
+      "query_type": "positive",
+      "n_proposed": 1,
+      "n_existing": 1,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C012",
+      "cluster": "NIS2 mono-norma",
+      "confidence": "bassa",
+      "query_type": "positive",
+      "n_proposed": 2,
+      "n_existing": 2,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C025",
+      "cluster": "L. 132/2025",
+      "confidence": "bassa",
+      "query_type": "positive",
+      "n_proposed": 2,
+      "n_existing": 2,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C027",
+      "cluster": "L. 132/2025",
+      "confidence": "bassa",
+      "query_type": "positive",
+      "n_proposed": 2,
+      "n_existing": 2,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C028",
+      "cluster": "L. 132/2025",
+      "confidence": "bassa",
+      "query_type": "positive",
+      "n_proposed": 2,
+      "n_existing": 2,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C029",
+      "cluster": "L. 132/2025",
+      "confidence": "bassa",
+      "query_type": "positive",
+      "n_proposed": 2,
+      "n_existing": 2,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C068",
+      "cluster": "Negative: art abrogato Codice Privacy",
+      "confidence": "bassa",
+      "query_type": "negative",
+      "n_proposed": 0,
+      "n_existing": 0,
+      "gap": 0,
+      "missing": [],
+      "note": "atteso per negative/edge"
+    },
+    {
+      "qid": "C082",
+      "cluster": "L. 132/2025",
+      "confidence": "bassa",
+      "query_type": "positive",
+      "n_proposed": 3,
+      "n_existing": 3,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C013",
+      "cluster": "NIS2 cross GDPR",
+      "confidence": "media",
+      "query_type": "positive",
+      "n_proposed": 2,
+      "n_existing": 2,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C014",
+      "cluster": "NIS2 cross GDPR",
+      "confidence": "media",
+      "query_type": "positive",
+      "n_proposed": 3,
+      "n_existing": 3,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C015",
+      "cluster": "NIS2 cross GDPR",
+      "confidence": "media",
+      "query_type": "positive",
+      "n_proposed": 2,
+      "n_existing": 2,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C023",
+      "cluster": "Codice Privacy mono-norma",
+      "confidence": "media",
+      "query_type": "positive",
+      "n_proposed": 3,
+      "n_existing": 3,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C024",
+      "cluster": "L. 132/2025",
+      "confidence": "media",
+      "query_type": "positive",
+      "n_proposed": 1,
+      "n_existing": 1,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C026",
+      "cluster": "L. 132/2025",
+      "confidence": "media",
+      "query_type": "positive",
+      "n_proposed": 2,
+      "n_existing": 2,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C030",
+      "cluster": "Cross-norma 3+ norme",
+      "confidence": "media",
+      "query_type": "positive",
+      "n_proposed": 5,
+      "n_existing": 5,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C031",
+      "cluster": "Cross-norma 3+ norme",
+      "confidence": "media",
+      "query_type": "positive",
+      "n_proposed": 5,
+      "n_existing": 5,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C032",
+      "cluster": "Cross-norma 3+ norme",
+      "confidence": "media",
+      "query_type": "positive",
+      "n_proposed": 5,
+      "n_existing": 5,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C033",
+      "cluster": "Cross-norma 3+ norme",
+      "confidence": "media",
+      "query_type": "positive",
+      "n_proposed": 4,
+      "n_existing": 4,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C034",
+      "cluster": "Cross-norma 3+ norme",
+      "confidence": "media",
+      "query_type": "positive",
+      "n_proposed": 5,
+      "n_existing": 5,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C035",
+      "cluster": "Cross-norma 3+ norme",
+      "confidence": "media",
+      "query_type": "positive",
+      "n_proposed": 5,
+      "n_existing": 5,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C036",
+      "cluster": "Cross-norma 3+ norme",
+      "confidence": "media",
+      "query_type": "positive",
+      "n_proposed": 5,
+      "n_existing": 5,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C037",
+      "cluster": "Cross-norma scenario 2 norme",
+      "confidence": "media",
+      "query_type": "positive",
+      "n_proposed": 4,
+      "n_existing": 4,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C038",
+      "cluster": "Cross-norma scenario 2 norme",
+      "confidence": "media",
+      "query_type": "positive",
+      "n_proposed": 4,
+      "n_existing": 4,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C040",
+      "cluster": "Cross-norma scenario 2 norme",
+      "confidence": "media",
+      "query_type": "positive",
+      "n_proposed": 3,
+      "n_existing": 3,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C041",
+      "cluster": "Cross-norma scenario 2 norme",
+      "confidence": "media",
+      "query_type": "positive",
+      "n_proposed": 3,
+      "n_existing": 3,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C064",
+      "cluster": "Negative: art abrogato Codice Privacy",
+      "confidence": "media",
+      "query_type": "negative",
+      "n_proposed": 0,
+      "n_existing": 0,
+      "gap": 0,
+      "missing": [],
+      "note": "atteso per negative/edge"
+    },
+    {
+      "qid": "C065",
+      "cluster": "Negative: art abrogato Codice Privacy",
+      "confidence": "media",
+      "query_type": "negative",
+      "n_proposed": 0,
+      "n_existing": 0,
+      "gap": 0,
+      "missing": [],
+      "note": "atteso per negative/edge"
+    },
+    {
+      "qid": "C066",
+      "cluster": "Negative: art abrogato Codice Privacy",
+      "confidence": "media",
+      "query_type": "negative",
+      "n_proposed": 0,
+      "n_existing": 0,
+      "gap": 0,
+      "missing": [],
+      "note": "atteso per negative/edge"
+    },
+    {
+      "qid": "C067",
+      "cluster": "Negative: art abrogato Codice Privacy",
+      "confidence": "media",
+      "query_type": "negative",
+      "n_proposed": 0,
+      "n_existing": 0,
+      "gap": 0,
+      "missing": [],
+      "note": "atteso per negative/edge"
+    },
+    {
+      "qid": "C078",
+      "cluster": "Edge: vaghe / mix",
+      "confidence": "media",
+      "query_type": "edge",
+      "n_proposed": 2,
+      "n_existing": 2,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C081",
+      "cluster": "Cross-norma 3+ norme",
+      "confidence": "media",
+      "query_type": "positive",
+      "n_proposed": 4,
+      "n_existing": 4,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C016",
+      "cluster": "Codice Privacy mono-norma",
+      "confidence": "alta",
+      "query_type": "positive",
+      "n_proposed": 2,
+      "n_existing": 2,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C017",
+      "cluster": "Codice Privacy mono-norma",
+      "confidence": "alta",
+      "query_type": "positive",
+      "n_proposed": 1,
+      "n_existing": 1,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C018",
+      "cluster": "Codice Privacy mono-norma",
+      "confidence": "alta",
+      "query_type": "positive",
+      "n_proposed": 2,
+      "n_existing": 2,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C019",
+      "cluster": "Codice Privacy mono-norma",
+      "confidence": "alta",
+      "query_type": "positive",
+      "n_proposed": 1,
+      "n_existing": 1,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C020",
+      "cluster": "Codice Privacy mono-norma",
+      "confidence": "alta",
+      "query_type": "positive",
+      "n_proposed": 1,
+      "n_existing": 1,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C021",
+      "cluster": "Codice Privacy mono-norma",
+      "confidence": "alta",
+      "query_type": "positive",
+      "n_proposed": 2,
+      "n_existing": 2,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C022",
+      "cluster": "Codice Privacy mono-norma",
+      "confidence": "alta",
+      "query_type": "positive",
+      "n_proposed": 1,
+      "n_existing": 1,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C039",
+      "cluster": "Cross-norma scenario 2 norme",
+      "confidence": "alta",
+      "query_type": "positive",
+      "n_proposed": 2,
+      "n_existing": 2,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C042",
+      "cluster": "Diritti dell'interessato GDPR",
+      "confidence": "alta",
+      "query_type": "positive",
+      "n_proposed": 2,
+      "n_existing": 2,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C043",
+      "cluster": "Diritti dell'interessato GDPR",
+      "confidence": "alta",
+      "query_type": "positive",
+      "n_proposed": 2,
+      "n_existing": 2,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C044",
+      "cluster": "Diritti dell'interessato GDPR",
+      "confidence": "alta",
+      "query_type": "positive",
+      "n_proposed": 1,
+      "n_existing": 1,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C045",
+      "cluster": "Diritti dell'interessato GDPR",
+      "confidence": "alta",
+      "query_type": "positive",
+      "n_proposed": 2,
+      "n_existing": 2,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C046",
+      "cluster": "Diritti dell'interessato GDPR",
+      "confidence": "alta",
+      "query_type": "positive",
+      "n_proposed": 1,
+      "n_existing": 1,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C047",
+      "cluster": "Diritti dell'interessato GDPR",
+      "confidence": "alta",
+      "query_type": "positive",
+      "n_proposed": 2,
+      "n_existing": 2,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C048",
+      "cluster": "Sanzionatorio puro",
+      "confidence": "alta",
+      "query_type": "positive",
+      "n_proposed": 1,
+      "n_existing": 1,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C049",
+      "cluster": "Sanzionatorio puro",
+      "confidence": "alta",
+      "query_type": "positive",
+      "n_proposed": 2,
+      "n_existing": 2,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C051",
+      "cluster": "Sanzionatorio puro",
+      "confidence": "alta",
+      "query_type": "positive",
+      "n_proposed": 1,
+      "n_existing": 1,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C052",
+      "cluster": "Sanzionatorio puro",
+      "confidence": "alta",
+      "query_type": "positive",
+      "n_proposed": 2,
+      "n_existing": 2,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C053",
+      "cluster": "231 fattispecie oltre 24-bis",
+      "confidence": "alta",
+      "query_type": "positive",
+      "n_proposed": 2,
+      "n_existing": 2,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C054",
+      "cluster": "231 fattispecie oltre 24-bis",
+      "confidence": "alta",
+      "query_type": "positive",
+      "n_proposed": 1,
+      "n_existing": 1,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C055",
+      "cluster": "231 fattispecie oltre 24-bis",
+      "confidence": "alta",
+      "query_type": "positive",
+      "n_proposed": 1,
+      "n_existing": 1,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C056",
+      "cluster": "231 fattispecie oltre 24-bis",
+      "confidence": "alta",
+      "query_type": "positive",
+      "n_proposed": 3,
+      "n_existing": 3,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C057",
+      "cluster": "231 fattispecie oltre 24-bis",
+      "confidence": "alta",
+      "query_type": "positive",
+      "n_proposed": 2,
+      "n_existing": 2,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C058",
+      "cluster": "Procedurali 'come si fa X'",
+      "confidence": "alta",
+      "query_type": "positive",
+      "n_proposed": 3,
+      "n_existing": 3,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C059",
+      "cluster": "Procedurali 'come si fa X'",
+      "confidence": "alta",
+      "query_type": "positive",
+      "n_proposed": 1,
+      "n_existing": 1,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C060",
+      "cluster": "Procedurali 'come si fa X'",
+      "confidence": "alta",
+      "query_type": "positive",
+      "n_proposed": 2,
+      "n_existing": 2,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C061",
+      "cluster": "Negative: art inesistente",
+      "confidence": "alta",
+      "query_type": "negative",
+      "n_proposed": 0,
+      "n_existing": 0,
+      "gap": 0,
+      "missing": [],
+      "note": "atteso per negative/edge"
+    },
+    {
+      "qid": "C062",
+      "cluster": "Negative: art inesistente",
+      "confidence": "alta",
+      "query_type": "negative",
+      "n_proposed": 0,
+      "n_existing": 0,
+      "gap": 0,
+      "missing": [],
+      "note": "atteso per negative/edge"
+    },
+    {
+      "qid": "C063",
+      "cluster": "Negative: art inesistente",
+      "confidence": "alta",
+      "query_type": "negative",
+      "n_proposed": 0,
+      "n_existing": 0,
+      "gap": 0,
+      "missing": [],
+      "note": "atteso per negative/edge"
+    },
+    {
+      "qid": "C069",
+      "cluster": "Negative: corpus mancante",
+      "confidence": "alta",
+      "query_type": "negative",
+      "n_proposed": 0,
+      "n_existing": 0,
+      "gap": 0,
+      "missing": [],
+      "note": "atteso per negative/edge"
+    },
+    {
+      "qid": "C070",
+      "cluster": "Negative: corpus mancante",
+      "confidence": "alta",
+      "query_type": "negative",
+      "n_proposed": 0,
+      "n_existing": 0,
+      "gap": 0,
+      "missing": [],
+      "note": "atteso per negative/edge"
+    },
+    {
+      "qid": "C071",
+      "cluster": "Negative: corpus mancante",
+      "confidence": "alta",
+      "query_type": "negative",
+      "n_proposed": 0,
+      "n_existing": 0,
+      "gap": 0,
+      "missing": [],
+      "note": "atteso per negative/edge"
+    },
+    {
+      "qid": "C072",
+      "cluster": "Negative: Garante UC4",
+      "confidence": "alta",
+      "query_type": "negative",
+      "n_proposed": 0,
+      "n_existing": 0,
+      "gap": 0,
+      "missing": [],
+      "note": "atteso per negative/edge"
+    },
+    {
+      "qid": "C073",
+      "cluster": "Negative: Garante UC4",
+      "confidence": "alta",
+      "query_type": "negative",
+      "n_proposed": 0,
+      "n_existing": 0,
+      "gap": 0,
+      "missing": [],
+      "note": "atteso per negative/edge"
+    },
+    {
+      "qid": "C074",
+      "cluster": "Negative: Garante UC4",
+      "confidence": "alta",
+      "query_type": "negative",
+      "n_proposed": 0,
+      "n_existing": 0,
+      "gap": 0,
+      "missing": [],
+      "note": "atteso per negative/edge"
+    },
+    {
+      "qid": "C075",
+      "cluster": "Negative: omonimia numerazione",
+      "confidence": "alta",
+      "query_type": "negative",
+      "n_proposed": 0,
+      "n_existing": 0,
+      "gap": 0,
+      "missing": [],
+      "note": "atteso per negative/edge"
+    },
+    {
+      "qid": "C076",
+      "cluster": "Negative: omonimia numerazione",
+      "confidence": "alta",
+      "query_type": "negative",
+      "n_proposed": 0,
+      "n_existing": 0,
+      "gap": 0,
+      "missing": [],
+      "note": "atteso per negative/edge"
+    },
+    {
+      "qid": "C077",
+      "cluster": "Negative: omonimia numerazione",
+      "confidence": "alta",
+      "query_type": "negative",
+      "n_proposed": 0,
+      "n_existing": 0,
+      "gap": 0,
+      "missing": [],
+      "note": "atteso per negative/edge"
+    },
+    {
+      "qid": "C079",
+      "cluster": "Edge: vaghe / mix",
+      "confidence": "alta",
+      "query_type": "edge",
+      "n_proposed": 2,
+      "n_existing": 2,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    },
+    {
+      "qid": "C080",
+      "cluster": "Edge: vaghe / mix",
+      "confidence": "alta",
+      "query_type": "edge",
+      "n_proposed": 3,
+      "n_existing": 3,
+      "gap": 0,
+      "missing": [],
+      "note": ""
+    }
+  ],
+  "actions": {
+    "C008": "RIPARABILE",
+    "C009": "RIPARABILE",
+    "C050": "RIPARABILE"
+  },
+  "proposals": {
+    "C008": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_38 → [akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_38__paras_12_16, akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_38__paras_1_11]",
+    "C009": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_38 → [akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_38__paras_12_16, akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_38__paras_1_11]",
+    "C050": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_38 → [akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_38__paras_12_16, akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_38__paras_1_11]"
+  },
+  "by_cluster": {
+    "NIS2 mono-norma": {
+      "n": 12,
+      "pass": 10,
+      "fail": 2
+    },
+    "Sanzionatorio puro": {
+      "n": 5,
+      "pass": 4,
+      "fail": 1
+    },
+    "L. 132/2025": {
+      "n": 7,
+      "pass": 7,
+      "fail": 0
+    },
+    "Negative: art abrogato Codice Privacy": {
+      "n": 5,
+      "pass": 5,
+      "fail": 0
+    },
+    "NIS2 cross GDPR": {
+      "n": 3,
+      "pass": 3,
+      "fail": 0
+    },
+    "Codice Privacy mono-norma": {
+      "n": 8,
+      "pass": 8,
+      "fail": 0
+    },
+    "Cross-norma 3+ norme": {
+      "n": 8,
+      "pass": 8,
+      "fail": 0
+    },
+    "Cross-norma scenario 2 norme": {
+      "n": 5,
+      "pass": 5,
+      "fail": 0
+    },
+    "Edge: vaghe / mix": {
+      "n": 3,
+      "pass": 3,
+      "fail": 0
+    },
+    "Diritti dell'interessato GDPR": {
+      "n": 6,
+      "pass": 6,
+      "fail": 0
+    },
+    "231 fattispecie oltre 24-bis": {
+      "n": 5,
+      "pass": 5,
+      "fail": 0
+    },
+    "Procedurali 'come si fa X'": {
+      "n": 3,
+      "pass": 3,
+      "fail": 0
+    },
+    "Negative: art inesistente": {
+      "n": 3,
+      "pass": 3,
+      "fail": 0
+    },
+    "Negative: corpus mancante": {
+      "n": 3,
+      "pass": 3,
+      "fail": 0
+    },
+    "Negative: Garante UC4": {
+      "n": 3,
+      "pass": 3,
+      "fail": 0
+    },
+    "Negative: omonimia numerazione": {
+      "n": 3,
+      "pass": 3,
+      "fail": 0
+    }
+  },
+  "missing_with_code": {
+    "NIS2 mono-norma": [
+      {
+        "code": "d",
+        "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_38",
+        "desc": "articolo presente come fragment splittato per oversize: ['akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_38__paras_12_16', 'akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_38__paras_1_11']",
+        "qid": "C008"
+      },
+      {
+        "code": "d",
+        "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_38",
+        "desc": "articolo presente come fragment splittato per oversize: ['akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_38__paras_12_16', 'akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_38__paras_1_11']",
+        "qid": "C009"
+      }
+    ],
+    "Sanzionatorio puro": [
+      {
+        "code": "d",
+        "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_38",
+        "desc": "articolo presente come fragment splittato per oversize: ['akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_38__paras_12_16', 'akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_38__paras_1_11']",
+        "qid": "C050"
+      }
+    ]
+  },
+  "systemic": [
+    {
+      "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_38",
+      "count": 3
+    }
+  ],
+  "alerts": [],
+  "summary": {
+    "n_pass": 79,
+    "n_fail": 3,
+    "n_rip": 3,
+    "n_sost": 0,
+    "n_scart": 0,
+    "pool_survivor": 82
+  },
+  "cluster_survivors": {
+    "NIS2 mono-norma": 12,
+    "Sanzionatorio puro": 5,
+    "L. 132/2025": 7,
+    "Negative: art abrogato Codice Privacy": 5,
+    "NIS2 cross GDPR": 3,
+    "Codice Privacy mono-norma": 8,
+    "Cross-norma 3+ norme": 8,
+    "Cross-norma scenario 2 norme": 5,
+    "Edge: vaghe / mix": 3,
+    "Diritti dell'interessato GDPR": 6,
+    "231 fattispecie oltre 24-bis": 5,
+    "Procedurali 'come si fa X'": 3,
+    "Negative: art inesistente": 3,
+    "Negative: corpus mancante": 3,
+    "Negative: Garante UC4": 3,
+    "Negative: omonimia numerazione": 3
+  }
+}

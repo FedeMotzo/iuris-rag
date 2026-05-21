@@ -1,0 +1,147 @@
+{
+  "step1_errors": [],
+  "step2_stats": {
+    "required": 63,
+    "populated": 63,
+    "missing": 0,
+    "missing_ids": [],
+    "chunk_dicts_populated": 86
+  },
+  "step3_results": {
+    "checks": [
+      [
+        "schema 10 campi",
+        100,
+        0
+      ],
+      [
+        "qid uniqueness",
+        100,
+        0
+      ],
+      [
+        "query_type valido",
+        100,
+        0
+      ],
+      [
+        "positive con gold_chunks",
+        100,
+        0
+      ],
+      [
+        "chunk text popolato",
+        100,
+        0
+      ],
+      [
+        "pattern canonico corpus_limit",
+        23,
+        0
+      ],
+      [
+        "pattern citazione",
+        100,
+        0
+      ]
+    ],
+    "errors": [],
+    "warnings": []
+  },
+  "step4_stats": {
+    "v1": {
+      "n": 50,
+      "query_type": {
+        "positive": 38,
+        "negative": 10,
+        "edge": 2
+      },
+      "has_corpus_limit": {
+        "true": 11,
+        "false": 39
+      },
+      "norms_touched": {
+        "AI Act": 19,
+        "GDPR": 12,
+        "D.Lgs 231/2001": 6,
+        "NIS2": 3,
+        "L. 132/2025": 2,
+        "Codice Privacy": 1
+      },
+      "cross": {
+        "positive_limit=False": 27,
+        "negative_limit=False": 10,
+        "edge_limit=False": 2,
+        "positive_limit=True": 11
+      }
+    },
+    "v2": {
+      "n": 50,
+      "query_type": {
+        "positive": 39,
+        "negative": 10,
+        "edge": 1
+      },
+      "has_corpus_limit": {
+        "true": 12,
+        "false": 38
+      },
+      "norms_touched": {
+        "NIS2": 13,
+        "GDPR": 21,
+        "Codice Privacy": 5,
+        "L. 132/2025": 8,
+        "AI Act": 10,
+        "D.Lgs 231/2001": 6
+      },
+      "cross": {
+        "positive_limit=False": 31,
+        "positive_limit=True": 8,
+        "negative_limit=False": 6,
+        "negative_limit=True": 4,
+        "edge_limit=False": 1
+      }
+    },
+    "cumulato": {
+      "n": 100,
+      "query_type": {
+        "positive": 77,
+        "negative": 20,
+        "edge": 3
+      },
+      "has_corpus_limit": {
+        "true": 23,
+        "false": 77
+      },
+      "norms_touched": {
+        "AI Act": 29,
+        "GDPR": 33,
+        "D.Lgs 231/2001": 12,
+        "NIS2": 16,
+        "L. 132/2025": 10,
+        "Codice Privacy": 6
+      },
+      "cross": {
+        "positive_limit=False": 58,
+        "negative_limit=False": 16,
+        "edge_limit=False": 3,
+        "positive_limit=True": 19,
+        "negative_limit=True": 4
+      }
+    },
+    "paired_queries": {
+      "art_38__paras_1_11": [
+        "Q55 (essenziali)",
+        "Q83 (importanti)"
+      ],
+      "GDPR_art_25_NIS2": [
+        "Q54 (destinatari servizio)",
+        "Q57 (autorità doppia notifica)"
+      ],
+      "L132_art_9_GDPR": [
+        "Q64 (trattamento dati sanitario)",
+        "Q67 (trattamento dati sviluppo IA)"
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+2026-05-19 17:38:29,486 INFO sentence_transformers.base.model: No modules.json found for BAAI/bge-reranker-v2-m3, initializing a new CrossEncoder model.
+2026-05-19 17:38:29,490 INFO httpx: HTTP Request: GET http://localhost:6333 "HTTP/1.1 200 OK"
+2026-05-19 17:38:30,173 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:38:30,173 INFO core.embedding.bge_m3: Loading BAAI/bge-m3 on mps (first call)
+2026-05-19 17:38:30,175 INFO sentence_transformers.base.model: Loading SentenceTransformer model from BAAI/bge-m3.
+2026-05-19 17:38:32,556 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:38:35,739 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:38:35,808 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 17:38:38,675 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=20 rerank=False graph=False
+2026-05-19 17:38:38,750 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"

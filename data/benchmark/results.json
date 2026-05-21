@@ -1,0 +1,886 @@
+{
+  "config": {
+    "collection": "italian_legal_v1",
+    "embedding_model": "BAAI/bge-m3",
+    "instruction_prefix_used": true,
+    "top_k": 10,
+    "n_chunks_indexed": 858,
+    "timestamp": "2026-05-18T13:18:41+00:00"
+  },
+  "per_query": [
+    {
+      "qid": "Q1",
+      "query": "Un sistema che fa screening automatico dei CV in fase di selezione del personale ricade tra i sistemi ad alto rischio dell'AI Act?",
+      "use_case": "AI Act high-risk HR screening",
+      "expected_kind": "positive",
+      "gold_chunk_ids": [
+        "eli/reg/2024/1689/oj__annex_III",
+        "eli/reg/2024/1689/oj__art_26",
+        "eli/reg/2024/1689/oj__art_6",
+        "eli/reg/2024/1689/oj__recital_57"
+      ],
+      "top_10": [
+        {
+          "rank": 1,
+          "chunk_id": "eli/reg/2024/1689/oj__recital_57",
+          "score": 0.7279,
+          "is_gold": true,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "eli/reg/2024/1689/oj__art_6",
+          "score": 0.6825,
+          "is_gold": true,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "eli/reg/2024/1689/oj__recital_62",
+          "score": 0.6787,
+          "is_gold": false,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "eli/reg/2024/1689/oj__recital_125",
+          "score": 0.6785,
+          "is_gold": false,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "eli/reg/2024/1689/oj__annex_III",
+          "score": 0.677,
+          "is_gold": true,
+          "chunk_type": "annex"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "eli/reg/2024/1689/oj__recital_85",
+          "score": 0.6751,
+          "is_gold": false,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 7,
+          "chunk_id": "eli/reg/2024/1689/oj__art_16",
+          "score": 0.6742,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 8,
+          "chunk_id": "eli/reg/2024/1689/oj__recital_60",
+          "score": 0.6734,
+          "is_gold": false,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 9,
+          "chunk_id": "eli/reg/2024/1689/oj__recital_7",
+          "score": 0.6722,
+          "is_gold": false,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 10,
+          "chunk_id": "eli/reg/2024/1689/oj__art_9",
+          "score": 0.6696,
+          "is_gold": false,
+          "chunk_type": "article"
+        }
+      ],
+      "recall_at_5": 0.75,
+      "recall_at_10": 0.75,
+      "mrr": 1.0,
+      "first_gold_rank": 1
+    },
+    {
+      "qid": "Q2",
+      "query": "Quando entrano in vigore gli obblighi dell'AI Act per un sistema di credit scoring già operativo?",
+      "use_case": "Timeline AI Act credit scoring",
+      "expected_kind": "positive",
+      "gold_chunk_ids": [
+        "eli/reg/2024/1689/oj__art_111",
+        "eli/reg/2024/1689/oj__art_113"
+      ],
+      "top_10": [
+        {
+          "rank": 1,
+          "chunk_id": "eli/reg/2024/1689/oj__art_111",
+          "score": 0.7165,
+          "is_gold": true,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "eli/reg/2024/1689/oj__recital_179",
+          "score": 0.7103,
+          "is_gold": false,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "eli/reg/2024/1689/oj__recital_177",
+          "score": 0.7014,
+          "is_gold": false,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "eli/reg/2024/1689/oj__art_2",
+          "score": 0.6633,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "eli/reg/2024/1689/oj__art_1",
+          "score": 0.6596,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "eli/reg/2024/1689/oj__art_72",
+          "score": 0.6582,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 7,
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_42",
+          "score": 0.6527,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 8,
+          "chunk_id": "eli/reg/2024/1689/oj__recital_1",
+          "score": 0.651,
+          "is_gold": false,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 9,
+          "chunk_id": "eli/reg/2024/1689/oj__art_25",
+          "score": 0.6507,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 10,
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_186",
+          "score": 0.6489,
+          "is_gold": false,
+          "chunk_type": "article"
+        }
+      ],
+      "recall_at_5": 0.5,
+      "recall_at_10": 0.5,
+      "mrr": 1.0,
+      "first_gold_rank": 1
+    },
+    {
+      "qid": "Q3",
+      "query": "In che casi devo fare una valutazione d'impatto sui diritti fondamentali ai sensi dell'AI Act in aggiunta alla DPIA prevista dal GDPR?",
+      "use_case": "DPIA vs FRIA",
+      "expected_kind": "positive",
+      "gold_chunk_ids": [
+        "eli/reg/2016/679/oj__art_35",
+        "eli/reg/2016/679/oj__recital_84",
+        "eli/reg/2024/1689/oj__art_27",
+        "eli/reg/2024/1689/oj__recital_96"
+      ],
+      "top_10": [
+        {
+          "rank": 1,
+          "chunk_id": "eli/reg/2024/1689/oj__art_27",
+          "score": 0.7485,
+          "is_gold": true,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "eli/reg/2024/1689/oj__recital_96",
+          "score": 0.7228,
+          "is_gold": true,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "eli/reg/2024/1689/oj__recital_70",
+          "score": 0.7085,
+          "is_gold": false,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "eli/reg/2024/1689/oj__art_1",
+          "score": 0.7052,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "eli/reg/2016/679/oj__art_35",
+          "score": 0.7046,
+          "is_gold": true,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "eli/reg/2024/1689/oj__recital_140",
+          "score": 0.7044,
+          "is_gold": false,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 7,
+          "chunk_id": "eli/reg/2024/1689/oj__art_7",
+          "score": 0.7027,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 8,
+          "chunk_id": "eli/reg/2024/1689/oj__recital_8",
+          "score": 0.698,
+          "is_gold": false,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 9,
+          "chunk_id": "eli/reg/2024/1689/oj__recital_48",
+          "score": 0.6951,
+          "is_gold": false,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 10,
+          "chunk_id": "eli/reg/2024/1689/oj__recital_1",
+          "score": 0.6946,
+          "is_gold": false,
+          "chunk_type": "recital"
+        }
+      ],
+      "recall_at_5": 0.75,
+      "recall_at_10": 0.75,
+      "mrr": 1.0,
+      "first_gold_rank": 1
+    },
+    {
+      "qid": "Q4",
+      "query": "Il Garante si è già pronunciato sull'uso di sistemi di riconoscimento facciale per il controllo accessi dei dipendenti?",
+      "use_case": "Garante riconoscimento facciale lavoro (negative)",
+      "expected_kind": "negative",
+      "gold_chunk_ids": [],
+      "top_10": [
+        {
+          "rank": 1,
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_154",
+          "score": 0.6818,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_155",
+          "score": 0.6757,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_111",
+          "score": 0.6703,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_158",
+          "score": 0.6591,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_154-bis",
+          "score": 0.6565,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_2-quater",
+          "score": 0.6563,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 7,
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_61",
+          "score": 0.651,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 8,
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_156",
+          "score": 0.6508,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 9,
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_157",
+          "score": 0.6501,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 10,
+          "chunk_id": "eli/reg/2024/1689/oj__recital_2",
+          "score": 0.648,
+          "is_gold": false,
+          "chunk_type": "recital"
+        }
+      ],
+      "recall_at_5": null,
+      "recall_at_10": null,
+      "mrr": null,
+      "first_gold_rank": null
+    },
+    {
+      "qid": "Q5",
+      "query": "L'uso di sistemi AI per decisioni che riguardano i lavoratori può attivare responsabilità ai sensi del D.Lgs 231/2001?",
+      "use_case": "231 + AI decisioni HR",
+      "expected_kind": "positive",
+      "gold_chunk_ids": [
+        "akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_25-undecies__paras_1_6",
+        "akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_25-undecies__paras_7_8",
+        "eli/reg/2016/679/oj__art_22"
+      ],
+      "top_10": [
+        {
+          "rank": 1,
+          "chunk_id": "eli/reg/2024/1689/oj__recital_57",
+          "score": 0.7286,
+          "is_gold": false,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "akn/it/act/legge/stato/2025-09-23/132__art_11",
+          "score": 0.7032,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "akn/it/act/legge/stato/2025-09-23/132__art_15",
+          "score": 0.7006,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "akn/it/act/legge/stato/2025-09-23/132__art_7",
+          "score": 0.6995,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "akn/it/act/legge/stato/2025-09-23/132__art_1",
+          "score": 0.6993,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "akn/it/act/legge/stato/2025-09-23/132__art_13",
+          "score": 0.6921,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 7,
+          "chunk_id": "akn/it/act/legge/stato/2025-09-23/132__art_12",
+          "score": 0.6901,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 8,
+          "chunk_id": "eli/reg/2024/1689/oj__recital_1",
+          "score": 0.6886,
+          "is_gold": false,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 9,
+          "chunk_id": "eli/reg/2024/1689/oj__recital_85",
+          "score": 0.6882,
+          "is_gold": false,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 10,
+          "chunk_id": "eli/reg/2024/1689/oj__recital_170",
+          "score": 0.6807,
+          "is_gold": false,
+          "chunk_type": "recital"
+        }
+      ],
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "first_gold_rank": null
+    },
+    {
+      "qid": "Q6",
+      "query": "Quali sono i compiti del responsabile della protezione dei dati?",
+      "use_case": "Compiti del DPO",
+      "expected_kind": "positive",
+      "gold_chunk_ids": [
+        "eli/reg/2016/679/oj__art_37",
+        "eli/reg/2016/679/oj__art_38",
+        "eli/reg/2016/679/oj__art_39"
+      ],
+      "top_10": [
+        {
+          "rank": 1,
+          "chunk_id": "eli/reg/2016/679/oj__art_39",
+          "score": 0.8842,
+          "is_gold": true,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "eli/reg/2016/679/oj__art_38",
+          "score": 0.8422,
+          "is_gold": true,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_2-sex-decies",
+          "score": 0.822,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "eli/reg/2016/679/oj__art_37",
+          "score": 0.8196,
+          "is_gold": true,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "eli/reg/2016/679/oj__recital_95",
+          "score": 0.7916,
+          "is_gold": false,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "eli/reg/2016/679/oj__art_24",
+          "score": 0.7799,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 7,
+          "chunk_id": "eli/reg/2016/679/oj__art_50",
+          "score": 0.7695,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 8,
+          "chunk_id": "eli/reg/2016/679/oj__art_28",
+          "score": 0.7675,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 9,
+          "chunk_id": "eli/reg/2016/679/oj__recital_2",
+          "score": 0.7643,
+          "is_gold": false,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 10,
+          "chunk_id": "eli/reg/2016/679/oj__art_29",
+          "score": 0.7608,
+          "is_gold": false,
+          "chunk_type": "article"
+        }
+      ],
+      "recall_at_5": 1.0,
+      "recall_at_10": 1.0,
+      "mrr": 1.0,
+      "first_gold_rank": 1
+    },
+    {
+      "qid": "Q7",
+      "query": "Quando è obbligatoria la valutazione d'impatto sulla protezione dei dati?",
+      "use_case": "Quando DPIA è obbligatoria",
+      "expected_kind": "positive",
+      "gold_chunk_ids": [
+        "eli/reg/2016/679/oj__art_35",
+        "eli/reg/2016/679/oj__recital_84",
+        "eli/reg/2016/679/oj__recital_91"
+      ],
+      "top_10": [
+        {
+          "rank": 1,
+          "chunk_id": "eli/reg/2016/679/oj__recital_84",
+          "score": 0.8146,
+          "is_gold": true,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "eli/reg/2016/679/oj__art_35",
+          "score": 0.8037,
+          "is_gold": true,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "eli/reg/2016/679/oj__recital_90",
+          "score": 0.7998,
+          "is_gold": false,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "eli/reg/2016/679/oj__recital_92",
+          "score": 0.775,
+          "is_gold": false,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "eli/reg/2016/679/oj__recital_95",
+          "score": 0.7673,
+          "is_gold": false,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "eli/reg/2016/679/oj__recital_91",
+          "score": 0.7466,
+          "is_gold": true,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 7,
+          "chunk_id": "eli/reg/2016/679/oj__art_19",
+          "score": 0.7448,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 8,
+          "chunk_id": "eli/reg/2016/679/oj__recital_87",
+          "score": 0.7256,
+          "is_gold": false,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 9,
+          "chunk_id": "eli/reg/2016/679/oj__recital_76",
+          "score": 0.7254,
+          "is_gold": false,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 10,
+          "chunk_id": "eli/reg/2016/679/oj__recital_96",
+          "score": 0.7222,
+          "is_gold": false,
+          "chunk_type": "recital"
+        }
+      ],
+      "recall_at_5": 0.6667,
+      "recall_at_10": 1.0,
+      "mrr": 1.0,
+      "first_gold_rank": 1
+    },
+    {
+      "qid": "Q8",
+      "query": "Cos'è la valutazione d'impatto sui diritti fondamentali e quando va condotta?",
+      "use_case": "Cos'è FRIA e quando si fa",
+      "expected_kind": "positive",
+      "gold_chunk_ids": [
+        "eli/reg/2024/1689/oj__art_27",
+        "eli/reg/2024/1689/oj__recital_96"
+      ],
+      "top_10": [
+        {
+          "rank": 1,
+          "chunk_id": "eli/reg/2016/679/oj__recital_84",
+          "score": 0.7315,
+          "is_gold": false,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "eli/reg/2024/1689/oj__art_27",
+          "score": 0.7238,
+          "is_gold": true,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "eli/reg/2016/679/oj__art_35",
+          "score": 0.7189,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "eli/reg/2016/679/oj__recital_90",
+          "score": 0.7157,
+          "is_gold": false,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "eli/reg/2016/679/oj__art_4",
+          "score": 0.7037,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "eli/reg/2016/679/oj__recital_92",
+          "score": 0.7019,
+          "is_gold": false,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 7,
+          "chunk_id": "eli/reg/2024/1689/oj__recital_96",
+          "score": 0.7,
+          "is_gold": true,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 8,
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_75",
+          "score": 0.6984,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 9,
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_30",
+          "score": 0.695,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 10,
+          "chunk_id": "eli/reg/2024/1689/oj__art_3",
+          "score": 0.6944,
+          "is_gold": false,
+          "chunk_type": "article"
+        }
+      ],
+      "recall_at_5": 0.5,
+      "recall_at_10": 1.0,
+      "mrr": 0.5,
+      "first_gold_rank": 2
+    },
+    {
+      "qid": "Q9",
+      "query": "Quali sono i reati presupposto in materia di trattamento illecito di dati personali ai sensi del 231?",
+      "use_case": "Reati 231 trattamento illecito dati",
+      "expected_kind": "positive",
+      "gold_chunk_ids": [
+        "akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_24-bis",
+        "akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_25-undecies__paras_1_6",
+        "akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_25-undecies__paras_7_8",
+        "akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_167"
+      ],
+      "top_10": [
+        {
+          "rank": 1,
+          "chunk_id": "eli/reg/2016/679/oj__art_10",
+          "score": 0.7198,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "eli/reg/2016/679/oj__recital_2",
+          "score": 0.7196,
+          "is_gold": false,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "eli/reg/2016/679/oj__art_1",
+          "score": 0.7185,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "eli/reg/2016/679/oj__recital_19",
+          "score": 0.7163,
+          "is_gold": false,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "eli/reg/2016/679/oj__recital_75",
+          "score": 0.7145,
+          "is_gold": false,
+          "chunk_type": "recital"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "eli/reg/2016/679/oj__art_5",
+          "score": 0.7072,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 7,
+          "chunk_id": "eli/reg/2016/679/oj__art_21",
+          "score": 0.7009,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 8,
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_167",
+          "score": 0.7004,
+          "is_gold": true,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 9,
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_2-novies",
+          "score": 0.6982,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 10,
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_58",
+          "score": 0.6956,
+          "is_gold": false,
+          "chunk_type": "article"
+        }
+      ],
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.25,
+      "mrr": 0.125,
+      "first_gold_rank": 8
+    },
+    {
+      "qid": "Q10",
+      "query": "La mia azienda è considerata soggetto essenziale o importante ai sensi del decreto NIS2?",
+      "use_case": "NIS2 soggetti essenziali/importanti",
+      "expected_kind": "positive",
+      "gold_chunk_ids": [
+        "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_3",
+        "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_6",
+        "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_7"
+      ],
+      "top_10": [
+        {
+          "rank": 1,
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_30",
+          "score": 0.6919,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 2,
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_34",
+          "score": 0.691,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 3,
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_27",
+          "score": 0.6901,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 4,
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_31",
+          "score": 0.6849,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 5,
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_32",
+          "score": 0.683,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 6,
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_35",
+          "score": 0.6663,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 7,
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_28",
+          "score": 0.6579,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 8,
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_43",
+          "score": 0.6557,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 9,
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_18",
+          "score": 0.6495,
+          "is_gold": false,
+          "chunk_type": "article"
+        },
+        {
+          "rank": 10,
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_11",
+          "score": 0.6487,
+          "is_gold": false,
+          "chunk_type": "article"
+        }
+      ],
+      "recall_at_5": 0.0,
+      "recall_at_10": 0.0,
+      "mrr": 0.0,
+      "first_gold_rank": null
+    }
+  ],
+  "aggregate": {
+    "n_positive_queries": 9,
+    "mean_recall_at_5": 0.463,
+    "mean_recall_at_10": 0.5833,
+    "mean_mrr": 0.625,
+    "n_queries_with_zero_recall_at_10": 2
+  }
+}

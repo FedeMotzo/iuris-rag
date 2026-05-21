@@ -1,0 +1,21 @@
+# Aliases sigla -> forma estesa.
+# Ogni voce DEVE essere giustificata da una query del benchmark che
+# fallisce senza l'alias. Niente alias preventivi.
+#
+# Schema: chiave = sigla (case-insensitive matching), valore = lista
+# di forme estese da concatenare alla query.
+
+FRIA:
+  # Q19 (DPIA + FRIA scoring bancario): 0 occorrenze "FRIA" nel corpus,
+  # tutte le occorrenze del concetto in forma estesa italiana.
+  - "valutazione d'impatto sui diritti fondamentali"
+
+DPIA:
+  # Q19: 0 occorrenze "DPIA" nel corpus, art. 35 GDPR usa solo la
+  # forma estesa.
+  - "valutazione d'impatto sulla protezione dei dati"
+
+scoring creditizio:
+  # Q19: corpus usa "merito di credito" (Annex III AI Act, recital 58).
+  # NB: chiave multi-token. Il matching deve gestire questo caso.
+  - "merito di credito"

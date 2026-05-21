@@ -1,0 +1,241 @@
+{
+  "metadata": {
+    "date": "2026-05-20",
+    "judge": "claude-sonnet-4-6",
+    "embeddings": "BAAI/bge-m3",
+    "metrics": [
+      "faithfulness",
+      "answer_relevancy"
+    ]
+  },
+  "results": [
+    {
+      "qid": "Q1",
+      "faithfulness": 0.8823529411764706,
+      "answer_relevancy": 0.9475043557579428,
+      "has_corpus_limit_declaration": false
+    },
+    {
+      "qid": "Q2",
+      "faithfulness": 0.7272727272727273,
+      "answer_relevancy": 1.0000000000000002,
+      "has_corpus_limit_declaration": false
+    },
+    {
+      "qid": "Q3",
+      "faithfulness": 0.9090909090909091,
+      "answer_relevancy": 0.8804264445886181,
+      "has_corpus_limit_declaration": false
+    },
+    {
+      "qid": "Q6",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7859983483303157,
+      "has_corpus_limit_declaration": false
+    },
+    {
+      "qid": "Q7",
+      "faithfulness": 0.8947368421052632,
+      "answer_relevancy": 0.8659732805909177,
+      "has_corpus_limit_declaration": false
+    },
+    {
+      "qid": "Q8",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7177220244585987,
+      "has_corpus_limit_declaration": false
+    },
+    {
+      "qid": "Q9",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": true
+    },
+    {
+      "qid": "Q10",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": false
+    },
+    {
+      "qid": "Q11",
+      "faithfulness": 0.8888888888888888,
+      "answer_relevancy": 0.9803044016273277,
+      "has_corpus_limit_declaration": false
+    },
+    {
+      "qid": "Q12",
+      "faithfulness": 0.9230769230769231,
+      "answer_relevancy": 0.7515134501294349,
+      "has_corpus_limit_declaration": true
+    },
+    {
+      "qid": "Q13",
+      "faithfulness": 0.9473684210526315,
+      "answer_relevancy": 0.7046953110211399,
+      "has_corpus_limit_declaration": true
+    },
+    {
+      "qid": "Q14",
+      "faithfulness": 0.9473684210526315,
+      "answer_relevancy": 0.9573349302548213,
+      "has_corpus_limit_declaration": false
+    },
+    {
+      "qid": "Q15",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8603106533475857,
+      "has_corpus_limit_declaration": true
+    },
+    {
+      "qid": "Q16",
+      "faithfulness": 0.7142857142857143,
+      "answer_relevancy": 0.8937644975296306,
+      "has_corpus_limit_declaration": false
+    },
+    {
+      "qid": "Q17",
+      "faithfulness": 0.625,
+      "answer_relevancy": 0.6998451656589975,
+      "has_corpus_limit_declaration": false
+    },
+    {
+      "qid": "Q18",
+      "faithfulness": 0.9411764705882353,
+      "answer_relevancy": 0.8240182553744083,
+      "has_corpus_limit_declaration": false
+    },
+    {
+      "qid": "Q19",
+      "faithfulness": 0.5833333333333334,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": false
+    },
+    {
+      "qid": "Q24",
+      "faithfulness": 0.7083333333333334,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": true
+    },
+    {
+      "qid": "Q25",
+      "faithfulness": 0.8125,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": true
+    },
+    {
+      "qid": "Q26",
+      "faithfulness": 0.5769230769230769,
+      "answer_relevancy": 0.7358638569175164,
+      "has_corpus_limit_declaration": true
+    },
+    {
+      "qid": "Q27",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7160689194265897,
+      "has_corpus_limit_declaration": true
+    },
+    {
+      "qid": "Q28",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8297728613463657,
+      "has_corpus_limit_declaration": false
+    },
+    {
+      "qid": "Q29",
+      "faithfulness": 0.8,
+      "answer_relevancy": 0.8337836898208788,
+      "has_corpus_limit_declaration": false
+    },
+    {
+      "qid": "Q30",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7279089221739069,
+      "has_corpus_limit_declaration": false
+    },
+    {
+      "qid": "Q31",
+      "faithfulness": 0.7857142857142857,
+      "answer_relevancy": 0.8024789027709651,
+      "has_corpus_limit_declaration": false
+    },
+    {
+      "qid": "Q32",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8119453322952989,
+      "has_corpus_limit_declaration": false
+    },
+    {
+      "qid": "Q33",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6445479913473503,
+      "has_corpus_limit_declaration": false
+    },
+    {
+      "qid": "Q34",
+      "faithfulness": 0.96,
+      "answer_relevancy": 0.8667187529059422,
+      "has_corpus_limit_declaration": false
+    },
+    {
+      "qid": "Q35",
+      "faithfulness": 0.375,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": false
+    },
+    {
+      "qid": "Q36",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7193995933321381,
+      "has_corpus_limit_declaration": false
+    },
+    {
+      "qid": "Q37",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8266378481909274,
+      "has_corpus_limit_declaration": false
+    },
+    {
+      "qid": "Q38",
+      "faithfulness": 0.9523809523809523,
+      "answer_relevancy": 0.8564545828504341,
+      "has_corpus_limit_declaration": false
+    },
+    {
+      "qid": "Q39",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7790780446271449,
+      "has_corpus_limit_declaration": false
+    },
+    {
+      "qid": "Q40",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7743159565322236,
+      "has_corpus_limit_declaration": false
+    },
+    {
+      "qid": "Q43",
+      "faithfulness": 0.8181818181818182,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": true
+    },
+    {
+      "qid": "Q45",
+      "faithfulness": 0.8235294117647058,
+      "answer_relevancy": 0.7233019873447767,
+      "has_corpus_limit_declaration": true
+    },
+    {
+      "qid": "Q49",
+      "faithfulness": 0.7,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": true
+    },
+    {
+      "qid": "Q50",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.6880211950611603,
+      "has_corpus_limit_declaration": false
+    }
+  ]
+}

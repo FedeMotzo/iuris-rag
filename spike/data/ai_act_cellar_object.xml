@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NOTICE decoding="ita" type="object">
+   <EXPRESSION>
+      <URI>
+         <VALUE>http://publications.europa.eu/resource/cellar/dc8116a1-3fe6-11ef-865a-01aa75ed71a1.0013</VALUE>
+         <IDENTIFIER>dc8116a1-3fe6-11ef-865a-01aa75ed71a1.0013</IDENTIFIER>
+         <TYPE>cellar</TYPE>
+      </URI>
+      <SAMEAS>
+         <URI>
+            <VALUE>http://publications.europa.eu/resource/oj/L_202401689.ITA</VALUE>
+            <IDENTIFIER>L_202401689.ITA</IDENTIFIER>
+            <TYPE>oj</TYPE>
+         </URI>
+      </SAMEAS>
+      <EXPRESSION_BELONGS_TO_WORK type="link">
+         <URI>
+            <VALUE>http://publications.europa.eu/resource/cellar/dc8116a1-3fe6-11ef-865a-01aa75ed71a1</VALUE>
+            <IDENTIFIER>dc8116a1-3fe6-11ef-865a-01aa75ed71a1</IDENTIFIER>
+            <TYPE>cellar</TYPE>
+         </URI>
+         <SAMEAS>
+            <URI>
+               <VALUE>http://publications.europa.eu/resource/celex/32024R1689</VALUE>
+               <IDENTIFIER>32024R1689</IDENTIFIER>
+               <TYPE>celex</TYPE>
+            </URI>
+         </SAMEAS>
+         <SAMEAS>
+            <URI>
+               <VALUE>http://publications.europa.eu/resource/oj/L_202401689</VALUE>
+               <IDENTIFIER>L_202401689</IDENTIFIER>
+               <TYPE>oj</TYPE>
+            </URI>
+         </SAMEAS>
+         <SAMEAS>
+            <URI>
+               <VALUE>http://publications.europa.eu/resource/eli/reg/2024/1689/oj</VALUE>
+               <IDENTIFIER>reg:2024:1689:oj</IDENTIFIER>
+               <TYPE>eli</TYPE>
+            </URI>
+         </SAMEAS>
+      </EXPRESSION_BELONGS_TO_WORK>
+      <EXPRESSION_MANIFESTED_BY_MANIFESTATION type="link">
+         <URI>
+            <VALUE>http://publications.europa.eu/resource/cellar/dc8116a1-3fe6-11ef-865a-01aa75ed71a1.0013.01</VALUE>
+            <IDENTIFIER>dc8116a1-3fe6-11ef-865a-01aa75ed71a1.0013.01</IDENTIFIER>
+            <TYPE>cellar</TYPE>
+         </URI>
+         <SAMEAS>
+            <URI>
+               <VALUE>http://publications.europa.eu/resource/oj/L_202401689.ITA.pdfa2a</VALUE>
+               <IDENTIFIER>L_202401689.ITA.pdfa2a</IDENTIFIER>
+               <TYPE>oj</TYPE>
+            </URI>
+         </SAMEAS>
+      </EXPRESSION_MANIFESTED_BY_MANIFESTATION>
+      <TITLE type="data">
+         <VALUE>Regolamento (UE) 2024/1689 del Parlamento europeo e del Consiglio, del 13 giugno 2024, che stabilisce regole armonizzate sull'intelligenza artificiale e modifica i regolamenti (CE) n, 300/2008, (UE) n, 167/2013, (UE) n, 168/2013, (UE) 2018/858, (UE) 2018/1139 e (UE) 2019/2144 e le direttive 2014/90/UE, (UE) 2016/797 e (UE) 2020/1828 (regolamento sull'intelligenza artificiale) (Testo rilevante ai fini del SEE)</VALUE>
+         <LANG>it</LANG>
+      </TITLE>
+      <TITLE type="data">
+         <VALUE>PE/24/2024/REV/1</VALUE>
+      </TITLE>
+      <LANG type="data">
+         <VALUE>it</VALUE>
+      </LANG>
+      <EXPRESSION_USES_LANGUAGE type="concept">
+         <URI>
+            <VALUE>http://publications.europa.eu/resource/authority/language/ITA</VALUE>
+            <IDENTIFIER>ITA</IDENTIFIER>
+            <TYPE>language</TYPE>
+         </URI>
+         <OP-CODE>ITA</OP-CODE>
+         <IDENTIFIER>ITA</IDENTIFIER>
+         <PREFLABEL>italiano</PREFLABEL>
+         <ALTLABEL>italiano</ALTLABEL>
+      </EXPRESSION_USES_LANGUAGE>
+      <CREATIONDATE type="date">
+         <VALUE>2024-07-12T02:36:57.511+02:00</VALUE>
+         <YEAR>2024</YEAR>
+         <MONTH>07</MONTH>
+         <DAY>12</DAY>
+      </CREATIONDATE>
+      <EXPRESSION_MANIFESTED_BY_MANIFESTATION type="link">
+         <URI>
+            <VALUE>http://publications.europa.eu/resource/cellar/dc8116a1-3fe6-11ef-865a-01aa75ed71a1.0013.02</VALUE>
+            <IDENTIFIER>dc8116a1-3fe6-11ef-865a-01aa75ed71a1.0013.02</IDENTIFIER>
+            <TYPE>cellar</TYPE>
+         </URI>
+         <SAMEAS>
+            <URI>
+               <VALUE>http://publications.europa.eu/resource/oj/L_202401689.ITA.fmx4</VALUE>
+               <IDENTIFIER>L_202401689.ITA.fmx4</IDENTIFIER>
+               <TYPE>oj</TYPE>
+            </URI>
+         </SAMEAS>
+      </EXPRESSION_MANIFESTED_BY_MANIFESTATION>
+      <EXPRESSION_MANIFESTED_BY_MANIFESTATION type="link">
+         <URI>
+            <VALUE>http://publications.europa.eu/resource/cellar/dc8116a1-3fe6-11ef-865a-01aa75ed71a1.0013.03</VALUE>
+            <IDENTIFIER>dc8116a1-3fe6-11ef-865a-01aa75ed71a1.0013.03</IDENTIFIER>
+            <TYPE>cellar</TYPE>
+         </URI>
+         <SAMEAS>
+            <URI>
+               <VALUE>http://publications.europa.eu/resource/oj/L_202401689.ITA.xhtml</VALUE>
+               <IDENTIFIER>L_202401689.ITA.xhtml</IDENTIFIER>
+               <TYPE>oj</TYPE>
+            </URI>
+         </SAMEAS>
+      </EXPRESSION_MANIFESTED_BY_MANIFESTATION>
+      <LANG type="data">
+         <VALUE>ita</VALUE>
+      </LANG>
+      <LASTMODIFICATIONDATE type="date">
+         <VALUE>2024-10-17T13:38:19.239+02:00</VALUE>
+         <YEAR>2024</YEAR>
+         <MONTH>10</MONTH>
+         <DAY>17</DAY>
+      </LASTMODIFICATIONDATE>
+      <EXPRESSION_SUBTITLE type="data">
+         <VALUE>PE/24/2024/REV/1</VALUE>
+      </EXPRESSION_SUBTITLE>
+      <EXPRESSION_TITLE type="data">
+         <VALUE>Regolamento (UE) 2024/1689 del Parlamento europeo e del Consiglio, del 13 giugno 2024, che stabilisce regole armonizzate sull'intelligenza artificiale e modifica i regolamenti (CE) n, 300/2008, (UE) n, 167/2013, (UE) n, 168/2013, (UE) 2018/858, (UE) 2018/1139 e (UE) 2019/2144 e le direttive 2014/90/UE, (UE) 2016/797 e (UE) 2020/1828 (regolamento sull'intelligenza artificiale) (Testo rilevante ai fini del SEE)</VALUE>
+         <LANG>it</LANG>
+      </EXPRESSION_TITLE>
+   </EXPRESSION>
+</NOTICE>

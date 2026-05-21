@@ -1,0 +1,2770 @@
+{
+  "queries": [
+    {
+      "qid": "Q1",
+      "query": "Un sistema che fa screening automatico dei CV in fase di selezione del personale ricade tra i sistemi ad alto rischio dell'AI Act?",
+      "use_case": "AI Act high-risk HR screening",
+      "expected_kind": "positive",
+      "candidates": [
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_26",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": "art_26",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo III - SISTEMI DI IA AD ALTO RISCHIO",
+            "art. 26"
+          ],
+          "text_excerpt": "Articolo 26 - Obblighi dei deployer dei sistemi di IA ad alto rischio\n\n1. I deployer di sistemi di IA ad alto rischio adottano idonee misure tecniche e organizzative per garantire di utilizzare tali sistemi conformemente alle istruzioni per l'uso che",
+          "found_via": [
+            "hint:aiact/art_26"
+          ],
+          "is_gold": true,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_6",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": "art_6",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo III - SISTEMI DI IA AD ALTO RISCHIO",
+            "art. 6"
+          ],
+          "text_excerpt": "Articolo 6 - Regole di classificazione per i sistemi di IA ad alto rischio\n\n1. A prescindere dal fatto che sia immesso sul mercato o messo in servizio indipendentemente dai prodotti di cui alle lettere a) e b), un sistema di IA è considerato ad alto ",
+          "found_via": [
+            "hint:aiact/art_6",
+            "term:allegato III"
+          ],
+          "is_gold": true,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_15",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2001-06-08/231",
+          "article_eid": "art_15",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo I",
+            "Sezione II",
+            "art. 15"
+          ],
+          "text_excerpt": "Art. 15 - Commissario giudiziale\n\n1. Se sussistono i presupposti per l'applicazione di una sanzione interdittiva che determina l'interruzione dell'attivita' dell'ente, il giudice, in luogo dell'applicazione della sanzione, dispone la prosecuzione del",
+          "found_via": [
+            "term:occupazione"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_17",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2001-06-08/231",
+          "article_eid": "art_17",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo I",
+            "Sezione II",
+            "art. 17"
+          ],
+          "text_excerpt": "Art. 17 - Riparazione delle conseguenze del reato\n\n1. Ferma l'applicazione delle sanzioni pecuniarie, le sanzioni interdittive non si applicano quando, prima della dichiarazione di apertura del dibattimento di primo grado, concorrono le seguenti cond",
+          "found_via": [
+            "term:occupazione"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_2-sexies",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2003-06-30/196",
+          "article_eid": "art_2-sexies",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "art. 2-sexies"
+          ],
+          "text_excerpt": "Art. 2-sexies - (Trattamento di categorie particolari di dati personali necessario per motivi di interesse pubblico rilevante)\n\n1. I trattamenti delle categorie particolari di dati personali di cui all'articolo 9, paragrafo 1, del Regolamento, necess",
+          "found_via": [
+            "term:occupazione"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_32",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2024-09-04/138",
+          "article_eid": "art_32",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo IV",
+            "art. 32"
+          ],
+          "text_excerpt": "Art. 32 - Previsioni settoriali specifiche\n\n1. Fermo restando quanto previsto dagli articoli 23, 24, 25, 27, 28 e 29, tenuto conto degli impatti sociali e economici di un incidente significativo nella catena di approvvigionamento del settore della pu",
+          "found_via": [
+            "term:allegato III"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_6",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2024-09-04/138",
+          "article_eid": "art_6",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo I",
+            "art. 6"
+          ],
+          "text_excerpt": "Art. 6 - Soggetti essenziali e soggetti importanti\n\n1. Ai fini del presente decreto, sono considerati soggetti essenziali: a) i soggetti di cui all'allegato I che superano i massimali per le medie imprese di cui all'articolo 2, paragrafo 1, dell'alle",
+          "found_via": [
+            "term:allegato III"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_88",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": "art_88",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo IX - Disposizioni relative a specifiche situazioni di trattamento",
+            "art. 88"
+          ],
+          "text_excerpt": "Articolo 88 - Trattamento dei dati nell'ambito dei rapporti di lavoro\n\n1. Gli Stati membri possono prevedere, con legge o tramite contratti collettivi, norme più specifiche per assicurare la protezione dei diritti e delle libertà con riguardo al trat",
+          "found_via": [
+            "term:assunzione"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_155",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 155"
+          ],
+          "text_excerpt": "Considerando 155\n\nIl diritto degli Stati membri o i contratti collettivi, ivi compresi gli «accordi aziendali», possono prevedere norme specifiche per il trattamento dei dati personali dei dipendenti nell'ambito dei rapporti di lavoro, in particolare",
+          "found_via": [
+            "term:assunzione"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_157",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 157"
+          ],
+          "text_excerpt": "Considerando 157\n\nCombinando informazioni provenienti dai registri, i ricercatori possono ottenere nuove conoscenze di grande utilità relativamente a patologie diffuse come le malattie cardiovascolari, il cancro e la depressione. Avvalendosi dei regi",
+          "found_via": [
+            "term:occupazione"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_71",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 71"
+          ],
+          "text_excerpt": "Considerando 71\n\nL'interessato dovrebbe avere il diritto di non essere sottoposto a una decisione, che possa includere una misura, che valuti aspetti personali che lo riguardano, che sia basata unicamente su un trattamento automatizzato e che produca",
+          "found_via": [
+            "term:assunzione"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__annex_III",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": "annex_III",
+          "chunk_type": "annex",
+          "hierarchy_path": [
+            "Allegato III - Sistemi di IA ad alto rischio di cui all'articolo 6, paragrafo 2"
+          ],
+          "text_excerpt": "ALLEGATO III - Sistemi di IA ad alto rischio di cui all'articolo 6, paragrafo 2\n\nI sistemi di IA ad alto rischio a norma dell'articolo 6, paragrafo 2, sono i sistemi di IA elencati in uno dei settori indicati di seguito.\n\n1. Biometria, nella misura i",
+          "found_via": [
+            "term:occupazione",
+            "term:assunzione"
+          ],
+          "is_gold": true,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_12",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": "art_12",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo III - SISTEMI DI IA AD ALTO RISCHIO",
+            "art. 12"
+          ],
+          "text_excerpt": "Articolo 12 - Conservazione delle registrazioni\n\n1. I sistemi di IA ad alto rischio consentono a livello tecnico la registrazione automatica degli eventi («log») per la durata del ciclo di vita del sistema.\n\n2. Al fine di garantire un livello di trac",
+          "found_via": [
+            "term:allegato III"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_14",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": "art_14",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo III - SISTEMI DI IA AD ALTO RISCHIO",
+            "art. 14"
+          ],
+          "text_excerpt": "Articolo 14 - Sorveglianza umana\n\n1. I sistemi di IA ad alto rischio sono progettati e sviluppati, anche con strumenti di interfaccia uomo-macchina adeguati, in modo tale da poter essere efficacemente supervisionati da persone fisiche durante il peri",
+          "found_via": [
+            "term:alto rischio"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_16",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": "art_16",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo III - SISTEMI DI IA AD ALTO RISCHIO",
+            "art. 16"
+          ],
+          "text_excerpt": "Articolo 16 - Obblighi dei fornitori dei sistemi di IA ad alto rischio",
+          "found_via": [
+            "term:alto rischio"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_20",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": "art_20",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo III - SISTEMI DI IA AD ALTO RISCHIO",
+            "art. 20"
+          ],
+          "text_excerpt": "Articolo 20 - Misure correttive e dovere di informazione\n\n1. I fornitori di sistemi di IA ad alto rischio che ritengono o hanno motivo di ritenere che un sistema di IA ad alto rischio da essi immesso sul mercato o messo in servizio non sia conforme a",
+          "found_via": [
+            "term:alto rischio"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_27",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": "art_27",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo III - SISTEMI DI IA AD ALTO RISCHIO",
+            "art. 27"
+          ],
+          "text_excerpt": "Articolo 27 - Valutazione d'impatto sui diritti fondamentali per i sistemi di IA ad alto rischio\n\n1. Prima di utilizzare un sistema di IA ad alto rischio di cui all'articolo 6, paragrafo 2, ad eccezione dei sistemi di IA ad alto rischio destinati a e",
+          "found_via": [
+            "term:allegato III"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_44",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": "art_44",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo III - SISTEMI DI IA AD ALTO RISCHIO",
+            "art. 44"
+          ],
+          "text_excerpt": "Articolo 44 - Certificati\n\n1. I certificati rilasciati dagli organismi notificati a norma dell'allegato VII sono redatti in una lingua che può essere facilmente compresa dalle autorità pertinenti dello Stato membro in cui è stabilito l'organismo noti",
+          "found_via": [
+            "term:allegato III"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_49",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": "art_49",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo III - SISTEMI DI IA AD ALTO RISCHIO",
+            "art. 49"
+          ],
+          "text_excerpt": "Articolo 49 - Registrazione\n\n1. Prima di immettere sul mercato o mettere in servizio un sistema di IA ad alto rischio elencato nell'allegato III, ad eccezione dei sistemi di IA ad alto rischio di cui all'allegato III, punto 2, il fornitore o, ove app",
+          "found_via": [
+            "term:allegato III"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_60",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": "art_60",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo VI - MISURE A SOSTEGNO DELL'INNOVAZIONE",
+            "art. 60"
+          ],
+          "text_excerpt": "Articolo 60 - Prove di sistemi di IA ad alto rischio in condizioni reali al di fuori degli spazi di sperimentazione normativa per l'IA\n\n1. Le prove di sistemi di IA ad alto rischio in condizioni reali al di fuori degli spazi di sperimentazione normat",
+          "found_via": [
+            "term:allegato III"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_7",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": "art_7",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo III - SISTEMI DI IA AD ALTO RISCHIO",
+            "art. 7"
+          ],
+          "text_excerpt": "Articolo 7 - Modifiche dell'allegato III\n\n1. Alla Commissione è conferito il potere di adottare atti delegati conformemente all'articolo 97 al fine di modificare l'allegato III aggiungendo o modificando i casi d'uso dei sistemi di IA ad alto rischio ",
+          "found_via": [
+            "term:allegato III"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_86",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": "art_86",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo IX - MONITORAGGIO SUCCESSIVO ALL'IMMISSIONE SUL MERCATO, CONDIVISIONE DELLE INFORMAZIONI E VIGILANZA DEL MERCATO",
+            "art. 86"
+          ],
+          "text_excerpt": "Articolo 86 - Diritto alla spiegazione dei singoli processi decisionali\n\n1. Qualsiasi persona interessata oggetto di una decisione adottata dal deployer sulla base dell'output di un sistema di IA ad alto rischio elencato nell'allegato III, ad eccezio",
+          "found_via": [
+            "term:allegato III"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_123",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 123"
+          ],
+          "text_excerpt": "Considerando 123\n\nAl fine di garantire un elevato livello di affidabilità dei sistemi di IA ad alto rischio, è opportuno sottoporre tali sistemi a una valutazione della conformità prima della loro immissione sul mercato o messa in servizio.",
+          "found_via": [
+            "term:alto rischio"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_129",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 129"
+          ],
+          "text_excerpt": "Considerando 129\n\nI sistemi di IA ad alto rischio dovrebbero recare la marcatura CE per indicare la loro conformità al presente regolamento, in modo da poter circolare liberamente nel mercato interno. Per i sistemi di IA ad alto rischio integrati in ",
+          "found_via": [
+            "term:alto rischio"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_178",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 178"
+          ],
+          "text_excerpt": "Considerando 178\n\nI fornitori di sistemi di IA ad alto rischio sono incoraggiati a iniziare a rispettare, su base volontaria, i pertinenti obblighi del presente regolamento già durante il periodo transitorio.",
+          "found_via": [
+            "term:alto rischio"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_2",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 2"
+          ],
+          "text_excerpt": "Considerando 2\n\nIl presente regolamento dovrebbe essere applicato conformemente ai valori dell'Unione sanciti dalla Carta agevolando la protezione delle persone fisiche, delle imprese, della democrazia e dello Stato di diritto e la protezione dell'am",
+          "found_via": [
+            "term:occupazione"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_51",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 51"
+          ],
+          "text_excerpt": "Considerando 51\n\nLa classificazione di un sistema di IA come ad alto rischio a norma del presente regolamento non dovrebbe necessariamente significare che il prodotto il cui componente di sicurezza è il sistema di IA, o il sistema di IA stesso in qua",
+          "found_via": [
+            "term:alto rischio"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_52",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 52"
+          ],
+          "text_excerpt": "Considerando 52\n\nPer quanto riguarda i sistemi di IA indipendenti, ossia i sistemi di IA ad alto rischio diversi da quelli che sono componenti di sicurezza dei prodotti o che sono essi stessi prodotti, è opportuno classificarli come ad alto rischio s",
+          "found_via": [
+            "term:alto rischio"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_57",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 57"
+          ],
+          "text_excerpt": "Considerando 57\n\nAnche i sistemi di IA utilizzati nel settore dell'occupazione, nella gestione dei lavoratori e nell'accesso al lavoro autonomo, in particolare per l'assunzione e la selezione delle persone, per l'adozione di decisioni riguardanti le ",
+          "found_via": [
+            "term:occupazione",
+            "term:assunzione"
+          ],
+          "is_gold": true,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_58",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 58"
+          ],
+          "text_excerpt": "Considerando 58\n\nUn altro settore in cui l'utilizzo dei sistemi di IA merita particolare attenzione è l'accesso ad alcuni servizi e prestazioni essenziali, pubblici e privati, necessari affinché le persone possano partecipare pienamente alla vita soc",
+          "found_via": [
+            "term:occupazione"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_85",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 85"
+          ],
+          "text_excerpt": "Considerando 85\n\nI sistemi di IA per finalità generali possono essere utilizzati da soli come sistemi di IA ad alto rischio o essere componenti di altri sistemi di IA ad alto rischio. Pertanto, data la loro natura particolare e al fine di garantire u",
+          "found_via": [
+            "term:alto rischio"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_9",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 9"
+          ],
+          "text_excerpt": "Considerando 9\n\nÈ opportuno che le norme armonizzate applicabili all'immissione sul mercato, alla messa in servizio e all'uso di sistemi di IA ad alto rischio siano stabilite conformemente al regolamento (CE) n, 765/2008 del Parlamento europeo e del ",
+          "found_via": [
+            "term:occupazione"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_90",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 90"
+          ],
+          "text_excerpt": "Considerando 90\n\nLa Commissione potrebbe elaborare e raccomandare clausole contrattuali tipo volontarie tra i fornitori di sistemi di IA ad alto rischio e i terzi che forniscono strumenti, servizi, componenti o processi utilizzati o integrati in sist",
+          "found_via": [
+            "term:alto rischio"
+          ],
+          "is_gold": false,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "qid": "Q2",
+      "query": "Quando entrano in vigore gli obblighi dell'AI Act per un sistema di credit scoring già operativo?",
+      "use_case": "Timeline AI Act credit scoring",
+      "expected_kind": "positive",
+      "candidates": [
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_111",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": "art_111",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo XIII - DISPOSIZIONI FINALI",
+            "art. 111"
+          ],
+          "text_excerpt": "Articolo 111 - Sistemi di IA già immessi sul mercato o messi in servizio e modelli di IA per finalità generali già immessi sul mercato\n\n1. Fatta salva l'applicazione dell'articolo 5 di cui all'articolo 113, paragrafo 3, lettera a), i sistemi di IA ch",
+          "found_via": [
+            "hint:aiact/art_111",
+            "term:agosto 2026"
+          ],
+          "is_gold": true,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_113",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": "art_113",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo XIII - DISPOSIZIONI FINALI",
+            "art. 113"
+          ],
+          "text_excerpt": "Articolo 113 - Entrata in vigore e applicazione",
+          "found_via": [
+            "hint:aiact/art_113",
+            "term:entrata in vigore"
+          ],
+          "is_gold": true,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_2",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2001-06-08/231",
+          "article_eid": "art_2",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo I",
+            "Sezione I",
+            "art. 2"
+          ],
+          "text_excerpt": "Art. 2 - Principio di legalita'\n\n1. L'ente non puo' essere ritenuto responsabile per un fatto costituente reato se la sua responsabilita' amministrativa in relazione a quel reato e le relative sanzioni non sono espressamente previste da una legge ent",
+          "found_via": [
+            "term:entrata in vigore"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_183",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2003-06-30/196",
+          "article_eid": "art_183",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "art. 183"
+          ],
+          "text_excerpt": "Art. 183 - (Norme abrogate)\n\n1. Dalla data di entrata in vigore del presente codice sono abrogati: a) la legge 31 dicembre 1996, n. 675; b) la legge 3 novembre 2000, n. 325; c) il decreto legislativo 9 maggio 1997, n. 123; d) il decreto legislativo 2",
+          "found_via": [
+            "term:entrata in vigore"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_186",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2003-06-30/196",
+          "article_eid": "art_186",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "art. 186"
+          ],
+          "text_excerpt": "Art. 186 - (Entrata in vigore)\n\n1. Le disposizioni di cui al presente codice entrano in vigore il 1 gennaio 2004, ad eccezione delle disposizioni di cui agli articoli 156, 176, commi 3, 4, 5 e 6, e 182, che entrano in vigore il giorno successivo alla",
+          "found_via": [
+            "term:entrata in vigore"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_7",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2024-09-04/138",
+          "article_eid": "art_7",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo I",
+            "art. 7"
+          ],
+          "text_excerpt": "Art. 7 - Identificazione ed elencazione dei soggetti essenziali e dei soggetti importanti\n\n1. Dal 1° gennaio al 28 febbraio di ogni anno successivo alla data di entrata in vigore del presente decreto, i soggetti di cui all'articolo 3, si registrano o",
+          "found_via": [
+            "term:entrata in vigore"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/legge/stato/2025-09-23/132__art_12",
+          "doc_urn": "akn/it/act/legge/stato/2025-09-23/132",
+          "article_eid": "art_12",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo II",
+            "art. 12"
+          ],
+          "text_excerpt": "Art. 12 - Osservatorio sull'adozione di sistemi di intelligenza artificiale nel mondo del lavoro\n\n1. Al fine di massimizzare i benefici e contenere i rischi derivanti dall'impiego di sistemi di intelligenza artificiale in ambito lavorativo, e' istitu",
+          "found_via": [
+            "term:entrata in vigore"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/legge/stato/2025-09-23/132__art_9",
+          "doc_urn": "akn/it/act/legge/stato/2025-09-23/132",
+          "article_eid": "art_9",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo II",
+            "art. 9"
+          ],
+          "text_excerpt": "Art. 9 - Disposizioni in materia di trattamento di dati personali\n\n1. Il trattamento dei dati personali anche particolari come definiti dall'articolo 9 del regolamento (UE) 2016/679, con il massimo delle modalita' semplificate consentite dal predetto",
+          "found_via": [
+            "term:entrata in vigore"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_91",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": "art_91",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo IX - Disposizioni relative a specifiche situazioni di trattamento",
+            "art. 91"
+          ],
+          "text_excerpt": "Articolo 91 - Norme di protezione dei dati vigenti presso chiese e associazioni religiose\n\n1. Qualora in uno Stato membro chiese e associazioni o comunità religiose applichino, al momento dell'entrata in vigore del presente regolamento, corpus comple",
+          "found_via": [
+            "term:entrata in vigore"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_99",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": "art_99",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo XI - Disposizioni finali",
+            "art. 99"
+          ],
+          "text_excerpt": "Articolo 99 - Entrata in vigore e applicazione\n\n1. Il presente regolamento entra in vigore il ventesimo giorno successivo alla pubblicazione nella Gazzetta ufficiale dell'Unione europea.\n\n2. Esso si applica a decorrere dal 25 maggio 2018.",
+          "found_via": [
+            "term:entrata in vigore"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_171",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 171"
+          ],
+          "text_excerpt": "Considerando 171\n\nIl presente regolamento dovrebbe abrogare la direttiva 95/46/CE. Il trattamento già in corso alla data di applicazione del presente regolamento dovrebbe essere reso conforme al presente regolamento entro un periodo di due anni dall'",
+          "found_via": [
+            "term:entrata in vigore"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_57__paras_1_15",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": "art_57",
+          "chunk_type": "article_group",
+          "hierarchy_path": [
+            "Capo VI - MISURE A SOSTEGNO DELL'INNOVAZIONE",
+            "art. 57"
+          ],
+          "text_excerpt": "Articolo 57 - Spazi di sperimentazione normativa per l'IA\n\n1. Gli Stati membri provvedono affinché le loro autorità competenti istituiscano almeno uno spazio di sperimentazione normativa per l'IA a livello nazionale, che sia operativo entro il 2 agos",
+          "found_via": [
+            "term:agosto 2026"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_179",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 179"
+          ],
+          "text_excerpt": "Considerando 179\n\nIl presente regolamento si dovrebbe applicare a decorrere dal 2 agosto 2026. Tuttavia, tenuto conto del rischio inaccettabile associato all'uso dell'IA in determinati modi, i divieti nonché le disposizioni generali del presente rego",
+          "found_via": [
+            "term:agosto 2026"
+          ],
+          "is_gold": false,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "qid": "Q3",
+      "query": "In che casi devo fare una valutazione d'impatto sui diritti fondamentali ai sensi dell'AI Act in aggiunta alla DPIA prevista dal GDPR?",
+      "use_case": "DPIA vs FRIA",
+      "expected_kind": "positive",
+      "candidates": [
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_35",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": "art_35",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo IV - Titolare del trattamento e responsabile del trattamento",
+            "art. 35"
+          ],
+          "text_excerpt": "Articolo 35 - Valutazione d'impatto sulla protezione dei dati\n\n1. Quando un tipo di trattamento, allorché prevede in particolare l'uso di nuove tecnologie, considerati la natura, l'oggetto, il contesto e le finalità del trattamento, può presentare un",
+          "found_via": [
+            "hint:gdpr/art_35",
+            "term:valutazione d'impatto"
+          ],
+          "is_gold": true,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_27",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": "art_27",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo III - SISTEMI DI IA AD ALTO RISCHIO",
+            "art. 27"
+          ],
+          "text_excerpt": "Articolo 27 - Valutazione d'impatto sui diritti fondamentali per i sistemi di IA ad alto rischio\n\n1. Prima di utilizzare un sistema di IA ad alto rischio di cui all'articolo 6, paragrafo 2, ad eccezione dei sistemi di IA ad alto rischio destinati a e",
+          "found_via": [
+            "hint:aiact/art_27",
+            "term:valutazione d'impatto"
+          ],
+          "is_gold": true,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/legge/stato/2025-09-23/132__art_1",
+          "doc_urn": "akn/it/act/legge/stato/2025-09-23/132",
+          "article_eid": "art_1",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo I",
+            "art. 1"
+          ],
+          "text_excerpt": "Art. 1\n\n1. La presente legge reca principi in materia di ricerca, sperimentazione, sviluppo, adozione e applicazione di sistemi e di modelli di intelligenza artificiale. Promuove un utilizzo corretto, trasparente e responsabile, in una dimensione ant",
+          "found_via": [
+            "term:diritti fondamentali"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_1",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 1"
+          ],
+          "text_excerpt": "Considerando 1\n\nLa protezione delle persone fisiche con riguardo al trattamento dei dati di carattere personale è un diritto fondamentale. L'articolo 8, paragrafo 1, della Carta dei diritti fondamentali dell'Unione europea («Carta») e l'articolo 16, ",
+          "found_via": [
+            "term:diritti fondamentali"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_102",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 102"
+          ],
+          "text_excerpt": "Considerando 102\n\nIl presente regolamento lascia impregiudicate le disposizioni degli accordi internazionali conclusi tra l'Unione e i paesi terzi che disciplinano il trasferimento di dati personali, comprese adeguate garanzie per gli interessati. Gl",
+          "found_via": [
+            "term:diritti fondamentali"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_114",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 114"
+          ],
+          "text_excerpt": "Considerando 114\n\nIn ogni caso, se la Commissione non ha adottato alcuna decisione circa il livello adeguato di protezione dei dati di un paese terzo, il titolare del trattamento o il responsabile del trattamento dovrebbe ricorrere a soluzioni che di",
+          "found_via": [
+            "term:diritti fondamentali"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_4",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 4"
+          ],
+          "text_excerpt": "Considerando 4\n\nIl trattamento dei dati personali dovrebbe essere al servizio dell'uomo. Il diritto alla protezione dei dati di carattere personale non è una prerogativa assoluta, ma va considerato alla luce della sua funzione sociale e va contempera",
+          "found_via": [
+            "term:diritti fondamentali"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_84",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 84"
+          ],
+          "text_excerpt": "Considerando 84\n\nPer potenziare il rispetto del presente regolamento qualora i trattamenti possano presentare un rischio elevato per i diritti e le libertà delle persone fisiche, il titolare del trattamento dovrebbe essere responsabile dello svolgime",
+          "found_via": [
+            "term:valutazione d'impatto",
+            "term:considerando 84"
+          ],
+          "is_gold": true,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_89",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 89"
+          ],
+          "text_excerpt": "Considerando 89\n\nLa direttiva 95/46/CE ha introdotto un obbligo generale di notificare alle autorità di controllo il trattamento dei dati personali. Mentre tale obbligo comporta oneri amministrativi e finanziari, non ha sempre contribuito a migliorar",
+          "found_via": [
+            "term:valutazione d'impatto"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_90",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 90"
+          ],
+          "text_excerpt": "Considerando 90\n\nIn tali casi, è opportuno che il titolare del trattamento effettui una valutazione d'impatto sulla protezione dei dati prima del trattamento, per valutare la particolare probabilità e gravità del rischio, tenuto conto della natura, d",
+          "found_via": [
+            "term:valutazione d'impatto"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_91",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 91"
+          ],
+          "text_excerpt": "Considerando 91\n\nCiò dovrebbe applicarsi in particolare ai trattamenti su larga scala, che mirano al trattamento di una notevole quantità di dati personali a livello regionale, nazionale o sovranazionale e che potrebbero incidere su un vasto numero d",
+          "found_via": [
+            "term:valutazione d'impatto"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_92",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 92"
+          ],
+          "text_excerpt": "Considerando 92\n\nVi sono circostanze in cui può essere ragionevole ed economico effettuare una valutazione d'impatto sulla protezione dei dati che verta su un oggetto più ampio di un unico progetto, per esempio quando autorità pubbliche o enti pubbli",
+          "found_via": [
+            "term:valutazione d'impatto"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_94",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 94"
+          ],
+          "text_excerpt": "Considerando 94\n\nSe dalla valutazione d'impatto sulla protezione dei dati risulta che il trattamento, in mancanza delle garanzie, delle misure di sicurezza e dei meccanismi per attenuare il rischio, presenterebbe un rischio elevato per i diritti e le",
+          "found_via": [
+            "term:valutazione d'impatto"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_95",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 95"
+          ],
+          "text_excerpt": "Considerando 95\n\nIl responsabile del trattamento, se necessario e su richiesta, dovrebbe assistere il titolare del trattamento nel garantire il rispetto degli obblighi derivanti dallo svolgimento di una valutazione d'impatto sulla protezione dei dati",
+          "found_via": [
+            "term:valutazione d'impatto"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_1",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": "art_1",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo I - DISPOSIZIONI GENERALI",
+            "art. 1"
+          ],
+          "text_excerpt": "Articolo 1 - Oggetto\n\n1. Lo scopo del presente regolamento è migliorare il funzionamento del mercato interno e promuovere la diffusione di un'intelligenza artificiale (IA) antropocentrica e affidabile, garantendo nel contempo un livello elevato di pr",
+          "found_via": [
+            "term:diritti fondamentali"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_1",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 1"
+          ],
+          "text_excerpt": "Considerando 1\n\nLo scopo del presente regolamento è migliorare il funzionamento del mercato interno istituendo un quadro giuridico uniforme in particolare per quanto riguarda lo sviluppo, l'immissione sul mercato, la messa in servizio e l'uso di sist",
+          "found_via": [
+            "term:diritti fondamentali"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_28",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 28"
+          ],
+          "text_excerpt": "Considerando 28\n\nL'IA presenta, accanto a molti utilizzi benefici, la possibilità di essere utilizzata impropriamente e di fornire strumenti nuovi e potenti per pratiche di manipolazione, sfruttamento e controllo sociale. Tali pratiche sono particola",
+          "found_via": [
+            "term:diritti fondamentali"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_43",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 43"
+          ],
+          "text_excerpt": "Considerando 43\n\nL'immissione sul mercato, la messa in servizio per tale finalità specifica o l'uso di sistemi di IA che creano o ampliano le banche dati di riconoscimento facciale mediante scraping non mirato di immagini facciali da internet o da fi",
+          "found_via": [
+            "term:diritti fondamentali"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_5",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 5"
+          ],
+          "text_excerpt": "Considerando 5\n\nL'IA può nel contempo, a seconda delle circostanze relative alla sua applicazione, al suo utilizzo e al suo livello di sviluppo tecnologico specifici, comportare rischi e pregiudicare gli interessi pubblici e i diritti fondamentali tu",
+          "found_via": [
+            "term:diritti fondamentali"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_84",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 84"
+          ],
+          "text_excerpt": "Considerando 84\n\nAl fine di garantire la certezza del diritto, è necessario chiarire che, a determinate condizioni specifiche, qualsiasi distributore, importatore, deployer o altro terzo dovrebbe essere considerato un fornitore di un sistema di IA ad",
+          "found_via": [
+            "term:considerando 84"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_96",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 96"
+          ],
+          "text_excerpt": "Considerando 96\n\nAl fine di garantire in modo efficiente la tutela dei diritti fondamentali, i deployer di sistemi di IA ad alto rischio che sono organismi di diritto pubblico o enti privati che forniscono servizi pubblici e deployer di taluni sistem",
+          "found_via": [
+            "term:valutazione d'impatto"
+          ],
+          "is_gold": true,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "qid": "Q4",
+      "query": "Il Garante si è già pronunciato sull'uso di sistemi di riconoscimento facciale per il controllo accessi dei dipendenti?",
+      "use_case": "Garante riconoscimento facciale lavoro (negative)",
+      "expected_kind": "negative",
+      "candidates": [
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_171",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2003-06-30/196",
+          "article_eid": "art_171",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "art. 171"
+          ],
+          "text_excerpt": "Art. 171 - (( (Violazioni delle disposizioni in materia di controlli a distanza e indagini sulle opinioni dei lavoratori). ))\n\n1. La violazione delle disposizioni di cui agli articoli 4, comma 1, e 8 della legge 20 maggio 1970, n. 300, e' punita con ",
+          "found_via": [
+            "term:lavoratori"
+          ],
+          "is_gold": false,
+          "notes": "NEGATIVE — Garante non in corpus v1, ci si aspetta is_gold=false su tutti."
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_2-septies",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2003-06-30/196",
+          "article_eid": "art_2-septies",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "art. 2-septies"
+          ],
+          "text_excerpt": "Art. 2-septies - (( (Misure di garanzia per il trattamento dei dati genetici, biometrici e relativi alla salute). ))\n\n1. In attuazione di quanto previsto dall'articolo 9, paragrafo 4, del regolamento, i dati genetici, biometrici e relativi alla salut",
+          "found_via": [
+            "term:biometrici"
+          ],
+          "is_gold": false,
+          "notes": "NEGATIVE — Garante non in corpus v1, ci si aspetta is_gold=false su tutti."
+        },
+        {
+          "chunk_id": "akn/it/act/legge/stato/2025-09-23/132__art_11",
+          "doc_urn": "akn/it/act/legge/stato/2025-09-23/132",
+          "article_eid": "art_11",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo II",
+            "art. 11"
+          ],
+          "text_excerpt": "Art. 11 - Disposizioni sull'uso dell'intelligenza artificiale in materia di lavoro\n\n1. L'intelligenza artificiale e' impiegata per migliorare le condizioni di lavoro, tutelare l'integrita' psicofisica dei lavoratori, accrescere la qualita' delle pres",
+          "found_via": [
+            "term:lavoratori"
+          ],
+          "is_gold": false,
+          "notes": "NEGATIVE — Garante non in corpus v1, ci si aspetta is_gold=false su tutti."
+        },
+        {
+          "chunk_id": "akn/it/act/legge/stato/2025-09-23/132__art_12",
+          "doc_urn": "akn/it/act/legge/stato/2025-09-23/132",
+          "article_eid": "art_12",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo II",
+            "art. 12"
+          ],
+          "text_excerpt": "Art. 12 - Osservatorio sull'adozione di sistemi di intelligenza artificiale nel mondo del lavoro\n\n1. Al fine di massimizzare i benefici e contenere i rischi derivanti dall'impiego di sistemi di intelligenza artificiale in ambito lavorativo, e' istitu",
+          "found_via": [
+            "term:lavoratori"
+          ],
+          "is_gold": false,
+          "notes": "NEGATIVE — Garante non in corpus v1, ci si aspetta is_gold=false su tutti."
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__annex_III",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": "annex_III",
+          "chunk_type": "annex",
+          "hierarchy_path": [
+            "Allegato III - Sistemi di IA ad alto rischio di cui all'articolo 6, paragrafo 2"
+          ],
+          "text_excerpt": "ALLEGATO III - Sistemi di IA ad alto rischio di cui all'articolo 6, paragrafo 2\n\nI sistemi di IA ad alto rischio a norma dell'articolo 6, paragrafo 2, sono i sistemi di IA elencati in uno dei settori indicati di seguito.\n\n1. Biometria, nella misura i",
+          "found_via": [
+            "term:lavoratori"
+          ],
+          "is_gold": false,
+          "notes": "NEGATIVE — Garante non in corpus v1, ci si aspetta is_gold=false su tutti."
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_2",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": "art_2",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo I - DISPOSIZIONI GENERALI",
+            "art. 2"
+          ],
+          "text_excerpt": "Articolo 2 - Ambito di applicazione\n\n1. Il presente regolamento si applica: a) ai fornitori che immettono sul mercato o mettono in servizio sistemi di IA o immettono sul mercato modelli di IA per finalità generali nell'Unione, indipendentemente dal f",
+          "found_via": [
+            "term:lavoratori"
+          ],
+          "is_gold": false,
+          "notes": "NEGATIVE — Garante non in corpus v1, ci si aspetta is_gold=false su tutti."
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_26",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": "art_26",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo III - SISTEMI DI IA AD ALTO RISCHIO",
+            "art. 26"
+          ],
+          "text_excerpt": "Articolo 26 - Obblighi dei deployer dei sistemi di IA ad alto rischio\n\n1. I deployer di sistemi di IA ad alto rischio adottano idonee misure tecniche e organizzative per garantire di utilizzare tali sistemi conformemente alle istruzioni per l'uso che",
+          "found_via": [
+            "term:lavoratori"
+          ],
+          "is_gold": false,
+          "notes": "NEGATIVE — Garante non in corpus v1, ci si aspetta is_gold=false su tutti."
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_5__paras_1_3",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": "art_5",
+          "chunk_type": "article_group",
+          "hierarchy_path": [
+            "Capo II - PRATICHE DI IA VIETATE",
+            "art. 5"
+          ],
+          "text_excerpt": "Articolo 5 - Pratiche di IA vietate\n\n1. Sono vietate le pratiche di IA seguenti: a) l'immissione sul mercato, la messa in servizio o l'uso di un sistema di IA che utilizza tecniche subliminali che agiscono senza che una persona ne sia consapevole o t",
+          "found_via": [
+            "term:riconoscimento facciale"
+          ],
+          "is_gold": false,
+          "notes": "NEGATIVE — Garante non in corpus v1, ci si aspetta is_gold=false su tutti."
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_14",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 14"
+          ],
+          "text_excerpt": "Considerando 14\n\nLa nozione di «dati biometrici» utilizzata nel presente regolamento dovrebbe essere interpretata alla luce della nozione di dati biometrici di cui all'articolo 4, punto 14, del regolamento (UE) 2016/679, all'articolo 3, punto 18, del",
+          "found_via": [
+            "term:biometrici"
+          ],
+          "is_gold": false,
+          "notes": "NEGATIVE — Garante non in corpus v1, ci si aspetta is_gold=false su tutti."
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_15",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 15"
+          ],
+          "text_excerpt": "Considerando 15\n\nLa nozione di «identificazione biometrica» di cui al presente regolamento dovrebbe essere definita come il riconoscimento automatico di caratteristiche fisiche, fisiologiche e comportamentali di una persona, quali il volto, il movime",
+          "found_via": [
+            "term:biometrici"
+          ],
+          "is_gold": false,
+          "notes": "NEGATIVE — Garante non in corpus v1, ci si aspetta is_gold=false su tutti."
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_17",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 17"
+          ],
+          "text_excerpt": "Considerando 17\n\nÈ opportuno definire a livello funzionale la nozione di «sistema di identificazione biometrica remota» di cui al presente regolamento, quale sistema di IA destinato all'identificazione, tipicamente a distanza, di persone fisiche senz",
+          "found_via": [
+            "term:biometrici"
+          ],
+          "is_gold": false,
+          "notes": "NEGATIVE — Garante non in corpus v1, ci si aspetta is_gold=false su tutti."
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_18",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 18"
+          ],
+          "text_excerpt": "Considerando 18\n\nLa nozione di «sistema di riconoscimento delle emozioni» di cui al presente regolamento dovrebbe essere definita come un sistema di IA finalizzato a identificare o inferire emozioni o intenzioni di persone fisiche, sulla base dei lor",
+          "found_via": [
+            "term:biometrici"
+          ],
+          "is_gold": false,
+          "notes": "NEGATIVE — Garante non in corpus v1, ci si aspetta is_gold=false su tutti."
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_30",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 30"
+          ],
+          "text_excerpt": "Considerando 30\n\nDovrebbero essere vietati i sistemi di categorizzazione biometrica basati sui dati biometrici di persone fisiche, quali il volto o le impronte digitali, per trarre deduzioni o inferenze in merito alle opinioni politiche, all'apparten",
+          "found_via": [
+            "term:biometrici"
+          ],
+          "is_gold": false,
+          "notes": "NEGATIVE — Garante non in corpus v1, ci si aspetta is_gold=false su tutti."
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_38",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 38"
+          ],
+          "text_excerpt": "Considerando 38\n\nL'uso di sistemi di IA per l'identificazione biometrica remota «in tempo reale» di persone fisiche in spazi accessibili al pubblico a fini di attività di contrasto comporta necessariamente il trattamento di dati biometrici. Le regole",
+          "found_via": [
+            "term:biometrici"
+          ],
+          "is_gold": false,
+          "notes": "NEGATIVE — Garante non in corpus v1, ci si aspetta is_gold=false su tutti."
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_39",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 39"
+          ],
+          "text_excerpt": "Considerando 39\n\nQualsiasi trattamento di dati biometrici e di altri dati personali interessati dall'uso di sistemi di IA a fini di identificazione biometrica, diverso da quello connesso all'uso di sistemi di identificazione biometrica remota «in tem",
+          "found_via": [
+            "term:biometrici"
+          ],
+          "is_gold": false,
+          "notes": "NEGATIVE — Garante non in corpus v1, ci si aspetta is_gold=false su tutti."
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_43",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 43"
+          ],
+          "text_excerpt": "Considerando 43\n\nL'immissione sul mercato, la messa in servizio per tale finalità specifica o l'uso di sistemi di IA che creano o ampliano le banche dati di riconoscimento facciale mediante scraping non mirato di immagini facciali da internet o da fi",
+          "found_via": [
+            "term:riconoscimento facciale"
+          ],
+          "is_gold": false,
+          "notes": "NEGATIVE — Garante non in corpus v1, ci si aspetta is_gold=false su tutti."
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_48",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 48"
+          ],
+          "text_excerpt": "Considerando 48\n\nLa portata dell'impatto negativo del sistema di IA sui diritti fondamentali protetti dalla Carta è di particolare rilevanza ai fini della classificazione di un sistema di IA tra quelli ad alto rischio. Tali diritti comprendono il dir",
+          "found_via": [
+            "term:lavoratori"
+          ],
+          "is_gold": false,
+          "notes": "NEGATIVE — Garante non in corpus v1, ci si aspetta is_gold=false su tutti."
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_54",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 54"
+          ],
+          "text_excerpt": "Considerando 54\n\nPoiché i dati biometrici costituiscono una categoria particolare di dati personali, è opportuno classificare come ad alto rischio diversi casi di uso critico di sistemi biometrici, nella misura in cui il loro uso è consentito dal per",
+          "found_via": [
+            "term:biometrici"
+          ],
+          "is_gold": false,
+          "notes": "NEGATIVE — Garante non in corpus v1, ci si aspetta is_gold=false su tutti."
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_57",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 57"
+          ],
+          "text_excerpt": "Considerando 57\n\nAnche i sistemi di IA utilizzati nel settore dell'occupazione, nella gestione dei lavoratori e nell'accesso al lavoro autonomo, in particolare per l'assunzione e la selezione delle persone, per l'adozione di decisioni riguardanti le ",
+          "found_via": [
+            "term:lavoratori"
+          ],
+          "is_gold": false,
+          "notes": "NEGATIVE — Garante non in corpus v1, ci si aspetta is_gold=false su tutti."
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_9",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 9"
+          ],
+          "text_excerpt": "Considerando 9\n\nÈ opportuno che le norme armonizzate applicabili all'immissione sul mercato, alla messa in servizio e all'uso di sistemi di IA ad alto rischio siano stabilite conformemente al regolamento (CE) n, 765/2008 del Parlamento europeo e del ",
+          "found_via": [
+            "term:lavoratori"
+          ],
+          "is_gold": false,
+          "notes": "NEGATIVE — Garante non in corpus v1, ci si aspetta is_gold=false su tutti."
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_92",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 92"
+          ],
+          "text_excerpt": "Considerando 92\n\nIl presente regolamento lascia impregiudicati gli obblighi dei datori di lavoro di informare o di informare e consultare i lavoratori o i loro rappresentanti a norma del diritto e delle prassi dell'Unione o nazionali, compresa la dir",
+          "found_via": [
+            "term:lavoratori"
+          ],
+          "is_gold": false,
+          "notes": "NEGATIVE — Garante non in corpus v1, ci si aspetta is_gold=false su tutti."
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_94",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 94"
+          ],
+          "text_excerpt": "Considerando 94\n\nQualsiasi trattamento di dati biometrici interessati dall'uso di sistemi di IA a fini di identificazione biometrica a scopo di contrasto deve essere conforme all'articolo 10 della direttiva (UE) 2016/680, che consente tale trattament",
+          "found_via": [
+            "term:biometrici"
+          ],
+          "is_gold": false,
+          "notes": "NEGATIVE — Garante non in corpus v1, ci si aspetta is_gold=false su tutti."
+        }
+      ]
+    },
+    {
+      "qid": "Q5",
+      "query": "L'uso di sistemi AI per decisioni che riguardano i lavoratori può attivare responsabilità ai sensi del D.Lgs 231/2001?",
+      "use_case": "231 + AI decisioni HR",
+      "expected_kind": "positive",
+      "candidates": [
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_24-bis",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2001-06-08/231",
+          "article_eid": "art_24-bis",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo I",
+            "Sezione III",
+            "art. 24-bis"
+          ],
+          "text_excerpt": "Art. 24-bis - (Delitti informatici e trattamento illecito di dati).\n\n1. In relazione alla commissione dei delitti di cui agli articoli 615-ter, 617-quater, 617-quinquies, 635-bis, 635-ter, 635-quater e 635-quinquies del codice penale, si applica all'",
+          "found_via": [
+            "hint:231/art_24-bis",
+            "term:trattamento illecito di dati"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_25-undecies__paras_1_6",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2001-06-08/231",
+          "article_eid": "art_25-undecies",
+          "chunk_type": "article_group",
+          "hierarchy_path": [
+            "Capo I",
+            "Sezione III",
+            "art. 25-undecies"
+          ],
+          "text_excerpt": "Art. 25-undecies - (Reati ambientali)\n\n1. In relazione alla commissione dei reati previsti dal codice penale, si applicano all'ente le seguenti sanzioni pecuniarie: a) per la violazione dell'articolo 452-bis, la sanzione pecuniaria da quattrocento a ",
+          "found_via": [
+            "hint:231/art_25-undecies"
+          ],
+          "is_gold": true,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_25-undecies__paras_7_8",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2001-06-08/231",
+          "article_eid": "art_25-undecies",
+          "chunk_type": "article_group",
+          "hierarchy_path": [
+            "Capo I",
+            "Sezione III",
+            "art. 25-undecies"
+          ],
+          "text_excerpt": "Art. 25-undecies - (Reati ambientali)\n\n7. Nei casi di condanna per i reati indicati al comma 2, (( lettera a) )), numero 2), e al comma 5, lettere b) e c), si applicano le sanzioni interdittive previste dall'articolo 9, comma 2, per una durata non su",
+          "found_via": [
+            "hint:231/art_25-undecies"
+          ],
+          "is_gold": true,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_22",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": "art_22",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo III - Diritti dell'interessato",
+            "art. 22"
+          ],
+          "text_excerpt": "Articolo 22 - Processo decisionale automatizzato relativo alle persone fisiche, compresa la profilazione\n\n1. L'interessato ha il diritto di non essere sottoposto a una decisione basata unicamente sul trattamento automatizzato, compresa la profilazion",
+          "found_via": [
+            "hint:gdpr/art_22"
+          ],
+          "is_gold": true,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_167",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2003-06-30/196",
+          "article_eid": "art_167",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "art. 167"
+          ],
+          "text_excerpt": "Art. 167 - (Trattamento illecito di dati)\n\n1. Salvo che il fatto costituisca piu' grave reato, chiunque, al fine di trarre per se' o per altri profitto ovvero di arrecare danno all'interessato, operando in violazione di quanto disposto dagli articoli",
+          "found_via": [
+            "term:trattamento illecito di dati"
+          ],
+          "is_gold": false,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "qid": "Q6",
+      "query": "Quali sono i compiti del responsabile della protezione dei dati?",
+      "use_case": "Compiti del DPO",
+      "expected_kind": "positive",
+      "candidates": [
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_37",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": "art_37",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo IV - Titolare del trattamento e responsabile del trattamento",
+            "art. 37"
+          ],
+          "text_excerpt": "Articolo 37 - Designazione del responsabile della protezione dei dati\n\n1. Il titolare del trattamento e il responsabile del trattamento designano sistematicamente un responsabile della protezione dei dati ogniqualvolta: a) il trattamento è effettuato",
+          "found_via": [
+            "hint:gdpr/art_37",
+            "term:responsabile della protezione dei dati"
+          ],
+          "is_gold": true,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_38",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": "art_38",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo IV - Titolare del trattamento e responsabile del trattamento",
+            "art. 38"
+          ],
+          "text_excerpt": "Articolo 38 - Posizione del responsabile della protezione dei dati\n\n1. Il titolare del trattamento e il responsabile del trattamento si assicurano che il responsabile della protezione dei dati sia tempestivamente e adeguatamente coinvolto in tutte le",
+          "found_via": [
+            "hint:gdpr/art_38",
+            "term:responsabile della protezione dei dati",
+            "term:compiti"
+          ],
+          "is_gold": true,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_39",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": "art_39",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo IV - Titolare del trattamento e responsabile del trattamento",
+            "art. 39"
+          ],
+          "text_excerpt": "Articolo 39 - Compiti del responsabile della protezione dei dati\n\n1. Il responsabile della protezione dei dati è incaricato almeno dei seguenti compiti: a) informare e fornire consulenza al titolare del trattamento o al responsabile del trattamento n",
+          "found_via": [
+            "hint:gdpr/art_39",
+            "term:responsabile della protezione dei dati"
+          ],
+          "is_gold": true,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_2-quaterdecies",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2003-06-30/196",
+          "article_eid": "art_2-quaterdecies",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "art. 2-quaterdecies"
+          ],
+          "text_excerpt": "Art. 2-quaterdecies - (( (Attribuzione di funzioni e compiti a soggetti designati). ))\n\n1. Il titolare o il responsabile del trattamento possono prevedere, sotto la propria responsabilita' e nell'ambito del proprio assetto organizzativo, che specific",
+          "found_via": [
+            "term:compiti"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_2-sex-decies",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2003-06-30/196",
+          "article_eid": "art_2-sex-decies",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "art. 2-sex-decies"
+          ],
+          "text_excerpt": "Art. 2-sex-decies - (( (Responsabile della protezione dei dati per i trattamenti effettuati dalle autorita' giudiziarie nell'esercizio delle loro funzioni). ))",
+          "found_via": [
+            "term:responsabile della protezione dei dati"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_13",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": "art_13",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo III - Diritti dell'interessato",
+            "art. 13"
+          ],
+          "text_excerpt": "Articolo 13 - Informazioni da fornire qualora i dati personali siano raccolti presso l'interessato\n\n1. In caso di raccolta presso l'interessato di dati che lo riguardano, il titolare del trattamento fornisce all'interessato, nel momento in cui i dati",
+          "found_via": [
+            "term:responsabile della protezione dei dati"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_30",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": "art_30",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo IV - Titolare del trattamento e responsabile del trattamento",
+            "art. 30"
+          ],
+          "text_excerpt": "Articolo 30 - Registri delle attività di trattamento\n\n1. Ogni titolare del trattamento e, ove applicabile, il suo rappresentante tengono un registro delle attività di trattamento svolte sotto la propria responsabilità. Tale registro contiene tutte le",
+          "found_via": [
+            "term:responsabile della protezione dei dati"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_33",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": "art_33",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo IV - Titolare del trattamento e responsabile del trattamento",
+            "art. 33"
+          ],
+          "text_excerpt": "Articolo 33 - Notifica di una violazione dei dati personali all'autorità di controllo\n\n1. In caso di violazione dei dati personali, il titolare del trattamento notifica la violazione all'autorità di controllo competente a norma dell'articolo 55 senza",
+          "found_via": [
+            "term:responsabile della protezione dei dati"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_36",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": "art_36",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo IV - Titolare del trattamento e responsabile del trattamento",
+            "art. 36"
+          ],
+          "text_excerpt": "Articolo 36 - Consultazione preventiva\n\n1. Il titolare del trattamento, prima di procedere al trattamento, consulta l'autorità di controllo qualora la valutazione d'impatto sulla protezione dei dati a norma dell'articolo 35 indichi che il trattamento",
+          "found_via": [
+            "term:responsabile della protezione dei dati"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_57",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": "art_57",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo VI - Autorità di controllo indipendenti",
+            "art. 57"
+          ],
+          "text_excerpt": "Articolo 57 - Compiti\n\n1. Fatti salvi gli altri compiti indicati nel presente regolamento, sul proprio territorio ogni autorità di controllo: a) sorveglia e assicura l'applicazione del presente regolamento; b) promuove la consapevolezza e favorisce l",
+          "found_via": [
+            "term:responsabile della protezione dei dati"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_69",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": "art_69",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo VII - Cooperazione e coerenza",
+            "art. 69"
+          ],
+          "text_excerpt": "Articolo 69 - Indipendenza\n\n1. Nell'esecuzione dei suoi compiti o nell'esercizio dei suoi poteri ai sensi degli articoli 70 e 71, il comitato opera con indipendenza.\n\n2. Fatte salve le richieste della Commissione di cui all'articolo 70, paragrafi 1 e",
+          "found_via": [
+            "term:compiti"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_74",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": "art_74",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo VII - Cooperazione e coerenza",
+            "art. 74"
+          ],
+          "text_excerpt": "Articolo 74 - Compiti del presidente\n\n1. Il presidente ha il compito di: a) convocare le riunioni del comitato e stabilirne l'ordine del giorno; b) notificare le decisioni adottate dal comitato a norma dell'articolo 65 all'autorità di controllo capof",
+          "found_via": [
+            "term:compiti"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_140",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 140"
+          ],
+          "text_excerpt": "Considerando 140\n\nIl comitato dovrebbe essere assistito da un segretariato messo a disposizione dal garante europeo della protezione dei dati. Il personale del garante europeo della protezione dei dati impegnato nell'assolvimento dei compiti attribui",
+          "found_via": [
+            "term:compiti"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_77",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 77"
+          ],
+          "text_excerpt": "Considerando 77\n\nGli orientamenti per la messa in atto di opportune misure e per dimostrare la conformità da parte del titolare del trattamento o dal responsabile del trattamento in particolare per quanto riguarda l'individuazione del rischio conness",
+          "found_via": [
+            "term:responsabile della protezione dei dati"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_93",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 93"
+          ],
+          "text_excerpt": "Considerando 93\n\nIn vista dell'adozione della legge degli Stati membri che disciplina i compiti dell'autorità pubblica o dell'organismo pubblico e lo specifico trattamento o insieme di trattamenti, gli Stati membri possono ritenere necessario effettu",
+          "found_via": [
+            "term:compiti"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_64",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": "art_64",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo VII - GOVERNANCE",
+            "art. 64"
+          ],
+          "text_excerpt": "Articolo 64 - Ufficio per l'IA\n\n1. La Commissione sviluppa le competenze e le capacità dell'Unione nel settore dell'IA attraverso l'ufficio per l'IA.\n\n2. Gli Stati membri agevolano i compiti affidati all'ufficio per l'IA, come indicato nel presente r",
+          "found_via": [
+            "term:compiti"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_66",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": "art_66",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo VII - GOVERNANCE",
+            "art. 66"
+          ],
+          "text_excerpt": "Articolo 66 - Compiti del consiglio per l'IA",
+          "found_via": [
+            "term:compiti"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_84",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": "art_84",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo IX - MONITORAGGIO SUCCESSIVO ALL'IMMISSIONE SUL MERCATO, CONDIVISIONE DELLE INFORMAZIONI E VIGILANZA DEL MERCATO",
+            "art. 84"
+          ],
+          "text_excerpt": "Articolo 84 - Strutture di sostegno dell'Unione per la prova dell'IA\n\n1. La Commissione designa una o più strutture di sostegno dell'Unione per la prova dell'IA per lo svolgimento dei compiti di cui all'articolo 21, paragrafo 6, del regolamento (UE) ",
+          "found_via": [
+            "term:compiti"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_99",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 99"
+          ],
+          "text_excerpt": "Considerando 99\n\nI grandi modelli di IA generativi sono un tipico esempio di modello di IA per finalità generali, dato che consentono una generazione flessibile di contenuti, ad esempio sotto forma di testo, audio, immagini o video, che possono pront",
+          "found_via": [
+            "term:compiti"
+          ],
+          "is_gold": false,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "qid": "Q7",
+      "query": "Quando è obbligatoria la valutazione d'impatto sulla protezione dei dati?",
+      "use_case": "Quando DPIA è obbligatoria",
+      "expected_kind": "positive",
+      "candidates": [
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_35",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": "art_35",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo IV - Titolare del trattamento e responsabile del trattamento",
+            "art. 35"
+          ],
+          "text_excerpt": "Articolo 35 - Valutazione d'impatto sulla protezione dei dati\n\n1. Quando un tipo di trattamento, allorché prevede in particolare l'uso di nuove tecnologie, considerati la natura, l'oggetto, il contesto e le finalità del trattamento, può presentare un",
+          "found_via": [
+            "hint:gdpr/art_35",
+            "term:valutazione d'impatto sulla protezione dei dati",
+            "term:rischio elevato"
+          ],
+          "is_gold": true,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_34",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": "art_34",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo IV - Titolare del trattamento e responsabile del trattamento",
+            "art. 34"
+          ],
+          "text_excerpt": "Articolo 34 - Comunicazione di una violazione dei dati personali all'interessato\n\n1. Quando la violazione dei dati personali è suscettibile di presentare un rischio elevato per i diritti e le libertà delle persone fisiche, il titolare del trattamento",
+          "found_via": [
+            "term:rischio elevato"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_36",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": "art_36",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo IV - Titolare del trattamento e responsabile del trattamento",
+            "art. 36"
+          ],
+          "text_excerpt": "Articolo 36 - Consultazione preventiva\n\n1. Il titolare del trattamento, prima di procedere al trattamento, consulta l'autorità di controllo qualora la valutazione d'impatto sulla protezione dei dati a norma dell'articolo 35 indichi che il trattamento",
+          "found_via": [
+            "term:valutazione d'impatto sulla protezione dei dati",
+            "term:rischio elevato"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_39",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": "art_39",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo IV - Titolare del trattamento e responsabile del trattamento",
+            "art. 39"
+          ],
+          "text_excerpt": "Articolo 39 - Compiti del responsabile della protezione dei dati\n\n1. Il responsabile della protezione dei dati è incaricato almeno dei seguenti compiti: a) informare e fornire consulenza al titolare del trattamento o al responsabile del trattamento n",
+          "found_via": [
+            "term:valutazione d'impatto sulla protezione dei dati"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_76",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 76"
+          ],
+          "text_excerpt": "Considerando 76\n\nLa probabilità e la gravità del rischio per i diritti e le libertà dell'interessato dovrebbero essere determinate con riguardo alla natura, all'ambito di applicazione, al contesto e alle finalità del trattamento. Il rischio dovrebbe ",
+          "found_via": [
+            "term:rischio elevato"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_77",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 77"
+          ],
+          "text_excerpt": "Considerando 77\n\nGli orientamenti per la messa in atto di opportune misure e per dimostrare la conformità da parte del titolare del trattamento o dal responsabile del trattamento in particolare per quanto riguarda l'individuazione del rischio conness",
+          "found_via": [
+            "term:rischio elevato"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_84",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 84"
+          ],
+          "text_excerpt": "Considerando 84\n\nPer potenziare il rispetto del presente regolamento qualora i trattamenti possano presentare un rischio elevato per i diritti e le libertà delle persone fisiche, il titolare del trattamento dovrebbe essere responsabile dello svolgime",
+          "found_via": [
+            "term:valutazione d'impatto sulla protezione dei dati",
+            "term:rischio elevato"
+          ],
+          "is_gold": true,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_86",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 86"
+          ],
+          "text_excerpt": "Considerando 86\n\nIl titolare del trattamento dovrebbe comunicare all'interessato la violazione dei dati personali senza indebito ritardo, qualora questa violazione dei dati personali sia suscettibile di presentare un rischio elevato per i diritti e l",
+          "found_via": [
+            "term:rischio elevato"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_89",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 89"
+          ],
+          "text_excerpt": "Considerando 89\n\nLa direttiva 95/46/CE ha introdotto un obbligo generale di notificare alle autorità di controllo il trattamento dei dati personali. Mentre tale obbligo comporta oneri amministrativi e finanziari, non ha sempre contribuito a migliorar",
+          "found_via": [
+            "term:valutazione d'impatto sulla protezione dei dati",
+            "term:rischio elevato"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_90",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 90"
+          ],
+          "text_excerpt": "Considerando 90\n\nIn tali casi, è opportuno che il titolare del trattamento effettui una valutazione d'impatto sulla protezione dei dati prima del trattamento, per valutare la particolare probabilità e gravità del rischio, tenuto conto della natura, d",
+          "found_via": [
+            "term:valutazione d'impatto sulla protezione dei dati"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_91",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 91"
+          ],
+          "text_excerpt": "Considerando 91\n\nCiò dovrebbe applicarsi in particolare ai trattamenti su larga scala, che mirano al trattamento di una notevole quantità di dati personali a livello regionale, nazionale o sovranazionale e che potrebbero incidere su un vasto numero d",
+          "found_via": [
+            "term:valutazione d'impatto sulla protezione dei dati",
+            "term:rischio elevato"
+          ],
+          "is_gold": true,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_92",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 92"
+          ],
+          "text_excerpt": "Considerando 92\n\nVi sono circostanze in cui può essere ragionevole ed economico effettuare una valutazione d'impatto sulla protezione dei dati che verta su un oggetto più ampio di un unico progetto, per esempio quando autorità pubbliche o enti pubbli",
+          "found_via": [
+            "term:valutazione d'impatto sulla protezione dei dati"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_94",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 94"
+          ],
+          "text_excerpt": "Considerando 94\n\nSe dalla valutazione d'impatto sulla protezione dei dati risulta che il trattamento, in mancanza delle garanzie, delle misure di sicurezza e dei meccanismi per attenuare il rischio, presenterebbe un rischio elevato per i diritti e le",
+          "found_via": [
+            "term:valutazione d'impatto sulla protezione dei dati",
+            "term:rischio elevato"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_95",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 95"
+          ],
+          "text_excerpt": "Considerando 95\n\nIl responsabile del trattamento, se necessario e su richiesta, dovrebbe assistere il titolare del trattamento nel garantire il rispetto degli obblighi derivanti dallo svolgimento di una valutazione d'impatto sulla protezione dei dati",
+          "found_via": [
+            "term:valutazione d'impatto sulla protezione dei dati"
+          ],
+          "is_gold": false,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "qid": "Q8",
+      "query": "Cos'è la valutazione d'impatto sui diritti fondamentali e quando va condotta?",
+      "use_case": "Cos'è FRIA e quando si fa",
+      "expected_kind": "positive",
+      "candidates": [
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_27",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": "art_27",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo III - SISTEMI DI IA AD ALTO RISCHIO",
+            "art. 27"
+          ],
+          "text_excerpt": "Articolo 27 - Valutazione d'impatto sui diritti fondamentali per i sistemi di IA ad alto rischio\n\n1. Prima di utilizzare un sistema di IA ad alto rischio di cui all'articolo 6, paragrafo 2, ad eccezione dei sistemi di IA ad alto rischio destinati a e",
+          "found_via": [
+            "hint:aiact/art_27",
+            "term:valutazione d'impatto sui diritti fondamentali"
+          ],
+          "is_gold": true,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/legge/stato/2025-09-23/132__art_1",
+          "doc_urn": "akn/it/act/legge/stato/2025-09-23/132",
+          "article_eid": "art_1",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo I",
+            "art. 1"
+          ],
+          "text_excerpt": "Art. 1\n\n1. La presente legge reca principi in materia di ricerca, sperimentazione, sviluppo, adozione e applicazione di sistemi e di modelli di intelligenza artificiale. Promuove un utilizzo corretto, trasparente e responsabile, in una dimensione ant",
+          "found_via": [
+            "term:diritti fondamentali"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_1",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 1"
+          ],
+          "text_excerpt": "Considerando 1\n\nLa protezione delle persone fisiche con riguardo al trattamento dei dati di carattere personale è un diritto fondamentale. L'articolo 8, paragrafo 1, della Carta dei diritti fondamentali dell'Unione europea («Carta») e l'articolo 16, ",
+          "found_via": [
+            "term:diritti fondamentali"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_102",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 102"
+          ],
+          "text_excerpt": "Considerando 102\n\nIl presente regolamento lascia impregiudicate le disposizioni degli accordi internazionali conclusi tra l'Unione e i paesi terzi che disciplinano il trasferimento di dati personali, comprese adeguate garanzie per gli interessati. Gl",
+          "found_via": [
+            "term:diritti fondamentali"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_114",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 114"
+          ],
+          "text_excerpt": "Considerando 114\n\nIn ogni caso, se la Commissione non ha adottato alcuna decisione circa il livello adeguato di protezione dei dati di un paese terzo, il titolare del trattamento o il responsabile del trattamento dovrebbe ricorrere a soluzioni che di",
+          "found_via": [
+            "term:diritti fondamentali"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_4",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 4"
+          ],
+          "text_excerpt": "Considerando 4\n\nIl trattamento dei dati personali dovrebbe essere al servizio dell'uomo. Il diritto alla protezione dei dati di carattere personale non è una prerogativa assoluta, ma va considerato alla luce della sua funzione sociale e va contempera",
+          "found_via": [
+            "term:diritti fondamentali"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_1",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": "art_1",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo I - DISPOSIZIONI GENERALI",
+            "art. 1"
+          ],
+          "text_excerpt": "Articolo 1 - Oggetto\n\n1. Lo scopo del presente regolamento è migliorare il funzionamento del mercato interno e promuovere la diffusione di un'intelligenza artificiale (IA) antropocentrica e affidabile, garantendo nel contempo un livello elevato di pr",
+          "found_via": [
+            "term:diritti fondamentali"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_5__paras_1_3",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": "art_5",
+          "chunk_type": "article_group",
+          "hierarchy_path": [
+            "Capo II - PRATICHE DI IA VIETATE",
+            "art. 5"
+          ],
+          "text_excerpt": "Articolo 5 - Pratiche di IA vietate\n\n1. Sono vietate le pratiche di IA seguenti: a) l'immissione sul mercato, la messa in servizio o l'uso di un sistema di IA che utilizza tecniche subliminali che agiscono senza che una persona ne sia consapevole o t",
+          "found_via": [
+            "term:valutazione d'impatto sui diritti fondamentali"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_1",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 1"
+          ],
+          "text_excerpt": "Considerando 1\n\nLo scopo del presente regolamento è migliorare il funzionamento del mercato interno istituendo un quadro giuridico uniforme in particolare per quanto riguarda lo sviluppo, l'immissione sul mercato, la messa in servizio e l'uso di sist",
+          "found_via": [
+            "term:diritti fondamentali"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_28",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 28"
+          ],
+          "text_excerpt": "Considerando 28\n\nL'IA presenta, accanto a molti utilizzi benefici, la possibilità di essere utilizzata impropriamente e di fornire strumenti nuovi e potenti per pratiche di manipolazione, sfruttamento e controllo sociale. Tali pratiche sono particola",
+          "found_via": [
+            "term:diritti fondamentali"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_34",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 34"
+          ],
+          "text_excerpt": "Considerando 34\n\nAl fine di garantire che tali sistemi siano utilizzati in modo responsabile e proporzionato, è altresì importante stabilire che, in ciascuna delle situazioni elencate in modo esaustivo e definite rigorosamente, è opportuno tener cont",
+          "found_via": [
+            "term:valutazione d'impatto sui diritti fondamentali"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_43",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 43"
+          ],
+          "text_excerpt": "Considerando 43\n\nL'immissione sul mercato, la messa in servizio per tale finalità specifica o l'uso di sistemi di IA che creano o ampliano le banche dati di riconoscimento facciale mediante scraping non mirato di immagini facciali da internet o da fi",
+          "found_via": [
+            "term:diritti fondamentali"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_5",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 5"
+          ],
+          "text_excerpt": "Considerando 5\n\nL'IA può nel contempo, a seconda delle circostanze relative alla sua applicazione, al suo utilizzo e al suo livello di sviluppo tecnologico specifici, comportare rischi e pregiudicare gli interessi pubblici e i diritti fondamentali tu",
+          "found_via": [
+            "term:diritti fondamentali"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_96",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 96"
+          ],
+          "text_excerpt": "Considerando 96\n\nAl fine di garantire in modo efficiente la tutela dei diritti fondamentali, i deployer di sistemi di IA ad alto rischio che sono organismi di diritto pubblico o enti privati che forniscono servizi pubblici e deployer di taluni sistem",
+          "found_via": [
+            "term:valutazione d'impatto sui diritti fondamentali"
+          ],
+          "is_gold": true,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "qid": "Q9",
+      "query": "Quali sono i reati presupposto in materia di trattamento illecito di dati personali ai sensi del 231?",
+      "use_case": "Reati 231 trattamento illecito dati",
+      "expected_kind": "positive",
+      "candidates": [
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_24-bis",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2001-06-08/231",
+          "article_eid": "art_24-bis",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo I",
+            "Sezione III",
+            "art. 24-bis"
+          ],
+          "text_excerpt": "Art. 24-bis - (Delitti informatici e trattamento illecito di dati).\n\n1. In relazione alla commissione dei delitti di cui agli articoli 615-ter, 617-quater, 617-quinquies, 635-bis, 635-ter, 635-quater e 635-quinquies del codice penale, si applica all'",
+          "found_via": [
+            "hint:231/art_24-bis",
+            "term:trattamento illecito",
+            "term:delitti informatici"
+          ],
+          "is_gold": true,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_25-undecies__paras_1_6",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2001-06-08/231",
+          "article_eid": "art_25-undecies",
+          "chunk_type": "article_group",
+          "hierarchy_path": [
+            "Capo I",
+            "Sezione III",
+            "art. 25-undecies"
+          ],
+          "text_excerpt": "Art. 25-undecies - (Reati ambientali)\n\n1. In relazione alla commissione dei reati previsti dal codice penale, si applicano all'ente le seguenti sanzioni pecuniarie: a) per la violazione dell'articolo 452-bis, la sanzione pecuniaria da quattrocento a ",
+          "found_via": [
+            "hint:231/art_25-undecies"
+          ],
+          "is_gold": true,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_25-undecies__paras_7_8",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2001-06-08/231",
+          "article_eid": "art_25-undecies",
+          "chunk_type": "article_group",
+          "hierarchy_path": [
+            "Capo I",
+            "Sezione III",
+            "art. 25-undecies"
+          ],
+          "text_excerpt": "Art. 25-undecies - (Reati ambientali)\n\n7. Nei casi di condanna per i reati indicati al comma 2, (( lettera a) )), numero 2), e al comma 5, lettere b) e c), si applicano le sanzioni interdittive previste dall'articolo 9, comma 2, per una durata non su",
+          "found_via": [
+            "hint:231/art_25-undecies"
+          ],
+          "is_gold": true,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_167",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2003-06-30/196",
+          "article_eid": "art_167",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "art. 167"
+          ],
+          "text_excerpt": "Art. 167 - (Trattamento illecito di dati)\n\n1. Salvo che il fatto costituisca piu' grave reato, chiunque, al fine di trarre per se' o per altri profitto ovvero di arrecare danno all'interessato, operando in violazione di quanto disposto dagli articoli",
+          "found_via": [
+            "term:trattamento illecito"
+          ],
+          "is_gold": true,
+          "notes": ""
+        }
+      ]
+    },
+    {
+      "qid": "Q10",
+      "query": "La mia azienda è considerata soggetto essenziale o importante ai sensi del decreto NIS2?",
+      "use_case": "NIS2 soggetti essenziali/importanti",
+      "expected_kind": "positive",
+      "candidates": [
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_3",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2024-09-04/138",
+          "article_eid": "art_3",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo I",
+            "art. 3"
+          ],
+          "text_excerpt": "Art. 3 - Ambito di applicazione\n\n1. Nell'ambito di applicazione del presente decreto rientrano i soggetti pubblici e privati delle tipologie di cui agli allegati I, II, III e IV, che costituiscono parte integrante del presente decreto, che sono sotto",
+          "found_via": [
+            "hint:nis2/art_3"
+          ],
+          "is_gold": true,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_7",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2001-06-08/231",
+          "article_eid": "art_7",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo I",
+            "Sezione I",
+            "art. 7"
+          ],
+          "text_excerpt": "Art. 7 - Soggetti sottoposti all'altrui direzione e modelli di organizzazione dell'ente\n\n1. Nel caso previsto dall'articolo 5, comma 1, lettera b), l'ente e' responsabile se la commissione del reato e' stata resa possibile dall'inosservanza degli obb",
+          "found_via": [
+            "term:dimensione"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_15",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2024-09-04/138",
+          "article_eid": "art_15",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo II",
+            "art. 15"
+          ],
+          "text_excerpt": "Art. 15\n\n1. Il CSIRT Italia, fermo restando quanto previsto dal decreto-legge 14 giugno 2021, n. 82, convertito, con modificazioni, dalla legge 4 agosto 2021, n. 109: a) e' l'organo preposto alle funzioni di gestione degli incidenti di sicurezza info",
+          "found_via": [
+            "term:soggetti essenziali"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_17",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2024-09-04/138",
+          "article_eid": "art_17",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo II",
+            "art. 17"
+          ],
+          "text_excerpt": "Art. 17 - Accordi di condivisione delle informazioni sulla sicurezza informatica\n\n1. I soggetti che rientrano nell'ambito di applicazione del presente decreto e laddove opportuno anche ulteriori soggetti, possono scambiarsi, su base volontaria, perti",
+          "found_via": [
+            "term:soggetti essenziali",
+            "term:soggetti importanti"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_22",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2024-09-04/138",
+          "article_eid": "art_22",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo III",
+            "art. 22"
+          ],
+          "text_excerpt": "Art. 22 - Comunicazioni all'Unione europea\n\n1. Successivamente alla data di entrata in vigore del presente decreto, la Presidenza del Consiglio dei ministri notifica tempestivamente alla Commissione europea la conferma dell'Agenzia per la cybersicure",
+          "found_via": [
+            "term:soggetti essenziali",
+            "term:soggetti importanti"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_23",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2024-09-04/138",
+          "article_eid": "art_23",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo IV",
+            "art. 23"
+          ],
+          "text_excerpt": "Art. 23 - Organi di amministrazione e direttivi\n\n1. Gli organi di amministrazione e gli organi direttivi dei soggetti essenziali e dei soggetti importanti: a) approvano le modalita' di implementazione delle misure di gestione dei rischi per la sicure",
+          "found_via": [
+            "term:soggetti essenziali",
+            "term:soggetti importanti"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_25",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2024-09-04/138",
+          "article_eid": "art_25",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo IV",
+            "art. 25"
+          ],
+          "text_excerpt": "Art. 25 - Obblighi in materia di notifica di incidente\n\n1. I soggetti essenziali e i soggetti importanti notificano, senza ingiustificato ritardo, al CSIRT Italia ogni incidente che, ai sensi del comma 4, ha un impatto significativo sulla fornitura d",
+          "found_via": [
+            "term:soggetti essenziali",
+            "term:soggetti importanti"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_26",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2024-09-04/138",
+          "article_eid": "art_26",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo IV",
+            "art. 26"
+          ],
+          "text_excerpt": "Art. 26 - Notifica volontaria di informazioni pertinenti\n\n1. In aggiunta all'obbligo di notifica di incidente di cui all'articolo 25, possono essere trasmesse, su base volontaria, notifiche al CSIRT Italia da parte dei: a) soggetti essenziali e sogge",
+          "found_via": [
+            "term:soggetti importanti"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_27",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2024-09-04/138",
+          "article_eid": "art_27",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo IV",
+            "art. 27"
+          ],
+          "text_excerpt": "Art. 27 - Uso di schemi di certificazione della cybersicurezza\n\n1. Al fine di dimostrare il rispetto di determinati obblighi di cui all'articolo 24, l'Autorita' nazionale competente NIS, secondo le modalita' di cui all'articolo 40, comma 5, puo' impo",
+          "found_via": [
+            "term:soggetti essenziali",
+            "term:soggetti importanti"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_30",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2024-09-04/138",
+          "article_eid": "art_30",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo IV",
+            "art. 30"
+          ],
+          "text_excerpt": "Art. 30\n\n1. Ai fini di cui all'articolo 24, comma 1, dal 1° maggio al 30 giugno di ogni anno a partire dalla ricezione della prima comunicazione di cui all'articolo 7, comma 3, lettera a), i soggetti essenziali e i soggetti importanti comunicano e ag",
+          "found_via": [
+            "term:soggetti essenziali",
+            "term:soggetti importanti"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_36",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2024-09-04/138",
+          "article_eid": "art_36",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo V",
+            "art. 36"
+          ],
+          "text_excerpt": "Art. 36 - Verifiche e ispezioni\n\n1. L'Autorita' nazionale competente NIS, nell'esercizio dei poteri di verifica e ispettivi nei confronti dei soggetti che rientrano nell'ambito di applicazione del presente decreto, puo' sottoporre questi ultimi a: a)",
+          "found_via": [
+            "term:soggetti importanti"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_42",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2024-09-04/138",
+          "article_eid": "art_42",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo VI",
+            "art. 42"
+          ],
+          "text_excerpt": "Art. 42 - Fase di prima applicazione\n\n1. In fase di prima applicazione: a) ai sensi dell'articolo 7, entro il 17 gennaio 2025, i fornitori di servizi di sistema dei nomi di dominio, i gestori di registri dei nomi di dominio di primo livello, i fornit",
+          "found_via": [
+            "term:soggetti essenziali",
+            "term:soggetti importanti"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_6",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2024-09-04/138",
+          "article_eid": "art_6",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo I",
+            "art. 6"
+          ],
+          "text_excerpt": "Art. 6 - Soggetti essenziali e soggetti importanti\n\n1. Ai fini del presente decreto, sono considerati soggetti essenziali: a) i soggetti di cui all'allegato I che superano i massimali per le medie imprese di cui all'articolo 2, paragrafo 1, dell'alle",
+          "found_via": [
+            "term:soggetti essenziali",
+            "term:soggetti importanti"
+          ],
+          "is_gold": true,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_7",
+          "doc_urn": "akn/it/act/decreto_legislativo/stato/2024-09-04/138",
+          "article_eid": "art_7",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo I",
+            "art. 7"
+          ],
+          "text_excerpt": "Art. 7 - Identificazione ed elencazione dei soggetti essenziali e dei soggetti importanti\n\n1. Dal 1° gennaio al 28 febbraio di ogni anno successivo alla data di entrata in vigore del presente decreto, i soggetti di cui all'articolo 3, si registrano o",
+          "found_via": [
+            "term:soggetti essenziali"
+          ],
+          "is_gold": true,
+          "notes": ""
+        },
+        {
+          "chunk_id": "akn/it/act/legge/stato/2025-09-23/132__art_1",
+          "doc_urn": "akn/it/act/legge/stato/2025-09-23/132",
+          "article_eid": "art_1",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo I",
+            "art. 1"
+          ],
+          "text_excerpt": "Art. 1\n\n1. La presente legge reca principi in materia di ricerca, sperimentazione, sviluppo, adozione e applicazione di sistemi e di modelli di intelligenza artificiale. Promuove un utilizzo corretto, trasparente e responsabile, in una dimensione ant",
+          "found_via": [
+            "term:dimensione"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_2",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": "art_2",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo I - Disposizioni generali",
+            "art. 2"
+          ],
+          "text_excerpt": "Articolo 2 - Ambito di applicazione materiale\n\n1. Il presente regolamento si applica al trattamento interamente o parzialmente automatizzato di dati personali e al trattamento non automatizzato di dati personali contenuti in un archivio o destinati a",
+          "found_via": [
+            "term:ambito di applicazione"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_37",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": "art_37",
+          "chunk_type": "article",
+          "hierarchy_path": [
+            "Capo IV - Titolare del trattamento e responsabile del trattamento",
+            "art. 37"
+          ],
+          "text_excerpt": "Articolo 37 - Designazione del responsabile della protezione dei dati\n\n1. Il titolare del trattamento e il responsabile del trattamento designano sistematicamente un responsabile della protezione dei dati ogniqualvolta: a) il trattamento è effettuato",
+          "found_via": [
+            "term:dimensione"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_15",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 15"
+          ],
+          "text_excerpt": "Considerando 15\n\nAl fine di evitare l'insorgere di gravi rischi di elusione, la protezione delle persone fisiche dovrebbe essere neutrale sotto il profilo tecnologico e non dovrebbe dipendere dalle tecniche impiegate. La protezione delle persone fisi",
+          "found_via": [
+            "term:ambito di applicazione"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_16",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 16"
+          ],
+          "text_excerpt": "Considerando 16\n\nIl presente regolamento non si applica a questioni di tutela dei diritti e delle libertà fondamentali o di libera circolazione dei dati personali riferite ad attività che non rientrano nell'ambito di applicazione del diritto dell'Uni",
+          "found_via": [
+            "term:ambito di applicazione"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_19",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 19"
+          ],
+          "text_excerpt": "Considerando 19\n\nLa protezione delle persone fisiche con riguardo al trattamento dei dati personali da parte delle autorità competenti a fini di prevenzione, indagine, accertamento e perseguimento di reati o esecuzione di sanzioni penali, incluse la ",
+          "found_via": [
+            "term:ambito di applicazione"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_74",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 74"
+          ],
+          "text_excerpt": "Considerando 74\n\nÈ opportuno stabilire la responsabilità generale del titolare del trattamento per qualsiasi trattamento di dati personali che quest'ultimo abbia effettuato direttamente o che altri abbiano effettuato per suo conto. In particolare, il",
+          "found_via": [
+            "term:ambito di applicazione"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_76",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 76"
+          ],
+          "text_excerpt": "Considerando 76\n\nLa probabilità e la gravità del rischio per i diritti e le libertà dell'interessato dovrebbero essere determinate con riguardo alla natura, all'ambito di applicazione, al contesto e alle finalità del trattamento. Il rischio dovrebbe ",
+          "found_via": [
+            "term:ambito di applicazione"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_90",
+          "doc_urn": "eli/reg/2016/679/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 90"
+          ],
+          "text_excerpt": "Considerando 90\n\nIn tali casi, è opportuno che il titolare del trattamento effettui una valutazione d'impatto sulla protezione dei dati prima del trattamento, per valutare la particolare probabilità e gravità del rischio, tenuto conto della natura, d",
+          "found_via": [
+            "term:ambito di applicazione"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_174",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 174"
+          ],
+          "text_excerpt": "Considerando 174\n\nDati i rapidi sviluppi tecnologici e le competenze tecniche necessarie per l'efficace applicazione del presente regolamento, la Commissione dovrebbe valutare e riesaminare il presente regolamento entro il 2 agosto 2029 e successivam",
+          "found_via": [
+            "term:ambito di applicazione"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_24",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 24"
+          ],
+          "text_excerpt": "Considerando 24\n\nSe, e nella misura in cui, i sistemi di IA sono immessi sul mercato, messi in servizio o utilizzati con o senza modifica di tali sistemi per scopi militari, di difesa o di sicurezza nazionale, essi dovrebbero essere esclusi dall'ambi",
+          "found_via": [
+            "term:ambito di applicazione"
+          ],
+          "is_gold": false,
+          "notes": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__recital_87",
+          "doc_urn": "eli/reg/2024/1689/oj",
+          "article_eid": null,
+          "chunk_type": "recital",
+          "hierarchy_path": [
+            "Considerando 87"
+          ],
+          "text_excerpt": "Considerando 87\n\nInoltre, se un sistema di IA ad alto rischio che è un componente di sicurezza di un prodotto rientrante nell'ambito di applicazione della normativa di armonizzazione dell'Unione basata sul nuovo quadro legislativo non è immesso sul m",
+          "found_via": [
+            "term:ambito di applicazione"
+          ],
+          "is_gold": false,
+          "notes": ""
+        }
+      ]
+    }
+  ]
+}

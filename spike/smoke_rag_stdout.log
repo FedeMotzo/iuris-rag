@@ -1,0 +1,30 @@
+2026-05-19 18:19:01,751 INFO smoke_rag: Smoke RAG pipeline — provider=ollama
+2026-05-19 18:19:04,448 INFO sentence_transformers.base.model: No modules.json found for BAAI/bge-reranker-v2-m3, initializing a new CrossEncoder model.
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 9206.92it/s]
+2026-05-19 18:19:06,386 INFO core.llm_provider.config: Nessun .env trovato in /Users/fmotzo/progetti/italian-legal-rag/.env — uso solo variabili di ambiente
+2026-05-19 18:19:06,387 INFO core.llm_provider.ollama_provider: OllamaProvider init model=qwen2.5:14b base_url=http://localhost:11434 num_ctx=8192 timeout=120s
+2026-05-19 18:19:06,395 INFO httpx: HTTP Request: GET http://localhost:6333 "HTTP/1.1 200 OK"
+2026-05-19 18:19:06,395 INFO httpx: HTTP Request: GET http://localhost:11434/api/tags "HTTP/1.1 200 OK"
+2026-05-19 18:19:06,395 INFO core.serving.pipeline: RAGPipeline init provider=ollama model=qwen2.5:14b top_k=5 rerank_top_k=20 use_graph=False max_tokens=500
+2026-05-19 18:19:06,399 INFO smoke_rag: === Q6: Quali sono i compiti del responsabile della protezione dei dati?
+2026-05-19 18:19:06,399 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=5 rerank=True graph=False
+2026-05-19 18:19:06,399 INFO core.embedding.bge_m3: Loading BAAI/bge-m3 on mps (first call)
+2026-05-19 18:19:06,399 INFO sentence_transformers.base.model: Loading SentenceTransformer model from BAAI/bge-m3.
+Loading weights:   0%|          | 0/391 [00:00<?, ?it/s]Loading weights: 100%|██████████| 391/391 [00:00<00:00, 91419.41it/s]
+2026-05-19 18:19:07,674 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 18:19:31,886 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 18:19:43,992 INFO core.serving.pipeline: query done retrieval=4189ms gen=33404ms verify=1ms total=37594ms all_verified=True n_cite=4
+2026-05-19 18:19:43,993 INFO smoke_rag: [Q6] retrieval=4189ms gen=33404ms verify=1ms total=37594ms n_cite=4 all_verified=True
+2026-05-19 18:19:43,993 INFO smoke_rag: === Q7: Quando è obbligatoria la valutazione d'impatto sulla protezione dei dati?
+2026-05-19 18:19:43,993 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=5 rerank=True graph=False
+2026-05-19 18:19:44,409 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 18:20:01,717 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 18:20:14,605 INFO core.serving.pipeline: query done retrieval=3428ms gen=27183ms verify=0ms total=30612ms all_verified=True n_cite=4
+2026-05-19 18:20:14,605 INFO smoke_rag: [Q7] retrieval=3428ms gen=27183ms verify=0ms total=30612ms n_cite=4 all_verified=True
+2026-05-19 18:20:14,605 INFO smoke_rag: === Q1: Un sistema che fa screening automatico dei CV in fase di selezione del personale ricade tra i sistemi ad alto rischio dell'AI Act?
+2026-05-19 18:20:14,605 INFO core.hybrid_retriever.retriever: retrieve mode=hybrid fetch_k=20 top_k=5 rerank=True graph=False
+2026-05-19 18:20:14,701 INFO httpx: HTTP Request: POST http://localhost:6333/collections/italian_legal_v1_hybrid/points/query "HTTP/1.1 200 OK"
+2026-05-19 18:20:39,554 INFO httpx: HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2026-05-19 18:20:47,429 INFO core.serving.pipeline: query done retrieval=2946ms gen=29878ms verify=0ms total=32824ms all_verified=True n_cite=2
+2026-05-19 18:20:47,429 INFO smoke_rag: [Q1] retrieval=2946ms gen=29878ms verify=0ms total=32824ms n_cite=2 all_verified=True
+2026-05-19 18:20:47,431 INFO smoke_rag: Risultati scritti su /Users/fmotzo/progetti/italian-legal-rag/spike/SMOKE_RAG_PIPELINE_RESULTS.md

@@ -1,0 +1,802 @@
+{
+  "articles": {
+    "D.Lgs 231/2001": {
+      "total": 109,
+      "token_distribution": {
+        "p50": 146,
+        "p90": 363,
+        "p99": 924,
+        "max": 2218
+      },
+      "over_1000": 1,
+      "over_2000": 1,
+      "over_4000": 0,
+      "top_5_longest": [
+        {
+          "id": "art_25-undecies",
+          "tokens": 2218
+        },
+        {
+          "id": "art_25-ter",
+          "tokens": 924
+        },
+        {
+          "id": "art_6",
+          "tokens": 692
+        },
+        {
+          "id": "art_25-quinquiesdecies",
+          "tokens": 605
+        },
+        {
+          "id": "art_25-octies.2",
+          "tokens": 582
+        }
+      ]
+    },
+    "D.Lgs 138/2024 (NIS2)": {
+      "total": 44,
+      "token_distribution": {
+        "p50": 699,
+        "p90": 1440,
+        "p99": 3542,
+        "max": 3542
+      },
+      "over_1000": 12,
+      "over_2000": 2,
+      "over_4000": 0,
+      "top_5_longest": [
+        {
+          "id": "art_2",
+          "tokens": 3542
+        },
+        {
+          "id": "art_38",
+          "tokens": 2733
+        },
+        {
+          "id": "art_11",
+          "tokens": 1695
+        },
+        {
+          "id": "art_40",
+          "tokens": 1582
+        },
+        {
+          "id": "art_15",
+          "tokens": 1440
+        }
+      ]
+    },
+    "L. 132/2025": {
+      "total": 28,
+      "token_distribution": {
+        "p50": 349,
+        "p90": 876,
+        "p99": 1938,
+        "max": 1938
+      },
+      "over_1000": 3,
+      "over_2000": 0,
+      "over_4000": 0,
+      "top_5_longest": [
+        {
+          "id": "art_24",
+          "tokens": 1938
+        },
+        {
+          "id": "art_19",
+          "tokens": 1118
+        },
+        {
+          "id": "art_20",
+          "tokens": 1064
+        },
+        {
+          "id": "art_8",
+          "tokens": 876
+        },
+        {
+          "id": "art_23",
+          "tokens": 759
+        }
+      ]
+    },
+    "GDPR (consolidata)": {
+      "total": 99,
+      "token_distribution": {
+        "p50": 312,
+        "p90": 982,
+        "p99": 1453,
+        "max": 1982
+      },
+      "over_1000": 9,
+      "over_2000": 0,
+      "over_4000": 0,
+      "top_5_longest": [
+        {
+          "id": "art_4",
+          "tokens": 1982
+        },
+        {
+          "id": "art_70",
+          "tokens": 1453
+        },
+        {
+          "id": "art_83",
+          "tokens": 1329
+        },
+        {
+          "id": "art_28",
+          "tokens": 1172
+        },
+        {
+          "id": "art_40",
+          "tokens": 1143
+        }
+      ]
+    },
+    "AI Act (iniziale)": {
+      "total": 113,
+      "token_distribution": {
+        "p50": 421,
+        "p90": 1145,
+        "p99": 2553,
+        "max": 4188
+      },
+      "over_1000": 18,
+      "over_2000": 3,
+      "over_4000": 1,
+      "top_5_longest": [
+        {
+          "id": "art_3",
+          "tokens": 4188
+        },
+        {
+          "id": "art_5",
+          "tokens": 2553
+        },
+        {
+          "id": "art_57",
+          "tokens": 2179
+        },
+        {
+          "id": "art_26",
+          "tokens": 1782
+        },
+        {
+          "id": "art_60",
+          "tokens": 1734
+        }
+      ]
+    }
+  },
+  "long_articles_detail": [
+    {
+      "doc": "D.Lgs 231/2001",
+      "article_id": "art_25-undecies",
+      "tokens": 2218,
+      "n_commi": 10,
+      "comma_tokens": {
+        "p50": 109,
+        "p90": 387,
+        "p99": 809,
+        "max": 809
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "D.Lgs 138/2024 (NIS2)",
+      "article_id": "art_2",
+      "tokens": 3542,
+      "n_commi": 1,
+      "comma_tokens": {
+        "p50": 3540,
+        "p90": 3540,
+        "p99": 3540,
+        "max": 3540
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "D.Lgs 138/2024 (NIS2)",
+      "article_id": "art_3",
+      "tokens": 1401,
+      "n_commi": 15,
+      "comma_tokens": {
+        "p50": 77,
+        "p90": 133,
+        "p99": 274,
+        "max": 274
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "D.Lgs 138/2024 (NIS2)",
+      "article_id": "art_9",
+      "tokens": 1110,
+      "n_commi": 4,
+      "comma_tokens": {
+        "p50": 408,
+        "p90": 465,
+        "p99": 465,
+        "max": 465
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "D.Lgs 138/2024 (NIS2)",
+      "article_id": "art_11",
+      "tokens": 1695,
+      "n_commi": 7,
+      "comma_tokens": {
+        "p50": 124,
+        "p90": 310,
+        "p99": 799,
+        "max": 799
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "D.Lgs 138/2024 (NIS2)",
+      "article_id": "art_14",
+      "tokens": 1399,
+      "n_commi": 6,
+      "comma_tokens": {
+        "p50": 149,
+        "p90": 330,
+        "p99": 521,
+        "max": 521
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "D.Lgs 138/2024 (NIS2)",
+      "article_id": "art_15",
+      "tokens": 1440,
+      "n_commi": 8,
+      "comma_tokens": {
+        "p50": 76,
+        "p90": 475,
+        "p99": 516,
+        "max": 516
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "D.Lgs 138/2024 (NIS2)",
+      "article_id": "art_18",
+      "tokens": 1422,
+      "n_commi": 4,
+      "comma_tokens": {
+        "p50": 639,
+        "p90": 718,
+        "p99": 718,
+        "max": 718
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "D.Lgs 138/2024 (NIS2)",
+      "article_id": "art_22",
+      "tokens": 1016,
+      "n_commi": 4,
+      "comma_tokens": {
+        "p50": 227,
+        "p90": 469,
+        "p99": 469,
+        "max": 469
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "D.Lgs 138/2024 (NIS2)",
+      "article_id": "art_25",
+      "tokens": 1212,
+      "n_commi": 12,
+      "comma_tokens": {
+        "p50": 85,
+        "p90": 124,
+        "p99": 354,
+        "max": 354
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "D.Lgs 138/2024 (NIS2)",
+      "article_id": "art_37",
+      "tokens": 1027,
+      "n_commi": 10,
+      "comma_tokens": {
+        "p50": 60,
+        "p90": 124,
+        "p99": 412,
+        "max": 412
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "D.Lgs 138/2024 (NIS2)",
+      "article_id": "art_38",
+      "tokens": 2733,
+      "n_commi": 16,
+      "comma_tokens": {
+        "p50": 128,
+        "p90": 337,
+        "p99": 405,
+        "max": 405
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "D.Lgs 138/2024 (NIS2)",
+      "article_id": "art_40",
+      "tokens": 1582,
+      "n_commi": 11,
+      "comma_tokens": {
+        "p50": 97,
+        "p90": 210,
+        "p99": 587,
+        "max": 587
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "L. 132/2025",
+      "article_id": "art_19",
+      "tokens": 1118,
+      "n_commi": 0,
+      "comma_tokens": {
+        "p50": 0,
+        "p90": 0,
+        "p99": 0,
+        "max": 0
+      },
+      "has_letters": false,
+      "is_monoblock": true
+    },
+    {
+      "doc": "L. 132/2025",
+      "article_id": "art_20",
+      "tokens": 1064,
+      "n_commi": 5,
+      "comma_tokens": {
+        "p50": 122,
+        "p90": 591,
+        "p99": 591,
+        "max": 591
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "L. 132/2025",
+      "article_id": "art_24",
+      "tokens": 1938,
+      "n_commi": 6,
+      "comma_tokens": {
+        "p50": 121,
+        "p90": 418,
+        "p99": 1138,
+        "max": 1138
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "GDPR (consolidata)",
+      "article_id": "art_4",
+      "tokens": 1982,
+      "n_commi": 0,
+      "comma_tokens": {
+        "p50": 0,
+        "p90": 0,
+        "p99": 0,
+        "max": 0
+      },
+      "has_letters": true,
+      "is_monoblock": true
+    },
+    {
+      "doc": "GDPR (consolidata)",
+      "article_id": "art_14",
+      "tokens": 1017,
+      "n_commi": 5,
+      "comma_tokens": {
+        "p50": 226,
+        "p90": 342,
+        "p99": 342,
+        "max": 342
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "GDPR (consolidata)",
+      "article_id": "art_28",
+      "tokens": 1172,
+      "n_commi": 10,
+      "comma_tokens": {
+        "p50": 69,
+        "p90": 187,
+        "p99": 508,
+        "max": 508
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "GDPR (consolidata)",
+      "article_id": "art_40",
+      "tokens": 1143,
+      "n_commi": 11,
+      "comma_tokens": {
+        "p50": 82,
+        "p90": 188,
+        "p99": 286,
+        "max": 286
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "GDPR (consolidata)",
+      "article_id": "art_45",
+      "tokens": 1037,
+      "n_commi": 9,
+      "comma_tokens": {
+        "p50": 65,
+        "p90": 182,
+        "p99": 329,
+        "max": 329
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "GDPR (consolidata)",
+      "article_id": "art_47",
+      "tokens": 1128,
+      "n_commi": 3,
+      "comma_tokens": {
+        "p50": 120,
+        "p90": 928,
+        "p99": 928,
+        "max": 928
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "GDPR (consolidata)",
+      "article_id": "art_58",
+      "tokens": 1100,
+      "n_commi": 6,
+      "comma_tokens": {
+        "p50": 57,
+        "p90": 304,
+        "p99": 409,
+        "max": 409
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "GDPR (consolidata)",
+      "article_id": "art_70",
+      "tokens": 1453,
+      "n_commi": 4,
+      "comma_tokens": {
+        "p50": 51,
+        "p90": 1332,
+        "p99": 1332,
+        "max": 1332
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "GDPR (consolidata)",
+      "article_id": "art_83",
+      "tokens": 1329,
+      "n_commi": 9,
+      "comma_tokens": {
+        "p50": 81,
+        "p90": 220,
+        "p99": 479,
+        "max": 479
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "AI Act (iniziale)",
+      "article_id": "art_2",
+      "tokens": 1110,
+      "n_commi": 12,
+      "comma_tokens": {
+        "p50": 83,
+        "p90": 189,
+        "p99": 222,
+        "max": 222
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "AI Act (iniziale)",
+      "article_id": "art_3",
+      "tokens": 4188,
+      "n_commi": 0,
+      "comma_tokens": {
+        "p50": 0,
+        "p90": 0,
+        "p99": 0,
+        "max": 0
+      },
+      "has_letters": true,
+      "is_monoblock": true
+    },
+    {
+      "doc": "AI Act (iniziale)",
+      "article_id": "art_5",
+      "tokens": 2553,
+      "n_commi": 8,
+      "comma_tokens": {
+        "p50": 239,
+        "p90": 401,
+        "p99": 1170,
+        "max": 1170
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "AI Act (iniziale)",
+      "article_id": "art_10",
+      "tokens": 1076,
+      "n_commi": 6,
+      "comma_tokens": {
+        "p50": 77,
+        "p90": 314,
+        "p99": 455,
+        "max": 455
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "AI Act (iniziale)",
+      "article_id": "art_26",
+      "tokens": 1782,
+      "n_commi": 12,
+      "comma_tokens": {
+        "p50": 95,
+        "p90": 332,
+        "p99": 653,
+        "max": 653
+      },
+      "has_letters": false,
+      "is_monoblock": false
+    },
+    {
+      "doc": "AI Act (iniziale)",
+      "article_id": "art_36",
+      "tokens": 1390,
+      "n_commi": 9,
+      "comma_tokens": {
+        "p50": 185,
+        "p90": 256,
+        "p99": 324,
+        "max": 324
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "AI Act (iniziale)",
+      "article_id": "art_43",
+      "tokens": 1175,
+      "n_commi": 6,
+      "comma_tokens": {
+        "p50": 153,
+        "p90": 330,
+        "p99": 416,
+        "max": 416
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "AI Act (iniziale)",
+      "article_id": "art_50",
+      "tokens": 1076,
+      "n_commi": 7,
+      "comma_tokens": {
+        "p50": 146,
+        "p90": 215,
+        "p99": 278,
+        "max": 278
+      },
+      "has_letters": false,
+      "is_monoblock": false
+    },
+    {
+      "doc": "AI Act (iniziale)",
+      "article_id": "art_56",
+      "tokens": 1076,
+      "n_commi": 9,
+      "comma_tokens": {
+        "p50": 97,
+        "p90": 181,
+        "p99": 228,
+        "max": 228
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "AI Act (iniziale)",
+      "article_id": "art_57",
+      "tokens": 2179,
+      "n_commi": 17,
+      "comma_tokens": {
+        "p50": 128,
+        "p90": 218,
+        "p99": 223,
+        "max": 223
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "AI Act (iniziale)",
+      "article_id": "art_58",
+      "tokens": 1145,
+      "n_commi": 4,
+      "comma_tokens": {
+        "p50": 187,
+        "p90": 731,
+        "p99": 731,
+        "max": 731
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "AI Act (iniziale)",
+      "article_id": "art_59",
+      "tokens": 1022,
+      "n_commi": 3,
+      "comma_tokens": {
+        "p50": 104,
+        "p90": 788,
+        "p99": 788,
+        "max": 788
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "AI Act (iniziale)",
+      "article_id": "art_60",
+      "tokens": 1734,
+      "n_commi": 9,
+      "comma_tokens": {
+        "p50": 89,
+        "p90": 191,
+        "p99": 1005,
+        "max": 1005
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "AI Act (iniziale)",
+      "article_id": "art_66",
+      "tokens": 1023,
+      "n_commi": 0,
+      "comma_tokens": {
+        "p50": 0,
+        "p90": 0,
+        "p99": 0,
+        "max": 0
+      },
+      "has_letters": true,
+      "is_monoblock": true
+    },
+    {
+      "doc": "AI Act (iniziale)",
+      "article_id": "art_74",
+      "tokens": 1622,
+      "n_commi": 14,
+      "comma_tokens": {
+        "p50": 117,
+        "p90": 158,
+        "p99": 200,
+        "max": 200
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "AI Act (iniziale)",
+      "article_id": "art_79",
+      "tokens": 1179,
+      "n_commi": 9,
+      "comma_tokens": {
+        "p50": 85,
+        "p90": 197,
+        "p99": 410,
+        "max": 410
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "AI Act (iniziale)",
+      "article_id": "art_99",
+      "tokens": 1240,
+      "n_commi": 11,
+      "comma_tokens": {
+        "p50": 69,
+        "p90": 215,
+        "p99": 407,
+        "max": 407
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    },
+    {
+      "doc": "AI Act (iniziale)",
+      "article_id": "art_112",
+      "tokens": 1242,
+      "n_commi": 13,
+      "comma_tokens": {
+        "p50": 96,
+        "p90": 148,
+        "p99": 149,
+        "max": 149
+      },
+      "has_letters": true,
+      "is_monoblock": false
+    }
+  ],
+  "recitals": {
+    "GDPR (iniziale)": {
+      "total": 173,
+      "token_distribution": {
+        "p50": 154,
+        "p90": 354,
+        "p99": 637,
+        "max": 776
+      },
+      "over_500": 5,
+      "over_1000": 0
+    },
+    "AI Act (iniziale)": {
+      "total": 180,
+      "token_distribution": {
+        "p50": 245,
+        "p90": 607,
+        "p99": 811,
+        "max": 1043
+      },
+      "over_500": 27,
+      "over_1000": 1
+    }
+  }
+}

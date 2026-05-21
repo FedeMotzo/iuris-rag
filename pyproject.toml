@@ -1,0 +1,61 @@
+[project]
+name = "iuris-rag"
+version = "0.5.0"
+description = "RAG su normativa privacy/AI italiana"
+license = "Apache-2.0"
+readme = "README.md"
+authors = [{ name = "Federico Motzo" }]
+requires-python = ">=3.11"
+keywords = ["rag", "italian", "legal", "gdpr", "ai-act", "nis2", "benchmark"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Legal Industry",
+    "Intended Audience :: Science/Research",
+    "Natural Language :: Italian",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing :: Linguistic",
+]
+dependencies = [
+    "lxml>=5.2.0,<6",
+    "requests>=2.31,<3",
+    "sentence-transformers>=5.0,<6",
+    "qdrant-client>=1.18,<2",
+    "anthropic>=0.40.0,<1",
+    "python-dotenv>=1.0.0,<2",
+    "httpx>=0.27,<1",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8.0",
+    "requests-mock>=1.12",
+]
+dev = [
+    "pytest>=8.0",
+    "requests-mock>=1.12",
+    "ruff>=0.4",
+]
+
+[project.urls]
+Homepage = "https://github.com/fmotzo/iuris-rag"
+Repository = "https://github.com/fmotzo/iuris-rag"
+Issues = "https://github.com/fmotzo/iuris-rag/issues"
+Documentation = "https://github.com/fmotzo/iuris-rag"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["core*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = [
+    "requires_reranker: test che carica BAAI/bge-reranker-v2-m3 (~2.3GB); attiva con RUN_RERANKER_TESTS=1",
+]

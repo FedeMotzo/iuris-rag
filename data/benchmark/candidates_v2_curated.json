@@ -1,0 +1,1157 @@
+{
+  "metadata": {
+    "purpose": "Curated benchmark v2 candidates (phase C output)",
+    "date": "2026-05-20",
+    "phase": "C - human curation cluster-by-cluster",
+    "n_input": 82,
+    "n_kept": 50,
+    "n_scarted": 34,
+    "n_riformulate": 5,
+    "n_sostitute_nuove": 2,
+    "n_fix_metadata": 1,
+    "schema": "identical to gold_answers_v1.json for phase E merge",
+    "qid_range": "Q51-Q100",
+    "curation_summary": {
+      "pre_filter_yellow_scarted": [
+        "C060",
+        "C024",
+        "C039"
+      ],
+      "riformulate": {
+        "C026": "Cross-norma scenario 2 norme - angolatura concreta fornitore conforme AI Act",
+        "C040": "NIS2+GDPR data breach - focus art_34 comunicazione interessato",
+        "C063": "Articolo inesistente - rimosso errore 'Regolamento NIS2', mantenuto solo errore numerico",
+        "C072": "Garante UC4 ChatGPT - data 'fine marzo 2023', rimosso numero 9870832",
+        "C074": "Garante UC4 TikTok - rimosso importo non confermabile"
+      },
+      "sostitute_nuove": {
+        "C083": "L. 132/2025 trattamento dati per IA (sostituisce C024 scartato pre-filtro)",
+        "C084": "231+GDPR integrazione modello accesso abusivo (sostituisce C039 scartato pre-filtro)"
+      },
+      "fix_metadata": {
+        "C080": "has_corpus_limit_declaration true → false (gold_answer non usa pattern canonico, candidate è 'vaga pura')"
+      },
+      "fix_chunks_fragment_splittato": {
+        "C008": "[art_38] → [art_38__paras_1_11]",
+        "C009": "[art_37, art_38] → [art_38__paras_12_16]",
+        "C050": "[art_38] → [art_38__paras_1_11]"
+      },
+      "fix_chunks_other": {
+        "C005": "[art_24, art_25] → [art_24] (art_25 errato, supply chain è in art_24)",
+        "C025": "[art_7, art_8] → [art_8, art_9] (art_7 rubrica vuota, art_9 trattamento dati pertinente)",
+        "C029": "[art_25, art_26] → [art_26] (art_25 è diritto d'autore, non responsabilità penale)"
+      },
+      "voti_pro_estensione_cp": {
+        "count": 4,
+        "qids": [
+          "Q66 (ex C029 deepfake)",
+          "Q76 (ex C084 accesso abusivo)",
+          "Q85 (ex C053 corruzione)",
+          "Q86 (ex C054 riciclaggio)"
+        ],
+        "threshold": "≥4 raggiunta",
+        "decision": "Estensione c.p. RINVIATA a v1.1. Motivazione: costo elevato (5-7 giorni) vs beneficio limitato (4% del benchmark); le 4 query con corpus_limit canonico testano valutativamente la capacità del sistema di riconoscere i propri limiti."
+      },
+      "audit_patterns_caught": [
+        "C014 scartata per 'asse notifica già coperto' (cluster NIS2 cross GDPR)",
+        "C033 scartata per scenario artificiale (studio legale 231 destinatario ambiguo + qualificazione GDPR fornitore IA fragile)",
+        "C068 scartata per query strutturalmente confusa (art.11 abrogato vs art.153 vigente)",
+        "C071 scartata per scivolamento da negative a positive (art.122 Cod.Privacy risponde sui cookie)",
+        "C075 scartata per stress non puro (qualificatore 'sanzioni' risolve omonimia → quasi-positive)",
+        "C078/C079 scartate per fotocopia pattern Q43/Q45 v1"
+      ],
+      "design_intentional_paired_queries": {
+        "art_38__paras_1_11": [
+          "Q55 (essenziali)",
+          "Q83 (importanti)"
+        ],
+        "GDPR_art_25_NIS2": [
+          "Q54 (destinatari servizio)",
+          "Q57 (autorità doppia notifica)"
+        ],
+        "L132_art_9_GDPR": [
+          "Q64 (trattamento dati sanitario)",
+          "Q67 (trattamento dati sviluppo IA)"
+        ]
+      }
+    },
+    "warnings_for_phase_e_audit": [
+      "Gold_chunks campi 'hierarchy' e 'text' vuoti: popolare via script Qdrant in fase E pre-merge",
+      "Confidence cluster NIS2 mono-norma: media (numerazione articoli verificata via CORPUS_REFERENCE indice; rubriche verificate; mapping Direttiva→D.Lgs confermato)",
+      "Confidence cluster L. 132/2025: media-bassa (alcuni chunks selezionati su rubriche dell'indice, non verificati per contenuto sostantivo)",
+      "Confidence cluster Codice Privacy mono-norma: alta (articoli centrali confermati in CORPUS_OVERVIEW)"
+    ]
+  },
+  "entries": [
+    {
+      "qid": "Q51",
+      "use_case": "NIS2 governance organi amministrativi",
+      "query_type": "positive",
+      "question": "Quali responsabilità ricadono in modo diretto sugli organi di amministrazione di un soggetto essenziale per quanto riguarda l'approvazione e la sorveglianza delle misure di gestione del rischio cyber?",
+      "gold_chunks": [
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_23",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_24",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "Il D.Lgs 138/2024 prevede una responsabilità diretta degli organi di amministrazione dei soggetti essenziali e importanti, che devono approvare le misure tecniche, operative e organizzative di gestione del rischio adottate dal soggetto e sorvegliarne l'attuazione [cite:akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_23]. I membri di tali organi sono inoltre tenuti a seguire formazione specifica sulle pratiche di gestione del rischio in materia di cybersicurezza, in modo da poter identificare e valutare i rischi e le pratiche di gestione e il loro impatto sui servizi offerti [cite:akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_24]. L'inadempimento di tali obblighi espone i membri dell'organo amministrativo a profili di responsabilità sia in sede sanzionatoria amministrativa sia, in linea di principio, sul piano civilistico verso la società.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Stresso accountability personale dell'organo amministrativo, novità NIS2. gold_answer_quality: draft, articoli da verificare."
+    },
+    {
+      "qid": "Q52",
+      "use_case": "NIS2 misure gestione rischio multi-rischio",
+      "query_type": "positive",
+      "question": "La NIS2 impone l'adozione di un approccio multi-rischio: quali sono gli ambiti minimi che le misure tecniche e organizzative di gestione del rischio devono coprire?",
+      "gold_chunks": [
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_24",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "Il D.Lgs 138/2024 impone ai soggetti essenziali e importanti l'adozione di un approccio multi-rischio, articolato in misure tecniche, operative e organizzative adeguate e proporzionate per gestire i rischi posti alla sicurezza dei sistemi informativi e di rete utilizzati per l'erogazione dei servizi [cite:akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_24]. Le misure devono coprire almeno: politiche di analisi e gestione del rischio e sicurezza dei sistemi informatici; gestione degli incidenti; continuità operativa e gestione delle crisi; sicurezza della catena di approvvigionamento; sicurezza nell'acquisizione, sviluppo e manutenzione dei sistemi; politiche per valutare l'efficacia delle misure di gestione del rischio; pratiche di igiene informatica di base e formazione; politiche e procedure relative alla crittografia e alla cifratura; sicurezza delle risorse umane, controllo degli accessi e gestione degli attivi; uso di soluzioni di autenticazione a più fattori o autenticazione continua, comunicazioni vocali sicure, video e di testo protette.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Stresso elenco tassativo aree multi-rischio. gold_answer_quality: draft, articoli da verificare."
+    },
+    {
+      "qid": "Q53",
+      "use_case": "NIS2 supply chain ICT responsabilità",
+      "query_type": "positive",
+      "question": "Un soggetto essenziale che si affida a un fornitore ICT esterno per la gestione dei propri sistemi è esonerato dalle responsabilità in caso di incidente originato da una vulnerabilità del fornitore?",
+      "gold_chunks": [
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_24",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "No. Il D.Lgs 138/2024 include espressamente fra le misure di gestione del rischio anche quelle relative alla sicurezza della catena di approvvigionamento, includendo gli aspetti riguardanti i rapporti tra ciascun soggetto e i suoi fornitori e prestatori di servizi diretti [cite:akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_24]. Il soggetto essenziale deve valutare le vulnerabilità specifiche di ciascun fornitore diretto, la qualità complessiva dei prodotti e delle pratiche di cybersicurezza adottate, e tenere conto dei risultati delle valutazioni coordinate di rischio della catena di approvvigionamento condotte a livello europeo per i settori critici [cite:akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_25]. La responsabilità in caso di incidente originato dalla supply chain ICT ricade dunque sul soggetto essenziale, salva azione di rivalsa contrattuale verso il fornitore.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Stresso responsabilità supply chain, tema poco coperto in v1. gold_answer_quality: draft, articoli da verificare."
+    },
+    {
+      "qid": "Q54",
+      "use_case": "NIS2 comunicazione destinatari servizio",
+      "query_type": "positive",
+      "question": "In quali casi un soggetto NIS2 è tenuto a informare anche i destinatari dei propri servizi di un incidente significativo?",
+      "gold_chunks": [
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_25",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "Il D.Lgs 138/2024 prevede che il soggetto essenziale o importante, ove opportuno, comunichi senza indebito ritardo ai destinatari dei propri servizi che possono essere interessati da una minaccia informatica significativa le eventuali misure o azioni correttive che possono adottare in risposta a tale minaccia, fornendo quando necessario anche informazioni sulla minaccia stessa [cite:akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_25]. L'obbligo è distinto rispetto alla notifica all'autorità competente e ha finalità di trasparenza verso l'utenza e di contenimento dei danni a valle. La comunicazione ai destinatari non sostituisce l'eventuale notifica di violazione di dati personali ai sensi del GDPR, che resta autonoma e soggetta alle proprie regole.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Stresso comunicazione destinatari, distinta da notifica autorità. gold_answer_quality: draft, articoli da verificare."
+    },
+    {
+      "qid": "Q55",
+      "use_case": "NIS2 sanzioni soggetti essenziali",
+      "query_type": "positive",
+      "question": "Quali sono i massimali delle sanzioni amministrative pecuniarie previste dal D.Lgs 138/2024 per i soggetti essenziali?",
+      "gold_chunks": [
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_38__paras_1_11",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "Per i soggetti essenziali, il D.Lgs 138/2024 prevede sanzioni amministrative pecuniarie di importo massimo pari a 10 milioni di euro o al 2% del fatturato annuo mondiale totale dell'esercizio precedente, ove l'importo sia superiore [cite:akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_38]. Per i soggetti importanti i massimali sono inferiori, fissati a 7 milioni di euro o all'1,4% del fatturato annuo mondiale, ove superiore. L'autorità competente, nel determinare la sanzione, tiene conto delle circostanze del caso, in particolare della gravità della violazione, della sua durata, dei precedenti del soggetto e del beneficio finanziario eventualmente conseguito.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Stresso massimali differenziati essenziali/importanti. Confidence bassa su articolo specifico. gold_answer_quality: draft, articoli da verificare."
+    },
+    {
+      "qid": "Q56",
+      "use_case": "NIS2 sospensione dirigenti",
+      "query_type": "positive",
+      "question": "L'autorità competente NIS2 può sospendere temporaneamente dalle funzioni dirigenziali un amministratore di un soggetto essenziale in caso di inadempimento grave?",
+      "gold_chunks": [
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_38__paras_12_16",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "Sì, ma limitatamente ai soggetti essenziali e come misura di ultima istanza. Il D.Lgs 138/2024 prevede che, qualora le altre misure di esecuzione si rivelino inefficaci, l'autorità competente possa chiedere ai pertinenti organismi o organi giurisdizionali la sospensione temporanea della certificazione o autorizzazione relativa ai servizi del soggetto, ovvero il divieto temporaneo di esercitare funzioni dirigenziali in capo a una persona fisica che svolga funzioni di amministratore o rappresentante legale, fino al perdurare delle violazioni [cite:akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_38__paras_12_16]. Tale misura presuppone violazioni gravi e reiterate degli obblighi di gestione del rischio o di notifica di incidenti.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Stresso misura sospensione dirigenti, novità NIS2 ad alta visibilità. gold_answer_quality: draft, articoli da verificare."
+    },
+    {
+      "qid": "Q57",
+      "use_case": "NIS2+GDPR data breach tempistiche doppia notifica",
+      "query_type": "positive",
+      "question": "Un incidente informatico che compromette i sistemi di un soggetto essenziale NIS2 e comporta accesso non autorizzato a dati personali dei clienti deve essere notificato sia all'ACN sia al Garante: i due adempimenti hanno tempistiche e contenuti coordinati?",
+      "gold_chunks": [
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_25",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_33",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "I due adempimenti sono autonomi sotto il profilo soggettivo, ma vanno coordinati. Sotto il profilo NIS2, il D.Lgs 138/2024 impone un preallarme entro 24 ore e una notifica strutturata entro 72 ore all'autorità competente (CSIRT Italia presso ACN) ogniqualvolta l'incidente sia significativo, a prescindere dal coinvolgimento di dati personali [cite:akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_25]. Sotto il profilo GDPR, l'incidente costituisce violazione di dati personali se vi è stata distruzione, perdita, modifica, divulgazione non autorizzata o accesso ai dati e va notificato al Garante entro 72 ore dalla conoscenza, salvo che sia improbabile la lesione di diritti e libertà delle persone fisiche [cite:eli/reg/2016/679/oj__art_33]. Le due notifiche, pur sovrapponibili nel termine ordinario delle 72 ore, hanno contenuti, destinatari e finalità distinti e non sono fungibili.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Cross-norma fondamentale. Confidence media: GDPR art. 33 sicuro, articolo NIS2 da verificare."
+    },
+    {
+      "qid": "Q58",
+      "use_case": "NIS2+GDPR misure sicurezza preventive",
+      "query_type": "positive",
+      "question": "Quale rapporto sussiste fra l'obbligo di valutazione del rischio cyber NIS2 e l'obbligo di adottare misure di sicurezza adeguate ex art. 32 GDPR?",
+      "gold_chunks": [
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_24",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_32",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "Gli obblighi convivono e si rafforzano reciprocamente, pur muovendo da prospettive distinte. L'art. 32 GDPR impone a titolare e responsabile di adottare misure tecniche e organizzative adeguate per garantire un livello di sicurezza adeguato al rischio, considerando lo stato dell'arte, i costi di attuazione e la natura e finalità del trattamento, con riferimento specifico al rischio per i diritti e le libertà delle persone fisiche [cite:eli/reg/2016/679/oj__art_32]. Il D.Lgs 138/2024 impone ai soggetti essenziali e importanti misure tecniche, operative e organizzative adeguate e proporzionate per gestire i rischi posti alla sicurezza dei sistemi informativi e di rete, includendo aree specifiche come supply chain, gestione incidenti, igiene informatica [cite:akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_24]. Un soggetto che è insieme titolare GDPR e soggetto NIS2 deve adottare un quadro di misure idoneo a soddisfare entrambe le discipline, con cui condividere documentazione e procedure di gestione del rischio.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Cross-norma sostanziale su misure di sicurezza. Confidence media."
+    },
+    {
+      "qid": "Q59",
+      "use_case": "Garante poteri ispettivi",
+      "query_type": "positive",
+      "question": "Quali sono i poteri ispettivi del Garante per la protezione dei dati personali e in quali modalità possono essere esercitati?",
+      "gold_chunks": [
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_157",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_158",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "Il Garante può richiedere a titolare, responsabile, rappresentante, interessato o anche a terzi le informazioni e l'esibizione di documenti utili allo svolgimento dei propri compiti, fissando un termine per il riscontro [cite:akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_157]. Per l'esercizio dei poteri di controllo e accertamento il Garante può inoltre disporre, anche d'ufficio, l'accesso alle banche di dati o ad altre ispezioni e verifiche nei luoghi ove si svolge il trattamento o nei quali occorre effettuare rilevazioni utili, avvalendosi del personale del proprio Ufficio e, se necessario, della collaborazione di altri organi dello Stato [cite:akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_158]. Gli accertamenti che comportano accesso a domicilio, salvo che vi sia consenso, sono effettuati previa autorizzazione del presidente del tribunale competente per territorio.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Confidence alta su artt. 157-158."
+    },
+    {
+      "qid": "Q60",
+      "use_case": "Garante composizione collegio",
+      "query_type": "positive",
+      "question": "Come è composto il collegio del Garante per la protezione dei dati personali e con quali modalità avviene la nomina dei suoi componenti?",
+      "gold_chunks": [
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_153",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "Il Garante per la protezione dei dati personali opera in piena indipendenza ed è organo collegiale costituito da quattro componenti, eletti due dalla Camera dei deputati e due dal Senato della Repubblica con voto limitato [cite:akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_153]. I componenti sono scelti tra persone che assicurano indipendenza e che siano esperti di riconosciuta competenza nelle materie del diritto o dell'informatica, garantendo la presenza di entrambe le qualificazioni. Il presidente è eletto dai componenti tra loro stessi e il suo voto prevale in caso di parità. Il mandato dura sette anni e non è rinnovabile. Per la durata dell'incarico i componenti non possono esercitare attività professionale o di consulenza, né essere amministratori o dipendenti di enti pubblici o privati, né ricoprire cariche elettive.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Confidence alta su art. 153."
+    },
+    {
+      "qid": "Q61",
+      "use_case": "Trattamento condanne penali in gare pubbliche",
+      "query_type": "positive",
+      "question": "Su quale base giuridica un'amministrazione pubblica italiana può trattare dati relativi a condanne penali e reati nell'ambito di una procedura di gara?",
+      "gold_chunks": [
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_2-octies",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_10",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "Il trattamento di dati relativi a condanne penali e a reati o a connesse misure di sicurezza è consentito, ai sensi dell'art. 10 GDPR, soltanto sotto il controllo dell'autorità pubblica o se autorizzato dal diritto dell'Unione o degli Stati membri [cite:eli/reg/2016/679/oj__art_10]. L'art. 2-octies del Codice Privacy individua, in attuazione del rinvio europeo, le specifiche basi normative italiane: il trattamento è ammesso quando autorizzato da una norma di legge o, nei casi previsti, di regolamento, riguardanti tipologie di dati che possono essere trattati, i trattamenti consentiti e le specifiche garanzie [cite:akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_2-octies]. La verifica di assenza di condanne nelle procedure di gara pubblica trova fondamento nella normativa sui contratti pubblici, che costituisce una delle norme di legge richiamate dall'art. 2-octies a fondamento del trattamento.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Confidence alta su art. 2-octies, tema canonico."
+    },
+    {
+      "qid": "Q62",
+      "use_case": "Reclusione art.167 trattamento illecito",
+      "query_type": "positive",
+      "question": "In quali ipotesi il trattamento illecito di dati personali costituisce reato punito con la reclusione ai sensi dell'art. 167 del Codice Privacy?",
+      "gold_chunks": [
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_167",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "L'art. 167 del Codice Privacy punisce con la reclusione da sei mesi a un anno e mezzo il trattamento dei dati personali in violazione di specifiche disposizioni del GDPR e del Codice Privacy, quando sia commesso al fine di trarre per sé o per altri profitto ovvero di arrecare danno all'interessato, sempre che il fatto non costituisca più grave reato [cite:akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_167]. La pena è aumentata, da uno a tre anni di reclusione, se il fatto riguarda i dati di cui agli artt. 9 e 10 del GDPR (categorie particolari di dati e dati relativi a condanne penali e reati) o se dal fatto deriva nocumento all'interessato. La reclusione si applica inoltre, secondo la cornice prevista al primo comma, a trasferimenti di dati verso paesi terzi effettuati in violazione delle disposizioni del Capo V del GDPR.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Confidence alta su art. 167."
+    },
+    {
+      "qid": "Q63",
+      "use_case": "Trattamento dati forze di polizia",
+      "query_type": "positive",
+      "question": "Quali condizioni devono essere rispettate per il trattamento dei dati personali da parte delle forze di polizia ai sensi del Codice Privacy?",
+      "gold_chunks": [
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_175",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "L'art. 175 del Codice Privacy regola i trattamenti effettuati per finalità di polizia e di prevenzione, accertamento e repressione dei reati, in attuazione del rinvio operato dal D.Lgs 51/2018 che ha recepito in Italia la direttiva (UE) 2016/680 in materia di trattamento dati a fini di contrasto [cite:akn/it/act/decreto_legislativo/stato/2003-06-30/196__art_175]. Le disposizioni del Codice si applicano in quanto compatibili e nei limiti previsti dalla disciplina speciale. La base giuridica del trattamento è normativa e i diritti dell'interessato sono modulati con specifiche limitazioni che tengono conto delle finalità di indagine e tutela della sicurezza pubblica. Il dettaglio della disciplina sostanziale è contenuto nel D.Lgs 51/2018, non incluso nel corpus normativo di riferimento.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": true,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Stresso art. 175 con corpus limit su D.Lgs 51/2018. Confidence alta su art. 175."
+    },
+    {
+      "qid": "Q64",
+      "use_case": "L.132 IA in ambito sanitario",
+      "query_type": "positive",
+      "question": "Quali specifiche cautele introduce la L. 132/2025 per l'utilizzo di sistemi di intelligenza artificiale in ambito sanitario?",
+      "gold_chunks": [
+        {
+          "chunk_id": "akn/it/act/legge/stato/2025-09-23/132__art_8",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "akn/it/act/legge/stato/2025-09-23/132__art_9",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "La L. 132/2025 dedica al settore sanitario specifiche disposizioni in materia di ricerca e sperimentazione scientifica relativa alla realizzazione di sistemi di intelligenza artificiale, valorizzando la centralità della decisione del professionista sanitario e il carattere strumentale dei sistemi a supporto delle attività di prevenzione, diagnosi e cura [cite:akn/it/act/legge/stato/2025-09-23/132__art_8]. L'utilizzo non può comportare trattamento differenziato e discriminatorio nell'accesso alle prestazioni sanitarie. Sotto il profilo del trattamento dei dati personali coinvolti nello sviluppo e nell'utilizzo dei sistemi, si applicano le specifiche disposizioni della legge che si raccordano con la disciplina generale del GDPR e in particolare con il regime dei dati sanitari di cui all'art. 9 GDPR [cite:akn/it/act/legge/stato/2025-09-23/132__art_9]. Restano fermi gli obblighi informativi verso il paziente sull'utilizzo del sistema, sui vantaggi diagnostico-terapeutici e sulla logica decisionale impiegata.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Confidence bassa: articoli 7-8 ipotizzati ma non verificati nel mio quadro. gold_answer_quality: draft, articoli da verificare."
+    },
+    {
+      "qid": "Q65",
+      "use_case": "L.132 coordinamento con AI Act",
+      "query_type": "positive",
+      "question": "Un fornitore di un sistema di intelligenza artificiale ad alto rischio, già conforme agli obblighi dell'AI Act, è tenuto al rispetto di obblighi aggiuntivi previsti dalla L. 132/2025 nel diritto italiano?",
+      "gold_chunks": [
+        {
+          "chunk_id": "akn/it/act/legge/stato/2025-09-23/132__art_3",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_1",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "Il fornitore conforme all'AI Act non è destinatario di un sistema parallelo di obblighi tecnici sostanziali per la conformità del proprio sistema di IA in quanto tale: l'AI Act stabilisce regole armonizzate per l'immissione sul mercato, la messa in servizio e l'uso dei sistemi di IA nell'Unione, direttamente applicabili in Italia [cite:eli/reg/2024/1689/oj__art_1]. La L. 132/2025 reca principi generali sull'utilizzo trasparente, antropocentrico e responsabile dei sistemi di IA, e disciplina ambiti settoriali (sanità, lavoro, professioni intellettuali, pubblica amministrazione) e materie riservate alla competenza nazionale [cite:akn/it/act/legge/stato/2025-09-23/132__art_3]. Gli obblighi della L. 132/2025 che gravano sul fornitore non sostituiscono quelli dell'AI Act ma si aggiungono in via complementare quando il sistema è utilizzato negli ambiti settoriali italiani, ovvero rilevano per il deployer più che per il fornitore.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Confidence media su artt. 1 e 3."
+    },
+    {
+      "qid": "Q66",
+      "use_case": "L.132 deepfake fattispecie penale",
+      "query_type": "positive",
+      "question": "La L. 132/2025 introduce nuove fattispecie penali per la diffusione illecita di contenuti generati o manipolati con sistemi di intelligenza artificiale (deepfake)?",
+      "gold_chunks": [
+        {
+          "chunk_id": "akn/it/act/legge/stato/2025-09-23/132__art_26",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "Sì. L'art. 26 della L. 132/2025 reca modifiche al codice penale e ulteriori disposizioni penali, introducendo in particolare una specifica fattispecie incriminatrice per la diffusione illecita di contenuti generati o manipolati con sistemi di intelligenza artificiale (deepfake), quando dalla condotta derivi un danno ingiusto alla persona [cite:akn/it/act/legge/stato/2025-09-23/132__art_26]. La nuova fattispecie si innesta nel codice penale e prevede la pena della reclusione, articolata in funzione del danno causato e delle circostanze della diffusione. L'art. 26 contiene inoltre ulteriori interventi sulla disciplina penale connessi all'utilizzo improprio di sistemi di IA. Il dispositivo delle norme del codice penale modificate dall'art. 26 non è incluso nel corpus normativo di riferimento.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": true,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Confidence bassa: articoli ipotizzati. gold_answer_quality: draft, articoli da verificare."
+    },
+    {
+      "qid": "Q67",
+      "use_case": "L.132 trattamento dati per sviluppo IA",
+      "query_type": "positive",
+      "question": "Quali disposizioni specifiche introduce la L. 132/2025 in materia di trattamento di dati personali per lo sviluppo e l'addestramento di sistemi di intelligenza artificiale, e come si raccordano con il GDPR?",
+      "gold_chunks": [
+        {
+          "chunk_id": "akn/it/act/legge/stato/2025-09-23/132__art_9",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_6",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "La L. 132/2025 detta specifiche disposizioni in materia di trattamento di dati personali nello sviluppo, addestramento e utilizzo dei sistemi di intelligenza artificiale, in raccordo con il GDPR di cui costituisce specificazione nel diritto interno [cite:akn/it/act/legge/stato/2025-09-23/132__art_9]. Le disposizioni operano nei limiti consentiti dal margine di manovra del diritto nazionale ai sensi del Regolamento UE 2016/679. Le basi giuridiche del trattamento restano quelle dell'art. 6 GDPR e, per i dati delle categorie particolari, dell'art. 9 GDPR [cite:eli/reg/2016/679/oj__art_6]. La legge italiana valorizza in particolare il principio di trasparenza nei confronti dell'interessato sull'uso dell'algoritmo, il principio di non discriminazione e la sorveglianza umana, principi che il titolare deve integrare nelle proprie misure organizzative e nelle informative ai sensi degli artt. 13-14 GDPR.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Sostituta A generata in fase C per sostituire C024 (scartata pre-filtro come duplicato Q38). Confidence media su sostanza specifica art_9 L.132; alta su raccordo GDPR."
+    },
+    {
+      "qid": "Q68",
+      "use_case": "Sanità chatbot AI triage paziente",
+      "query_type": "positive",
+      "question": "Un'azienda ospedaliera intende mettere in produzione un chatbot AI per supportare il triage telefonico dei pazienti: quali adempimenti integrati AI Act, GDPR e L. 132/2025 devono essere previsti prima dell'avvio?",
+      "gold_chunks": [
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_6",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_27",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_9",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_35",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "akn/it/act/legge/stato/2025-09-23/132__art_7",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "Il sistema di chatbot AI per il triage va qualificato sotto il profilo dell'AI Act in base ai criteri di classificazione del rischio: se è destinato a finalità di valutazione che incidono sull'accesso a prestazioni essenziali e sull'assistenza sanitaria, può rientrare fra i sistemi ad alto rischio dell'Allegato III [cite:eli/reg/2024/1689/oj__art_6]. In quanto deployer pubblico erogatore di servizio pubblico essenziale, l'azienda ospedaliera è tenuta a svolgere la valutazione d'impatto sui diritti fondamentali (FRIA) prima del primo utilizzo [cite:eli/reg/2024/1689/oj__art_27]. Sotto il profilo GDPR, il trattamento di dati relativi alla salute richiede una base giuridica specifica ex art. 9, par. 2 (in genere finalità di medicina preventiva o assistenza sanitaria) [cite:eli/reg/2016/679/oj__art_9] e una DPIA ex art. 35 attesa la natura sensibile dei dati e l'uso di tecnologie innovative [cite:eli/reg/2016/679/oj__art_35]. La L. 132/2025 richiede che il sistema operi a supporto del professionista sanitario, con riserva al medico delle decisioni clinico-terapeutiche e con specifici obblighi informativi verso il paziente [cite:akn/it/act/legge/stato/2025-09-23/132__art_7].",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Scenario realistico DPO sanitario. Confidence media."
+    },
+    {
+      "qid": "Q69",
+      "use_case": "Pharma IA farmacovigilanza",
+      "query_type": "positive",
+      "question": "Un'azienda farmaceutica italiana, qualificata come soggetto essenziale NIS2 per il settore sanitario, intende impiegare un sistema di IA per supportare le attività di farmacovigilanza con dati provenienti da operatori sanitari e pazienti: quali sono gli obblighi cumulativi ai sensi di AI Act, GDPR e NIS2?",
+      "gold_chunks": [
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_6",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_9",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_35",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_24",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_25",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "Il sistema di IA in farmacovigilanza tratta dati relativi alla salute, sicché il trattamento è ammesso solo sulle basi previste dall'art. 9 GDPR (interesse pubblico in ambito sanitario, finalità di medicina preventiva, o consenso esplicito a seconda della finalità prevalente) [cite:eli/reg/2016/679/oj__art_9]. Sotto il profilo AI Act, la qualificazione del sistema dipende dalla destinazione: se utilizzato a supporto di decisioni che possano incidere su persone fisiche è da valutarne il rientro fra i sistemi ad alto rischio ai sensi dell'art. 6 e dell'Allegato III [cite:eli/reg/2024/1689/oj__art_6]. Una DPIA è in ogni caso necessaria attesa la natura sensibile dei dati e la valutazione sistematica [cite:eli/reg/2016/679/oj__art_35]. In quanto soggetto essenziale NIS2 del settore sanitario, l'azienda è tenuta ad adottare misure di gestione del rischio multi-dimensionali, in particolare in materia di sicurezza della supply chain ICT del sistema [cite:akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_24], e a rispettare le tempistiche di notifica di eventuali incidenti significativi all'autorità competente [cite:akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_25].",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Scenario realistico farma + NIS2. Confidence media. NIS2 articoli da verificare."
+    },
+    {
+      "qid": "Q70",
+      "use_case": "Banca outsourcing IA AML extra-UE",
+      "query_type": "positive",
+      "question": "Una banca italiana intende affidare in outsourcing a un fornitore extra-UE la gestione di un sistema di IA per il rilevamento di operazioni sospette di riciclaggio: quali profili AI Act, GDPR, NIS2 e 231 deve considerare in fase di selezione del fornitore?",
+      "gold_chunks": [
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_25",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_44",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_28",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_24",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_25-octies",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "Il fornitore extra-UE del sistema di IA assume gli obblighi di provider e i suoi rappresentanti autorizzati nell'Unione devono garantire la conformità al Regolamento, fermo restando il riparto di responsabilità con il deployer (la banca) [cite:eli/reg/2024/1689/oj__art_25]. Sotto il profilo GDPR, il trasferimento dei dati personali verso il paese terzo richiede una delle basi giuridiche previste dal Capo V (decisione di adeguatezza, garanzie adeguate come SCC, deroghe) [cite:eli/reg/2016/679/oj__art_44] e la formalizzazione del rapporto titolare-responsabile con specifici contenuti minimi [cite:eli/reg/2016/679/oj__art_28]. In quanto soggetto NIS2, la banca deve includere il fornitore nella propria valutazione della supply chain ICT e adottare misure di sicurezza adeguate al rischio specifico [cite:akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_24]. Sotto il profilo 231, l'utilizzo del sistema nell'ambito della normativa antiriciclaggio richiede l'aggiornamento del modello organizzativo per il presidio dei rischi 231 in materia di riciclaggio [cite:akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_25-octies].",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Scenario realistico banca + provider extra-UE. Confidence media."
+    },
+    {
+      "qid": "Q71",
+      "use_case": "PA regionale IA graduatorie sociali",
+      "query_type": "positive",
+      "question": "Una regione italiana intende mettere in produzione un sistema di IA per supportare l'attribuzione di punteggi nelle graduatorie di accesso ai servizi residenziali per anziani: quali sono i principali profili giuridici da considerare integrando GDPR, AI Act, L. 132/2025 e NIS2?",
+      "gold_chunks": [
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__annex_III__point_5",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_27",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_22",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "akn/it/act/legge/stato/2025-09-23/132__art_3",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_24",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "Il sistema è ad alto rischio in quanto destinato a essere utilizzato dalle autorità pubbliche per valutare l'ammissibilità delle persone fisiche all'accesso a prestazioni e servizi essenziali di assistenza pubblica [cite:eli/reg/2024/1689/oj__annex_III__point_5]. La regione, quale deployer pubblico, deve svolgere la FRIA prima del primo utilizzo [cite:eli/reg/2024/1689/oj__art_27]. Le decisioni che incidono sull'attribuzione del posto in graduatoria, ove producano effetti giuridici sulle persone fisiche, non possono essere fondate unicamente su trattamenti automatizzati e devono garantire l'intervento umano e il diritto di contestare la decisione [cite:eli/reg/2016/679/oj__art_22]. La L. 132/2025 conferma il principio di antropocentricità dell'utilizzo dei sistemi di IA nel settore pubblico [cite:akn/it/act/legge/stato/2025-09-23/132__art_3]. Qualora la regione sia qualificata come soggetto essenziale NIS2, il sistema deve essere integrato nel quadro complessivo di gestione del rischio cyber [cite:akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_24].",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Scenario realistico ente regionale. Confidence media."
+    },
+    {
+      "qid": "Q72",
+      "use_case": "Industria IA monitoraggio lavoratori",
+      "query_type": "positive",
+      "question": "Un'impresa industriale italiana adotta un sistema di IA per monitorare in continuo le prestazioni dei propri lavoratori in linea di produzione: quali obblighi cumulativi sorgono ai sensi di AI Act, GDPR e L. 132/2025 e quali profili di rilevanza statutaria sul piano del controllo a distanza?",
+      "gold_chunks": [
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__annex_III__point_4",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_26",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_88",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "akn/it/act/legge/stato/2025-09-23/132__art_11",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "Il sistema di IA destinato a monitorare e valutare le prestazioni e il comportamento delle persone nei rapporti di lavoro è classificato come ad alto rischio dall'AI Act [cite:eli/reg/2024/1689/oj__annex_III__point_4]. In quanto deployer datore di lavoro, l'impresa deve informare preventivamente i lavoratori e i loro rappresentanti, garantire la sorveglianza umana, conservare i log e adempiere agli altri obblighi ex art. 26 [cite:eli/reg/2024/1689/oj__art_26]. Sotto il profilo GDPR, il trattamento dei dati dei lavoratori è regolato anche dalle disposizioni nazionali introdotte ai sensi dell'art. 88, che valorizzano la dignità umana, gli interessi legittimi e i diritti fondamentali degli interessati [cite:eli/reg/2016/679/oj__art_88]. La L. 132/2025 conferma il principio di dignità, riservatezza e non discriminazione nei rapporti di lavoro mediati da IA [cite:akn/it/act/legge/stato/2025-09-23/132__art_11]. Sotto il profilo statutario, il controllo a distanza dei lavoratori è disciplinato dall'art. 4 dello Statuto dei lavoratori (L. 300/1970, non incluso nel corpus normativo di riferimento), che impone accordo sindacale o autorizzazione amministrativa preventiva per gli strumenti che possono comportare controllo dell'attività.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": true,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Scenario realistico monitoraggio lavoratori. Cross AI Act + GDPR + L.132 + Statuto (limit). Confidence media."
+    },
+    {
+      "qid": "Q73",
+      "use_case": "AI Act+GDPR deployer vs titolare",
+      "query_type": "positive",
+      "question": "Quando un'organizzazione assume la qualifica di deployer di un sistema di IA ad alto rischio coincide automaticamente anche la qualifica di titolare del trattamento ai sensi del GDPR?",
+      "gold_chunks": [
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_3",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_26",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_4",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_24",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "Non automaticamente, ma frequentemente sì. Il deployer ai sensi dell'AI Act è la persona fisica o giuridica che utilizza un sistema di IA sotto la propria autorità nel quadro di un'attività professionale [cite:eli/reg/2024/1689/oj__art_3]. Il titolare del trattamento ai sensi del GDPR è il soggetto che determina finalità e mezzi del trattamento di dati personali [cite:eli/reg/2016/679/oj__art_4]. La sovrapposizione si realizza quando l'utilizzo del sistema comporta un trattamento di dati personali e il deployer ne determina le finalità ed i mezzi essenziali. Gli obblighi sono tuttavia distinti: il deployer è tenuto a misure di sorveglianza umana, monitoraggio, conservazione dei log e informazione ai sensi dell'art. 26 [cite:eli/reg/2024/1689/oj__art_26]; il titolare è tenuto al rispetto dei principi di protezione dei dati e a implementare misure idonee a dimostrare la conformità ai sensi dell'art. 24 [cite:eli/reg/2016/679/oj__art_24]. La sovrapposizione richiede un'integrazione documentale, non una fungibilità degli obblighi.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Cross-norma standard AI Act + GDPR. Confidence media-alta."
+    },
+    {
+      "qid": "Q74",
+      "use_case": "AI Act+GDPR informativa",
+      "query_type": "positive",
+      "question": "Gli obblighi informativi che il deployer di un sistema di IA ad alto rischio deve assolvere verso le persone fisiche interessate dall'utilizzo coincidono con gli obblighi informativi del titolare del trattamento previsti dagli artt. 13-14 del GDPR?",
+      "gold_chunks": [
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_26",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_50",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_13",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_14",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "Gli obblighi sono complementari ma non sovrapponibili. Il deployer di un sistema di IA ad alto rischio dell'Allegato III deve informare le persone fisiche che siano soggette a decisioni o assistite da decisioni del sistema circa l'utilizzo dello stesso [cite:eli/reg/2024/1689/oj__art_26]. Gli obblighi di trasparenza ex art. 50 si applicano poi ai sistemi di IA destinati ad interagire con persone fisiche e ai sistemi che generano contenuti, con finalità di rendere riconoscibile la natura artificiale del soggetto o dell'output [cite:eli/reg/2024/1689/oj__art_50]. Quando il sistema tratta dati personali, l'informativa AI Act non sostituisce l'informativa GDPR, che deve essere fornita ai sensi degli artt. 13-14 nei modi e nei tempi richiesti, con il contenuto specifico previsto dalla normativa europea sulla protezione dei dati [cite:eli/reg/2016/679/oj__art_13] [cite:eli/reg/2016/679/oj__art_14]. Le informative possono essere integrate ma vanno verificate separatamente per completezza.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Cross-norma AI Act + GDPR su informativa. Confidence media-alta."
+    },
+    {
+      "qid": "Q75",
+      "use_case": "NIS2+GDPR comunicazione interessato",
+      "query_type": "positive",
+      "question": "A seguito di un incidente NIS2 che ha comportato esfiltrazione di dati personali di clienti, in quali casi il soggetto è tenuto a comunicare la violazione direttamente agli interessati persone fisiche, oltre alle notifiche al Garante e all'ACN?",
+      "gold_chunks": [
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_34",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_33",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_25",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "Quando l'incidente ha determinato una violazione dei dati personali che è suscettibile di presentare un rischio elevato per i diritti e le libertà delle persone fisiche, il titolare è tenuto a comunicare la violazione anche all'interessato senza ingiustificato ritardo, con linguaggio semplice e chiaro, indicando natura della violazione, dati di contatto del DPO, conseguenze probabili e misure adottate o proposte [cite:eli/reg/2016/679/oj__art_34]. La comunicazione all'interessato non è dovuta quando il titolare ha adottato misure tecniche di protezione (es. cifratura) che rendono incomprensibili i dati, ha adottato misure successive idonee a scongiurare il rischio elevato, o quando essa richiederebbe sforzi sproporzionati. La comunicazione all'interessato è ulteriore e distinta rispetto alla notifica al Garante entro 72 ore ai sensi dell'art. 33 [cite:eli/reg/2016/679/oj__art_33] e rispetto alla notifica all'autorità NIS2 (CSIRT Italia presso ACN), che ha tempistiche proprie e finalità di sicurezza dei sistemi, non di tutela dell'interessato [cite:akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_25].",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Cross-norma NIS2 + GDPR data breach. Confidence media."
+    },
+    {
+      "qid": "Q76",
+      "use_case": "231+GDPR integrazione modello accesso abusivo",
+      "query_type": "positive",
+      "question": "Una società ha subito un accesso abusivo a un proprio sistema informatico contenente dati personali di clienti: il fatto può attivare la responsabilità amministrativa dell'ente ex art. 24-bis del D.Lgs 231/2001, e quali misure del modello organizzativo si raccordano con gli obblighi di sicurezza e accountability previsti dal GDPR?",
+      "gold_chunks": [
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_24-bis",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_6",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_5",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_32",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "Sì. L'accesso abusivo a un sistema informatico (art. 615-ter del codice penale) è ricompreso fra i delitti informatici richiamati dall'art. 24-bis del D.Lgs 231/2001 come reato-presupposto della responsabilità amministrativa dell'ente [cite:akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_24-bis]. L'ente non risponde se prova di aver adottato ed efficacemente attuato, prima della commissione del fatto, modelli di organizzazione e gestione idonei a prevenire reati della specie di quello verificatosi [cite:akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_6]. Sul piano del trattamento, l'evento integra al contempo una violazione dei principi di integrità e riservatezza dei dati personali, in quanto la sicurezza dei dati è parte integrante dei principi del trattamento [cite:eli/reg/2016/679/oj__art_5]. Le misure tecniche e organizzative del modello 231 si raccordano dunque con le misure adeguate al rischio richieste al titolare ai sensi dell'art. 32 GDPR, integrandole sul piano della prevenzione del reato-presupposto [cite:eli/reg/2016/679/oj__art_32]. Il dispositivo dell'art. 615-ter c.p. non è incluso nel corpus normativo di riferimento.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": true,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Sostituta B generata in fase C per coprire sub_cluster 231+GDPR (C039 scartata pre-filtro come duplicato Q9). Angolo \"integrazione modello 231 ↔ accountability GDPR\" distinto da C039/Q9 (focus reato-presupposto art.167). Conta come voto pro estensione c.p. fase D."
+    },
+    {
+      "qid": "Q77",
+      "use_case": "Diritto accesso tempi e modalità",
+      "query_type": "positive",
+      "question": "Entro quale termine il titolare è tenuto a riscontrare una richiesta di accesso ex art. 15 GDPR e quali sono i casi in cui può prorogarlo o rifiutare di darne riscontro?",
+      "gold_chunks": [
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_15",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_12",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "Il titolare deve fornire all'interessato le informazioni richieste senza ingiustificato ritardo e comunque al più tardi entro un mese dalla ricezione della richiesta [cite:eli/reg/2016/679/oj__art_12]. Tale termine può essere prorogato di ulteriori due mesi se necessario, tenuto conto della complessità e del numero delle richieste, dandone comunicazione all'interessato entro un mese dalla richiesta unitamente ai motivi del ritardo. L'art. 15 individua i contenuti specifici dell'accesso, includendo conferma del trattamento, copia dei dati, finalità, categorie, destinatari, periodo di conservazione, esistenza dei diritti e fonte dei dati se non raccolti presso l'interessato [cite:eli/reg/2016/679/oj__art_15]. Il titolare può rifiutare il riscontro solo quando dimostri di non essere in grado di identificare l'interessato e quando le richieste siano manifestamente infondate o eccessive, in particolare per il loro carattere ripetitivo, motivando il rifiuto.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Diritto di accesso. Confidence alta."
+    },
+    {
+      "qid": "Q78",
+      "use_case": "Oblio vs finalità giornalistica",
+      "query_type": "positive",
+      "question": "In quali condizioni il diritto all'oblio ex art. 17 GDPR può essere esercitato nei confronti di contenuti pubblicati per finalità giornalistica e quali sono i limiti?",
+      "gold_chunks": [
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_17",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_85",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "Il diritto all'oblio incontra un limite espresso nell'art. 17, par. 3, lett. a) del GDPR, secondo cui il diritto alla cancellazione non si applica nella misura in cui il trattamento sia necessario per l'esercizio del diritto alla libertà di espressione e di informazione [cite:eli/reg/2016/679/oj__art_17]. L'art. 85 demanda agli Stati membri il bilanciamento, da effettuarsi con disposizioni legislative, fra il diritto alla protezione dei dati personali e il diritto alla libertà di espressione e di informazione, includendo specificamente il trattamento a scopi giornalistici e di espressione accademica, artistica o letteraria [cite:eli/reg/2016/679/oj__art_85]. Il bilanciamento è in concreto operato caso per caso, considerando l'interesse pubblico all'informazione, l'attualità della notizia, il ruolo pubblico dell'interessato, l'esattezza dei fatti riportati e il tempo trascorso. L'esercizio del diritto può tradursi in misure intermedie (deindicizzazione, aggiornamento) anziché nella cancellazione integrale.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Diritto all'oblio + bilanciamento art. 85. Confidence alta."
+    },
+    {
+      "qid": "Q79",
+      "use_case": "Portabilità dati derivati",
+      "query_type": "positive",
+      "question": "Il diritto alla portabilità dei dati di cui all'art. 20 GDPR si applica anche a dati derivati o inferiti dal trattamento, oltre che a quelli forniti dall'interessato?",
+      "gold_chunks": [
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_20",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "No. Il diritto alla portabilità ex art. 20 GDPR si applica esclusivamente ai dati personali che riguardano l'interessato e che l'interessato stesso ha fornito al titolare, e solo se il trattamento è basato sul consenso o sull'esecuzione di un contratto ed è effettuato con mezzi automatizzati [cite:eli/reg/2016/679/oj__art_20]. La nozione di dati forniti dall'interessato include sia i dati attivamente comunicati (dati anagrafici, contenuti caricati) sia i dati osservati dall'attività dell'interessato (cronologia di navigazione, dati di geolocalizzazione, log di utilizzo). Non rientrano invece nella portabilità i dati derivati o inferiti dal trattamento, ossia gli output prodotti dal titolare elaborando i dati dell'interessato, come profili comportamentali, score di affidabilità, esiti algoritmici. Su tali dati derivati l'interessato può comunque esercitare il diritto di accesso ex art. 15.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Portabilità + dati derivati (distinzione classica WP29). Confidence alta."
+    },
+    {
+      "qid": "Q80",
+      "use_case": "Opposizione marketing diretto",
+      "query_type": "positive",
+      "question": "Il diritto di opposizione al trattamento per finalità di marketing diretto può essere esercitato in modo assoluto dall'interessato o richiede una valutazione di bilanciamento da parte del titolare?",
+      "gold_chunks": [
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_21",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "L'art. 21 GDPR opera una netta distinzione. In via generale, l'opposizione al trattamento fondato sul legittimo interesse del titolare richiede al titolare di astenersi dal trattare ulteriormente i dati, salvo che dimostri l'esistenza di motivi legittimi cogenti per procedere che prevalgano sugli interessi, sui diritti e sulle libertà dell'interessato oppure per l'accertamento, l'esercizio o la difesa di un diritto in sede giudiziaria [cite:eli/reg/2016/679/oj__art_21]. Quando invece i dati personali sono trattati per finalità di marketing diretto, l'interessato ha in qualsiasi momento il diritto di opporsi al trattamento per tale finalità senza che il titolare possa opporre alcun bilanciamento, includendo la profilazione effettuata per finalità di marketing. A partire dall'opposizione, i dati non possono più essere trattati per tale finalità. L'esistenza di tale diritto deve essere portata esplicitamente all'attenzione dell'interessato al più tardi al momento della prima comunicazione.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Diritto opposizione marketing. Confidence alta."
+    },
+    {
+      "qid": "Q81",
+      "use_case": "GDPR sanzione violazione diritto accesso",
+      "query_type": "positive",
+      "question": "Quale è il massimale di sanzione amministrativa pecuniaria applicabile a una violazione del diritto di accesso dell'interessato ex art. 15 GDPR commessa da un'impresa?",
+      "gold_chunks": [
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_83",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "La violazione delle disposizioni che riguardano i diritti degli interessati di cui agli artt. 12-22 GDPR (e dunque anche il diritto di accesso ex art. 15) è soggetta al massimale più elevato previsto dall'art. 83, par. 5 GDPR, pari a 20 milioni di euro o, per le imprese, al 4% del fatturato mondiale totale annuo dell'esercizio precedente, se superiore [cite:eli/reg/2016/679/oj__art_83]. Tale massimale è il limite superiore di una determinazione che il Garante effettua caso per caso, applicando i criteri di gravità, durata, natura dolosa o colposa, misure adottate per attenuare il danno, livello di cooperazione, eventuali precedenti e altre circostanze rilevanti. La sanzione è effettiva, proporzionata e dissuasiva.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Sanzioni GDPR. Confidence alta."
+    },
+    {
+      "qid": "Q82",
+      "use_case": "231 sanzioni interdittive condizioni",
+      "query_type": "positive",
+      "question": "In quali casi specifici il giudice dispone le sanzioni interdittive nei confronti dell'ente ai sensi del D.Lgs 231/2001 e quali sono i loro effetti?",
+      "gold_chunks": [
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_9",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_13",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "Le sanzioni interdittive previste dall'art. 9 del D.Lgs 231/2001 sono: l'interdizione dall'esercizio dell'attività, la sospensione o revoca delle autorizzazioni, licenze o concessioni funzionali alla commissione dell'illecito, il divieto di contrattare con la pubblica amministrazione (salvo che per ottenere prestazioni di pubblico servizio), l'esclusione da agevolazioni, finanziamenti, contributi o sussidi (eventualmente con revoca di quelli già concessi), il divieto di pubblicizzare beni o servizi [cite:akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_9]. Le sanzioni interdittive si applicano nei casi espressamente previsti dalla legge e quando ricorre almeno una delle condizioni dell'art. 13: profitto di rilevante entità conseguito dall'ente e commissione del reato da soggetti in posizione apicale, o da soggetti subordinati con grave carenza organizzativa; ovvero reiterazione degli illeciti [cite:akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_13]. La durata varia da tre mesi a due anni.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Sanzioni interdittive 231. Confidence alta."
+    },
+    {
+      "qid": "Q83",
+      "use_case": "NIS2 sanzioni soggetti importanti",
+      "query_type": "positive",
+      "question": "Quali sono i massimali edittali delle sanzioni amministrative pecuniarie applicabili dai soggetti importanti per la violazione degli obblighi di gestione del rischio e notifica incidenti?",
+      "gold_chunks": [
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_38__paras_1_11",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "Per i soggetti importanti il D.Lgs 138/2024 prevede sanzioni amministrative pecuniarie di importo massimo pari a 7 milioni di euro o all'1,4% del fatturato annuo mondiale totale dell'esercizio precedente del soggetto cui il soggetto importante appartiene, ove tale importo sia superiore [cite:akn/it/act/decreto_legislativo/stato/2024-09-04/138__art_38]. I massimali sono inferiori rispetto a quelli previsti per i soggetti essenziali (10 milioni o 2% del fatturato), in coerenza con il diverso regime di vigilanza ex ante e ex post. La determinazione in concreto dell'importo tiene conto della gravità della violazione, della sua durata, dei precedenti del soggetto, dei vantaggi finanziari conseguiti e di ogni altra circostanza rilevante.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Sanzioni NIS2. gold_answer_quality: draft, articoli da verificare."
+    },
+    {
+      "qid": "Q84",
+      "use_case": "AI Act sanzioni GPAI rischio sistemico",
+      "query_type": "positive",
+      "question": "Quale è il massimale edittale applicabile a un fornitore di modelli di IA per finalità generali con rischio sistemico che violi gli obblighi specifici previsti dall'AI Act?",
+      "gold_chunks": [
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_101",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "L'art. 101 dell'AI Act prevede che la Commissione possa irrogare al fornitore di un modello di IA per finalità generali sanzioni pecuniarie non superiori al 3% del fatturato mondiale totale annuo dell'esercizio precedente o a 15 milioni di euro, se superiore, qualora il fornitore intenzionalmente o per negligenza violi le pertinenti disposizioni del Regolamento, non ottemperi a una richiesta di documenti o informazioni, ovvero non si conformi a una misura imposta [cite:eli/reg/2024/1689/oj__art_101]. La sanzione è determinata tenendo conto della natura, gravità e durata della violazione, considerando il principio di proporzionalità e l'adeguatezza, e considerando le dimensioni economiche e la quota di mercato del fornitore. Il procedimento è di competenza della Commissione e prevede il diritto di essere ascoltato del fornitore.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Sanzioni AI Act GPAI sistemico. Confidence alta su art. 101."
+    },
+    {
+      "qid": "Q85",
+      "use_case": "231 corruzione fattispecie",
+      "query_type": "positive",
+      "question": "Quali fattispecie penali in materia di corruzione e concussione sono inserite nell'elenco dei reati-presupposto del D.Lgs 231/2001 e in quali articoli sono richiamate?",
+      "gold_chunks": [
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_25",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_25-ter",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "L'art. 25 del D.Lgs 231/2001 disciplina la responsabilità dell'ente per i delitti di concussione, induzione indebita a dare o promettere utilità, corruzione propria e impropria, corruzione in atti giudiziari, istigazione alla corruzione, corruzione di persone esercenti pubblici servizi, traffico di influenze illecite e simili, nei rapporti con la pubblica amministrazione [cite:akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_25]. L'art. 25-ter estende la responsabilità ai reati societari, includendo specifiche fattispecie quali falso in bilancio, illegale ripartizione di utili, illecita influenza sull'assemblea e, in particolare, la corruzione fra privati [cite:akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_25-ter]. Per ciascuna fattispecie il D.Lgs 231 fissa la sanzione pecuniaria edittale in quote e, ove ricorrano le condizioni dell'art. 13, le sanzioni interdittive. Il dispositivo delle singole fattispecie del codice penale richiamate non è incluso nel corpus normativo di riferimento.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": true,
+      "runtime_corpus_limit_observed": false,
+      "notes": "231 corruzione. Confidence alta su artt. 25/25-ter."
+    },
+    {
+      "qid": "Q86",
+      "use_case": "231 riciclaggio condotte e cornici",
+      "query_type": "positive",
+      "question": "Quali condotte costituiscono reati-presupposto del 231 in materia di riciclaggio e autoriciclaggio e quale è il livello sanzionatorio edittale?",
+      "gold_chunks": [
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_25-octies",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "L'art. 25-octies del D.Lgs 231/2001 disciplina la responsabilità dell'ente per i delitti di ricettazione, riciclaggio, impiego di denaro, beni o utilità di provenienza illecita e autoriciclaggio, articolati su distinte cornici edittali [cite:akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_25-octies]. Per ricettazione, riciclaggio e impiego, la sanzione pecuniaria varia da 200 a 800 quote, elevata fino a un massimo di 1.000 quote se la condotta riguarda denaro o cose provenienti da delitti per i quali è previsto un determinato massimo edittale. Per autoriciclaggio sono previste cornici analoghe, in coerenza con la fattispecie introdotta nel codice penale dalla L. 186/2014. Nei casi di condanna sono previste anche sanzioni interdittive di durata non superiore a due anni. Il dispositivo delle singole fattispecie penali richiamate non è incluso nel corpus normativo di riferimento.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": true,
+      "runtime_corpus_limit_observed": false,
+      "notes": "231 riciclaggio. Confidence alta su art. 25-octies."
+    },
+    {
+      "qid": "Q87",
+      "use_case": "231 sicurezza lavoro omicidio colposo",
+      "query_type": "positive",
+      "question": "In quali ipotesi il D.Lgs 231/2001 prevede la responsabilità amministrativa dell'ente per omicidio colposo e lesioni gravi commessi con violazione delle norme antinfortunistiche?",
+      "gold_chunks": [
+        {
+          "chunk_id": "akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_25-septies",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "L'art. 25-septies del D.Lgs 231/2001 disciplina la responsabilità dell'ente per i delitti di omicidio colposo e di lesioni gravi o gravissime commessi con violazione delle norme sulla tutela della salute e sicurezza sul lavoro [cite:akn/it/act/decreto_legislativo/stato/2001-06-08/231__art_25-septies]. La sanzione pecuniaria edittale varia in funzione della gravità della fattispecie e della violazione delle norme antinfortunistiche e arriva fino a 1.000 quote per i casi più gravi. È prevista inoltre l'applicazione delle sanzioni interdittive per una durata non inferiore a tre mesi e non superiore a un anno. Il riferimento sostanziale è alle norme del D.Lgs 81/2008 in materia di salute e sicurezza nei luoghi di lavoro, il cui dispositivo non è incluso nel corpus normativo di riferimento.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": true,
+      "runtime_corpus_limit_observed": false,
+      "notes": "231 sicurezza lavoro. Confidence alta su art. 25-septies."
+    },
+    {
+      "qid": "Q88",
+      "use_case": "Procedura DPIA passi e contenuti",
+      "query_type": "positive",
+      "question": "Quali sono i passi della procedura di valutazione d'impatto sulla protezione dei dati ai sensi dell'art. 35 GDPR e con quali contenuti minimi va documentata?",
+      "gold_chunks": [
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_35",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_36",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__recital_84",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "La DPIA è obbligatoria quando un tipo di trattamento, segnatamente con uso di nuove tecnologie e considerati la natura, l'oggetto, il contesto e le finalità, può presentare un rischio elevato per i diritti e le libertà delle persone fisiche [cite:eli/reg/2016/679/oj__art_35]. La valutazione deve contenere almeno: una descrizione sistematica dei trattamenti previsti e delle finalità del trattamento, compreso, ove applicabile, l'interesse legittimo perseguito dal titolare; una valutazione della necessità e proporzionalità dei trattamenti in relazione alle finalità; una valutazione dei rischi per i diritti e le libertà degli interessati; le misure previste per affrontare i rischi, includendo le garanzie, le misure di sicurezza e i meccanismi per garantire la protezione dei dati personali e dimostrare la conformità al GDPR, tenuto conto dei diritti e degli interessi legittimi degli interessati. Se la DPIA indica che il trattamento presenterebbe un rischio elevato in assenza di misure adottate per attenuarlo, il titolare consulta l'autorità di controllo prima di procedere [cite:eli/reg/2016/679/oj__art_36] [cite:eli/reg/2016/679/oj__recital_84]. Le specifiche linee guida procedurali (WP248) non sono incluse nel corpus normativo di riferimento.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": true,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Procedura DPIA + corpus limit WP29. Confidence alta."
+    },
+    {
+      "qid": "Q89",
+      "use_case": "Registro trattamenti art.30 contenuti",
+      "query_type": "positive",
+      "question": "Quali sono i contenuti minimi che il registro delle attività di trattamento deve contenere ai sensi dell'art. 30 del GDPR e in quali casi l'obbligo di tenuta è escluso?",
+      "gold_chunks": [
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_30",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "L'art. 30 GDPR impone a ciascun titolare di tenere un registro delle attività di trattamento sotto la propria responsabilità, contenente: nome e dati di contatto del titolare (e ove applicabile del contitolare, del rappresentante e del DPO), finalità del trattamento, descrizione delle categorie di interessati e di dati personali, categorie di destinatari, eventuali trasferimenti verso paesi terzi o organizzazioni internazionali, termini ultimi previsti per la cancellazione delle diverse categorie di dati, descrizione generale delle misure tecniche e organizzative di sicurezza [cite:eli/reg/2016/679/oj__art_30]. Per il responsabile, il registro contiene categorie di trattamenti effettuati per conto di ciascun titolare. L'obbligo non si applica alle imprese o organizzazioni con meno di 250 dipendenti, salvo che il trattamento possa presentare un rischio per i diritti e le libertà degli interessati, non sia occasionale o includa dati delle categorie particolari o relativi a condanne penali e reati. Il registro è in forma scritta, anche elettronica, e va messo a disposizione del Garante.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Registro trattamenti. Confidence alta."
+    },
+    {
+      "qid": "Q90",
+      "use_case": "AI Act art.220 inesistente",
+      "query_type": "negative",
+      "question": "Quali sono gli obblighi del fornitore di sistemi di IA ad alto rischio previsti dall'art. 220 dell'AI Act?",
+      "gold_chunks": [],
+      "gold_answer": "Il contesto normativo fornito non contiene riferimenti sufficienti per rispondere con precisione.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Articolo inesistente. AI Act si ferma all'art. 113. Confidence alta."
+    },
+    {
+      "qid": "Q91",
+      "use_case": "Decreto NIS2 art.75 inesistente",
+      "query_type": "negative",
+      "question": "Cosa stabilisce l'art. 75 del decreto NIS2 sulla cooperazione transfrontaliera?",
+      "gold_chunks": [],
+      "gold_answer": "Il contesto normativo fornito non contiene riferimenti sufficienti per rispondere con precisione.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Doppio errore intenzionale: NIS2 è una direttiva non un regolamento, e art. 75 oltre i 50 articoli del D.Lgs 138/2024. Confidence alta."
+    },
+    {
+      "qid": "Q92",
+      "use_case": "Cod.Privacy art.33 misure minime abrogato",
+      "query_type": "negative",
+      "question": "Quali sono le misure minime di sicurezza che il titolare deve adottare ai sensi dell'art. 33 del Codice Privacy?",
+      "gold_chunks": [],
+      "gold_answer": "Il contesto normativo fornito non contiene riferimenti sufficienti per rispondere con precisione.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "L'art. 33 (e l'allegato B con le misure minime) sono stati abrogati dal D.Lgs 101/2018 in seguito all'entrata in vigore del GDPR. La materia è ora regolata dall'art. 32 GDPR. Confidence media: convinto che l'art. 33 sia abrogato, da confermare. gold_answer_quality: draft, articoli da verificare."
+    },
+    {
+      "qid": "Q93",
+      "use_case": "Cod.Privacy art.7 diritti abrogato",
+      "query_type": "negative",
+      "question": "Quali sono i diritti dell'interessato previsti dall'art. 7 del Codice Privacy?",
+      "gold_chunks": [],
+      "gold_answer": "Il contesto normativo fornito non contiene riferimenti sufficienti per rispondere con precisione.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "L'art. 7 (diritti dell'interessato) è abrogato dal D.Lgs 101/2018, materia ora regolata dagli artt. 15-22 GDPR. Confidence media. gold_answer_quality: draft, articoli da verificare."
+    },
+    {
+      "qid": "Q94",
+      "use_case": "ISO 27701 corpus mancante",
+      "query_type": "negative",
+      "question": "Quali sono i requisiti dello standard ISO/IEC 27701 per i sistemi di gestione della privacy delle informazioni e come si integra con la certificazione ISO/IEC 27001?",
+      "gold_chunks": [],
+      "gold_answer": "Gli standard ISO/IEC 27701 e ISO/IEC 27001 non sono inclusi nel corpus normativo di riferimento. Il GDPR riconosce in via generale il valore della certificazione come strumento per dimostrare la conformità ai sensi dell'art. 42, ma i requisiti tecnici di specifici standard internazionali non sono ricompresi nel materiale disponibile.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": true,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Corpus mancante ISO. Confidence alta."
+    },
+    {
+      "qid": "Q95",
+      "use_case": "EDPB linee guida 5/2020 corpus mancante",
+      "query_type": "negative",
+      "question": "Cosa stabiliscono le linee guida EDPB 5/2020 sul consenso ai sensi del GDPR?",
+      "gold_chunks": [],
+      "gold_answer": "Le linee guida del Comitato europeo per la protezione dei dati (EDPB) non sono incluse nel corpus normativo di riferimento. La disciplina del consenso quale base giuridica del trattamento è regolata dall'art. 6, par. 1, lett. a) e dall'art. 7 del GDPR per i requisiti di validità (libero, specifico, informato e inequivocabile), nonché dall'art. 9, par. 2, lett. a) per il consenso esplicito al trattamento di categorie particolari di dati.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": true,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Corpus mancante EDPB. Confidence alta."
+    },
+    {
+      "qid": "Q96",
+      "use_case": "Garante provvedimento ChatGPT 2023",
+      "query_type": "negative",
+      "question": "Quali sono le prescrizioni contenute nel provvedimento del Garante di fine marzo 2023 in materia di uso di ChatGPT in Italia?",
+      "gold_chunks": [],
+      "gold_answer": "I provvedimenti specifici emanati dal Garante per la protezione dei dati personali non sono inclusi nel corpus normativo di riferimento, che è limitato alle fonti normative primarie. La materia generale è disciplinata dal Codice Privacy, in particolare per quanto riguarda i compiti e i poteri del Garante (artt. 154 ss.), e dal GDPR, ma il dispositivo del singolo provvedimento di fine marzo 2023 non è disponibile.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": true,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Garante UC4 provvedimento specifico. Confidence alta."
+    },
+    {
+      "qid": "Q97",
+      "use_case": "Garante decisione TikTok 2024",
+      "query_type": "negative",
+      "question": "Cosa ha disposto il Garante Privacy nella decisione del 2024 contro TikTok per la profilazione dei minori?",
+      "gold_chunks": [],
+      "gold_answer": "Le decisioni e i provvedimenti sanzionatori del Garante per la protezione dei dati personali non sono inclusi nel corpus normativo di riferimento. Il regime sanzionatorio generale è disciplinato dagli artt. 83 e 84 del GDPR e dagli artt. 166 ss. del Codice Privacy, ma il dispositivo della specifica decisione su TikTok del 2024 non è disponibile.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": true,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Garante UC4 decisione TikTok. Confidence alta."
+    },
+    {
+      "qid": "Q98",
+      "use_case": "Omonimia art.6 par.1 GDPR vs AI Act",
+      "query_type": "negative",
+      "question": "Articolo 6 paragrafo 1: quali sono le condizioni elencate?",
+      "gold_chunks": [],
+      "gold_answer": "La domanda non identifica univocamente la fonte normativa. L'art. 6, par. 1 del GDPR elenca le sei basi giuridiche del trattamento di dati personali (consenso, contratto, obbligo legale, interesse vitale, interesse pubblico, legittimo interesse); l'art. 6, par. 1 dell'AI Act individua i criteri di classificazione di un sistema di IA come ad alto rischio in relazione alla normativa di armonizzazione di cui all'Allegato I. Si tratta di disposizioni con oggetto e contenuto diversi: occorre indicare la fonte rispetto alla quale si chiede l'analisi.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Omonimia art. 6 par. 1. Confidence alta."
+    },
+    {
+      "qid": "Q99",
+      "use_case": "Omonimia art.35 valutazione GDPR vs FRIA",
+      "query_type": "negative",
+      "question": "Cosa stabilisce l'articolo 35 in materia di valutazione?",
+      "gold_chunks": [],
+      "gold_answer": "La domanda contiene un riferimento numerico ambiguo. L'art. 35 del GDPR disciplina la valutazione d'impatto sulla protezione dei dati (DPIA) quando un trattamento può presentare un rischio elevato per i diritti e le libertà delle persone fisiche; nell'AI Act non vi è un art. 35 con oggetto omologo, ma l'art. 27 del Regolamento (UE) 2024/1689 disciplina invece la valutazione d'impatto sui diritti fondamentali (FRIA) per i deployer di sistemi di IA ad alto rischio. Per una risposta puntuale è necessario indicare la fonte normativa di riferimento.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Omonimia art. 35 (DPIA) vs assenza in AI Act + richiamo a FRIA. Confidence alta."
+    },
+    {
+      "qid": "Q100",
+      "use_case": "Edge vaga privacy e AI obblighi aziende",
+      "query_type": "edge",
+      "question": "Privacy e AI: gli obblighi delle aziende",
+      "gold_chunks": [
+        {
+          "chunk_id": "eli/reg/2024/1689/oj__art_1",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "eli/reg/2016/679/oj__art_1",
+          "hierarchy": "",
+          "text": ""
+        },
+        {
+          "chunk_id": "akn/it/act/legge/stato/2025-09-23/132__art_1",
+          "hierarchy": "",
+          "text": ""
+        }
+      ],
+      "gold_answer": "La domanda copre un perimetro molto ampio. Il quadro normativo essenziale per un'azienda italiana è dato dal GDPR per i profili di trattamento di dati personali [cite:eli/reg/2016/679/oj__art_1], dall'AI Act per i sistemi di intelligenza artificiale, con obblighi differenziati a seconda del ruolo (provider, deployer, importatore, distributore) [cite:eli/reg/2024/1689/oj__art_1], dalla L. 132/2025 per le specificità italiane in materia di IA, in particolare nei settori sanitario, del lavoro, della giustizia [cite:akn/it/act/legge/stato/2025-09-23/132__art_1]. Vanno considerate anche il D.Lgs 138/2024 (NIS2) per la cybersicurezza dei soggetti essenziali o importanti e il D.Lgs 231/2001 per i profili di responsabilità amministrativa. Per una risposta puntuale è necessario specificare il settore, il ruolo dell'azienda e il sistema di IA o di trattamento di interesse.",
+      "review_status": "reviewed",
+      "has_corpus_limit_declaration": false,
+      "runtime_corpus_limit_observed": false,
+      "notes": "Edge vaga multi-norma. Confidence alta."
+    }
+  ]
+}
