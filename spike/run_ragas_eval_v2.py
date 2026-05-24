@@ -22,6 +22,13 @@ REQUISITI: ragas, langchain_huggingface, anthropic, instructor.
 
     spike/.venv/bin/python spike/run_ragas_eval_v2.py --dry-sample Q52
     spike/.venv/bin/python spike/run_ragas_eval_v2.py --judge
+
+Modalità dev (subset 20 query — legge ragas_pipeline_outputs_v2_subset.json
+prodotto da `run_pipeline_v2.py --subset`, scrive results/aggregates
+con suffisso `_subset`):
+
+    spike/.venv/bin/python spike/run_ragas_eval_v2.py --judge \
+        --subset data/benchmark/subset_dev.yaml
 """
 
 from __future__ import annotations
@@ -308,14 +315,19 @@ def _evaluate_batch(batch_outputs: list[dict], judge, embeddings) -> list[dict]:
     return df.to_dict(orient="records")
 
 
-def step_judge(skip_existing: bool = False) -> None:
+def step_judge(skip_existing: bool = False,
+               subset: set[str] | None = None,
+               report_path: Path | None = None) -> None:
     if not OUTPUTS_PATH.is_file():
         raise RuntimeError(f"Pipeline outputs assenti: {OUTPUTS_PATH}.")
     _load_env()
 
     payload = json.loads(OUTPUTS_PATH.read_text(encoding="utf-8"))
     outputs = payload["outputs"]
-    if len(outputs) != 100:
+    if subset is not None:
+        outputs = [o for o in outputs if o["qid"] in subset]
+        log.info("Subset filter applied: %d/%d outputs", len(outputs), len(payload["outputs"]))
+    elif len(outputs) != 100:
         raise RuntimeError(f"Atteso 100 outputs, trovato {len(outputs)}.")
     log.info("Judge — %d query, judge=%s, embeddings=%s.",
              len(outputs), JUDGE_MODEL, EMBEDDINGS_MODEL)
@@ -496,19 +508,23 @@ def step_judge(skip_existing: bool = False) -> None:
     print(f"Eval v2 finished — cost ${cost:.2f}, {elapsed:.0f}s, "
           f"{tracker['n_calls']} LLM calls")
     print("=" * 75)
+    _f = lambda v: "n/a" if v is None else f"{v:.3f}"
     g = global_block
     print(f"\nGlobal (n={g['n']}):")
     for metric in ("faithfulness", "answer_relevancy"):
         s = g[metric]
-        print(f"  {metric:<20} n={s['n']:>3} median={s['median']:.3f} "
-              f"mean={s['mean']:.3f} min={s['min']:.3f} max={s['max']:.3f}")
+        print(f"  {metric:<20} n={s['n']:>3} median={_f(s['median'])} "
+              f"mean={_f(s['mean'])} min={_f(s['min'])} max={_f(s['max'])}")
 
     print("\nPer query_type:")
     for qt in ("positive", "negative", "edge"):
         s = by_qtype[qt]
+        if s["n"] == 0:
+            print(f"  {qt:<10} n=  0 (skip)")
+            continue
         fm = s["faithfulness"]["median"]
         rm = s["answer_relevancy"]["median"]
-        print(f"  {qt:<10} n={s['n']:>3} faith={fm:.3f} rel={rm:.3f}")
+        print(f"  {qt:<10} n={s['n']:>3} faith={_f(fm)} rel={_f(rm)}")
 
     # bottom-5 per metrica
     print()
@@ -521,8 +537,9 @@ def step_judge(skip_existing: bool = False) -> None:
                   f"qt={r['query_type']:<8} cluster={r['use_case'][:40]}")
 
     # Report W7_v2
-    REPORT_PATH = ROOT / "spike/BENCHMARK_RAGAS_W7_v2.md"
-    write_report(REPORT_PATH, run_meta, per_query, aggregates)
+    if report_path is None:
+        report_path = ROOT / "spike/BENCHMARK_RAGAS_W7_v2.md"
+    write_report(report_path, run_meta, per_query, aggregates)
 
 
 def _v1_w7_archived() -> dict:
@@ -748,6 +765,7 @@ def write_report(path: Path, run_meta: dict, per_query: list[dict], aggregates: 
 
 
 def main() -> int:
+    global OUTPUTS_PATH, RESULTS_PATH, AGGREGATES_PATH
     parser = argparse.ArgumentParser(description="Ragas eval v2 (100 query, 2 metriche)")
     parser.add_argument("--dry-sample", type=str, default=None,
                         help="qid singolo per dry-run + cost projection.")
@@ -755,6 +773,10 @@ def main() -> int:
                         help="Run full eval su 100 sample (batched, save incrementale).")
     parser.add_argument("--skip-existing", action="store_true",
                         help="Resume: carica risultati esistenti, processa solo qid mancanti.")
+    parser.add_argument("--subset", type=str, default=None,
+                        help="Path YAML con lista qids. Legge pipeline_outputs_v2_subset.json, "
+                             "scrive results/aggregates/report con suffisso _subset. "
+                             "Le label dei gruppi A/B negli aggregati restano cosmetiche.")
     args = parser.parse_args()
 
     if args.dry_sample and args.judge:
@@ -762,10 +784,28 @@ def main() -> int:
     if not args.dry_sample and not args.judge:
         raise SystemExit("Specificare --dry-sample <qid> o --judge.")
 
+    subset_qids: set[str] | None = None
+    report_path: Path | None = None
+    if args.subset:
+        import yaml
+        subset_path = Path(args.subset)
+        if not subset_path.is_absolute():
+            subset_path = ROOT / subset_path
+        with subset_path.open(encoding="utf-8") as fh:
+            data = yaml.safe_load(fh)
+        subset_qids = set(data["qids"])
+        OUTPUTS_PATH = ROOT / "data/benchmark/ragas_pipeline_outputs_v2_subset.json"
+        RESULTS_PATH = ROOT / "data/benchmark/ragas_results_v2_subset.json"
+        AGGREGATES_PATH = ROOT / "data/benchmark/ragas_aggregates_v2_subset.json"
+        report_path = ROOT / "spike/BENCHMARK_RAGAS_W7_v2_subset.md"
+        log.info("Subset mode: %d qid da %s → input %s, output *_subset.*",
+                 len(subset_qids), subset_path.name, OUTPUTS_PATH.name)
+
     if args.dry_sample:
         step_dry_run(args.dry_sample)
     else:
-        step_judge(skip_existing=args.skip_existing)
+        step_judge(skip_existing=args.skip_existing,
+                   subset=subset_qids, report_path=report_path)
     return 0
 
 

@@ -1,0 +1,186 @@
+{
+  "metadata": {
+    "date": "2026-05-24",
+    "judge": "claude-sonnet-4-6",
+    "embeddings": "BAAI/bge-m3",
+    "metrics": [
+      "faithfulness",
+      "answer_relevancy"
+    ],
+    "n_samples": 20,
+    "wall_time_s": 749.1,
+    "cost_usd": 1.2059,
+    "n_llm_calls": 57,
+    "input_tokens": 172735,
+    "cache_creation_tokens": 0,
+    "cache_read_tokens": 0,
+    "output_tokens": 45847,
+    "prompt_caching": "disabled",
+    "status": "completed",
+    "batch_size": 10,
+    "skip_existing_used": false,
+    "finished_utc": "2026-05-24T12:39:25.054355+00:00"
+  },
+  "results": [
+    {
+      "qid": "Q6",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.7859983483303157,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Compiti del DPO"
+    },
+    {
+      "qid": "Q7",
+      "query_type": "positive",
+      "faithfulness": 0.9375,
+      "answer_relevancy": 0.8655021862097784,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Quando DPIA è obbligatoria"
+    },
+    {
+      "qid": "Q9",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": true,
+      "use_case": "Reati 231 trattamento illecito dati"
+    },
+    {
+      "qid": "Q13",
+      "query_type": "positive",
+      "faithfulness": 0.9375,
+      "answer_relevancy": 0.7584902660994847,
+      "has_corpus_limit_declaration": true,
+      "use_case": "AI Act Allegato III biometria"
+    },
+    {
+      "qid": "Q15",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8604260190603562,
+      "has_corpus_limit_declaration": true,
+      "use_case": "AI Act timeline divieti"
+    },
+    {
+      "qid": "Q25",
+      "query_type": "positive",
+      "faithfulness": 0.5714285714285714,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": true,
+      "use_case": "231 fattispecie informatica art 24-bis"
+    },
+    {
+      "qid": "Q35",
+      "query_type": "positive",
+      "faithfulness": 0.25,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": false,
+      "use_case": "stress: art 27 AI Act FRIA"
+    },
+    {
+      "qid": "Q43",
+      "query_type": "positive",
+      "faithfulness": 0.8095238095238095,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": true,
+      "use_case": "edge: query troppo generica"
+    },
+    {
+      "qid": "Q49",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": true,
+      "use_case": "edge: mix in/off corpus"
+    },
+    {
+      "qid": "Q55",
+      "query_type": "positive",
+      "faithfulness": 0.5,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": false,
+      "use_case": "NIS2 sanzioni soggetti essenziali"
+    },
+    {
+      "qid": "Q63",
+      "query_type": "positive",
+      "faithfulness": 0.9615384615384616,
+      "answer_relevancy": 0.9867699339706717,
+      "has_corpus_limit_declaration": true,
+      "use_case": "Trattamento dati forze di polizia"
+    },
+    {
+      "qid": "Q68",
+      "query_type": "positive",
+      "faithfulness": 0.5238095238095238,
+      "answer_relevancy": 0.8924766610757757,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Sanità chatbot AI triage paziente"
+    },
+    {
+      "qid": "Q69",
+      "query_type": "positive",
+      "faithfulness": 0.65,
+      "answer_relevancy": 0.8998426519412493,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Pharma IA farmacovigilanza"
+    },
+    {
+      "qid": "Q70",
+      "query_type": "positive",
+      "faithfulness": 0.8461538461538461,
+      "answer_relevancy": 0.7311208943668491,
+      "has_corpus_limit_declaration": false,
+      "use_case": "Banca outsourcing IA AML extra-UE"
+    },
+    {
+      "qid": "Q71",
+      "query_type": "positive",
+      "faithfulness": 0.5,
+      "answer_relevancy": 0.7416575711056846,
+      "has_corpus_limit_declaration": false,
+      "use_case": "PA regionale IA graduatorie sociali"
+    },
+    {
+      "qid": "Q83",
+      "query_type": "positive",
+      "faithfulness": 0.5714285714285714,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": false,
+      "use_case": "NIS2 sanzioni soggetti importanti"
+    },
+    {
+      "qid": "Q87",
+      "query_type": "positive",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.9481404379958139,
+      "has_corpus_limit_declaration": true,
+      "use_case": "231 sicurezza lavoro omicidio colposo"
+    },
+    {
+      "qid": "Q88",
+      "query_type": "positive",
+      "faithfulness": 0.9230769230769231,
+      "answer_relevancy": 0.8264421418023326,
+      "has_corpus_limit_declaration": true,
+      "use_case": "Procedura DPIA passi e contenuti"
+    },
+    {
+      "qid": "Q94",
+      "query_type": "negative",
+      "faithfulness": 0.8,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": true,
+      "use_case": "ISO 27701 corpus mancante"
+    },
+    {
+      "qid": "Q96",
+      "query_type": "negative",
+      "faithfulness": 0.7,
+      "answer_relevancy": 0.0,
+      "has_corpus_limit_declaration": true,
+      "use_case": "Garante provvedimento ChatGPT 2023"
+    }
+  ]
+}

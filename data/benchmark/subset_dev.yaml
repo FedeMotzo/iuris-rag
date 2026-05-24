@@ -1,0 +1,30 @@
+# Subset 20 query per cicli sviluppo veloce su fix F.2.
+# Composizione causale: target fix A (corpus_limit) + target fix C
+# (FRIA) + cross-norma fragili F.1 + NIS2 fragment + sentinelle.
+# Re-run completo (100 query) solo a milestone.
+qids:
+  # 11 corpus_limit (target fix A: drift lessicale runtime_corpus_limit_observed)
+  - Q9
+  - Q13
+  - Q15
+  - Q25
+  - Q43
+  - Q49
+  - Q63
+  - Q87
+  - Q88
+  - Q94
+  - Q96
+  # 4 cross-norma 3+ (cluster fragile F.1)
+  - Q68
+  - Q69
+  - Q70
+  - Q71
+  # 2 NIS2 fragment (cluster fragile F.1, paired queries)
+  - Q55
+  - Q83
+  # 1 FRIA (target fix C: terminology aliases)
+  - Q35
+  # 2 sentinelle positive mainstream (regression detection)
+  - Q6
+  - Q7

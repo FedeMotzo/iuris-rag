@@ -101,6 +101,41 @@ Il progetto è stato scelto dopo una deep research approfondita su 16 verticali 
 | 33 | **W7 chiusa**: benchmark Ragas (`faithfulness` + `answer_relevancy`) eseguito su 38 query positive con generator Sonnet 4.6 + judge Sonnet 4.6 (cambiato da Opus 4.7 in corso per esaurimento credito). Aggregati gruppo A non-limite (n=27): faith mediana **0.952**, rel mediana **0.812**. Gruppo B limite (n=11): faith mediana 0.824, rel mediana 0.705. Globale: faith 0.944, rel 0.763. Analisi qualitativa bottom-5 gruppo A ha rivelato che le 3 query peggiori (Q35 0.375, Q19 0.583, Q17 0.625) NON sono failure di pipeline: 2 sono retrieval-bound failures gestiti correttamente con dichiarazione di limite spontanea (falsi negativi del flag `has_corpus_limit_declaration` a monte, riclassificati come runtime corpus limit), 1 è judge-bound artifact su risposta più ricca del gold (parentesi esplicative penalizzate). 8 query su 38 hanno `answer_relevancy=0.0` esatto — failure mode strutturale di Ragas su risposte di dichiarazione di non-rispondibilità, non punteggio reale. Senza zeri degenerati, rel globale mediana = 0.815 (sopra soglia 0.80). | Decisione di chiusura W7 (2026-05-20). Verdict: **GO ready-with-followup**. Pipeline cloud Sonnet 4.6 pronta per release v1 con 3 follow-up v1.1 documentati in BENCHMARK_RAGAS_W7.md e ROADMAP_POST_V1.md: (a) flag `runtime_corpus_limit_observed` per catturare query che diventano scenario C runtime, (b) validazione incrociata judge opzionale per quantificare bias, (c) tuning lessicale system prompt per pattern "dichiarazione limite corpus". Le 4 soglie ready/not-ready di RAGAS_RUN_NOTES nota 9 sono rispettate post-segregazione esplicita di Q35/Q19 (runtime corpus limit) e dopo rimozione zeri degenerati Ragas. La segregazione è dichiarata esplicitamente nel report come modifica metodologica ex-post, non camuffata. | Costo effettivo W7: $2.32 (run Opus interrotto) + ~$0.50 (run Sonnet completato) = ~$2.82 totali. Stima a monte ($0.45-0.60) era ottimistica ~4× perché non contava le ~14 call Ragas per sample (faithfulness fa 1 call extraction + 1 call verification per ogni statement, ~8-15 per risposta Sonnet). Lezione metodologica: stime costo eval LLM-judge vanno sempre calcolate esplicitamente come N_call × prompt_size × pricing modello, non sulla base di "1 call per metrica". Dataset `gold_answers_v1.json` aggiornato con secondo flag `runtime_corpus_limit_observed` (true per Q19, Q35). |
 | 34 | **Pivot pre-fase G del 2026-05-20**: deliverable v1 ridefiniti come benchmark esteso 100q + articolo tecnico + packaging pip core. Rimossi demo pubblica deployata, video 3 min, README bilingue. Audience primaria del rilascio = ricercatori/practitioner RAG legal italiano, non utenti finali della demo. | Vedi voce registro SCOPE.md 2026-05-20 per motivazione completa. README va riorientato di conseguenza dopo che Ragas F.2 chiude e fase G conferma rilascio pubblico. |
 | 35 | **Decisione fase G 2026-05-21: rilascio pubblico v1.0 confermato come ready-with-followup.** Soglie Ragas F.2 rispettate, judge e pipeline stabili tra W7 e F.2. Bottom-5 faithfulness sono casi attesi (retrieval-bound noti + negative off-corpus + 1 gap testo norma vs dottrina già predetto). | Vedi voce registro SCOPE.md 2026-05-21 per numeri completi. Follow-up v1.1 documentato: sostituzione detection regex con LLM-as-judge per dichiarazioni di limite. |
+| 36 | Quattro finding post-F.2 (subset dev): (1) "drift lessicale 
+0/23 corpus_limit_observed" rilettura come artefatto regex 
+CORPUS_LIMIT_RE troppo stretta, non bug modello — le risposte 
+positive corpus_limit (Q9, Q43, Q49) dichiarano il limite in 
+italiano naturale ("contesto fornito non contiene", "assenti", 
+"sarebbe necessario disporre") senza usare la frase canonica 
+"non incluso nel corpus normativo di riferimento". Fix: 
+allargamento regex per catturare i pattern naturali. (2) Q25 
+(231 fattispecie informatica) faith=0.571 ar=0.000 NON è bug 
+modello: art_24-bis assente dal top-10 retrieval (stesso pattern 
+Q5 vocabolari disgiunti), il modello dichiara correttamente il 
+gap; faith bassa è artefatto RAGAS su reasoning sussuntivo 
+(claim applicativi non verificabili letteralmente). Già coperto 
+da capability v1.1 architetture cross-norma. (3) Q35 (art 27 AI 
+Act FRIA) faith=0.250 ar=0.000 — gold chunk eli/reg/2024/1689/oj__art_27 
+mai recuperato (rank>20). Diagnosi: modulo core/terminology 
+esiste, alias FRIA presente, ma expand_query NON è cablato in 
+core/hybrid_retriever né in core/serving/pipeline né in 
+spike/run_pipeline_v2.py. Modulo orfano da W4 (2026-05-19). Fix: 
+wiring expand_query pre-retrieval. (4) Pattern metodologico 
+consolidato su 4 casi (Q5→edge W7, F.2 drift→regex, Q25→cross-norma 
+v1.1, Q35→wiring orphan): validazione sostantiva > meccanica, 
+e in particolare definition of done modulo W* richiede (a) test 
+unitari + (b) wiring esplicito verificato con grep + (c) test di 
+integrazione end-to-end. Senza (c) un modulo "testato" può essere 
+strutturalmente orfano. | F.2 baseline come è stato pubblicato 
+resta valido come fotografia W7. La rilettura aggiunge informazione 
+sulla causa, non corregge i numeri. I fix v1 (regex + wiring) sono 
+"finalmente cablare quello che esiste" + "misurare ciò che il 
+modello già fa", non nuove capability. | Sviluppi v0.6: fix wiring 
++ fix regex su due branch separati, re-run subset per delta. 
+Branch wiring eseguito prima (semantico, alto impatto Q35), 
+branch regex dopo (metrica, scope limitato). Definition of done 
+aggiornata per W*-future: ogni nuovo modulo richiede integrazione 
+end-to-end testata, non solo unit test verdi. |
 
 ---
 

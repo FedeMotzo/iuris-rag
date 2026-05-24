@@ -18,6 +18,12 @@ LLM_PROVIDER=anthropic obbligatorio. Reranker su MPS (topologia S1).
     spike/.venv/bin/python spike/run_pipeline_v2.py
     spike/.venv/bin/python spike/run_pipeline_v2.py --limit 10   # dry-run
     spike/.venv/bin/python spike/run_pipeline_v2.py --skip-existing
+
+Modalità dev (subset 20 query, output su path *_subset.* per non
+sovrascrivere gli artefatti F.2 archived):
+
+    spike/.venv/bin/python spike/run_pipeline_v2.py \
+        --subset data/benchmark/subset_dev.yaml
 """
 
 from __future__ import annotations
@@ -126,7 +132,8 @@ def write_outputs_atomic(payload: dict) -> None:
     tmp.replace(OUTPUTS_PATH)
 
 
-def step_run(limit: int | None, skip_existing: bool) -> tuple[list[dict], dict]:
+def step_run(limit: int | None, skip_existing: bool,
+             subset: set[str] | None = None) -> tuple[list[dict], dict]:
     """Esegue retrieval + generation per ciascuna entry, salva incrementale."""
     from dotenv import load_dotenv
     env_path = ROOT / ".env"
@@ -143,9 +150,17 @@ def step_run(limit: int | None, skip_existing: bool) -> tuple[list[dict], dict]:
     entries = json.loads(GOLD_PATH.read_text(encoding="utf-8"))
     if not isinstance(entries, list):
         raise RuntimeError("gold_answers_v2.json non è una lista pura")
-    if len(entries) != 100:
+    if subset is None and len(entries) != 100:
         raise RuntimeError(f"atteso 100 entry, trovato {len(entries)}")
     log.info("Caricate %d entry da %s", len(entries), GOLD_PATH.name)
+
+    if subset is not None:
+        entries = [e for e in entries if e["qid"] in subset]
+        missing = subset - {e["qid"] for e in entries}
+        if missing:
+            raise RuntimeError(f"qid del subset non presenti in dataset: {sorted(missing)}")
+        log.info("SUBSET attivo → %d entry filtrate (%s)",
+                 len(entries), ",".join(e["qid"] for e in entries))
 
     if limit:
         entries = entries[:limit]
@@ -480,14 +495,34 @@ def write_report(outputs: list[dict], meta: dict) -> None:
 
 
 def main() -> int:
+    global OUTPUTS_PATH, REPORT_PATH
     parser = argparse.ArgumentParser(description="Phase F.1 pipeline run su 100 query v2")
     parser.add_argument("--limit", type=int, default=None,
-                        help="Limita alle prime N query (dry-run / smoke).")
+                        help="Limita alle prime N query (dry-run / smoke). Applicato dopo --subset.")
     parser.add_argument("--skip-existing", action="store_true",
                         help="Salta qid già presenti in outputs_v2.json.")
+    parser.add_argument("--subset", type=str, default=None,
+                        help="Path YAML con lista qids (chiave 'qids'). "
+                             "Filtra il dataset e devia gli output su path *_subset.* "
+                             "per non sovrascrivere gli artefatti F.2 archived.")
     args = parser.parse_args()
 
-    outputs, meta = step_run(limit=args.limit, skip_existing=args.skip_existing)
+    subset_qids: set[str] | None = None
+    if args.subset:
+        import yaml
+        subset_path = Path(args.subset)
+        if not subset_path.is_absolute():
+            subset_path = ROOT / subset_path
+        with subset_path.open(encoding="utf-8") as fh:
+            data = yaml.safe_load(fh)
+        subset_qids = set(data["qids"])
+        OUTPUTS_PATH = ROOT / "data/benchmark/ragas_pipeline_outputs_v2_subset.json"
+        REPORT_PATH = ROOT / "spike/BENCHMARK_W3_v2_subset.md"
+        log.info("Subset mode: %d qid da %s → output %s",
+                 len(subset_qids), subset_path.name, OUTPUTS_PATH.name)
+
+    outputs, meta = step_run(limit=args.limit, skip_existing=args.skip_existing,
+                             subset=subset_qids)
     log.info("Pipeline run completato: %d output", len(outputs))
 
     summary = write_report(outputs, meta)
