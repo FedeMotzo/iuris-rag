@@ -13,6 +13,7 @@ from typing import TYPE_CHECKING, Literal
 from qdrant_client import QdrantClient, models
 
 from core.embedding import BgeM3Encoder
+from core.terminology import expand_query
 from core.vector_store import DENSE_VECTOR_NAME, SPARSE_VECTOR_NAME
 
 from .types import RetrievalHit, RetrievalResult
@@ -64,6 +65,10 @@ class HybridRetriever:
         graph_max_expansions: int = 5,
     ) -> RetrievalResult:
         self._validate_args(top_k, mode, rerank_top_k)
+
+        # Query expansion via terminology aliases (FRIA, DPIA, ecc).
+        # Vedi core/terminology/aliases.yaml.
+        query = expand_query(query)
 
         # Quanti hit chiedere a Qdrant: se è prevista una rerank, prendiamo
         # rerank_top_k così il reranker ha materiale; altrimenti top_k.

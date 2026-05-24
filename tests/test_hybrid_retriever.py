@@ -183,6 +183,37 @@ def test_validation_bad_mode() -> None:
 
 
 # ----------------------------------------------------------------------------
+# Terminology expansion wiring — verifica che expand_query sia applicato
+# ----------------------------------------------------------------------------
+
+@pytest.mark.parametrize("mode", ["dense", "sparse", "hybrid"])
+def test_retrieve_applies_terminology_expansion(monkeypatch, mode: str) -> None:
+    """`expand_query` deve essere applicato prima del fetch in tutti i modi.
+
+    Se la chiamata viene rimossa da `retrieve()`, questo test fallisce perché
+    la query passata a `_query_{dense,sparse,hybrid}` non conterrebbe la forma
+    estesa dell'alias FRIA. Vedi `core/terminology/aliases.yaml`.
+    """
+    r = _stub_retriever()
+    captured: dict[str, str] = {}
+
+    def fake_query(query: str, fetch_k: int):
+        captured["query"] = query
+        return []
+
+    monkeypatch.setattr(r, "_query_dense", fake_query)
+    monkeypatch.setattr(r, "_query_sparse", fake_query)
+    monkeypatch.setattr(r, "_query_hybrid", fake_query)
+
+    r.retrieve("art 27 FRIA", top_k=5, mode=mode)  # type: ignore[arg-type]
+
+    assert "query" in captured, "fake_query non è stata invocata"
+    assert "valutazione d'impatto sui diritti fondamentali" in captured["query"], (
+        f"expand_query non applicato (alias FRIA mancante): {captured['query']!r}"
+    )
+
+
+# ----------------------------------------------------------------------------
 # Graph expansion — integrazione opzionale
 # ----------------------------------------------------------------------------
 
