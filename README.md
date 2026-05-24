@@ -49,11 +49,11 @@ Per chi è:
 
 Per chi **non** è:
 
-- Utenti finali che cercano un SaaS pronto: per quello esistono
-  prodotti commerciali (Lexroom, Normo.ai, OneFISCALE AI) con UX,
-  supporto e SLA pensati per studio professionale.
-- Use case certificati (medico, ISO, audit regolamentati): fuori
-  scope v1, nessuna pretesa di compliance funzionale.
+Iuris RAG è un sistema di ricerca, non un parere legale. Le risposte 
+generate vanno sempre verificate prima di qualunque utilizzo in 
+contesti professionali. Non sostituisce la consulenza di un avvocato 
+o DPO qualificato, né può essere considerato strumento di compliance 
+certificato per audit regolamentati.
 
 ---
 
