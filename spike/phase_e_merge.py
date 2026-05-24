@@ -14,10 +14,15 @@ from __future__ import annotations
 
 import json
 import re
+import sys
 from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+
+from spike.corpus_limit_regex import CORPUS_LIMIT_RE  # noqa: E402
+
 V1_PATH = ROOT / "data/benchmark/gold_answers_v1.json"
 V2_CURATED_PATH = ROOT / "data/benchmark/candidates_v2_curated.json"
 OUTPUT_PATH = ROOT / "data/benchmark/gold_answers_v2.json"
@@ -41,12 +46,6 @@ NORM_PREFIXES = [
     ("akn/it/act/legge/stato/2025-09-23/132", "L. 132/2025"),
 ]
 
-# Pattern canonico per dichiarazione di limite corpus (PROJECT_CONTEXT voce 32)
-CORPUS_LIMIT_RE = re.compile(
-    r"non\s+(?:è\s+|sono\s+|sia\s+|siano\s+)?(?:inclus[oaie]|present[eai])"
-    r".{0,40}corpus(?:\s+normativo)?(?:\s+di\s+riferimento)?",
-    re.IGNORECASE | re.DOTALL,
-)
 CITE_RE = re.compile(r"\[cite:([^\]]+)\]")
 CITE_ATTACHED_RE = re.compile(r"\[cite:[^\]]+\]\[cite:")
 

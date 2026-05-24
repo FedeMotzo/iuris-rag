@@ -66,11 +66,7 @@ NORM_PREFIXES = [
     ("akn/it/act/legge/stato/2025-09-23/132", "L. 132/2025"),
 ]
 
-CORPUS_LIMIT_RE = re.compile(
-    r"non\s+(?:è\s+|sono\s+|sia\s+|siano\s+)?(?:inclus[oaie]|present[eai])"
-    r".{0,40}corpus(?:\s+normativo)?(?:\s+di\s+riferimento)?",
-    re.IGNORECASE | re.DOTALL,
-)
+from spike.corpus_limit_regex import CORPUS_LIMIT_RE
 
 
 def norm_of(chunk_id: str) -> str:
