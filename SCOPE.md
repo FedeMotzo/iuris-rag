@@ -274,5 +274,6 @@ chunking v0.7. | Coerenza metodologica con principio "minima
 modifica + sfida scope creep + no cosmetica". Q55/Q83 restano 
 documentati come limite noto. | Nessun impatto v0.6. Capability 
 SPIKE policy chunking aggiunta a ROADMAP_POST_V1.md.
+| 2026-05-25 | **Chiusura ciclo F.2 v3 + chunking policy + top_k decisions**. F.2 v3 misurato (faith mediana positive 0.882, ar 0.840, sopra soglia SCOPE). Tre decisioni: (1) chunking policy Q55/Q83 deferred a v0.7 SPIKE, (2) top_k=5 confermato per Q13 isolato (ROI fix insufficiente: +50-100% costo per query per risolvere 1/100), (3) late chunking candidato per SPIKE v0.7 (non sostituisce decisione strutturale, da testare empiricamente). | F.2 v3 ridistribuisce metriche post-curatela (-0.053 mediana globale atteso, gold flag corretti su 14 qid in v3). Pattern "validazione sostantiva > metrica forzata + diagnostica superficie prima del fix" applicato consistentemente su 6 casi del ciclo (Q5, F.2 drift, Q25, Q35, Q55/Q83, Q13). | v0.5.2 patch release pronta. Prossimo lavoro strutturale: v0.7 SPIKE policy chunking. v1.1 cross-norma indipendente.
 
 
