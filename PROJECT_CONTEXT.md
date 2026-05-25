@@ -213,6 +213,24 @@ case study iuris-rag F.2". |
 
 | 38 | **Curatela gold_answers v3 (post-fix v0.5.1)**. Diagnostica completa delle 23 query con `has_corpus_limit_declaration=True` nel dataset v2: 11 confermate (CAT1, drift naturale catturato dalla regex allargata post-v0.5.1) + 12 riallineate `True→False` (CAT2, groundato sufficiente, gold flag spurious). Inoltre **Q19 e Q35** riallineano `runtime_corpus_limit_observed True→False` (post-fix wiring: gold chunks in top-10, validato empiricamente — Q35 rank 1, Q19 ranks 1/5/9 su 3 gold). Generato `data/benchmark/gold_answers_v3.json` + audit trail completo in `data/benchmark/gold_v2_to_v3_diff.md`. Q25 lasciata invariata (decisione voce 36: limite metrica RAGAS noto su query case-based, rivalutare post-v1.1). | F.2 archived "0/23 drift" era doppio artefatto: regex stretta + gold flag spurious in 12/23 casi. Reale comportamento sistema: 11/23 dichiarano limit (catturate dalla regex post-v0.5.1), 12/23 rispondono groundato. Curatela v3 riallinea il gold alla realtà runtime. | Script benchmark (`spike/run_pipeline_v2.py`, `spike/run_ragas_eval_v2.py`) aggiornati per puntare a v3 come default. `gold_answers_v2.json` mantenuto come riferimento storico, non più input default. |
 
+| 39 | **Policy chunking — gap di coerenza identificato (v0.7 planning)**. 
+Diagnostica fragment vs monolitici nel corpus: 9 fragment splittati 
+(__paras_X_Y) vs 37 monolitici > 5000 char, policy applicata caso per 
+caso. Q55/Q83 NIS2 sanzioni: gold rank 1 pre-rerank → rank 11/16 
+post-rerank, CrossEncoder penalizza chunk tecnico-elencativo specifico. 
+Pattern NON generale (Q27/Q56 healthy con stesso suffisso fragment). 
+Diagnosi 2026-05-24 ha falsificato 4 ipotesi fix puntuali: 
+(a) disable rerank su fragment → regredisce Q27/Q56, (b) riunifica 
+tutti i 9 fragment → scope sproporzionato, (c) riunifica solo 
+NIS2 art_38 → cosmetica senza policy, (d) document + accept → 
+scelta corrente. | Pattern Q5/Q9/Q25/Q35: continuazione metodologica 
+"validazione sostantiva > fix forzato". Riconoscere il problema 
+strutturale (chunking policy non deterministica) invece di fixare 
+i sintomi puntualmente. | Sviluppi v0.7: SPIKE policy chunking 
+deterministica o semantica, benchmark con re-ingestion, misura su 
+Q55/Q83 + non-regressione mainstream. Q55/Q83 restano R@10=0 in 
+v0.6 come limite noto documentato. |
+
 ---
 
 ## Principi guida (regole di ingaggio)

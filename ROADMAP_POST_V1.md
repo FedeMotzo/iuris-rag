@@ -321,3 +321,36 @@ migliorerà. Se retrieval porta art_24-bis in top-10, riprovare
 metrica RAGAS; se metrica resta bassa, valutare se è limite 
 strutturale di RAGAS per QA legale applicativo (asset narrativo 
 per articolo tecnico).
+
+---
+
+## Policy chunking — gap di coerenza (v0.7 planning)
+
+Diagnostica 2026-05-24 sulla collection italian_legal_v1_hybrid:
+
+- 9 chunk fragment (suffisso __paras_X_Y) su 865 totali
+- 37 chunk monolitici > 5000 char nel corpus
+- AI Act art_3 (definizioni) 18410 char monolitico
+- NIS2 art_38 commi 1-11 splittato a 8476 char
+- Policy split applicata caso per caso, non da threshold deterministico
+
+**Sintomo misurato**: Q55/Q83 (NIS2 sanzioni soggetti essenziali/importanti) 
+hanno gold rank 1 pre-rerank e rank 11/16 post-rerank. Il CrossEncoder 
+bge-reranker-v2-m3 penalizza il chunk __art_38__paras_1_11 
+(tabelle importi + percentuali fatturato) rispetto a chunk discorsivi 
+adiacenti, anche on-topic. Pattern NON generale a tutti i fragment 
+(Q27 healthy, Q56 healthy con stesso suffisso), specifico a 
+chunk + query.
+
+**Decisione 2026-05-24**: nessun fix puntuale v0.6. Pattern richiede 
+decisione strutturale su policy chunking, non workaround per 1 chunk.
+
+**Planning v0.7 — opzioni candidate**:
+1. Threshold deterministico (es. split se char > N, N da definire empiricamente)
+2. Split semantico (per comma/paragrafo logico, non per char count)
+3. Re-ingestion completa con policy unificata
+4. Tuning/sostituzione CrossEncoder (preferenze su chunk tecnico-elencativi)
+
+Scelta richiede SPIKE: benchmark con policy diverse, misura impatto 
+su Q55/Q83 + non regressione su Q27/Q56 e altre query mainstream. 
+Re-run F.2 con corpus ri-policy = ~$10. Tempo SPIKE atteso: 1 settimana.

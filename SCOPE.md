@@ -263,4 +263,16 @@ meccanica" (Q5, F.2 drift, Q25, Q35). | Nessun impatto su scope v1.
 archived (100 query) resta valida come fotografia W7. Re-run completo 
 post-fix rimandato a milestone v0.6 (capability di accumulo numeri, 
 non urgente).
+
 | 2026-05-24 | **Curatela gold v3 + script default a v3**. Generato `data/benchmark/gold_answers_v3.json`: 12 qid CAT2 riallineati `has_corpus_limit_declaration True→False` (Q12, Q13, Q15, Q26, Q27, Q45, Q63, Q66, Q72, Q85, Q87, Q88), 2 qid (Q19, Q35) `runtime_corpus_limit_observed True→False`, 6 notes appended con prefisso `[v3 2026-05-24]`. Audit trail completo in `data/benchmark/gold_v2_to_v3_diff.md`. Script `spike/run_pipeline_v2.py` e `spike/run_ragas_eval_v2.py` spostati a v3 (path constant). | Riallineamento metodologico post-fix v0.5.1: il dataset v2 conteneva gold flag spurious su 12/23 corpus_limit (diagnostica completa CAT1/CAT2 sulle 23 query). Curatela v3 riflette stato reale del sistema runtime, non lo stato curatoriale W7-prep. Q25 lasciata invariata (limite metrica RAGAS noto su reasoning sussuntivo, vedi `ROADMAP_POST_V1.md`). | Nessun impatto su scope v1. `gold_answers_v2.json` mantenuto in filesystem come riferimento storico (input default precedente W7/F.2), non più input default. Re-run F.2 completo su v3 atteso dopo eventuali fix retrieval v0.6 (Q15, Q55/Q83 cluster NIS2 fragment).
+
+2026-05-24 | **Q55/Q83 retrieval cross-NIS2 — non fix v0.6**. 
+Diagnostica ha rivelato pattern chunking inconsistente nel corpus 
+(9 fragment vs 37 monolitici > 5000 char). Fix puntuale ha ROI 
+negativo (regredisce altre query). Pattern richiede planning policy 
+chunking v0.7. | Coerenza metodologica con principio "minima 
+modifica + sfida scope creep + no cosmetica". Q55/Q83 restano 
+documentati come limite noto. | Nessun impatto v0.6. Capability 
+SPIKE policy chunking aggiunta a ROADMAP_POST_V1.md.
+
+
