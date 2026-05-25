@@ -137,6 +137,80 @@ branch regex dopo (metrica, scope limitato). Definition of done
 aggiornata per W*-future: ogni nuovo modulo richiede integrazione 
 end-to-end testata, non solo unit test verdi. |
 
+| 37 | **Rilettura F.2 post-subset dev + 4 finding metodologici consolidati**. 
+Implementazione subset benchmark mode (20 query causali, $2/ciclo vs 
+$10 run completo) ha rivelato 4 pattern non identificati in F.2 
+archived: 
+
+(1) **F.2 "drift lessicale 0/23 corpus_limit_observed" è artefatto 
+regex, non bug modello**. Le risposte corpus_limit positive (Q9, 
+Q43, Q49) dichiarano il limite in italiano naturale ("contesto 
+fornito non contiene", "assenti", "sarebbe necessario disporre") 
+senza usare la frase canonica gold "non incluso nel corpus normativo 
+di riferimento". CORPUS_LIMIT_RE pre-fix catturava solo il pattern 
+canonico. **Fix applicato**: regex allargata a 4 famiglie lessicali 
+(spike/corpus_limit_regex.py centralizzato), detection sale da 0/20 
+a 8/20 sul subset dev con zero falsi positivi (test_corpus_limit_regex.py 
+10 test verdi). Bonus: Q55 e Q83 (NIS2 fragment, has_limit=false in 
+gold) attivano la detection perché il modello dichiara correttamente 
+il limit quando retrieval è oggettivamente insufficiente — comportamento 
+emergente desiderabile, suggerisce riallineamento gold curatela v1.1.
+
+(2) **Q25 (231 fattispecie informatica) faith=0.571 NON è bug modello**. 
+Diagnostica retrieval: art_24-bis (gold centrale) assente da top-10 
+(stesso pattern Q5/Q9 vocabolari disgiunti). Il modello dichiara 
+correttamente il gap usando art_5 disponibile. Faith bassa è artefatto 
+RAGAS su reasoning sussuntivo (claim applicativi non verificabili 
+letteralmente nel chunk). **Decisione**: nessun fix v1, già coperto 
+da capability v1.1 "Retrieval avanzato — Query cross-norma con 
+vocabolari disgiunti" (ROADMAP_POST_V1.md).
+
+(3) **Q35 (art 27 AI Act FRIA) faith=0.250 NON era bug terminology 
+aliases**. Diagnostica W4: modulo core/terminology esiste, alias FRIA 
+presente (aliases.yaml), ma expand_query non è cablato in 
+HybridRetriever né in RAGPipeline né in spike/run_pipeline_v2.py. 
+Wiring originale viveva solo in scripts/run_benchmark_w3_with_expansion.py 
+(W4 ad-hoc per benchmark) e non è stato propagato a W5 quando è stata 
+costruita core/serving/pipeline.py. Modulo strutturalmente orfano da 
+W4 nonostante PROJECT_CONTEXT e SCOPE lo descrivessero come "✅ chiuso 
+e wirato in produzione". Causa: validazione W4 fatta tramite script 
+monouso, mancata propagazione, nessun test di integrazione che 
+fallisse in assenza del wiring. **Fix applicato**: 
+HybridRetriever.retrieve() cabla expand_query in 1 riga 
+(core/hybrid_retriever/retriever.py), 3 test di integrazione 
+parametrici (dense/sparse/hybrid). Q35 da rank>20 a rank 1 
+(score 0.085 → 0.591), zero regressioni su 17/17 query del subset, 
+smoke isolato conferma anche DPIA + scoring creditizio alias 
+operativi.
+
+(4) **Pattern metodologico consolidato su 4 casi** (Q5→edge W7, 
+F.2 drift→regex, Q25→retrieval v1.1, Q35→wiring orphan): la 
+**validazione sostantiva** (leggere risposte reali, ispezionare 
+chunk retrieval, verificare wiring con grep) è di secondo livello 
+rispetto a metriche aggregate e catch artefatti che la misurazione 
+meccanica nasconde. **Definition of done per moduli W*-future 
+aggiornata**: ogni nuovo modulo richiede (a) test unitari verdi 
++ (b) chiamata esplicita da pipeline produttiva verificata con 
+grep + (c) test di integrazione end-to-end (anche 1 sola query 
+benchmark) che fallirebbe in assenza del modulo. Senza (c) un 
+modulo "testato" può essere strutturalmente orfano. | 
+
+F.2 baseline pubblicato resta valido come fotografia W7. La rilettura 
+aggiunge informazione sulla causa, non corregge i numeri archived. 
+I 2 fix v1 (wiring + regex) sono "cablare quello che esiste" + 
+"misurare ciò che il modello già fa", non nuove capability. Subset 
+benchmarking mode (capability già mergeata in feat/benchmark-subset-mode) 
+è stata strumento essenziale per la diagnostica: senza re-run veloci 
+$2/ciclo, le 3 ispezioni iterative (Q9/Q25/Q35) non sarebbero state 
+economicamente sostenibili. | 
+
+Sviluppi v0.5.1: 2 fix indipendenti su 2 branch separati 
+(fix/terminology-wiring + fix/corpus-limit-regex), entrambi mergeati. 
+Lezione di processo replicabile: integration test obbligatorio per 
+moduli wired in pipeline. Asset narrativo per articolo tecnico: 
+"validazione sostantiva come secondo livello di QA in RAG benchmark, 
+case study iuris-rag F.2". |
+
 ---
 
 ## Principi guida (regole di ingaggio)
