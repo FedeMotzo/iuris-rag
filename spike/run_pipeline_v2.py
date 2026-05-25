@@ -49,7 +49,7 @@ logging.basicConfig(
 )
 log = logging.getLogger("pipeline_v2")
 
-GOLD_PATH = ROOT / "data/benchmark/gold_answers_v2.json"
+GOLD_PATH = ROOT / "data/benchmark/gold_answers_v3.json"
 OUTPUTS_PATH = ROOT / "data/benchmark/ragas_pipeline_outputs_v2.json"
 REPORT_PATH = ROOT / "spike/BENCHMARK_W3_v2.md"
 
