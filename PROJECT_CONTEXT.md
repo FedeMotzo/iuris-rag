@@ -211,6 +211,8 @@ moduli wired in pipeline. Asset narrativo per articolo tecnico:
 "validazione sostantiva come secondo livello di QA in RAG benchmark, 
 case study iuris-rag F.2". |
 
+| 38 | **Curatela gold_answers v3 (post-fix v0.5.1)**. Diagnostica completa delle 23 query con `has_corpus_limit_declaration=True` nel dataset v2: 11 confermate (CAT1, drift naturale catturato dalla regex allargata post-v0.5.1) + 12 riallineate `True→False` (CAT2, groundato sufficiente, gold flag spurious). Inoltre **Q19 e Q35** riallineano `runtime_corpus_limit_observed True→False` (post-fix wiring: gold chunks in top-10, validato empiricamente — Q35 rank 1, Q19 ranks 1/5/9 su 3 gold). Generato `data/benchmark/gold_answers_v3.json` + audit trail completo in `data/benchmark/gold_v2_to_v3_diff.md`. Q25 lasciata invariata (decisione voce 36: limite metrica RAGAS noto su query case-based, rivalutare post-v1.1). | F.2 archived "0/23 drift" era doppio artefatto: regex stretta + gold flag spurious in 12/23 casi. Reale comportamento sistema: 11/23 dichiarano limit (catturate dalla regex post-v0.5.1), 12/23 rispondono groundato. Curatela v3 riallinea il gold alla realtà runtime. | Script benchmark (`spike/run_pipeline_v2.py`, `spike/run_ragas_eval_v2.py`) aggiornati per puntare a v3 come default. `gold_answers_v2.json` mantenuto come riferimento storico, non più input default. |
+
 ---
 
 ## Principi guida (regole di ingaggio)

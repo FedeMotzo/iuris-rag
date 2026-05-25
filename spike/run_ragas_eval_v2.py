@@ -55,7 +55,9 @@ log = logging.getLogger("ragas_eval_v2")
 OUTPUTS_PATH = ROOT / "data/benchmark/ragas_pipeline_outputs_v2.json"
 RESULTS_PATH = ROOT / "data/benchmark/ragas_results_v2.json"
 AGGREGATES_PATH = ROOT / "data/benchmark/ragas_aggregates_v2.json"
-GOLD_V2_PATH = ROOT / "data/benchmark/gold_answers_v2.json"
+# NOTA: nome variabile storico, punta a v3 post-curatela
+# (vedi gold_v2_to_v3_diff.md)
+GOLD_V2_PATH = ROOT / "data/benchmark/gold_answers_v3.json"
 
 JUDGE_MODEL = "claude-sonnet-4-6"
 EMBEDDINGS_MODEL = "BAAI/bge-m3"

@@ -305,3 +305,19 @@ retrieval avanzate (multi-query / HyDE per vocabolari disgiunti),
 già presenti in ROADMAP_POST_V1.md da W7-prep, NON vanno duplicate. Sono
 correlate al finding "runtime corpus limit detection" ma sono interventi
 indipendenti.
+
+---
+
+Q25 (231 fattispecie informatica art 24-bis) — limite metrica noto.
+Question case-based richiede reasoning sussuntivo che RAGAS 
+faithfulness penalizza (claim applicativi non verificabili 
+letteralmente nel chunk). Combinato con retrieval cross-norma 
+debole (art_24-bis assente top-10, pattern Q5/Q9 vocabolari 
+disgiunti), produce faith=0.667 + ar=0.000 nonostante risposta 
+modello qualitativamente corretta (dichiara gap + sussume con 
+prudenza usando art_5 disponibile). Decisione 2026-05-24: 
+nessun fix v0.6, rivalutare post-v1.1 quando retrieval cross-norma 
+migliorerà. Se retrieval porta art_24-bis in top-10, riprovare 
+metrica RAGAS; se metrica resta bassa, valutare se è limite 
+strutturale di RAGAS per QA legale applicativo (asset narrativo 
+per articolo tecnico).
