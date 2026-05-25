@@ -1,7 +1,7 @@
 # BENCHMARK W3 v2 — pipeline outputs su gold_answers_v2.json
 
-**Start (UTC):** 2026-05-20T19:24:40.885402+00:00
-**End (UTC):** 2026-05-20T19:54:47.615664+00:00
+**Start (UTC):** 2026-05-25T15:16:28.194277+00:00
+**End (UTC):** 2026-05-25T15:47:33.704372+00:00
 **Provider:** anthropic · model: `claude-sonnet-4-6`
 **Pipeline params:** top_k=5, rerank_top_k=20, use_graph=False, max_output_tokens=1000.
 **Reranker device:** MPS (topologia S1). Collection: `italian_legal_v1_hybrid`.
@@ -14,18 +14,18 @@
 | R@10 (su query con gold) | 1.000 |
 | R@20 (su query con gold) | 1.000 |
 | MRR (su query con gold)  | 0.500 |
-| n query con R@10=1.0     | 45 |
-| n query con R@10=0.0     | 14 |
+| n query con R@10=1.0     | 46 |
+| n query con R@10=0.0     | 13 |
 
 ## 2. Per query_type
 
 | type | n | R@5 | R@10 | R@20 | MRR | n R@10=1 | n R@10=0 |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| positive | 77 | 1.000 | 1.000 | 1.000 | 0.500 | 45 | 14 |
+| positive | 77 | 1.000 | 1.000 | 1.000 | 0.500 | 46 | 13 |
 | negative+edge | 23 | — | — | — | — | — | — |
 
-- Negative+edge con pattern canonico 'corpus_limit' nella answer: **0 / 23** → []
-- Negative+edge con risposta sostantiva (>200 char, no pattern): **23** → ['Q4', 'Q5', 'Q20', 'Q21', 'Q22', 'Q23', 'Q41', 'Q42', 'Q44', 'Q46', 'Q47', 'Q48', 'Q90', 'Q91', 'Q92', 'Q93', 'Q94', 'Q95', 'Q96', 'Q97', 'Q98', 'Q99', 'Q100']
+- Negative+edge con pattern canonico 'corpus_limit' nella answer: **18 / 23** → ['Q4', 'Q5', 'Q20', 'Q21', 'Q22', 'Q23', 'Q41', 'Q42', 'Q46', 'Q47', 'Q48', 'Q91', 'Q92', 'Q93', 'Q94', 'Q95', 'Q96', 'Q97']
+- Negative+edge con risposta sostantiva (>200 char, no pattern): **5** → ['Q44', 'Q90', 'Q98', 'Q99', 'Q100']
 
 ## 3. Per cluster v2 (Q51-Q100)
 
@@ -41,7 +41,7 @@ Aggregati per use_case (proxy del cluster). Soglia outlier: R@10 mediana < globa
 | AI Act sanzioni GPAI rischio sistemico | 1 | 1.000 | 0.250 |
 | AI Act+GDPR deployer vs titolare | 1 | 0.250 | 0.333 | ⚠ outlier
 | AI Act+GDPR informativa | 1 | 0.500 | 0.500 | ⚠ outlier
-| Banca outsourcing IA AML extra-UE | 1 | 0.200 | 0.250 | ⚠ outlier
+| Banca outsourcing IA AML extra-UE | 1 | 0.200 | 0.333 | ⚠ outlier
 | Diritto accesso tempi e modalità | 1 | 1.000 | 1.000 |
 | GDPR sanzione violazione diritto accesso | 1 | 1.000 | 0.200 |
 | Garante composizione collegio | 1 | 1.000 | 1.000 |
@@ -63,7 +63,7 @@ Aggregati per use_case (proxy del cluster). Soglia outlier: R@10 mediana < globa
 | NIS2+GDPR misure sicurezza preventive | 1 | 1.000 | 1.000 |
 | Oblio vs finalità giornalistica | 1 | 1.000 | 1.000 |
 | Opposizione marketing diretto | 1 | 1.000 | 1.000 |
-| PA regionale IA graduatorie sociali | 1 | 0.000 | 0.077 | ⚠ outlier
+| PA regionale IA graduatorie sociali | 1 | 0.000 | 0.083 | ⚠ outlier
 | Pharma IA farmacovigilanza | 1 | 0.000 | 0.000 | ⚠ outlier
 | Portabilità dati derivati | 1 | 1.000 | 1.000 |
 | Procedura DPIA passi e contenuti | 1 | 1.000 | 1.000 |
@@ -107,30 +107,20 @@ Nota drift: confronto vs `BENCHMARK_W3.md` (W7-prep) per pipeline drift. Se R@10
 
 ## 7. Runtime corpus_limit observed (post-eval)
 
-Query positive con `has_corpus_limit_declaration=false` ma pattern canonico presente nella answer: **0 / 77**
+Query positive con `has_corpus_limit_declaration=false` ma pattern canonico presente nella answer: **6 / 77**
 
+Lista qid (candidati v1.1 per flag update):
+- `Q10` — use_case: NIS2 soggetti essenziali/importanti
+- `Q13` — use_case: AI Act Allegato III biometria
+- `Q39` — use_case: stress: art 6 GDPR base giuridica
+- `Q55` — use_case: NIS2 sanzioni soggetti essenziali
+- `Q65` — use_case: L.132 coordinamento con AI Act
+- `Q83` — use_case: NIS2 sanzioni soggetti importanti
 
-Drift lessicale (has_corpus_limit_declaration=true ma pattern canonico non rilevato): **19**
+Drift lessicale (has_corpus_limit_declaration=true ma pattern canonico non rilevato): **2**
 Lista qid:
-- `Q9` — verificare se è drift lessicale benigno o pattern legittimo non catturato dalla regex
-- `Q12` — verificare se è drift lessicale benigno o pattern legittimo non catturato dalla regex
-- `Q13` — verificare se è drift lessicale benigno o pattern legittimo non catturato dalla regex
-- `Q15` — verificare se è drift lessicale benigno o pattern legittimo non catturato dalla regex
-- `Q24` — verificare se è drift lessicale benigno o pattern legittimo non catturato dalla regex
 - `Q25` — verificare se è drift lessicale benigno o pattern legittimo non catturato dalla regex
-- `Q26` — verificare se è drift lessicale benigno o pattern legittimo non catturato dalla regex
-- `Q27` — verificare se è drift lessicale benigno o pattern legittimo non catturato dalla regex
-- `Q43` — verificare se è drift lessicale benigno o pattern legittimo non catturato dalla regex
-- `Q45` — verificare se è drift lessicale benigno o pattern legittimo non catturato dalla regex
-- `Q49` — verificare se è drift lessicale benigno o pattern legittimo non catturato dalla regex
-- `Q63` — verificare se è drift lessicale benigno o pattern legittimo non catturato dalla regex
-- `Q66` — verificare se è drift lessicale benigno o pattern legittimo non catturato dalla regex
-- `Q72` — verificare se è drift lessicale benigno o pattern legittimo non catturato dalla regex
-- `Q76` — verificare se è drift lessicale benigno o pattern legittimo non catturato dalla regex
-- `Q85` — verificare se è drift lessicale benigno o pattern legittimo non catturato dalla regex
 - `Q86` — verificare se è drift lessicale benigno o pattern legittimo non catturato dalla regex
-- `Q87` — verificare se è drift lessicale benigno o pattern legittimo non catturato dalla regex
-- `Q88` — verificare se è drift lessicale benigno o pattern legittimo non catturato dalla regex
 
 **Decisione**: pattern documentato qui, dataset `gold_answers_v2.json` non aggiornato. Eventuale fix runtime_corpus_limit_observed in v1.1.
 

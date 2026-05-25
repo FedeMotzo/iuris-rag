@@ -354,3 +354,37 @@ decisione strutturale su policy chunking, non workaround per 1 chunk.
 Scelta richiede SPIKE: benchmark con policy diverse, misura impatto 
 su Q55/Q83 + non regressione su Q27/Q56 e altre query mainstream. 
 Re-run F.2 con corpus ri-policy = ~$10. Tempo SPIKE atteso: 1 settimana.
+
+### Aggiornamento 2026-05-25 — chiusura ciclo F.2 v3
+
+A valle della misura F.2 v3 (faith mediana positive 0.882, ar 0.840 — 
+sopra soglia SCOPE) la sezione SPIKE v0.7 si estende con 3 elementi.
+
+**Opzione aggiuntiva — Late chunking** (Jina AI, 2024): embedding 
+pre-chunking su documento intero, poi chunk sui token embedding. 
+Eredita context globale. Potenzialmente utile per chunk fragment + 
+casi cross-norma vocabolari disgiunti. Da testare empiricamente, 
+NON risolve Q55/Q83 (problema rerank-side, non embedding-side). 
+Adottare per principio è anti-pattern: nello SPIKE va misurata, 
+non assunta.
+
+**Metodologia SPIKE consolidata**:
+1. Re-ingestion del corpus con ciascuna opzione candidata (o 
+   combinazione, es. semantic + late chunking)
+2. Re-run F.2 full dataset con nuova collection
+3. Confronto delta su 4 cluster di sentinelle:
+   - Target chunking: Q55/Q83 (cluster (1) della voce 39)
+   - Sentinelle fragment healthy (no regressione): Q27, Q56
+   - Mainstream sentinelle (no regressione): Q6, Q7, Q63, Q87
+   - Cross-norma fragili (atteso invariato, problema v1.1): Q68-Q72
+4. Decisione data-driven, non opinion-driven.
+
+**Confine v0.7 vs v1.1**: lo SPIKE v0.7 chunking NON sostituisce 
+il lavoro v1.1 cross-norma (HyDE / query rewriting / decomposition 
+LLM-assisted per vocabolari disgiunti puri). I due interventi sono 
+indipendenti: cluster Q68-Q72 e Q5 restano problema retrieval di 
+capability v1.1, anche dopo policy chunking ottimale.
+
+**Costo atteso**: 1 settimana SPIKE + 1 re-run F.2 v4 (~$10 per 
+opzione testata). Totale 1-2 settimane se test 2-3 opzioni in 
+sequenza.
