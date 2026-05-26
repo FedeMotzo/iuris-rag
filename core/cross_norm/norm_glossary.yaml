@@ -1,0 +1,99 @@
+# core/norm_glossary.yaml
+#
+# Mini-glosse del vocabolario tecnico tipico di ciascuna norma del corpus v1.
+# Iniettate nel prompt LLM di riformulazione sub-query per cross-norma v1.1.
+#
+# Criteri di redazione:
+# - Termini effettivamente presenti nel testo normativo (non parafrasi)
+# - Articoli "core" più frequentemente rilevanti in compliance integrata
+# - 5-8 voci per norma, cap a ~10 righe ciascuna
+# - Verbi/sostantivi tecnici che bge-m3 deve poter agganciare lessicalmente
+# - Niente acronimi senza forma estesa (es. "FRIA / valutazione d'impatto
+#   sui diritti fondamentali") perché alcuni chunk usano l'una, alcuni l'altra
+#
+# Aggiornamento: post-prompt iniziale, estendere solo se una query del benchmark
+# lo giustifica empiricamente (stessa regola di core/terminology/aliases.yaml).
+
+gdpr:
+  doc_urn: "eli/reg/2016/679/oj"
+  short_name: "GDPR / Regolamento UE 2016/679"
+  vocabolario:
+    - "titolare del trattamento, responsabile del trattamento, interessato"
+    - "base giuridica del trattamento (art. 6): consenso, contratto, obbligo legale, interesse legittimo, compito di interesse pubblico"
+    - "categorie particolari di dati personali (art. 9): dati sanitari, biometrici, genetici, origine razziale o etnica, opinioni politiche, convinzioni religiose, vita sessuale, orientamento sessuale"
+    - "processo decisionale automatizzato, profilazione, diritto di non essere sottoposto a decisione unicamente automatizzata (art. 22)"
+    - "valutazione d'impatto sulla protezione dei dati (DPIA, art. 35): trattamento sistematico, larga scala, rischio elevato per diritti e libertà"
+    - "trasferimento di dati personali verso paesi terzi (artt. 44-49): decisione di adeguatezza, clausole contrattuali tipo, garanzie adeguate"
+    - "responsabile del trattamento e contratto di nomina (art. 28), trattamenti per conto del titolare"
+    - "sicurezza del trattamento, misure tecniche e organizzative adeguate (art. 32), pseudonimizzazione, cifratura"
+    - "notifica violazione dati personali al Garante (art. 33), comunicazione all'interessato (art. 34)"
+    - "informativa e trasparenza (artt. 13-14), diritti dell'interessato (artt. 15-22): accesso, rettifica, cancellazione, portabilità, opposizione"
+
+ai_act:
+  doc_urn: "eli/reg/2024/1689/oj"
+  short_name: "AI Act / Regolamento UE 2024/1689"
+  vocabolario:
+    - "sistema di intelligenza artificiale, modello di IA per finalità generali (GPAI)"
+    - "fornitore (provider), deployer (utilizzatore/utente), distributore, importatore, rappresentante autorizzato"
+    - "pratiche di intelligenza artificiale vietate (art. 5): manipolazione, sfruttamento vulnerabilità, social scoring, identificazione biometrica remota in tempo reale"
+    - "sistema di IA ad alto rischio (art. 6 + Allegato III): occupazione e gestione dei lavoratori, istruzione, accesso a servizi essenziali pubblici e privati, applicazione della legge, migrazione, amministrazione della giustizia"
+    - "obblighi del fornitore di sistemi ad alto rischio (Capo III Sezione 2): sistema di gestione dei rischi, governance dei dati di addestramento, documentazione tecnica, registrazione automatica eventi (log), trasparenza verso il deployer, sorveglianza umana, accuratezza, robustezza e cybersicurezza"
+    - "obblighi del deployer (art. 26): conformità alle istruzioni d'uso, sorveglianza umana, monitoraggio funzionamento, conservazione log, informativa ai lavoratori"
+    - "valutazione d'impatto sui diritti fondamentali (FRIA, art. 27): organismi di diritto pubblico, fornitori di servizi pubblici essenziali, credit scoring, valutazione rischio assicurazioni vita e salute"
+    - "valutazione di conformità, marcatura CE, dichiarazione di conformità UE, banca dati UE dei sistemi ad alto rischio"
+    - "modifiche sostanziali al sistema, monitoraggio post-commercializzazione, segnalazione incidenti gravi"
+    - "sanzioni (art. 99): pratiche vietate fino a 35M€ o 7% fatturato globale; altre violazioni fino a 15M€ o 3%"
+
+dlgs_231:
+  doc_urn: "akn/it/act/decreto_legislativo/stato/2001-06-08/231"
+  short_name: "D.Lgs 231/2001 / responsabilità amministrativa degli enti"
+  vocabolario:
+    - "responsabilità amministrativa dell'ente da reato, persona giuridica, ente collettivo"
+    - "reato presupposto, reato commesso nell'interesse o a vantaggio dell'ente (art. 5)"
+    - "soggetti apicali, soggetti sottoposti a direzione o vigilanza"
+    - "modello di organizzazione, gestione e controllo (MOG, art. 6), organismo di vigilanza, esimente, idoneità del modello"
+    - "sanzioni pecuniarie (quote), sanzioni interdittive (art. 9), confisca, pubblicazione della sentenza"
+    - "delitti informatici e trattamento illecito di dati (art. 24-bis): accesso abusivo a sistema informatico, intercettazione, danneggiamento informatico, frode informatica del certificatore di firma elettronica"
+    - "reati contro la pubblica amministrazione (art. 25): corruzione, concussione, induzione indebita, peculato"
+    - "ricettazione, riciclaggio, impiego di denaro di provenienza illecita, autoriciclaggio (art. 25-octies)"
+    - "reati ambientali (art. 25-undecies), reati tributari (art. 25-quinquiesdecies)"
+    - "modelli per reati commessi da apicali vs sottoposti: requisiti di idoneità ed efficace attuazione (artt. 6-7)"
+
+nis2:
+  doc_urn: "akn/it/act/decreto_legislativo/stato/2024-09-04/138"
+  short_name: "NIS2 / D.Lgs 138/2024"
+  vocabolario:
+    - "soggetto essenziale, soggetto importante, ambito di applicazione, settori critici (sanità, energia, trasporti, finanza, infrastrutture digitali, PA)"
+    - "registrazione sulla piattaforma ACN (Agenzia per la Cybersicurezza Nazionale), punto di contatto"
+    - "responsabilità degli organi di amministrazione e direzione (art. 23): approvazione misure, supervisione, formazione, responsabilità diretta dei dirigenti"
+    - "misure tecniche, operative e organizzative di gestione del rischio di cybersicurezza (art. 24): analisi del rischio, gestione incidenti, continuità operativa, sicurezza supply chain, controllo accessi, autenticazione a più fattori, cifratura"
+    - "notifica incidenti significativi al CSIRT Italia (art. 25): pre-notifica entro 24 ore, notifica completa entro 72 ore, relazione finale entro un mese"
+    - "comunicazione volontaria di minacce cyber"
+    - "obblighi sulla catena di approvvigionamento ICT, fornitori e prestatori di servizi gestiti"
+    - "sanzioni amministrative differenziate per soggetti essenziali e importanti, poteri di vigilanza e ispezione dell'ACN"
+
+codice_privacy:
+  doc_urn: "akn/it/act/decreto_legislativo/stato/2003-06-30/196"
+  short_name: "Codice Privacy / D.Lgs 196/2003"
+  vocabolario:
+    - "trattamento di dati personali per esecuzione di compito di interesse pubblico o esercizio di pubblici poteri, base giuridica costituita da norma di legge o regolamento o atto amministrativo generale (art. 2-ter)"
+    - "finalità di interesse pubblico rilevante (art. 2-sexies): sanità pubblica, assistenza sociale, politiche del lavoro, immigrazione, prevenzione frodi, sicurezza pubblica"
+    - "trattamento di dati relativi alla salute, dati genetici, dati biometrici (art. 2-septies): garanzie e regole deontologiche del Garante"
+    - "trattamento di dati per finalità giudiziarie, di polizia, difesa e sicurezza dello Stato (artt. 46-58)"
+    - "trattamenti in ambito sanitario (artt. 75-94): dossier sanitario, fascicolo sanitario elettronico"
+    - "comunicazioni elettroniche, dati di traffico, conservazione dati per finalità di accertamento e repressione reati (artt. 121-132-bis)"
+    - "Garante per la protezione dei dati personali: poteri, sanzioni amministrative pecuniarie, ricorsi (artt. 141-172)"
+    - "illeciti penali in materia di trattamento illecito di dati (art. 167), comunicazione di dati per finalità di trattamento illecito"
+
+l_132_2025:
+  doc_urn: "akn/it/act/legge/stato/2025-09-23/132"
+  short_name: "L. 132/2025 / Disposizioni nazionali in materia di intelligenza artificiale"
+  vocabolario:
+    - "principi generali sull'uso dell'intelligenza artificiale: tutela della persona, dei diritti fondamentali, antropocentrismo, trasparenza, supervisione umana"
+    - "uso dell'IA in ambito sanitario (art. 7): supporto a decisioni cliniche, riservatezza dati dei pazienti, supervisione del medico"
+    - "uso dell'IA in ambito lavorativo (art. 11): obbligo del datore di lavoro di informativa ai lavoratori sui sistemi decisionali o di monitoraggio integralmente automatizzati, tutela integrità psicofisica, principio di non discriminazione"
+    - "IA nelle pubbliche amministrazioni: principio di strumentalità, responsabilità del funzionario, decisione finale umana"
+    - "IA nelle professioni intellettuali: trasparenza verso il cliente sull'uso di sistemi di IA"
+    - "Autorità nazionali competenti per l'IA, coordinamento con AgID e ACN"
+    - "tutela dei minori nell'uso dell'IA, consenso del genitore per servizi diretti a minori sotto i 14 anni"
+    - "disposizioni penali in materia di contenuti generati o alterati con IA (deepfake illeciti)"

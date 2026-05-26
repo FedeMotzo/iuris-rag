@@ -1,0 +1,11 @@
+{
+  "_meta": {
+    "model": "claude-sonnet-4-6",
+    "temperature": 0.0,
+    "source": "spike/test_subquery_q68.md (validato manualmente 2026-05-26)",
+    "key_format": "<query_label>:<norm_id>"
+  },
+  "q68:gdpr": "Trattamento di categorie particolari di dati personali (dati sanitari) su larga scala mediante processo decisionale automatizzato in ambito ospedaliero: base giuridica ex art. 9, obbligo di DPIA ex art. 35, misure di sicurezza adeguate ex art. 32, nomina del responsabile del trattamento ex art. 28.",
+  "q68:ai_act": "Obblighi del fornitore e del deployer per sistema di IA ad alto rischio in ambito sanitario (Allegato III): sistema di gestione dei rischi, governance dei dati di addestramento, sorveglianza umana, registrazione automatica eventi e valutazione di conformità ante-commercializzazione.",
+  "q68:l_132_2025": "Obblighi per l'uso di sistemi di intelligenza artificiale in ambito sanitario a supporto di decisioni cliniche: supervisione del medico, riservatezza dei dati dei pazienti, trasparenza verso il paziente e responsabilità del soggetto deployer ai sensi della L. 132/2025."
+}

@@ -74,6 +74,7 @@ def build_default_pipeline(
     rerank_top_k = _env_int("RAG_RERANK_TOP_K", 20)
     use_graph = _env_bool("RAG_USE_GRAPH", False)
     max_output_tokens = _env_int("RAG_MAX_OUTPUT_TOKENS", 1000)
+    enable_cross_norm = _env_bool("RAG_ENABLE_CROSS_NORM", False)
 
     graph_links = load_graph() if use_graph else None
 
@@ -85,4 +86,5 @@ def build_default_pipeline(
         use_graph=use_graph,
         graph_links=graph_links,
         max_output_tokens=max_output_tokens,
+        enable_cross_norm=enable_cross_norm,
     )
