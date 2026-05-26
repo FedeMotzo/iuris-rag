@@ -98,8 +98,13 @@ def load_all_chunks() -> list[Chunk]:
     return chunks
 
 
+# NOTE: post-W4 (annex_III split + NIS2 art_38 split), il corpus
+# ha 865 chunk. Numero verificato 2026-05-25.
+EXPECTED_CHUNKS = 865
+
+
 def sanity_check_baseline(client) -> None:
-    """Verifica che la baseline `italian_legal_v1` sia presente e intatta (858 punti)."""
+    """Verifica che la baseline `italian_legal_v1` sia presente e intatta (865 punti)."""
     if not client.collection_exists(COLLECTION_NAME):
         log.warning("Baseline collection %s does not exist — non blocca l'hybrid ingestion",
                     COLLECTION_NAME)
@@ -107,8 +112,8 @@ def sanity_check_baseline(client) -> None:
     info = client.get_collection(COLLECTION_NAME)
     n = info.points_count
     log.info("Baseline %s: %d points (preserved, non toccato)", COLLECTION_NAME, n)
-    if n != 858:
-        log.warning("Atteso 858 punti nella baseline, trovati %d", n)
+    if n != EXPECTED_CHUNKS:
+        log.warning("Atteso %d punti nella baseline, trovati %d", EXPECTED_CHUNKS, n)
 
 
 def smoke_retrieval(client, encoder: BgeM3Encoder, bm25: SparseTextEmbedding) -> None:
@@ -222,8 +227,9 @@ def main() -> int:
     elapsed = time.monotonic() - t_start
     log.info("Done: %d chunks upserted in %.1fs (%.2fs/chunk). Collection count: %d",
              n_upserted, elapsed, elapsed / max(n_upserted, 1), n_final)
-    if n_final != 858:
-        log.warning("Atteso 858 punti in %s, trovati %d", HYBRID_COLLECTION_NAME, n_final)
+    if n_final != EXPECTED_CHUNKS:
+        log.warning("Atteso %d punti in %s, trovati %d",
+                    EXPECTED_CHUNKS, HYBRID_COLLECTION_NAME, n_final)
 
     smoke_retrieval(client, encoder, bm25)
 
