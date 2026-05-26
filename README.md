@@ -6,7 +6,7 @@ metodologia documentata.
 
 ![License](https://img.shields.io/badge/license-Apache--2.0-blue)
 ![Python](https://img.shields.io/badge/python-3.11%2B-blue)
-![Version](https://img.shields.io/badge/version-0.5.0--beta-orange)
+![Version](https://img.shields.io/badge/version-1.0.0-brightgreen)
 
 ---
 
@@ -59,22 +59,23 @@ certificato per audit regolamentati.
 
 ## Stato del progetto
 
-**v0.5.0 — beta.** Backend RAG end-to-end completo (parser,
-retrieval ibrido, generazione, citation verifier). Benchmark v2 a
-100 query gold-annotate. Verdict Ragas F.2 del 2026-05-21:
-**GO ready-with-followup** — soglie metodologiche raggiunte, 3
-follow-up identificati per v1.1. Dettaglio in
-[`BENCHMARK_RAGAS_F2.md`](data/benchmark/BENCHMARK_RAGAS_F2.md).
+**v1.0 — first stable release** (2026-05-25). Backend RAG end-to-end
+completo (parser, retrieval ibrido con terminology wiring e fragment
+chunking, generazione, citation verifier). Benchmark v3 a 100 query
+gold-annotate (curatela post-fix v0.5.1 + diagnostica completa 23
+corpus_limit). Verdict Ragas F.2 v3: **soglie SCOPE raggiunte** —
+faithfulness mediana positive 0.882 (≥0.85), answer_relevancy
+mediana positive 0.840 (≥0.80). Dettaglio in
+[`BENCHMARK_RAGAS_F2.md`](data/benchmark/BENCHMARK_RAGAS_F2.md) +
+release notes su GitHub.
 
-Tag **v1.0** previsto dopo pubblicazione su PyPI e completamento
-dei follow-up F.2 (detection LLM-as-judge della dichiarazione di
-limite, validazione incrociata judge, tuning system prompt).
-
-**Non è ancora consigliabile per produzione.** È un artefatto
+**Non è ancora consigliabile per produzione critica.** È un artefatto
 tecnico/metodologico, da usare e citare con consapevolezza dei
 limiti documentati in
 [`docs/architecture/`](docs/architecture/README.md) § "Limiti
-noti v1".
+noti v1". Casi residui noti: Q55/Q83 (NIS2 sanzioni — rerank
+degradation, SPIKE v0.7) e cluster cross-norma vocabolari disgiunti
+(v1.1).
 
 ---
 
@@ -83,8 +84,8 @@ noti v1".
 | Metrica | Valore | Soglia | Documento |
 |---|---:|---:|---|
 | Retrieval R@10 (hybrid + reranker, 39 positive v1) | 0.712 | — | [`BENCHMARK_W3.md`](data/benchmark/BENCHMARK_W3.md) |
-| Generation faithfulness mediana (100 query) | **0.886** | ≥0.85 | [`BENCHMARK_RAGAS_F2.md`](data/benchmark/BENCHMARK_RAGAS_F2.md) |
-| Generation answer_relevancy mediana (100 query) | **0.815** | ≥0.80 | [`BENCHMARK_RAGAS_F2.md`](data/benchmark/BENCHMARK_RAGAS_F2.md) |
+| Generation faithfulness mediana positive (gold v3, 77 query) | **0.882** | ≥0.85 | [`BENCHMARK_RAGAS_F2.md`](data/benchmark/BENCHMARK_RAGAS_F2.md) |
+| Generation answer_relevancy mediana positive (gold v3, 77 query) | **0.840** | ≥0.80 | [`BENCHMARK_RAGAS_F2.md`](data/benchmark/BENCHMARK_RAGAS_F2.md) |
 
 Verdict F.2: **ready-with-followup**. Le soglie metodologiche di
 `RAGAS_RUN_NOTES.md` sono raggiunte, ma 3 follow-up restano aperti
@@ -246,7 +247,7 @@ Se usi `iuris-rag` in ricerca, pubblicazione o lavoro derivato:
   author  = {Motzo, Federico},
   title   = {iuris-rag: RAG italiano open-source su normativa privacy, AI e cybersecurity},
   year    = {2026},
-  version = {0.5.0},
+  version = {1.0},
   url     = {https://github.com/fmotzo/iuris-rag}
 }
 ```
@@ -254,7 +255,7 @@ Se usi `iuris-rag` in ricerca, pubblicazione o lavoro derivato:
 Forma testuale:
 
 > Motzo, F. (2026). *iuris-rag: RAG italiano open-source su
-> normativa privacy, AI e cybersecurity* (v0.5.0).
+> normativa privacy, AI e cybersecurity* (v1.0).
 > https://github.com/fmotzo/iuris-rag
 
 ---
