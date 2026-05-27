@@ -69,6 +69,13 @@ mediana positive 0.840 (≥0.80). Dettaglio in
 [`BENCHMARK_RAGAS_F2.md`](data/benchmark/BENCHMARK_RAGAS_F2.md) +
 release notes su GitHub.
 
+**v1.1.0 — cross-norma decomposition** (2026-05-27). Trigger lessicale
+≥2 norme + sub-query LLM-assisted (Sonnet 4.6) + retrieval per-norma con
+filter Qdrant + RRF fusion; opt-in (`enable_cross_norm`, default OFF).
+Fix max_tokens generation 1000→4000. Mediana rescue retrieval target
+cross-norma 0.70. Limiti noti e scope successivo in
+[`ROADMAP_v1_2.md`](ROADMAP_v1_2.md).
+
 **Non è ancora consigliabile per produzione critica.** È un artefatto
 tecnico/metodologico, da usare e citare con consapevolezza dei
 limiti documentati in
