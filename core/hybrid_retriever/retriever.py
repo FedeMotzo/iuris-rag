@@ -63,6 +63,7 @@ class HybridRetriever:
         rerank_top_k: int | None = None,
         graph_links: "list[GraphLink] | None" = None,
         graph_max_expansions: int = 5,
+        filter_doc_urn: str | None = None,
     ) -> RetrievalResult:
         self._validate_args(top_k, mode, rerank_top_k)
 
@@ -74,16 +75,18 @@ class HybridRetriever:
         # rerank_top_k così il reranker ha materiale; altrimenti top_k.
         fetch_k = rerank_top_k if rerank_top_k is not None else top_k
 
-        logger.info("retrieve mode=%s fetch_k=%d top_k=%d rerank=%s graph=%s",
+        logger.info("retrieve mode=%s fetch_k=%d top_k=%d rerank=%s graph=%s "
+                    "filter_doc_urn=%s",
                     mode, fetch_k, top_k, rerank_top_k is not None,
-                    graph_links is not None)
+                    graph_links is not None, filter_doc_urn)
 
+        qfilter = self._build_doc_urn_filter(filter_doc_urn)
         if mode == "dense":
-            points = self._query_dense(query, fetch_k)
+            points = self._query_dense(query, fetch_k, qfilter)
         elif mode == "sparse":
-            points = self._query_sparse(query, fetch_k)
+            points = self._query_sparse(query, fetch_k, qfilter)
         else:
-            points = self._query_hybrid(query, fetch_k)
+            points = self._query_hybrid(query, fetch_k, qfilter)
 
         hits = [self._point_to_hit(p, rank=i + 1) for i, p in enumerate(points)]
 
@@ -135,27 +138,50 @@ class HybridRetriever:
             values=emb.values.tolist(),
         )
 
-    def _query_dense(self, query: str, limit: int):
+    @staticmethod
+    def _build_doc_urn_filter(filter_doc_urn: str | None):
+        """Costruisce un `Filter` Qdrant su `doc_urn`, o None se non richiesto.
+
+        Nota: senza payload index su `doc_urn`, Qdrant esegue il filtro via
+        scan. Per cross-norma v1.1 è accettabile (4 sub-query × full scan
+        leggero); indicizzare il payload field è ottimizzazione separata.
+        """
+        if filter_doc_urn is None:
+            return None
+        return models.Filter(must=[
+            models.FieldCondition(
+                key="doc_urn",
+                match=models.MatchValue(value=filter_doc_urn),
+            )
+        ])
+
+    def _query_dense(self, query: str, limit: int, qfilter=None):
         dvec = self._encode_dense(query)
-        return self._client.query_points(
+        kwargs = dict(
             collection_name=self._collection,
             query=dvec,
             using=DENSE_VECTOR_NAME,
             limit=limit,
             with_payload=True,
-        ).points
+        )
+        if qfilter is not None:
+            kwargs["query_filter"] = qfilter
+        return self._client.query_points(**kwargs).points
 
-    def _query_sparse(self, query: str, limit: int):
+    def _query_sparse(self, query: str, limit: int, qfilter=None):
         svec = self._encode_sparse(query)
-        return self._client.query_points(
+        kwargs = dict(
             collection_name=self._collection,
             query=svec,
             using=SPARSE_VECTOR_NAME,
             limit=limit,
             with_payload=True,
-        ).points
+        )
+        if qfilter is not None:
+            kwargs["query_filter"] = qfilter
+        return self._client.query_points(**kwargs).points
 
-    def _query_hybrid(self, query: str, limit: int):
+    def _query_hybrid(self, query: str, limit: int, qfilter=None):
         dvec = self._encode_dense(query)
         svec = self._encode_sparse(query)
         # Larghezza del prefetch: 2x del limit richiesto, così RRF ha
@@ -164,8 +190,14 @@ class HybridRetriever:
         return self._client.query_points(
             collection_name=self._collection,
             prefetch=[
-                models.Prefetch(query=dvec, using=DENSE_VECTOR_NAME, limit=prefetch_limit),
-                models.Prefetch(query=svec, using=SPARSE_VECTOR_NAME, limit=prefetch_limit),
+                models.Prefetch(
+                    query=dvec, using=DENSE_VECTOR_NAME,
+                    limit=prefetch_limit, filter=qfilter,
+                ),
+                models.Prefetch(
+                    query=svec, using=SPARSE_VECTOR_NAME,
+                    limit=prefetch_limit, filter=qfilter,
+                ),
             ],
             query=models.FusionQuery(fusion=models.Fusion.RRF),
             limit=limit,

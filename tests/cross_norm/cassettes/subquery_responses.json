@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "model": "claude-sonnet-4-6",
+    "temperature": 0.0,
+    "source": "spike/regen_cassettes_v2.py (live)",
+    "key_format": "<query_label>:<norm_id>",
+    "regenerated": "2026-05-27",
+    "prompt_template_version": "v2 (clausola nominazione esplicita istituti)"
+  },
+  "q68:gdpr": "Quali obblighi prevede il GDPR per un trattamento di dati sanitari (art. 9) tramite sistema automatizzato con profilazione (art. 22) a larga scala in ambito ospedaliero, con riferimento a DPIA (art. 35), misure di sicurezza e pseudonimizzazione (art. 32), nomina del responsabile del trattamento (art. 28) e informativa all'interessato (artt. 13-14)?",
+  "q68:ai_act": "«Quali obblighi prevede l'AI Act per un sistema di IA ad alto rischio in ambito sanitario (Allegato III) destinato al triage telefonico: sistema di gestione dei rischi, governance dei dati di addestramento, documentazione tecnica, registrazione automatica eventi (log), sorveglianza umana, valutazione di conformità, marcatura CE e FRIA (art. 27)?»",
+  "q68:l_132_2025": "\"Ai sensi dell'art. 7 L. 132/2025, quali obblighi si applicano all'uso di sistemi di IA per supporto a decisioni cliniche nel triage telefonico, con riferimento a supervisione del medico, riservatezza dei dati dei pazienti e principio di antropocentrismo?\"",
+  "q69:gdpr": "\"Quali obblighi prevede il GDPR per il trattamento di categorie particolari di dati personali (art. 9) — dati sanitari di pazienti e operatori sanitari — in sistemi di farmacovigilanza con profilazione e processo decisionale automatizzato (art. 22), inclusi DPIA (art. 35), misure di sicurezza ex art. 32 e nomina del responsabile del trattamento (art. 28)?\"",
+  "q69:ai_act": "\"Quali obblighi prevede l'AI Act per un fornitore e deployer di sistema di IA ad alto rischio in ambito sanitario (Allegato III) impiegato in farmacovigilanza, con riferimento a: sistema di gestione dei rischi, governance dei dati di addestramento, registrazione automatica eventi (log), sorveglianza umana, e FRIA (art. 27)?\"",
+  "q69:nis2": "\"Quali obblighi prevede il D.Lgs 138/2024 per un soggetto essenziale nel settore sanitario in merito alle misure tecniche e organizzative di gestione del rischio di cybersicurezza (art. 24), alla notifica di incidenti significativi al CSIRT Italia (art. 25) e alla sicurezza della supply chain ICT, inclusi fornitori di sistemi di IA?\""
+}

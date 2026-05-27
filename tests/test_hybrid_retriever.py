@@ -197,7 +197,7 @@ def test_retrieve_applies_terminology_expansion(monkeypatch, mode: str) -> None:
     r = _stub_retriever()
     captured: dict[str, str] = {}
 
-    def fake_query(query: str, fetch_k: int):
+    def fake_query(query: str, fetch_k: int, qfilter=None):
         captured["query"] = query
         return []
 

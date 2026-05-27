@@ -1,0 +1,18 @@
+# Subset misurazione cross-norma v1.1 end-to-end (12 query).
+# Composizione:
+#   6 target cross-norma  : Q9, Q25, Q68, Q69, Q70, Q71
+#   4 sentinelle mainstream: Q6, Q7, Q63, Q87  (verifica no falso-positivo trigger)
+#   2 corpus_limit         : Q43, Q94          (idem)
+qids:
+  - Q9
+  - Q25
+  - Q68
+  - Q69
+  - Q70
+  - Q71
+  - Q6
+  - Q7
+  - Q63
+  - Q87
+  - Q43
+  - Q94

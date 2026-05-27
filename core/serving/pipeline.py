@@ -52,14 +52,21 @@ class RAGPipeline:
         rerank_top_k: int = 20,
         use_graph: bool = False,
         graph_links: "list[GraphLink] | None" = None,
-        max_output_tokens: int = 1000,
+        max_output_tokens: int = 4000,
         system_prompt_lang: str = "it",
+        enable_cross_norm: bool = False,
     ) -> None:
         if use_graph and not graph_links:
             raise ValueError(
                 "use_graph=True ma graph_links non fornito o vuoto. "
                 "Carica il graph con core.normative_graph.load_graph() "
                 "e passalo a RAGPipeline(graph_links=...)."
+            )
+        if enable_cross_norm and use_graph:
+            raise ValueError(
+                "enable_cross_norm=True non è compatibile con use_graph=True in v1.1. "
+                "Disabilita una delle due (cross-norma e graph-expansion sono path "
+                "indipendenti di retrieval avanzato)."
             )
         self._retriever = retriever
         self._llm = llm_provider
@@ -69,11 +76,27 @@ class RAGPipeline:
         self._graph_links = graph_links
         self._max_tokens = max_output_tokens
         self._system_prompt = load_system_prompt(system_prompt_lang)
+
+        # Cross-norma v1.1 (opt-in): wrapper sopra l'HybridRetriever esistente
+        # che orchestra trigger + sub-query LLM + RRF fusion.
+        self._cross_norm = None
+        if enable_cross_norm:
+            from core.cross_norm import CrossNormRetriever
+            self._cross_norm = CrossNormRetriever(
+                hybrid_retriever=retriever,
+                llm_client=llm_provider,
+                top_k_per_norm=5,
+                top_k_global=5,
+                top_k_final=max(top_k, rerank_top_k),
+                rerank_top_k_per_norm=rerank_top_k,
+                rerank_top_k_global=rerank_top_k,
+            )
+
         logger.info(
             "RAGPipeline init provider=%s model=%s top_k=%d rerank_top_k=%d "
-            "use_graph=%s max_tokens=%d",
+            "use_graph=%s max_tokens=%d enable_cross_norm=%s",
             llm_provider.provider_name, llm_provider.model_name,
-            top_k, rerank_top_k, use_graph, max_output_tokens,
+            top_k, rerank_top_k, use_graph, max_output_tokens, enable_cross_norm,
         )
 
     # ----------------------------------------------------- public API
@@ -191,13 +214,21 @@ class RAGPipeline:
 
     def _do_retrieve(self, question: str) -> tuple["RetrievalResult", float]:
         t = time.perf_counter()
-        result = self._retriever.retrieve(
-            query=question,
-            top_k=self._top_k,
-            mode="hybrid",
-            rerank_top_k=self._rerank_top_k,
-            graph_links=self._graph_links if self._use_graph else None,
-        )
+        if self._cross_norm is not None:
+            # CrossNormRetriever fa fallback automatico su hybrid standard se
+            # rileva < 2 norme: zero impatto su query mono-norma. Per query
+            # multi-norma, la fusione RRF avviene internamente sui hit
+            # per-norma + globale, e ritorna i top `top_k` finali destinati al
+            # prompt builder (stessa numerosità del path standard).
+            result = self._cross_norm.retrieve(question, top_k=self._top_k)
+        else:
+            result = self._retriever.retrieve(
+                query=question,
+                top_k=self._top_k,
+                mode="hybrid",
+                rerank_top_k=self._rerank_top_k,
+                graph_links=self._graph_links if self._use_graph else None,
+            )
         return result, (time.perf_counter() - t) * 1000.0
 
     def _do_generate(self, user_prompt: str) -> tuple[GenerationResult, float]:
