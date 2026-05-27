@@ -91,3 +91,8 @@ def subquery_cassette_path() -> Path:
 @pytest.fixture
 def q68_stub_llm(subquery_cassette_path: Path) -> StubLLMClient:
     return StubLLMClient(subquery_cassette_path, query_label="q68")
+
+
+@pytest.fixture
+def q69_stub_llm(subquery_cassette_path: Path) -> StubLLMClient:
+    return StubLLMClient(subquery_cassette_path, query_label="q69")

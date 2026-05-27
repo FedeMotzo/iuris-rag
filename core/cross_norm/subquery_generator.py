@@ -38,6 +38,8 @@ Query utente originale:
 
 Compito: produci una singola sub-query (1-2 frasi, max 50 parole) che esprima cosa cercare SPECIFICAMENTE nella norma {short_name} per questo scenario, usando il vocabolario tecnico della norma sopra elencato. La sub-query sarà usata come input testuale per un retrieval dense+sparse sul corpus {short_name}.
 
+Vincolo importante: la sub-query DEVE nominare esplicitamente gli istituti giuridici e i riferimenti normativi attivati dallo scenario (es. nomi di istituti come FRIA, DPIA, sigle ufficiali, numeri di articolo come 'art. 27', 'art. 9', 'Allegato III' quando il vocabolario sopra li include e lo scenario li attiva). NON parafrasare gli istituti con descrizioni applicative generiche.
+
 Output: solo la sub-query, senza preamboli o spiegazioni. La sub-query deve essere sulla norma {short_name}, non su altre norme."""
 
 
