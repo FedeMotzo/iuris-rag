@@ -52,7 +52,7 @@ class RAGPipeline:
         rerank_top_k: int = 20,
         use_graph: bool = False,
         graph_links: "list[GraphLink] | None" = None,
-        max_output_tokens: int = 1000,
+        max_output_tokens: int = 4000,
         system_prompt_lang: str = "it",
         enable_cross_norm: bool = False,
     ) -> None:

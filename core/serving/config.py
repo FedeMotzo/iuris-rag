@@ -61,9 +61,11 @@ def build_default_pipeline(
     - `RAG_TOP_K` (default 5)
     - `RAG_RERANK_TOP_K` (default 20)
     - `RAG_USE_GRAPH` (default false)
-    - `RAG_MAX_OUTPUT_TOKENS` (default 1000 — alzato da 500 dopo smoke
-      cloud 2026-05-19: Sonnet 4.6 troncava 3/3 query a 500 mid-frase;
-      vedi PROJECT_CONTEXT.md registro decisioni)
+    - `RAG_MAX_OUTPUT_TOKENS` (default 4000 — alzato da 1000 in v1.1
+      closeout: le risposte cross-norma a 3-4 norme troncavano a 1000
+      mid-sezione, es. Q69 finish_reason=length all'inizio della sezione
+      NIS2; 6000 completa in ~1955 tok, 4000 dà margine. Storia: 500→1000
+      dopo smoke cloud 2026-05-19, 1000→4000 dopo diag troncamento Q69)
 
     `retriever` va costruito dal caller (richiede QdrantClient, BgeM3Encoder,
     bm25, reranker — quest'ultimo sul device corretto in base al provider:
@@ -73,7 +75,7 @@ def build_default_pipeline(
     top_k = _env_int("RAG_TOP_K", 5)
     rerank_top_k = _env_int("RAG_RERANK_TOP_K", 20)
     use_graph = _env_bool("RAG_USE_GRAPH", False)
-    max_output_tokens = _env_int("RAG_MAX_OUTPUT_TOKENS", 1000)
+    max_output_tokens = _env_int("RAG_MAX_OUTPUT_TOKENS", 4000)
     enable_cross_norm = _env_bool("RAG_ENABLE_CROSS_NORM", False)
 
     graph_links = load_graph() if use_graph else None
