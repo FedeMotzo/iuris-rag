@@ -108,3 +108,57 @@ def test_deterministic_repeated_call() -> None:
     r2 = verify_citations(text, retrieval_context=ctx)
     assert r1.model_dump() == r2.model_dump()
     assert r1.model_dump_json() == r2.model_dump_json()
+
+
+# ----------------------------------------------------- normalizzazioni additive
+# Marker malformati osservati nel run map→assembly (Q68/Q70/Q76).
+
+_AI = "eli/reg/2024/1689/oj"
+_D231 = "akn/it/act/decreto_legislativo/stato/2001-06-08/231"
+
+
+def test_paragraph_suffix_tolerated() -> None:
+    """[cite:ID, paragrafo 1] → verificato (prefisso ID al confine)."""
+    cid = f"{_AI}__art_12"
+    text = f"Logging [cite:{cid}, paragrafo 1] e tracciabilità."
+    r = verify_citations(text, retrieval_context={cid})
+    assert r.n_total == 1
+    assert r.all_verified is True
+
+
+def test_paragraph_suffix_abbreviato_punto() -> None:
+    cid = f"{_AI}__art_26"
+    text = f"Obblighi [cite:{cid}, par. 2] del deployer."
+    r = verify_citations(text, retrieval_context={cid})
+    assert r.all_verified is True
+
+
+def test_multi_cite_semicolon() -> None:
+    a, b = f"{_AI}__art_12", f"{_AI}__art_19"
+    text = f"Vedi [cite:{a}; cite:{b}]."
+    r = verify_citations(text, retrieval_context={a, b})
+    assert r.all_verified is True
+
+
+def test_multi_cite_comma_internal() -> None:
+    a, b = f"{_D231}__art_1", f"{_D231}__art_5"
+    text = f"Imputazione [cite:{a}, cite:{b}]."
+    r = verify_citations(text, retrieval_context={a, b})
+    assert r.all_verified is True
+
+
+def test_abbreviated_id_residuo_unverified() -> None:
+    """Id abbreviato senza doc_urn → resta unverified (no match per suffisso)."""
+    text = "Notifica [cite:art_7] e [cite:art_42]."
+    r = verify_citations(text, retrieval_context={"akn/it/act/x/138__art_7"})
+    assert r.n_total == 2
+    assert r.n_verified == 0
+    assert r.all_verified is False
+
+
+def test_prefix_no_false_positive_art3_vs_art35() -> None:
+    """art_3 noto NON deve verificare un cite ad art_35 (confine separatore)."""
+    known = f"{_AI}__art_3"
+    text = f"Vedi [cite:{_AI}__art_35]."
+    r = verify_citations(text, retrieval_context={known})
+    assert r.all_verified is False
