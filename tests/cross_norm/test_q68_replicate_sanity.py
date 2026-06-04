@@ -118,28 +118,29 @@ def hybrid_retriever(qdrant_client, encoder, bm25, reranker) -> HybridRetriever:
 def test_q68_replicate_sanity_via_cross_norm(hybrid_retriever, q68_stub_llm) -> None:
     """Replica sanity manuale Q68: rescue ≥3/5 gold nei top-20 cross-norm.
 
-    Usa i default produttivi (top_k_per_norm=5). I 2 gold mancanti (art_9
+    Usa i default produttivi (top_k_per_subquery=3). I 2 gold mancanti (art_9
     GDPR rubrica-mismatch, art_6 AI Act retrieval gap definitorio) sono
     open question v1.2 — vedi docstring di modulo.
     """
     cnr = CrossNormRetriever(
         hybrid_retriever=hybrid_retriever,
         llm_client=q68_stub_llm,
+        top_k_per_subquery=3,
+        rerank_pool_per_subquery=20,
         top_k_final=20,
-        rerank_top_k_per_norm=20,
-        rerank_top_k_global=20,
     )
     result = cnr.retrieve(Q68, top_k=20)
-    fused_ids = {h.chunk_id for h in result}
+    # v1.2 step 2: niente fusione — copertura = unione degli hit dei gruppi.
+    group_ids = {h.chunk_id for g in result.groups for h in g.hits}
 
-    rescued = GOLD_Q68 & fused_ids
+    rescued = GOLD_Q68 & group_ids
     n_rescued = len(rescued)
 
     diagnostic = (
-        f"Q68 cross-norm rescue: {n_rescued}/5 gold trovati nei top-{len(result)}\n"
+        f"Q68 cross-norm rescue: {n_rescued}/5 gold nei gruppi per-sub-query\n"
         f"  Rescued: {sorted(rescued)}\n"
-        f"  Missing: {sorted(GOLD_Q68 - fused_ids)}\n"
-        f"  Top-20 fusion: {[h.chunk_id for h in result]}"
+        f"  Missing: {sorted(GOLD_Q68 - group_ids)}\n"
+        f"  Gruppi: {[(g.source, [h.chunk_id for h in g.hits]) for g in result.groups]}"
     )
     assert n_rescued >= RESCUE_MIN, diagnostic
 
