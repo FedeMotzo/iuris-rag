@@ -55,6 +55,8 @@ class RAGPipeline:
         max_output_tokens: int = 4000,
         system_prompt_lang: str = "it",
         enable_cross_norm: bool = False,
+        map_llm_provider: LLMProvider | None = None,
+        cross_norm_map_top_k: int = 5,
     ) -> None:
         if use_graph and not graph_links:
             raise ValueError(
@@ -77,20 +79,23 @@ class RAGPipeline:
         self._max_tokens = max_output_tokens
         self._system_prompt = load_system_prompt(system_prompt_lang)
 
-        # Cross-norma v1.1 (opt-in): wrapper sopra l'HybridRetriever esistente
-        # che orchestra trigger + sub-query LLM + RRF fusion.
+        # Cross-norma v1.2 (opt-in): trigger + sub-query LLM → gruppi
+        # per-sub-query → map (mini Haiku) → assembly strutturato.
         self._cross_norm = None
+        self._map_llm: LLMProvider | None = None
+        self._cross_norm_map_top_k = cross_norm_map_top_k
         if enable_cross_norm:
             from core.cross_norm import CrossNormRetriever
             self._cross_norm = CrossNormRetriever(
                 hybrid_retriever=retriever,
                 llm_client=llm_provider,
-                top_k_per_norm=5,
-                top_k_global=5,
+                top_k_per_subquery=cross_norm_map_top_k,
+                rerank_pool_per_subquery=rerank_top_k,
                 top_k_final=max(top_k, rerank_top_k),
-                rerank_top_k_per_norm=rerank_top_k,
-                rerank_top_k_global=rerank_top_k,
+                rerank_top_k_final=rerank_top_k,
             )
+            # Map model: Haiku 4.5 di default (configurabile via map_llm_provider).
+            self._map_llm = map_llm_provider or self._default_map_provider(llm_provider)
 
         logger.info(
             "RAGPipeline init provider=%s model=%s top_k=%d rerank_top_k=%d "
@@ -106,14 +111,26 @@ class RAGPipeline:
         return self._use_graph
 
     def query(self, question: str) -> RAGResponse:
-        """Esegue retrieval + generate (non-streaming) + verify, ritorna esito."""
+        """Esegue retrieval + generate (non-streaming) + verify, ritorna esito.
+
+        Cross-norma multi-norma (≥2 norme): map (mini Haiku per gruppo) +
+        assembly strutturato sostituiscono il generate monolitico. Path
+        mono-norma e non-cross invariati.
+        """
         t0 = time.perf_counter()
-        retrieval, t_retr = self._do_retrieve(question)
-        user_prompt = build_user_prompt(
-            question, retrieval, include_expanded=self._use_graph,
-        )
-        gen, t_gen = self._do_generate(user_prompt)
-        verification, t_verify = self._do_verify(gen.text, retrieval)
+        retrieved, t_retr = self._retrieve(question)
+
+        if self._is_cross_norm_multi(retrieved):
+            answer, retrieval, gen, t_gen = self._map_assemble_answer(retrieved)
+        else:
+            retrieval = self._as_retrieval_result(retrieved)
+            user_prompt = build_user_prompt(
+                question, retrieval, include_expanded=self._use_graph,
+            )
+            gen, t_gen = self._do_generate(user_prompt)
+            answer = gen.text
+
+        verification, t_verify = self._do_verify(answer, retrieval)
         t_total = (time.perf_counter() - t0) * 1000.0
 
         timings = {
@@ -129,7 +146,7 @@ class RAGPipeline:
             verification.all_verified, verification.n_total,
         )
         return RAGResponse(
-            answer=gen.text,
+            answer=answer,
             annotated_answer=verification.annotated_text,
             retrieval_result=retrieval,
             verification=verification,
@@ -149,7 +166,36 @@ class RAGPipeline:
         Il citation verify gira dopo lo stream sull'output completo.
         """
         t0 = time.perf_counter()
-        retrieval, t_retr = self._do_retrieve(question)
+        retrieved, t_retr = self._retrieve(question)
+
+        # Cross-norma multi: map+assembly non è streaming → emette il report
+        # assemblato come un unico chunk, poi il final.
+        if self._is_cross_norm_multi(retrieved):
+            answer, retrieval, gen, t_gen = self._map_assemble_answer(retrieved)
+            yield ("chunk", GenerationChunk(text=answer, is_final=False))
+            yield ("chunk", GenerationChunk(text="", is_final=True))
+            verification, t_verify = self._do_verify(answer, retrieval)
+            t_total = (time.perf_counter() - t0) * 1000.0
+            timings = {
+                "retrieval_ms": t_retr,
+                "generate_ms": t_gen,
+                "verify_ms": t_verify,
+                "total_ms": t_total,
+            }
+            yield (
+                "final",
+                RAGResponse(
+                    answer=answer,
+                    annotated_answer=verification.annotated_text,
+                    retrieval_result=retrieval,
+                    verification=verification,
+                    timings_ms=timings,
+                    generation_meta=gen,
+                ),
+            )
+            return
+
+        retrieval = self._as_retrieval_result(retrieved)
         user_prompt = build_user_prompt(
             question, retrieval, include_expanded=self._use_graph,
         )
@@ -212,14 +258,11 @@ class RAGPipeline:
 
     # ----------------------------------------------------- internal phases
 
-    def _do_retrieve(self, question: str) -> tuple["RetrievalResult", float]:
+    def _retrieve(self, question: str):
+        """Retrieval. Ritorna `CrossNormResult` (path cross-norma) o
+        `RetrievalResult` (path standard / mono-norma) + tempo in ms."""
         t = time.perf_counter()
         if self._cross_norm is not None:
-            # CrossNormRetriever fa fallback automatico su hybrid standard se
-            # rileva < 2 norme: zero impatto su query mono-norma. Per query
-            # multi-norma, la fusione RRF avviene internamente sui hit
-            # per-norma + globale, e ritorna i top `top_k` finali destinati al
-            # prompt builder (stessa numerosità del path standard).
             result = self._cross_norm.retrieve(question, top_k=self._top_k)
         else:
             result = self._retriever.retrieve(
@@ -230,6 +273,68 @@ class RAGPipeline:
                 graph_links=self._graph_links if self._use_graph else None,
             )
         return result, (time.perf_counter() - t) * 1000.0
+
+    @staticmethod
+    def _is_cross_norm_multi(retrieved) -> bool:
+        from core.cross_norm import CrossNormResult
+        return (
+            isinstance(retrieved, CrossNormResult)
+            and len(retrieved.detected_norms) >= 2
+        )
+
+    def _as_retrieval_result(self, retrieved) -> "RetrievalResult":
+        """Path standard: `RetrievalResult` così com'è; fallback cross-norma
+        (< 2 norme, gruppo singolo) appiattito a `RetrievalResult`."""
+        from core.cross_norm import CrossNormResult
+        from core.cross_norm.map_assemble import collect_universe
+
+        if isinstance(retrieved, CrossNormResult):
+            return collect_universe(retrieved.groups, self._cross_norm_map_top_k)
+        return retrieved
+
+    def _map_assemble_answer(self, cn_result):
+        """Map (mini Haiku per gruppo) + assembly strutturato. Ritorna
+        (testo_assemblato, universo_chunk, GenerationResult, t_map_ms)."""
+        from core.cross_norm.map_assemble import map_and_assemble
+
+        t = time.perf_counter()
+        text, universe, minis, n_sections = map_and_assemble(
+            cn_result, self._map_llm, top_k_hits=self._cross_norm_map_top_k,
+        )
+        t_map = (time.perf_counter() - t) * 1000.0
+        self.last_cross_norm_minis = minis
+        gen = GenerationResult(
+            text=text,
+            n_input_tokens=sum(m.n_input_tokens for m in minis),
+            n_output_tokens=sum(m.n_output_tokens for m in minis),
+            ttft_ms=0.0,
+            total_ms=t_map,
+            finish_reason="stop",
+            provider=self._map_llm.provider_name,
+            model=self._map_llm.model_name,
+        )
+        logger.info(
+            "cross_norm map+assembly: %d mini, %d sezioni, %d char",
+            len(minis), n_sections, len(text),
+        )
+        return text, universe, gen, t_map
+
+    @staticmethod
+    def _default_map_provider(fallback: LLMProvider) -> LLMProvider:
+        """Provider di default per il map: Haiku 4.5 via .env, con fallback al
+        provider principale se la chiave Anthropic non è disponibile."""
+        import os
+
+        from core.cross_norm.map_assemble import MAP_MODEL_DEFAULT
+
+        key = os.environ.get("ANTHROPIC_API_KEY", "").strip()
+        if not key:
+            return fallback
+        try:
+            from core.llm_provider.anthropic_provider import AnthropicProvider
+            return AnthropicProvider(api_key=key, model=MAP_MODEL_DEFAULT)
+        except Exception:  # noqa: BLE001
+            return fallback
 
     def _do_generate(self, user_prompt: str) -> tuple[GenerationResult, float]:
         t = time.perf_counter()
