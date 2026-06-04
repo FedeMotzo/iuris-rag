@@ -53,7 +53,12 @@ class StubLLMClient:
                 f"Cassette miss: chiave {key!r} non presente in {CASSETTES_DIR}. "
                 f"Chiavi disponibili: {sorted(k for k in self._cassette if not k.startswith('_'))}"
             )
-        return _StubResult(text=self._cassette[key])
+        # v1.2: cassette può contenere list[str] (sub-query mono-concetto) o
+        # str (legacy V2). Il subquery_generator parser accetta entrambi.
+        val = self._cassette[key]
+        if isinstance(val, list):
+            return _StubResult(text=json.dumps(val, ensure_ascii=False))
+        return _StubResult(text=val)
 
     @property
     def calls(self) -> list[dict]:

@@ -1,9 +1,14 @@
-"""Unit test `CrossNormRetriever` — orchestrazione + RRF fusion.
+"""Unit test `CrossNormRetriever` v1.2 step 2 — gruppi per-sub-query.
 
 Niente Qdrant, niente LLM live. Tutti gli I/O sono stub:
 - `_StubHybridRetriever` ritorna liste pre-canned di RetrievalHit basate su
-  (sub_query, filter_doc_urn) lookup.
-- `q68_stub_llm` (fixture) ritorna le sub-query canoniche dalla cassette.
+  `filter_doc_urn` lookup (ignora il testo della sub-query, mappa solo per
+  norma).
+- `q68_stub_llm` (fixture) ritorna sub-query canoniche dalla cassette.
+
+Contratto verificato: `retrieve()` ritorna sempre un `CrossNormResult` con
+`groups` per-sub-query; gli hit di ogni gruppo provengono dalla source
+(norma) corretta; il fallback < 2 norme è un gruppo singolo.
 """
 
 from __future__ import annotations
@@ -12,7 +17,7 @@ from dataclasses import dataclass
 
 import pytest
 
-from core.cross_norm.retriever import CrossNormRetriever
+from core.cross_norm.retriever import CrossNormResult, CrossNormRetriever
 from core.hybrid_retriever.types import RetrievalHit, RetrievalResult
 
 Q68 = (
@@ -36,11 +41,10 @@ class _Call:
 
 
 class _StubHybridRetriever:
-    """Stub di `HybridRetriever`: registra ogni chiamata + ritorna hit pre-canned.
+    """Stub: registra ogni chiamata + ritorna hit pre-canned per `doc_urn`.
 
-    `responses` è un dict: chiave = `filter_doc_urn` (o "GLOBAL"), valore =
-    lista di chunk_id da restituire come hit ordinati. Lo stub crea
-    RetrievalHit con score decrescente e rank 1..N.
+    Ignora il testo della sub-query (multi-subquery → stessa risposta per norma).
+    Score = 1.0 - i*0.01 → simula logit ad alta confidenza decrescente.
     """
 
     def __init__(self, responses: dict[str | None, list[str]]) -> None:
@@ -74,180 +78,189 @@ class _StubHybridRetriever:
 
 # ----------------------------------------------------------- fixtures & helpers
 
-GOLD_Q68 = [
-    "eli/reg/2024/1689/oj__art_6",
-    "eli/reg/2024/1689/oj__art_27",
-    "eli/reg/2016/679/oj__art_9",
-    "eli/reg/2016/679/oj__art_35",
-    "akn/it/act/legge/stato/2025-09-23/132__art_7",
-]
+# norm_id -> doc_urn (allineato a norm_glossary.yaml)
+_URN = {
+    "ai_act": "eli/reg/2024/1689/oj",
+    "gdpr": "eli/reg/2016/679/oj",
+    "l_132_2025": "akn/it/act/legge/stato/2025-09-23/132",
+}
 
 
 def _q68_responses() -> dict[str | None, list[str]]:
-    """Risposte pre-canned plausibili: ogni sub-query trova il gold della
-    sua norma in top-3, retrieval globale trova solo L.132 art_7."""
     return {
         "eli/reg/2024/1689/oj": [
             "eli/reg/2024/1689/oj__recital_96",
-            "eli/reg/2024/1689/oj__art_27",       # gold
+            "eli/reg/2024/1689/oj__art_27",
             "eli/reg/2024/1689/oj__art_16",
-            "eli/reg/2024/1689/oj__art_6",        # gold (rank 4)
+            "eli/reg/2024/1689/oj__art_6",
             "eli/reg/2024/1689/oj__art_25",
         ],
         "eli/reg/2016/679/oj": [
             "eli/reg/2016/679/oj__recital_91",
-            "eli/reg/2016/679/oj__art_9",         # gold
-            "eli/reg/2016/679/oj__art_35",        # gold
+            "eli/reg/2016/679/oj__art_9",
+            "eli/reg/2016/679/oj__art_35",
             "eli/reg/2016/679/oj__recital_53",
             "eli/reg/2016/679/oj__recital_84",
         ],
         "akn/it/act/legge/stato/2025-09-23/132": [
-            "akn/it/act/legge/stato/2025-09-23/132__art_7",  # gold
+            "akn/it/act/legge/stato/2025-09-23/132__art_7",
             "akn/it/act/legge/stato/2025-09-23/132__art_3",
             "akn/it/act/legge/stato/2025-09-23/132__art_1",
             "akn/it/act/legge/stato/2025-09-23/132__art_8",
             "akn/it/act/legge/stato/2025-09-23/132__art_10",
         ],
-        "GLOBAL": [
-            "eli/reg/2024/1689/oj__recital_57",
-            "akn/it/act/legge/stato/2025-09-23/132__art_7",  # gold
-            "akn/it/act/legge/stato/2025-09-23/132__art_11",
-            "eli/reg/2024/1689/oj__recital_85",
-            "akn/it/act/legge/stato/2025-09-23/132__art_15",
-        ],
+        # NB: source `global` rimossa in v1.2 step 2 → la chiave GLOBAL non
+        # viene mai consultata per le query multi-norma.
     }
 
 
 # ----------------------------------------------------------- mono-norma fallback
 
-def test_mono_norm_falls_back_to_hybrid(q68_stub_llm) -> None:
-    """1 norma rilevata → no sub-query, no fusion: chiamata diretta a hybrid."""
+def test_mono_norm_falls_back_to_single_group(q68_stub_llm) -> None:
     stub = _StubHybridRetriever({"GLOBAL": ["chunk_a", "chunk_b", "chunk_c"]})
     cnr = CrossNormRetriever(
         hybrid_retriever=stub,  # type: ignore[arg-type]
-        llm_client=q68_stub_llm,
-        top_k_final=10,
+        llm_client=q68_stub_llm, top_k_final=10,
     )
     result = cnr.retrieve(MONO_NORM_Q)
-    # Una sola chiamata, senza filtro
+    assert isinstance(result, CrossNormResult)
+    assert result.detected_norms == ["gdpr"]
     assert len(stub.calls) == 1
     assert stub.calls[0].filter_doc_urn is None
-    assert [h.chunk_id for h in result] == ["chunk_a", "chunk_b", "chunk_c"]
+    # fallback = gruppo singolo, profondità preservata
+    assert len(result.groups) == 1
+    g = result.groups[0]
+    assert g.source == "gdpr"
+    assert [h.chunk_id for h in g.hits] == ["chunk_a", "chunk_b", "chunk_c"]
 
 
-def test_zero_norm_falls_back_to_hybrid(q68_stub_llm) -> None:
+def test_zero_norm_falls_back_to_single_group(q68_stub_llm) -> None:
     stub = _StubHybridRetriever({"GLOBAL": ["chunk_x"]})
     cnr = CrossNormRetriever(
         hybrid_retriever=stub,  # type: ignore[arg-type]
-        llm_client=q68_stub_llm,
-        top_k_final=10,
+        llm_client=q68_stub_llm, top_k_final=10,
     )
     result = cnr.retrieve("Quando serve fare una valutazione d'impatto?")
+    assert isinstance(result, CrossNormResult)
+    assert result.detected_norms == []
     assert len(stub.calls) == 1
     assert stub.calls[0].filter_doc_urn is None
-    assert [h.chunk_id for h in result] == ["chunk_x"]
+    assert len(result.groups) == 1
+    assert result.groups[0].source == "global"
+    assert [h.chunk_id for h in result.groups[0].hits] == ["chunk_x"]
 
 
-# ----------------------------------------------------------- multi-norma fusion
+# --------------------------------------------- multi-norma: gruppi per-sub-query
 
-def test_q68_calls_one_subquery_per_norm_plus_global(q68_stub_llm) -> None:
-    """Q68 → 3 norme + 1 retrieval globale = 4 chiamate a hybrid."""
+def test_q68_calls_match_total_subqueries_no_global(q68_stub_llm) -> None:
+    """v1.2 step 2: una chiamata hybrid per OGNI sub-query, NESSUNA global.
+
+    Numero totale = Σ_norm |sub_queries(norm)| (niente +1 global).
+    """
     stub = _StubHybridRetriever(_q68_responses())
     cnr = CrossNormRetriever(
         hybrid_retriever=stub,  # type: ignore[arg-type]
-        llm_client=q68_stub_llm,
-        top_k_per_norm=5,
-        top_k_global=5,
-        top_k_final=20,
+        llm_client=q68_stub_llm, top_k_per_subquery=5,
     )
     cnr.retrieve(Q68)
-    assert len(stub.calls) == 4
-    # Le 3 chiamate filtrate corrispondono ai 3 doc_urn
-    filtered = sorted(c.filter_doc_urn for c in stub.calls if c.filter_doc_urn)
-    assert filtered == sorted([
-        "eli/reg/2024/1689/oj",
-        "eli/reg/2016/679/oj",
-        "akn/it/act/legge/stato/2025-09-23/132",
-    ])
-    # E una chiamata globale (senza filtro)
-    assert sum(1 for c in stub.calls if c.filter_doc_urn is None) == 1
+    total_subq = sum(len(sq) for sq in cnr.last_trace["sub_queries"].values())
+    assert len(stub.calls) == total_subq, (
+        f"Atteso {total_subq} call (niente global), ottenuto {len(stub.calls)}"
+    )
+    # Tutte le call sono filtrate per norma: nessuna call senza filtro.
+    assert all(c.filter_doc_urn is not None for c in stub.calls)
+    filtered_urns = {c.filter_doc_urn for c in stub.calls}
+    assert filtered_urns == set(_URN.values())
 
 
-def test_q68_rrf_fusion_returns_all_5_golds(q68_stub_llm) -> None:
-    """Con le risposte pre-canned, la fusione RRF deve includere tutti i 5 gold
-    nei top-20 (in realtà top-N, dove N = unione delle risposte stub)."""
+def test_q68_groups_contain_all_5_golds(q68_stub_llm) -> None:
+    """Formalizza il check di copertura: ogni gold compare nel top-k del suo
+    gruppo-source (un gruppo la cui `source` è la norma del gold)."""
     stub = _StubHybridRetriever(_q68_responses())
     cnr = CrossNormRetriever(
         hybrid_retriever=stub,  # type: ignore[arg-type]
-        llm_client=q68_stub_llm,
-        top_k_per_norm=5,
-        top_k_global=5,
-        top_k_final=20,
+        llm_client=q68_stub_llm, top_k_per_subquery=5,
     )
     result = cnr.retrieve(Q68)
-    fused_ids = {h.chunk_id for h in result}
-    assert set(GOLD_Q68).issubset(fused_ids), (
-        f"Mancano gold: {set(GOLD_Q68) - fused_ids}"
-    )
+    gold_norm = {
+        "eli/reg/2024/1689/oj__art_6": "ai_act",
+        "eli/reg/2024/1689/oj__art_27": "ai_act",
+        "eli/reg/2016/679/oj__art_9": "gdpr",
+        "eli/reg/2016/679/oj__art_35": "gdpr",
+        "akn/it/act/legge/stato/2025-09-23/132__art_7": "l_132_2025",
+    }
+    for gold, norm in gold_norm.items():
+        covered = any(
+            g.source == norm and gold in {h.chunk_id for h in g.hits}
+            for g in result.groups
+        )
+        assert covered, f"Gold {gold} non nel top-k di alcun gruppo source={norm}"
 
 
-def test_q68_rrf_score_monotonic_descending(q68_stub_llm) -> None:
+def test_q68_group_hits_come_from_correct_source(q68_stub_llm) -> None:
+    """Gli hit di ogni gruppo provengono dalla source (norma) dichiarata."""
     stub = _StubHybridRetriever(_q68_responses())
     cnr = CrossNormRetriever(
         hybrid_retriever=stub,  # type: ignore[arg-type]
-        llm_client=q68_stub_llm,
-        top_k_per_norm=5,
-        top_k_global=5,
-        top_k_final=20,
+        llm_client=q68_stub_llm, top_k_per_subquery=5,
     )
     result = cnr.retrieve(Q68)
-    scores = [h.score for h in result]
-    assert scores == sorted(scores, reverse=True), (
-        f"RRF scores non monotoni: {scores}"
-    )
-    ranks = [h.rank for h in result]
-    assert ranks == list(range(1, len(result) + 1))
-
-
-def test_q68_rrf_chunk_in_multiple_sources_ranks_higher(q68_stub_llm) -> None:
-    """L.132 art_7 appare in sub-query L.132 (rank 1) e in retrieval globale
-    (rank 2). La sua RRF score deve essere strettamente maggiore di chunk che
-    appaiono in una sola source."""
-    stub = _StubHybridRetriever(_q68_responses())
-    cnr = CrossNormRetriever(
-        hybrid_retriever=stub,  # type: ignore[arg-type]
-        llm_client=q68_stub_llm,
-        rrf_k=60,
-        top_k_per_norm=5,
-        top_k_global=5,
-        top_k_final=20,
-    )
-    result = cnr.retrieve(Q68)
-    by_id = {h.chunk_id: h for h in result}
-
-    l132_art7 = by_id["akn/it/act/legge/stato/2025-09-23/132__art_7"]
-    # appare in 2 source (rank 1 + rank 2). RRF score = 1/(60+1) + 1/(60+2)
-    expected = 1.0 / 61 + 1.0 / 62
-    assert l132_art7.score == pytest.approx(expected, rel=1e-6)
-
-
-def test_validation_top_k_per_norm_zero(q68_stub_llm) -> None:
-    stub = _StubHybridRetriever({})
-    with pytest.raises(ValueError, match="top_k_per_norm"):
-        CrossNormRetriever(
-            hybrid_retriever=stub,  # type: ignore[arg-type]
-            llm_client=q68_stub_llm,
-            top_k_per_norm=0,
+    assert result.groups, "attesi gruppi per-sub-query"
+    for g in result.groups:
+        allowed = set(_q68_responses()[_URN[g.source]])
+        got = {h.chunk_id for h in g.hits}
+        assert got <= allowed, (
+            f"Gruppo source={g.source}: hit fuori source {got - allowed}"
         )
 
 
-def test_validation_rrf_k_zero(q68_stub_llm) -> None:
+def test_q68_top_k_per_subquery_caps_group_size(q68_stub_llm) -> None:
+    """top_k_per_subquery è il cap sugli hit per gruppo (leva isolata)."""
+    stub = _StubHybridRetriever(_q68_responses())
+    cnr = CrossNormRetriever(
+        hybrid_retriever=stub,  # type: ignore[arg-type]
+        llm_client=q68_stub_llm, top_k_per_subquery=3,
+    )
+    result = cnr.retrieve(Q68)
+    assert all(len(g.hits) <= 3 for g in result.groups)
+    # e lo stub riceve top_k=3
+    assert all(c.top_k == 3 for c in stub.calls)
+
+
+def test_q68_trace_contains_sub_queries_as_lists(q68_stub_llm) -> None:
+    """trace['sub_queries'][norm_id] è list[str]."""
+    stub = _StubHybridRetriever(_q68_responses())
+    cnr = CrossNormRetriever(
+        hybrid_retriever=stub,  # type: ignore[arg-type]
+        llm_client=q68_stub_llm, top_k_per_subquery=5,
+    )
+    cnr.retrieve(Q68)
+    sq_dict = cnr.last_trace["sub_queries"]
+    assert set(sq_dict.keys()) == {"gdpr", "ai_act", "l_132_2025"}
+    for nid, sub_qs in sq_dict.items():
+        assert isinstance(sub_qs, list), f"{nid}: atteso list, ottenuto {type(sub_qs)}"
+        assert all(isinstance(s, str) for s in sub_qs)
+        assert len(sub_qs) >= 1
+
+
+# --------------------------------------------- validation / config
+
+def test_validation_top_k_per_subquery_zero(q68_stub_llm) -> None:
     stub = _StubHybridRetriever({})
-    with pytest.raises(ValueError, match="rrf_k"):
+    with pytest.raises(ValueError, match="top_k_per_subquery"):
+        CrossNormRetriever(
+            hybrid_retriever=stub,  # type: ignore[arg-type]
+            llm_client=q68_stub_llm, top_k_per_subquery=0,
+        )
+
+
+def test_validation_rerank_pool_below_top_k(q68_stub_llm) -> None:
+    stub = _StubHybridRetriever({})
+    with pytest.raises(ValueError, match="rerank_pool_per_subquery"):
         CrossNormRetriever(
             hybrid_retriever=stub,  # type: ignore[arg-type]
             llm_client=q68_stub_llm,
-            rrf_k=0,
+            top_k_per_subquery=5, rerank_pool_per_subquery=3,
         )
 
 

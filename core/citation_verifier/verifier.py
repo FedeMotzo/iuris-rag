@@ -16,8 +16,56 @@ from collections.abc import Iterable
 from .models import CitationMarker, VerificationResult
 
 # Marker [cite:CHUNK_ID] — il chunk_id non può contenere whitespace né ']',
-# deve essere non vuoto. Case-sensitive (i chunk_id del corpus lo sono).
-CITE_PATTERN = re.compile(r"\[cite:([^\]\s]+)\]")
+# Il contenuto deve INIZIARE con un char non-spazio (così `[cite:]` e
+# `[cite: foo]` restano malformati e ignorati) ma può avere una coda (spazi,
+# virgole) che le normalizzazioni additive tollerano. Case-sensitive.
+CITE_PATTERN = re.compile(r"\[cite:([^\]\s][^\]]*)\]")
+
+
+def _split_cite_tokens(content: str) -> list[str]:
+    """Spezza il contenuto di un bracket in token-cite.
+
+    Additivo: splitta su ';' e ',' e strippa un eventuale prefisso "cite:"
+    ripetuto → gestisce `[cite:A, cite:B]`, `[cite:A; cite:B]` e le code
+    descrittive `[cite:A, paragrafo 1]` (il secondo token resta separato).
+    """
+    tokens: list[str] = []
+    for raw in re.split(r"[;,]", content):
+        t = raw.strip()
+        if t.lower().startswith("cite:"):
+            t = t[len("cite:"):].strip()
+        if t:
+            tokens.append(t)
+    return tokens
+
+
+def _token_verified(token: str, context_set: set[str]) -> bool:
+    """True se un chunk_id noto è PREFISSO del token al confine.
+
+    Tollera la coda descrittiva (es. "ID, paragrafo 1", "ID par. 2") ma solo
+    verso id realmente recuperati, e il carattere dopo il prefisso deve essere
+    un separatore → niente falsi positivi tipo art_3 vs art_35.
+    """
+    for known in context_set:
+        if token == known:
+            return True
+        if token.startswith(known) and token[len(known):len(known) + 1] in " ,;":
+            return True
+    return False
+
+
+def _classify_bracket(content: str, context_set: set[str]) -> bool:
+    """True se il bracket è verificato: nessun token-cite compatto resta
+    irrisolto. Un token con spazio interno non risolto è trattato come coda
+    descrittiva (ignorato); un token compatto non risolto (es. id abbreviato
+    "art_7") conta come unverified → bracket non verificato."""
+    has_unverified = False
+    for tok in _split_cite_tokens(content):
+        if _token_verified(tok, context_set):
+            continue
+        if " " not in tok:
+            has_unverified = True
+    return not has_unverified
 
 
 def verify_citations(
@@ -39,7 +87,7 @@ def verify_citations(
     markers: list[CitationMarker] = []
     for m in CITE_PATTERN.finditer(llm_output):
         chunk_id = m.group(1)
-        verified = chunk_id in context_set
+        verified = _classify_bracket(chunk_id, context_set)
         markers.append(CitationMarker(
             chunk_id=chunk_id,
             span_start=m.start(),

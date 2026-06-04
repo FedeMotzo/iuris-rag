@@ -5,12 +5,156 @@
     "source": "spike/regen_cassettes_v2.py (live)",
     "key_format": "<query_label>:<norm_id>",
     "regenerated": "2026-05-27",
-    "prompt_template_version": "v2 (clausola nominazione esplicita istituti)"
+    "prompt_template_version": "v2 (clausola nominazione esplicita istituti)",
+    "v3_regen_date": "2026-05-29",
+    "v3_prompt": "mono-concept (JSON array di sub-query)",
+    "v3_format": "list[str]",
+    "v3_cleaned": "spike/cleanup_cassettes_v3.py"
   },
-  "q68:gdpr": "Quali obblighi prevede il GDPR per un trattamento di dati sanitari (art. 9) tramite sistema automatizzato con profilazione (art. 22) a larga scala in ambito ospedaliero, con riferimento a DPIA (art. 35), misure di sicurezza e pseudonimizzazione (art. 32), nomina del responsabile del trattamento (art. 28) e informativa all'interessato (artt. 13-14)?",
-  "q68:ai_act": "«Quali obblighi prevede l'AI Act per un sistema di IA ad alto rischio in ambito sanitario (Allegato III) destinato al triage telefonico: sistema di gestione dei rischi, governance dei dati di addestramento, documentazione tecnica, registrazione automatica eventi (log), sorveglianza umana, valutazione di conformità, marcatura CE e FRIA (art. 27)?»",
-  "q68:l_132_2025": "\"Ai sensi dell'art. 7 L. 132/2025, quali obblighi si applicano all'uso di sistemi di IA per supporto a decisioni cliniche nel triage telefonico, con riferimento a supervisione del medico, riservatezza dei dati dei pazienti e principio di antropocentrismo?\"",
-  "q69:gdpr": "\"Quali obblighi prevede il GDPR per il trattamento di categorie particolari di dati personali (art. 9) — dati sanitari di pazienti e operatori sanitari — in sistemi di farmacovigilanza con profilazione e processo decisionale automatizzato (art. 22), inclusi DPIA (art. 35), misure di sicurezza ex art. 32 e nomina del responsabile del trattamento (art. 28)?\"",
-  "q69:ai_act": "\"Quali obblighi prevede l'AI Act per un fornitore e deployer di sistema di IA ad alto rischio in ambito sanitario (Allegato III) impiegato in farmacovigilanza, con riferimento a: sistema di gestione dei rischi, governance dei dati di addestramento, registrazione automatica eventi (log), sorveglianza umana, e FRIA (art. 27)?\"",
-  "q69:nis2": "\"Quali obblighi prevede il D.Lgs 138/2024 per un soggetto essenziale nel settore sanitario in merito alle misure tecniche e organizzative di gestione del rischio di cybersicurezza (art. 24), alla notifica di incidenti significativi al CSIRT Italia (art. 25) e alla sicurezza della supply chain ICT, inclusi fornitori di sistemi di IA?\""
+  "q68:gdpr": [
+    "Quali obblighi prevede il GDPR per il trattamento di dati sanitari come categorie particolari di dati personali in ambito ospedaliero?",
+    "Quando un sistema di triage automatizzato costituisce processo decisionale automatizzato ai sensi dell'art. 22 GDPR e quali garanzie si applicano?",
+    "In quali casi il trattamento tramite chatbot AI in ambito sanitario richiede una valutazione d'impatto sulla protezione dei dati (DPIA) ai sensi dell'art. 35 GDPR?",
+    "Quali misure tecniche e organizzative adeguate deve adottare un'azienda ospedaliera per garantire la sicurezza del trattamento dei dati dei pazienti ai sensi dell'art. 32 GDPR?",
+    "Quali informazioni deve contenere l'informativa resa ai pazienti prima del trattamento dei loro dati tramite un chatbot di triage ai sensi degli artt. 13-14 GDPR?",
+    "Quale base giuridica legittima il trattamento di dati sanitari dei pazienti da parte di un'azienda ospedaliera tramite sistema AI ai sensi dell'art. 6 e art. 9 GDPR?",
+    "Quali requisiti deve soddisfare il contratto di nomina del responsabile del trattamento fornitore del chatbot AI ai sensi dell'art. 28 GDPR?",
+    "Quali obblighi di notifica al Garante e di comunicazione agli interessati deriv"
+  ],
+  "q68:ai_act": [
+    "Un chatbot per triage telefonico ospedaliero rientra nella definizione di sistema di IA ad alto rischio ai sensi dell'art. 6 e Allegato III AI Act?",
+    "Quali obblighi di sistema di gestione dei rischi deve soddisfare il fornitore di un sistema di IA ad alto rischio in ambito sanitario prima della messa in produzione?",
+    "Quali requisiti di governance dei dati di addestramento si applicano a un sistema di IA ad alto rischio che elabora dati sanitari dei pazienti?",
+    "Quali obblighi di documentazione tecnica deve predisporre il fornitore di un sistema di IA ad alto rischio prima dell'immissione sul mercato?",
+    "Quali requisiti di registrazione automatica degli eventi (log) sono previsti per un sistema di IA ad alto rischio utilizzato in contesto ospedaliero?",
+    "Quali obblighi di trasparenza deve garantire il fornitore verso il deployer di un sistema di IA ad alto rischio in ambito sanitario?",
+    "Quali misure di sorveglianza umana devono essere integrate in un sistema di IA ad alto rischio impiegato nel triage dei pazienti?",
+    "Quali requisiti di accuratezza, robustezza e cybersicurezza si applicano a un sistema di IA ad alto rischio operante in ambito sanitario?",
+    "Un'azienda ospedaliera che mette in produzione un chatbot AI per triage è qualificabile come deployer e quali obblighi specifici derivano dall'art"
+  ],
+  "q68:l_132_2025": [
+    "Quali obblighi prevede la L. 132/2025 per l'uso dell'IA a supporto delle decisioni cliniche in ambito sanitario, con particolare riguardo alla supervisione del medico?",
+    "Come disciplina la L. 132/2025 la riservatezza dei dati dei pazienti quando vengono trattati da sistemi di intelligenza artificiale in contesto sanitario?",
+    "Quali requisiti di trasparenza impone la L. 132/2025 ai soggetti che impiegano sistemi di IA in ambito sanitario nei confronti degli utenti del servizio?",
+    "In che modo la L. 132/2025 garantisce il principio di antropocentrismo e la supervisione umana nei processi decisionali automatizzati in sanità?",
+    "Quali adempimenti prevede la L. 132/2025 per le pubbliche amministrazioni che adottano sistemi di IA, con riferimento alla responsabilità del funzionario e alla decisione finale umana?",
+    "Quali sono le autorità nazionali competenti designate dalla L. 132/2025 per vigilare sull'uso dell'IA in ambito sanitario e quale ruolo svolgono AgID e ACN?"
+  ],
+  "q69:gdpr": [
+    "Quali obblighi prevede il GDPR per il trattamento di dati sanitari come categorie particolari di dati personali ai sensi dell'art. 9 in ambito farmacovigilanza?",
+    "Quando è obbligatoria la valutazione d'impatto sulla protezione dei dati (DPIA) ex art. 35 GDPR per trattamenti sistematici su larga scala di dati sanitari?",
+    "Quali basi giuridiche ex art. 6 e art. 9 GDPR legittimano il trattamento di dati di pazienti e operatori sanitari per finalità di farmacovigilanza?",
+    "Quali requisiti impone l'art. 22 GDPR sul processo decisionale automatizzato e la profilazione quando un sistema di IA analizza dati di pazienti?",
+    "Quali misure tecniche e organizzative adeguate richiede l'art. 32 GDPR, incluse pseudonimizzazione e cifratura, per il trattamento di dati sanitari con sistemi di IA?",
+    "Quali obblighi di informativa e trasparenza ex artt. 13-14 GDPR gravano sul titolare del trattamento verso pazienti e operatori sanitari coinvolti nel sistema di farmacovigilanza?",
+    "Come deve essere strutturato il contratto di nomina del responsabile del trattamento ex art. 28 GDPR quando un fornitore di IA tratta dati sanitari per conto dell'azienda farmaceutica?"
+  ],
+  "q69:ai_act": [
+    "Quali criteri determinano la classificazione di un sistema di IA per farmacovigilanza come sistema ad alto rischio ai sensi dell'art. 6 e dell'Allegato III AI Act?",
+    "Quali obblighi di gestione del rischio deve soddisfare il fornitore di un sistema di IA ad alto rischio nel settore sanitario ai sensi del Capo III Sezione 2 AI Act?",
+    "Quali requisiti di governance dei dati di addestramento si applicano a un sistema di IA ad alto rischio che elabora dati provenienti da operatori sanitari e pazienti?",
+    "Quali obblighi di documentazione tecnica incombono sul fornitore di un sistema di IA ad alto rischio destinato al settore sanitario ai sensi dell'AI Act?",
+    "Quali requisiti di registrazione automatica degli eventi (log) prevede l'AI Act per i sistemi di IA ad alto rischio impiegati in ambito sanitario?",
+    "Quali obblighi di trasparenza deve rispettare il fornitore di un sistema di IA ad alto rischio nei confronti del deployer nel settore della farmacovigilanza?",
+    "Quali obblighi di sorveglianza umana impone l'AI Act al fornitore di un sistema di IA ad alto rischio utilizzato per la farmacovigilanza?",
+    "Quali obblighi specifici ricadono sul deployer di un sistema di IA ad alto rischio in ambito sanitario ai sensi dell'art. 26 AI Act?"
+  ],
+  "q69:nis2": [
+    "Quali obblighi di registrazione sulla piattaforma ACN si applicano a un'azienda farmaceutica qualificata come soggetto essenziale NIS2 nel settore sanitario?",
+    "Quali misure tecniche, operative e organizzative di gestione del rischio di cybersicurezza deve adottare un soggetto essenziale NIS2 che tratta dati sanitari con sistemi automatizzati?",
+    "Quali responsabilità ricadono sugli organi di amministrazione e direzione di un soggetto essenziale NIS2 in merito all'approvazione e supervisione delle misure di cybersicurezza?",
+    "Quali obblighi di notifica al CSIRT Italia si applicano a un soggetto essenziale NIS2 in caso di incidente significativo che coinvolge un sistema di elaborazione dati sanitari?",
+    "Quali obblighi impone il D.Lgs 138/2024 sulla catena di approvvigionamento ICT a un soggetto essenziale NIS2 che si avvale di fornitori esterni per sistemi di intelligenza artificiale?",
+    "Quali requisiti di controllo degli accessi e autenticazione a più fattori prevede il D.Lgs 138/2024 per i soggetti essenziali NIS2 che gestiscono dati sanitari tramite piattaforme digitali?",
+    "Quali misure di continuità operativa deve garantire un soggetto essenziale NIS2 nel settore sanitario a fronte di un'interruzione del sistema di IA utilizzato"
+  ],
+  "q9:dlgs_231": [
+    "Quali fattispecie di reato presupposto in materia di trattamento illecito di dati personali sono richiamate dall'art. 24-bis del D.Lgs 231/2001?",
+    "Come si configura la responsabilità amministrativa dell'ente per reati informatici commessi nell'interesse o a vantaggio dell'ente ai sensi dell'art. 5 D.Lgs 231/2001?",
+    "Quali condotte integrano il reato di accesso abusivo a sistema informatico rilevante come reato presupposto ex art. 24-bis D.Lgs 231/2001?",
+    "In che modo il danneggiamento informatico di dati o sistemi rileva come reato presupposto della responsabilità amministrativa dell'ente ex D.Lgs 231/2001?",
+    "Quali violazioni del Codice Privacy possono integrare reati presupposto richiamati dal D.Lgs 231/2001 in materia di trattamento illecito di dati personali?",
+    "Quali requisiti deve soddisfare il Modello di Organizzazione, Gestione e Controllo per costituire esimente rispetto a reati informatici e di trattamento illecito di dati ex art. 6 D.Lgs 231/2001?",
+    "Quali sanzioni pecuniarie e interdittive sono applicabili all'ente per i reati presupposto di cui all'art. 24-bis D.Lgs 231/2001 in materia di d"
+  ],
+  "q9:codice_privacy": [
+    "Quali condotte integrano il reato di trattamento illecito di dati personali ai sensi dell'art. 167 del Codice Privacy D.Lgs 196/2003?",
+    "Quali sono le fattispecie penali previste dal Codice Privacy per la comunicazione e diffusione illecita di dati personali?",
+    "Come si configura il reato di trattamento illecito di dati personali come reato presupposto della responsabilità degli enti ai sensi del D.Lgs 231/2001?",
+    "Quali sanzioni penali sono previste dall'art. 167 del Codice Privacy per il trattamento illecito di dati in violazione delle disposizioni del GDPR?"
+  ],
+  "q70:gdpr": [
+    "Quali requisiti prevede il GDPR per il trasferimento di dati personali verso un fornitore stabilito in un paese extra-UE, in assenza di decisione di adeguatezza?",
+    "Quando è obbligatoria la valutazione d'impatto sulla protezione dei dati (DPIA) per un sistema di trattamento automatizzato su larga scala in ambito bancario?",
+    "Quali clausole deve contenere il contratto di nomina del responsabile del trattamento ex art. 28 GDPR quando il fornitore è un soggetto extra-UE?",
+    "Il rilevamento automatizzato di operazioni sospette tramite IA configura un processo decisionale automatizzato ai sensi dell'art. 22 GDPR con diritti dell'interessato?",
+    "Quali misure tecniche e organizzative adeguate richiede l'art. 32 GDPR per un sistema di IA che tratta dati finanziari su larga scala?",
+    "I dati trattati da un sistema anti-riciclaggio possono includere categorie particolari di dati personali soggette alle tutele rafforzate dell'art. 9 GDPR?",
+    "Quali obblighi di informativa e trasparenza gravano sul titolare del trattamento bancario verso gli interessati i cui dati sono analizzati da un sistema di IA?"
+  ],
+  "q70:ai_act": [
+    "Quali obblighi prevede l'AI Act per il fornitore extra-UE di un sistema di IA ad alto rischio destinato al mercato europeo?",
+    "Il sistema di IA per il rilevamento di operazioni sospette di riciclaggio rientra nelle categorie ad alto rischio dell'Allegato III dell'AI Act?",
+    "Quali requisiti di sistema di gestione dei rischi deve soddisfare un fornitore di sistema di IA ad alto rischio ai sensi del Capo III Sezione 2 dell'AI Act?",
+    "Quali obblighi di governance dei dati di addestramento impone l'AI Act al fornitore di un sistema di IA ad alto rischio?",
+    "Quali obblighi di documentazione tecnica deve rispettare il fornitore extra-UE di un sistema di IA ad alto rischio secondo l'AI Act?",
+    "Quali requisiti di registrazione automatica degli eventi (log) prevede l'AI Act per i sistemi di IA ad alto rischio?",
+    "Quali obblighi di trasparenza verso il deployer (utilizzatore) impone l'AI Act al fornitore di un sistema di IA ad alto rischio?",
+    "Quali obblighi di sorveglianza umana deve garantire il deployer bancario che utilizza un sistema di IA ad alto rischio ai sensi dell'art. 26 AI Act?",
+    "Quali obblighi di monitoraggio del funzionamento e conservazione dei log gravano sul deployer di un sistema di IA ad alto rischio secondo l"
+  ],
+  "q70:dlgs_231": [
+    "Quali reati presupposto ex D.Lgs 231/2001 rilevano quando un ente affida a terzi extra-UE sistemi automatizzati per il rilevamento di operazioni sospette di riciclaggio?",
+    "Come deve essere strutturato il modello organizzativo ex art. 6 D.Lgs 231/2001 per gestire il rischio 231 derivante dall'outsourcing a fornitori esteri di sistemi informatici critici?",
+    "Quali requisiti di idoneità ed efficace attuazione del MOG ex artt. 6-7 D.Lgs 231/2001 si applicano quando i soggetti apicali delegano a fornitori esterni la gestione di processi sensibili antiriciclaggio?",
+    "Come deve essere configurato l'organismo di vigilanza ex art. 6 D.Lgs 231/2001 per esercitare controllo su attività esternalizzate a soggetti extra-UE nell'ambito di sistemi informatici?",
+    "Quali profili di responsabilità amministrativa dell'ente ex D.Lgs 231/2001 emergono per i reati di riciclaggio e autoriciclaggio ex art. 25-octies commessi nell'interesse o a vantaggio della banca tramite fornitore esterno?",
+    "In che modo i reati informatici ex art. 24-bis D.Lgs 231/2001, come accesso abusivo o danneggiamento informatico, possono essere attivati dalla gestione esternalizzata di un sistema IA"
+  ],
+  "q70:nis2": [
+    "Quali obblighi prevede il D.Lgs 138/2024 sulla sicurezza della catena di approvvigionamento ICT quando il fornitore è stabilito fuori dall'Unione Europea?",
+    "Come disciplina la NIS2 la valutazione del rischio cyber associato a fornitori e prestatori di servizi gestiti nella selezione contrattuale?",
+    "Quali misure tecniche e organizzative di gestione del rischio di cybersicurezza deve adottare una banca soggetto essenziale o importante ai sensi dell'art. 24 D.Lgs 138/2024?",
+    "Quali responsabilità gravano sugli organi di amministrazione e direzione ai sensi dell'art. 23 D.Lgs 138/2024 in relazione all'approvazione delle misure di sicurezza ICT?",
+    "Il settore finanziario bancario rientra nell'ambito di applicazione del D.Lgs 138/2024 come soggetto essenziale o importante?",
+    "Quali obblighi di notifica al CSIRT Italia scattano ai sensi dell'art. 25 D.Lgs 138/2024 in caso di incidente significativo su un sistema gestito da un fornitore esterno?",
+    "Quali poteri di vigilanza e ispezione esercita l'ACN nei confronti dei soggetti finanziari obbligati dalla NIS2 riguardo ai contratti di outsourcing ICT?"
+  ],
+  "q71:gdpr": [
+    "Quali obblighi prevede il GDPR quando un sistema automatizzato attribuisce punteggi che determinano l'accesso a servizi pubblici per anziani, ai sensi dell'art. 22?",
+    "Il trattamento di dati sanitari di anziani per l'accesso a servizi residenziali rientra nelle categorie particolari ex art. 9 GDPR e quali condizioni di liceità si applicano?",
+    "Quando è obbligatoria la valutazione d'impatto sulla protezione dei dati (DPIA) per un sistema di IA che tratta dati di anziani su larga scala per graduatorie pubbliche?",
+    "Quale base giuridica ex art. 6 GDPR legittima il trattamento di dati personali da parte di una regione italiana per l'attribuzione automatizzata di punteggi in graduatorie di accesso a servizi sociali?",
+    "Quali misure tecniche e organizzative adeguate deve adottare una pubblica amministrazione regionale per garantire la sicurezza del trattamento in un sistema di IA ex art. 32 GDPR?",
+    "Quali obblighi di informativa e trasparenza ex artt. 13-14 GDPR gravano sulla regione nei confronti degli anziani i cui dati sono trattati da un sistema di profilazione automatizzata?",
+    "Quali diritti dell'interessato ex artt. 15-22 GDPR sono azionabili dagli anziani sottoposti a profilazione automatizzata per l'accesso a"
+  ],
+  "q71:ai_act": [
+    "Un sistema di IA che attribuisce punteggi per l'accesso a servizi residenziali per anziani rientra nella definizione di sistema ad alto rischio ai sensi dell'art. 6 e Allegato III AI Act?",
+    "Quali obblighi di sistema di gestione dei rischi deve rispettare il fornitore di un sistema di IA ad alto rischio destinato all'accesso a servizi essenziali pubblici?",
+    "Quali requisiti di governance dei dati di addestramento si applicano a un sistema di IA ad alto rischio utilizzato da una regione italiana per graduatorie di accesso a servizi sociali?",
+    "Quali obblighi di documentazione tecnica incombono sul fornitore di un sistema di IA ad alto rischio impiegato in ambito di servizi residenziali pubblici per anziani?",
+    "Quali requisiti di registrazione automatica degli eventi (log) prevede l'AI Act per sistemi di IA ad alto rischio gestiti da organismi pubblici regionali?",
+    "Quali obblighi di trasparenza verso il deployer sono previsti dall'AI Act per sistemi di IA ad alto rischio che supportano decisioni di accesso a servizi essenziali?",
+    "Quali requisiti di sorveglianza umana impone l'AI Act al fornitore di un sistema di IA ad alto rischio utilizzato per l'attribuzione di punteggi in graduatorie pubbliche?",
+    "Quali obblighi gravano sul deployer ai sensi dell'art. 26 AI Act quando una regione italiana utilizza un"
+  ],
+  "q71:nis2": [
+    "La regione italiana che gestisce un sistema informatico per l'erogazione di servizi residenziali per anziani rientra nell'ambito di applicazione del D.Lgs 138/2024 come soggetto essenziale o importante?",
+    "Quali obblighi di registrazione sulla piattaforma ACN e designazione del punto di contatto competono a una regione italiana che adotta sistemi digitali per servizi socio-assistenziali?",
+    "Quali responsabilità ricadono sugli organi di amministrazione e direzione di un ente pubblico regionale ai sensi dell'art. 23 D.Lgs 138/2024 in relazione all'approvazione e supervisione delle misure di cybersicurezza?",
+    "Quali misure tecniche, operative e organizzative di gestione del rischio di cybersicurezza deve adottare una regione ai sensi dell'art. 24 D.Lgs 138/2024 per un sistema di IA che tratta dati di anziani?",
+    "Quali obblighi di notifica di incidenti significativi al CSIRT Italia entro 24 e 72 ore si applicano a una regione che subisce un incidente su un sistema di IA per graduatorie di servizi residenziali?",
+    "Quali obblighi impone il D.Lgs 138/2024 sulla sicurezza della catena di approvvigionamento ICT quando una regione si avvale di fornitori esterni per sviluppare o gestire un sistema di IA?",
+    "Quali sanzioni amministrative"
+  ],
+  "q71:l_132_2025": [
+    "Quali obblighi prevede la L. 132/2025 per le pubbliche amministrazioni che adottano sistemi di IA per decisioni che incidono su posizioni soggettive dei cittadini?",
+    "La L. 132/2025 richiede che la decisione finale in procedimenti amministrativi assistiti da IA sia sempre adottata da un funzionario umano responsabile?",
+    "Quali requisiti di trasparenza impone la L. 132/2025 quando una PA utilizza un sistema di IA per l'attribuzione automatica di punteggi in graduatorie?",
+    "Come disciplina la L. 132/2025 il principio di strumentalità dell'IA nelle pubbliche amministrazioni rispetto alle decisioni che incidono su diritti delle persone?",
+    "La L. 132/2025 prevede garanzie specifiche contro la discriminazione algoritmica nei sistemi di IA utilizzati da enti pubblici per l'accesso a servizi sociali?",
+    "Quali autorità nazionali competenti in materia di IA devono essere coinvolte o notificate quando una regione mette in produzione un sistema di IA per servizi alla persona?",
+    "Il principio di supervisione umana sancito dalla L. 132/2025 si applica ai sistemi di scoring automatizzato adottati da enti pubblici per l'accesso a servizi residenziali?"
+  ]
 }

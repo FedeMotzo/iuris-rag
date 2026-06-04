@@ -124,3 +124,42 @@ faith. Il numero a 4000 è quello reale.
 - `spike/SUBSET_CROSS_NORM_V1_1_REBASELINE.md` — re-baseline @ max_tokens=4000 (config A)
 - `spike/BOOST_ARTICLE_RESULTS.md` — A/B boost + verdetto + re-baseline impact
 - `data/benchmark/ragas_pipeline_outputs_boost_ab.json` — output intermedio A+B
+
+---
+
+## Open items post-backend (2026-06-04)
+
+Backend cross-norma v1.2 chiuso (vedi `PROJECT_CONTEXT.md` voce 42). Causa radice
+del fallimento v1.1 = FORMA delle sub-query del decomposer, non graph/boost (entrambi
+**demotati con evidenza**: i gold "irrecuperabili senza graph", es. art. 6 AI Act,
+recuperati dalla sola forma sub-query). Le capability §3 di questa roadmap (graph
+expansion, boost type-aware) NON sono state costruite: superflue. Resta aperto:
+
+**v1.2 rimanente (pre-merge)**
+- **UI Streamlit collapsible** → ship. `CrossNormPresentation.to_dict()` è
+  JSON-serializzabile e pronta (norme → articoli → body+cites+verified+truncated +
+  orientamento compatto). È l'ultimo deliverable v1.2 prima del merge del branch.
+
+**Gold review (benchmark)**
+- **Q65 ai_act art_1** — articolo di scopo/"Oggetto", a rank 9 nel retrieval
+  (fuori top-5): la mini correttamente non lo copre. Verificare se è davvero gold
+  dispositivo o annotazione da rivedere.
+- **Q23** — gold non a livello dispositivo (nessun gold articolo/allegato parsato):
+  audit annotazione.
+
+**Gap corpus v1.3+**
+- **Articoli del codice penale (648 ss.)** non ingeriti: emerso dalla mini
+  art_25-octies (231 rinvia ai reati c.p. senza che il corpus li contenga). Già
+  noto come limite (cfr. "Estensione corpus codice penale" §4); confermato dal
+  backend v1.2.
+
+**Futuro (oltre v1.2, data-driven)**
+- **select-then-format** — alternativa robusta al decomposer, da costruire SOLO se
+  emerge fragilità su query reali non-benchmark.
+- **dedup map-level** — se la ridondanza intra-sezione (più mini stesso articolo,
+  oggi concatenate) dà fastidio; oggi il dedup è solo output-level (grouping).
+- **streaming eventi/stage** — UX (deroga latenza accettata, precisione > latenza).
+- **articolo tecnico** — leva narrativa: forma-sub-query come causa radice + le 2
+  scoperte da misura onesta (verifier che sotto-contava marker malformati;
+  bracket-fix che ha esposto i troncamenti da token-limit) + graph/boost demotati
+  con dati.
