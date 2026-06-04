@@ -163,3 +163,10 @@ expansion, boost type-aware) NON sono state costruite: superflue. Resta aperto:
   scoperte da misura onesta (verifier che sotto-contava marker malformati;
   bracket-fix che ha esposto i troncamenti da token-limit) + graph/boost demotati
   con dati.
+- **gating gen-side buona-formazione marker** — mini che termina con `[cite:`
+  dangling ⟹ retry automatico, per chiudere il troncamento alla fonte invece di
+  flaggarlo a posteriori. Rilevato su Q71/gdpr/Art.6+Art.32 (2 sezioni,
+  `finish_reason=stop` ma body troncato mid-marker): il modello ha segnalato
+  terminazione normale pur interrompendosi dentro un marker aperto. Attuale
+  fix: `has_dangling_cite` in `map_assemble` setta `truncated=True` per
+  detection retroattiva; il gating gen-side chiuderebbe il problema alla fonte.

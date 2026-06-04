@@ -13,13 +13,8 @@ from __future__ import annotations
 import re
 from collections.abc import Iterable
 
+from core.citation_marker import CITE_PATTERN
 from .models import CitationMarker, VerificationResult
-
-# Marker [cite:CHUNK_ID] — il chunk_id non può contenere whitespace né ']',
-# Il contenuto deve INIZIARE con un char non-spazio (così `[cite:]` e
-# `[cite: foo]` restano malformati e ignorati) ma può avere una coda (spazi,
-# virgole) che le normalizzazioni additive tollerano. Case-sensitive.
-CITE_PATTERN = re.compile(r"\[cite:([^\]\s][^\]]*)\]")
 
 
 def _split_cite_tokens(content: str) -> list[str]:
