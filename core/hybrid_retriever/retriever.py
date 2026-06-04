@@ -226,10 +226,12 @@ class HybridRetriever:
             return []
         pairs = [(query, h.payload.get("text", "")) for h in hits]
         scores = reranker.predict(pairs, show_progress_bar=False)
+        # Score desc; a parità di score, chunk_id asc come tiebreaker → ordine
+        # deterministico (riproducibilità del map cross-norma). Behavior-preserving
+        # tranne fissare l'ordine dei tie (prima dipendeva dall'ordine Qdrant).
         scored = sorted(
             zip(hits, scores, strict=True),
-            key=lambda hs: float(hs[1]),
-            reverse=True,
+            key=lambda hs: (-float(hs[1]), hs[0].chunk_id),
         )
         out: list[RetrievalHit] = []
         for new_rank, (h, s) in enumerate(scored[:top_k], start=1):
