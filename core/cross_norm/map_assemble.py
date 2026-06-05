@@ -23,6 +23,7 @@ from pathlib import Path
 
 import yaml
 
+from core.citation_marker import has_dangling_cite
 from core.hybrid_retriever.types import RetrievalHit, RetrievalResult
 
 from .retriever import CrossNormResult, SubQueryGroup
@@ -326,6 +327,12 @@ def _map_one(
             )
 
     text = (getattr(res, "text", "") or "").strip()
+    if has_dangling_cite(text):
+        truncated = True
+        logger.warning(
+            "map mini con [cite: dangling (troncamento silenzioso): source=%s %s",
+            g.source, label,
+        )
     return MiniResult(
         source=g.source,
         sub_query=g.sub_query,
