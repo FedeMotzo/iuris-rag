@@ -136,16 +136,21 @@ recuperati dalla sola forma sub-query). Le capability §3 di questa roadmap (gra
 expansion, boost type-aware) NON sono state costruite: superflue. Resta aperto:
 
 **v1.2 rimanente (pre-merge)**
-- **UI Streamlit collapsible** → ship. `CrossNormPresentation.to_dict()` è
-  JSON-serializzabile e pronta (norme → articoli → body+cites+verified+truncated +
-  orientamento compatto). È l'ultimo deliverable v1.2 prima del merge del branch.
+- **UI Streamlit collapsible** ✅ CHIUSO — `app/streamlit_app.py`, render-only sui
+  12 artefatti congelati. Orientation in cima, expander per norma (collapsed default),
+  badge `verified`+`truncated` indipendenti, sub-query per articolo, selectbox con
+  testo query completo. Query box live = follow-up, non v1.2.
 
 **Gold review (benchmark)**
-- **Q65 ai_act art_1** — articolo di scopo/"Oggetto", a rank 9 nel retrieval
-  (fuori top-5): la mini correttamente non lo copre. Verificare se è davvero gold
-  dispositivo o annotazione da rivedere.
-- **Q23** — gold non a livello dispositivo (nessun gold articolo/allegato parsato):
-  audit annotazione.
+- **Q65 ai_act art_1** ✅ CHIUSO — `art_1` è "Oggetto"/cornice (supporting, non
+  dispositivo recall-target). Il dispositivo binding è `L.132 art_3 c.5`
+  ("non produce nuovi obblighi rispetto al reg. 2024/1689"), coperto+verificato nella
+  mini. Annotazione aggiornata in `gold_answers_v3.json`. 12/12 dispositivi regge.
+- **Q23** ✅ CHIUSO — gold "contesto insufficiente" corretta: il collegamento
+  GDPR→reato-presupposto 231 richiede il codice penale (c.p. 615-ter, 635-bis,
+  640-quinquies via art. 24-bis), fuori corpus v1. Faithfulness pulita: la mini
+  elenca i reati-presupposto del c.p. senza fabbricare il nesso GDPR→231.
+  Limite documentato (vedi "negative / norme co-nominate" in Futuro).
 
 **Gap corpus v1.3+**
 - **Articoli del codice penale (648 ss.)** non ingeriti: emerso dalla mini
@@ -163,10 +168,19 @@ expansion, boost type-aware) NON sono state costruite: superflue. Resta aperto:
   scoperte da misura onesta (verifier che sotto-contava marker malformati;
   bracket-fix che ha esposto i troncamenti da token-limit) + graph/boost demotati
   con dati.
-- **gating gen-side buona-formazione marker** — mini che termina con `[cite:`
+- **detection troncamento alla fonte (gating gen-side)** — mini che termina con `[cite:`
   dangling ⟹ retry automatico, per chiudere il troncamento alla fonte invece di
   flaggarlo a posteriori. Rilevato su Q71/gdpr/Art.6+Art.32 (2 sezioni,
   `finish_reason=stop` ma body troncato mid-marker): il modello ha segnalato
   terminazione normale pur interrompendosi dentro un marker aperto. Attuale
   fix: `has_dangling_cite` in `map_assemble` setta `truncated=True` per
   detection retroattiva; il gating gen-side chiuderebbe il problema alla fonte.
+- **Limite negative / norme co-nominate** — il trigger lessicale scatta su ≥2 norme
+  nominate anche se non interagiscono (Q23: GDPR + 231 co-nominati ma senza nesso
+  diretto nel corpus). La presentation accosta il materiale senza concludere né
+  astenersi: misleading-by-omission per query negative. Dipende da norm-router LLM
+  (già §4) + uno step di sintesi/astensione esplicita. v1.3+.
+- **Micro-debito: glossary loader duplicato** — `norm_glossary.yaml` caricato in 3
+  punti separati (`map_assemble`, `subquery_generator`, `citation_renderer`).
+  Estrarre un loader leggero qdrant-free condiviso. Non urgente (zero bug,
+  zero inconsistenza attuale).
