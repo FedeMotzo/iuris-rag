@@ -1,0 +1,134 @@
+{
+  "kind": "negativo",
+  "role": "deployer",
+  "obligations": [],
+  "system_description": "Un'azienda usa un sistema AI per filtrare le email di spam in arrivo sulle caselle di posta interne dei dipendenti.",
+  "high_risk_annex": false,
+  "obligations_applicable": false,
+  "judgment": {
+    "annex_iii": [
+      {
+        "point": 1,
+        "applies": false,
+        "reason": "Il sistema filtra email di spam e non tratta dati biometrici, non effettua identificazione biometrica remota, categorizzazione biometrica né riconoscimento delle emozioni.",
+        "cite": null
+      },
+      {
+        "point": 2,
+        "applies": false,
+        "reason": "Il sistema è usato per filtrare email aziendali interne e non è un componente di sicurezza nella gestione di infrastrutture critiche (traffico, acqua, gas, elettricità, infrastrutture digitali critiche nel senso del punto 2).",
+        "cite": null
+      },
+      {
+        "point": 3,
+        "applies": false,
+        "reason": "Il sistema non ha alcuna attinenza con istruzione o formazione professionale.",
+        "cite": null
+      },
+      {
+        "point": 4,
+        "applies": false,
+        "reason": "Il sistema non è destinato all'assunzione, selezione, valutazione delle prestazioni o gestione dei lavoratori; filtra semplicemente email indesiderate.",
+        "cite": null
+      },
+      {
+        "point": 5,
+        "applies": false,
+        "reason": "Il sistema non valuta ammissibilità a prestazioni pubbliche, affidabilità creditizia, rischi assicurativi né chiamate di emergenza.",
+        "cite": null
+      },
+      {
+        "point": 6,
+        "applies": false,
+        "reason": "Il sistema non è usato da autorità di contrasto né per finalità di contrasto.",
+        "cite": null
+      },
+      {
+        "point": 7,
+        "applies": false,
+        "reason": "Il sistema non ha alcuna attinenza con migrazione, asilo o controllo delle frontiere.",
+        "cite": null
+      },
+      {
+        "point": 8,
+        "applies": false,
+        "reason": "Il sistema non è usato da autorità giudiziarie né per influenzare processi democratici o elezioni.",
+        "cite": null
+      }
+    ],
+    "prohibited_practices": [
+      {
+        "practice": "a",
+        "label": "Tecniche subliminali/manipolative/ingannevoli che distorcono materialmente il comportamento causando danno significativo",
+        "applies": false,
+        "reason": "Il sistema non utilizza tecniche subliminali o manipolative per distorcere il comportamento degli utenti; si limita a classificare email come spam.",
+        "cite": null
+      },
+      {
+        "practice": "b",
+        "label": "Sfruttamento di vulnerabilità (età, disabilità, situazione socio-economica) per distorcere il comportamento causando danno",
+        "applies": false,
+        "reason": "Il sistema non sfrutta vulnerabilità di persone fisiche legate a età, disabilità o situazione socio-economica.",
+        "cite": null
+      },
+      {
+        "practice": "c",
+        "label": "Social scoring che porta a trattamento pregiudizievole/sfavorevole",
+        "applies": false,
+        "reason": "Il sistema non valuta né classifica persone fisiche in base al comportamento sociale o a caratteristiche personali ai fini di un social scoring.",
+        "cite": null
+      },
+      {
+        "practice": "d",
+        "label": "Valutazione del rischio di reato basata unicamente su profilazione/tratti di personalità (polizia predittiva individuale)",
+        "applies": false,
+        "reason": "Il sistema non valuta il rischio di commissione di reati da parte di individui né effettua profilazione predittiva a fini di polizia.",
+        "cite": null
+      },
+      {
+        "practice": "e",
+        "label": "Creazione/ampliamento di banche dati di riconoscimento facciale tramite scraping non mirato di immagini",
+        "applies": false,
+        "reason": "Il sistema non crea né amplia banche dati di riconoscimento facciale tramite scraping di immagini.",
+        "cite": null
+      },
+      {
+        "practice": "f",
+        "label": "Inferenza delle emozioni sul luogo di lavoro e negli istituti di istruzione (salvo motivi medici/sicurezza)",
+        "applies": false,
+        "reason": "Il sistema non inferisce emozioni dei dipendenti; analizza contenuti testuali delle email per rilevare spam, non stati emotivi delle persone.",
+        "cite": null
+      },
+      {
+        "practice": "g",
+        "label": "Categorizzazione biometrica per inferire attributi sensibili (razza, opinioni politiche, appartenenza sindacale, convinzioni religiose/filosofiche, vita sessuale, orientamento)",
+        "applies": false,
+        "reason": "Il sistema non effettua categorizzazione biometrica per inferire attributi sensibili (razza, opinioni politiche, ecc.).",
+        "cite": null
+      },
+      {
+        "practice": "h",
+        "label": "Identificazione biometrica remota in tempo reale in spazi pubblici a fini di contrasto (salvo eccezioni)",
+        "applies": false,
+        "reason": "Il sistema non effettua identificazione biometrica remota in tempo reale in spazi pubblici a fini di contrasto.",
+        "cite": null
+      }
+    ],
+    "art6_1_safety_component": {
+      "plausible": false,
+      "reason": "Un filtro antispam per email aziendali interne non è plausibilmente un componente di sicurezza di un prodotto disciplinato da normativa di armonizzazione settoriale (es. dispositivi medici, macchine, ecc.)."
+    },
+    "art6_3_exception": {
+      "plausible": false,
+      "reason": "Non essendo applicabile alcun punto dell'Allegato III, la deroga dell'art. 6(3) non è rilevante; il sistema non è classificabile come ad alto rischio ai sensi dell'art. 6(2) e quindi la deroga non ha oggetto su cui operare."
+    }
+  },
+  "card": {
+    "verdict": "Non risulta alto rischio (né Allegato III né altra via nei riferimenti). Decisione finale al DPO.",
+    "prohibited_flag": false,
+    "annex_iii_category": null,
+    "art6_3_exception": null,
+    "declared_limits": [],
+    "disclaimer": "Questa card raccoglie evidenza normativa a supporto della classificazione effettuata dal DPO / titolare; non è un verdetto vincolante né una consulenza legale. La decisione finale spetta al DPO."
+  }
+}

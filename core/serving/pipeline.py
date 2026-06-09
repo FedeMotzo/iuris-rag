@@ -18,6 +18,7 @@ from core.llm_provider import GenerationChunk, GenerationResult, LLMProvider
 from core.rag_prompt import build_user_prompt, load_system_prompt
 
 if TYPE_CHECKING:
+    from core.classification import ClassificationResult, ObligationItem
     from core.hybrid_retriever import HybridRetriever
     from core.hybrid_retriever.types import RetrievalResult
     from core.normative_graph import GraphLink
@@ -255,6 +256,55 @@ class RAGPipeline:
                 generation_meta=gen,
             ),
         )
+
+    def classify(self, system_description: str) -> "ClassificationResult":
+        """CLASSIFICAZIONE UC1 (single-norm AI Act), parallela a query(). SOLO
+        classificazione, role-free e senza adempimenti.
+
+        Insieme CHIUSO: set fisso di norme di classificazione caricato per
+        chunk_id (no retrieval semantico) → giudizio per-candidato (self._llm)
+        → card sez. 1-3 + limiti. Gli adempimenti (sez. 4) sono separati:
+        `get_obligations(role)`.
+
+        Non tocca `query()`/`query_stream()`/`enable_cross_norm`/`_is_cross_norm_multi`.
+        """
+        from core.classification import (
+            FIXED_SET_CHUNK_IDS,
+            ClassificationResult,
+            build_classification_card,
+            judge_classification,
+        )
+
+        t0 = time.perf_counter()
+        fixed_chunks = self._retriever.fetch_by_chunk_ids(FIXED_SET_CHUNK_IDS)
+        judgment = judge_classification(system_description, fixed_chunks, self._llm)
+        high_risk_annex = judgment.high_risk_annex
+        card = build_classification_card(judgment)
+
+        t_total = (time.perf_counter() - t0) * 1000.0
+        logger.info(
+            "classify done high_risk_annex=%s art6_1=%s vietata=%s total=%.0fms",
+            high_risk_annex, judgment.art6_1_safety_component.plausible,
+            card.prohibited_flag, t_total,
+        )
+        return ClassificationResult(
+            system_description=system_description,
+            judgment=judgment,
+            card=card,
+            high_risk_annex=high_risk_annex,
+        )
+
+    def get_obligations(self, role: str = "deployer") -> "list[ObligationItem]":
+        """Adempimenti AI Act per ruolo (DATO STATICO CURATO), grounded sul corpus.
+
+        Operazione separata da `classify()`. `role`: "provider" o "deployer"
+        (default). Ritorna tutte le voci del ruolo con i tag di condizione; il
+        testo-fonte di ogni articolo (e l'eventuale puntatore GDPR) è popolato
+        via `fetch_by_chunk_ids`.
+        """
+        from core.classification import get_obligations as _get_obligations
+
+        return _get_obligations(role, retriever=self._retriever)
 
     # ----------------------------------------------------- internal phases
 
