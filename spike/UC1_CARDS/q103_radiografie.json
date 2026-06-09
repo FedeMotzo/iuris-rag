@@ -1,0 +1,136 @@
+{
+  "kind": "positivo",
+  "role": "deployer",
+  "obligations": [],
+  "system_description": "Un sistema AI che analizza immagini radiografiche per supportare la diagnosi di patologie polmonari è ad alto rischio ai sensi dell'AI Act? Chi è il fornitore e chi è il deployer in un contesto ospedaliero?",
+  "high_risk_annex": false,
+  "obligations_applicable": false,
+  "judgment": {
+    "annex_iii": [
+      {
+        "point": 1,
+        "applies": false,
+        "reason": "Il sistema analizza immagini radiografiche per scopi diagnostici, non effettua identificazione biometrica remota, categorizzazione biometrica per attributi sensibili né riconoscimento delle emozioni.",
+        "cite": null
+      },
+      {
+        "point": 2,
+        "applies": false,
+        "reason": "Il sistema non è destinato alla gestione di infrastrutture critiche (traffico, acqua, energia, infrastrutture digitali critiche), bensì alla diagnosi medica in ambito ospedaliero.",
+        "cite": null
+      },
+      {
+        "point": 3,
+        "applies": false,
+        "reason": "Il sistema non riguarda istruzione, formazione professionale, valutazione di studenti o accesso a istituti formativi.",
+        "cite": null
+      },
+      {
+        "point": 4,
+        "applies": false,
+        "reason": "Il sistema non è destinato a gestione del personale, selezione lavoratori, valutazione delle prestazioni o condizioni di lavoro.",
+        "cite": null
+      },
+      {
+        "point": 5,
+        "applies": false,
+        "reason": "Il sistema non valuta ammissibilità a prestazioni pubbliche, merito creditizio, prezzi assicurativi né gestisce chiamate di emergenza o triage di emergenza. Il supporto diagnostico radiologico ordinario non rientra nelle fattispecie elencate al punto 5.",
+        "cite": null
+      },
+      {
+        "point": 6,
+        "applies": false,
+        "reason": "Il sistema non è destinato ad attività di contrasto, forze dell'ordine o valutazione di rischi criminali.",
+        "cite": null
+      },
+      {
+        "point": 7,
+        "applies": false,
+        "reason": "Il sistema non riguarda migrazione, asilo o controllo delle frontiere.",
+        "cite": null
+      },
+      {
+        "point": 8,
+        "applies": false,
+        "reason": "Il sistema non è destinato ad autorità giudiziarie né a influenzare processi elettorali o democratici.",
+        "cite": null
+      }
+    ],
+    "prohibited_practices": [
+      {
+        "practice": "a",
+        "label": "Tecniche subliminali/manipolative/ingannevoli che distorcono materialmente il comportamento causando danno significativo",
+        "applies": false,
+        "reason": "Il sistema non utilizza tecniche subliminali, manipolative o ingannevoli per distorcere il comportamento degli utenti.",
+        "cite": null
+      },
+      {
+        "practice": "b",
+        "label": "Sfruttamento di vulnerabilità (età, disabilità, situazione socio-economica) per distorcere il comportamento causando danno",
+        "applies": false,
+        "reason": "Il sistema non sfrutta vulnerabilità di pazienti o operatori per distorcere comportamenti a fini di danno.",
+        "cite": null
+      },
+      {
+        "practice": "c",
+        "label": "Social scoring che porta a trattamento pregiudizievole/sfavorevole",
+        "applies": false,
+        "reason": "Il sistema non effettua social scoring né classifica persone in base a comportamento sociale con effetti pregiudizievoli.",
+        "cite": null
+      },
+      {
+        "practice": "d",
+        "label": "Valutazione del rischio di reato basata unicamente su profilazione/tratti di personalità (polizia predittiva individuale)",
+        "applies": false,
+        "reason": "Il sistema non valuta rischi di commissione di reati né effettua profilazione predittiva criminale.",
+        "cite": null
+      },
+      {
+        "practice": "e",
+        "label": "Creazione/ampliamento di banche dati di riconoscimento facciale tramite scraping non mirato di immagini",
+        "applies": false,
+        "reason": "Il sistema non crea né amplia banche dati di riconoscimento facciale tramite scraping di immagini.",
+        "cite": null
+      },
+      {
+        "practice": "f",
+        "label": "Inferenza delle emozioni sul luogo di lavoro e negli istituti di istruzione (salvo motivi medici/sicurezza)",
+        "applies": false,
+        "reason": "Il sistema non inferisce emozioni di lavoratori o studenti; analizza immagini radiografiche a fini diagnostici clinici.",
+        "cite": null
+      },
+      {
+        "practice": "g",
+        "label": "Categorizzazione biometrica per inferire attributi sensibili (razza, opinioni politiche, appartenenza sindacale, convinzioni religiose/filosofiche, vita sessuale, orientamento)",
+        "applies": false,
+        "reason": "Il sistema non effettua categorizzazione biometrica per inferire attributi sensibili (razza, opinioni politiche, orientamento sessuale, ecc.).",
+        "cite": null
+      },
+      {
+        "practice": "h",
+        "label": "Identificazione biometrica remota in tempo reale in spazi pubblici a fini di contrasto (salvo eccezioni)",
+        "applies": false,
+        "reason": "Il sistema non effettua identificazione biometrica remota in tempo reale in spazi pubblici a fini di contrasto.",
+        "cite": null
+      }
+    ],
+    "art6_1_safety_component": {
+      "plausible": true,
+      "reason": "Un sistema AI per l'analisi di immagini radiografiche in ambito diagnostico è molto probabilmente qualificabile come dispositivo medico o componente di sicurezza di un dispositivo medico ai sensi del Regolamento (UE) 2017/745 (MDR), normativa di armonizzazione dell'Unione che figura nell'Allegato I dell'AI Act. Se il sistema è soggetto a valutazione della conformità da parte di terzi ai sensi dell'MDR, entrambe le condizioni dell'art. 6(1) sarebbero soddisfatte, rendendo il sistema ad alto rischio per questa via, indipendentemente dall'Allegato III."
+    },
+    "art6_3_exception": {
+      "plausible": false,
+      "reason": "Un sistema che analizza immagini radiografiche per supportare la diagnosi di patologie polmonari non esegue un compito meramente procedurale o preparatorio: influenza materialmente il processo decisionale clinico del medico (diagnosi, trattamento). Non è plausibile che ricada nella deroga dell'art. 6(3), che richiede che il sistema non influenzi materialmente il risultato decisionale o svolga solo compiti procedurali limitati."
+    }
+  },
+  "card": {
+    "verdict": "Non risulta alto rischio per Allegato III; POSSIBILE alto rischio per via art. 6(1) (componente di sicurezza / dispositivo medico), NON verificabile nel corpus — da approfondire. Un sistema AI per l'analisi di immagini radiografiche in ambito diagnostico è molto probabilmente qualificabile come dispositivo medico o componente di sicurezza di un dispositivo medico ai sensi del Regolamento (UE) 2017/745 (MDR), normativa di armonizzazione dell'Unione che figura nell'Allegato I dell'AI Act. Se il sistema è soggetto a valutazione della conformità da parte di terzi ai sensi dell'MDR, entrambe le condizioni dell'art. 6(1) sarebbero soddisfatte, rendendo il sistema ad alto rischio per questa via, indipendentemente dall'Allegato III. Decisione finale al DPO.",
+    "prohibited_flag": false,
+    "annex_iii_category": null,
+    "art6_3_exception": null,
+    "declared_limits": [
+      "Possibile alto rischio ex art. 6(1) come componente di sicurezza di un prodotto regolato da normativa di armonizzazione settoriale (es. dispositivo medico): tale normativa è fuori corpus, la classificazione su quel pathway non è verificabile sui riferimenti recuperati. Motivo del giudizio: Un sistema AI per l'analisi di immagini radiografiche in ambito diagnostico è molto probabilmente qualificabile come dispositivo medico o componente di sicurezza di un dispositivo medico ai sensi del Regolamento (UE) 2017/745 (MDR), normativa di armonizzazione dell'Unione che figura nell'Allegato I dell'AI Act. Se il sistema è soggetto a valutazione della conformità da parte di terzi ai sensi dell'MDR, entrambe le condizioni dell'art. 6(1) sarebbero soddisfatte, rendendo il sistema ad alto rischio per questa via, indipendentemente dall'Allegato III"
+    ],
+    "disclaimer": "Questa card raccoglie evidenza normativa a supporto della classificazione effettuata dal DPO / titolare; non è un verdetto vincolante né una consulenza legale. La decisione finale spetta al DPO."
+  }
+}

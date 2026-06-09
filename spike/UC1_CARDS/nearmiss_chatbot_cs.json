@@ -1,0 +1,134 @@
+{
+  "kind": "near-miss",
+  "role": "deployer",
+  "obligations": [],
+  "system_description": "Un'azienda usa un chatbot basato su AI per rispondere alle domande dei clienti sul servizio di assistenza e fornire informazioni sui prodotti.",
+  "high_risk_annex": false,
+  "obligations_applicable": false,
+  "judgment": {
+    "annex_iii": [
+      {
+        "point": 1,
+        "applies": false,
+        "reason": "Il chatbot non esegue identificazione biometrica remota, categorizzazione biometrica né riconoscimento delle emozioni. Si limita a rispondere a domande su prodotti e assistenza.",
+        "cite": null
+      },
+      {
+        "point": 2,
+        "applies": false,
+        "reason": "Il chatbot non è un componente di sicurezza per infrastrutture critiche (traffico, acqua, gas, elettricità, infrastrutture digitali critiche).",
+        "cite": null
+      },
+      {
+        "point": 3,
+        "applies": false,
+        "reason": "Il chatbot non opera in contesti di istruzione o formazione professionale e non valuta studenti né determina accessi a istituti formativi.",
+        "cite": null
+      },
+      {
+        "point": 4,
+        "applies": false,
+        "reason": "Il chatbot non è destinato a selezione del personale, gestione dei lavoratori né valutazione delle prestazioni lavorative.",
+        "cite": null
+      },
+      {
+        "point": 5,
+        "applies": false,
+        "reason": "Il chatbot non valuta ammissibilità a prestazioni pubbliche, merito creditizio, rischi assicurativi né gestisce chiamate di emergenza.",
+        "cite": null
+      },
+      {
+        "point": 6,
+        "applies": false,
+        "reason": "Il chatbot non è destinato ad attività di contrasto né opera per autorità di polizia o simili.",
+        "cite": null
+      },
+      {
+        "point": 7,
+        "applies": false,
+        "reason": "Il chatbot non è destinato a gestione di frontiere, asilo o migrazione.",
+        "cite": null
+      },
+      {
+        "point": 8,
+        "applies": false,
+        "reason": "Il chatbot non assiste autorità giudiziarie né è destinato a influenzare elezioni o comportamenti di voto.",
+        "cite": null
+      }
+    ],
+    "prohibited_practices": [
+      {
+        "practice": "a",
+        "label": "Tecniche subliminali/manipolative/ingannevoli che distorcono materialmente il comportamento causando danno significativo",
+        "applies": false,
+        "reason": "Il chatbot risponde a domande su prodotti e assistenza senza impiegare tecniche subliminali o manipolative finalizzate a distorcere materialmente il comportamento causando danno significativo.",
+        "cite": null
+      },
+      {
+        "practice": "b",
+        "label": "Sfruttamento di vulnerabilità (età, disabilità, situazione socio-economica) per distorcere il comportamento causando danno",
+        "applies": false,
+        "reason": "Non vi è evidenza che il chatbot sfrutti vulnerabilità legate a età, disabilità o situazione socio-economica per distorcere il comportamento degli utenti.",
+        "cite": null
+      },
+      {
+        "practice": "c",
+        "label": "Social scoring che porta a trattamento pregiudizievole/sfavorevole",
+        "applies": false,
+        "reason": "Il chatbot non valuta né classifica persone fisiche in base a comportamento sociale o caratteristiche personali ai fini di un social scoring.",
+        "cite": null
+      },
+      {
+        "practice": "d",
+        "label": "Valutazione del rischio di reato basata unicamente su profilazione/tratti di personalità (polizia predittiva individuale)",
+        "applies": false,
+        "reason": "Il chatbot non effettua valutazioni del rischio di commissione di reati né profilazione predittiva individuale.",
+        "cite": null
+      },
+      {
+        "practice": "e",
+        "label": "Creazione/ampliamento di banche dati di riconoscimento facciale tramite scraping non mirato di immagini",
+        "applies": false,
+        "reason": "Il chatbot non crea né amplia banche dati di riconoscimento facciale tramite scraping di immagini.",
+        "cite": null
+      },
+      {
+        "practice": "f",
+        "label": "Inferenza delle emozioni sul luogo di lavoro e negli istituti di istruzione (salvo motivi medici/sicurezza)",
+        "applies": false,
+        "reason": "Il chatbot non inferisce emozioni degli utenti né opera in contesti lavorativi o educativi con tale finalità.",
+        "cite": null
+      },
+      {
+        "practice": "g",
+        "label": "Categorizzazione biometrica per inferire attributi sensibili (razza, opinioni politiche, appartenenza sindacale, convinzioni religiose/filosofiche, vita sessuale, orientamento)",
+        "applies": false,
+        "reason": "Il chatbot non effettua categorizzazione biometrica per inferire attributi sensibili (razza, opinioni politiche, orientamento sessuale, ecc.).",
+        "cite": null
+      },
+      {
+        "practice": "h",
+        "label": "Identificazione biometrica remota in tempo reale in spazi pubblici a fini di contrasto (salvo eccezioni)",
+        "applies": false,
+        "reason": "Il chatbot non esegue identificazione biometrica remota in tempo reale in spazi pubblici a fini di contrasto.",
+        "cite": null
+      }
+    ],
+    "art6_1_safety_component": {
+      "plausible": false,
+      "reason": "Il chatbot è uno strumento di customer service per informazioni su prodotti e assistenza; non vi è alcun elemento che lo configuri come componente di sicurezza di un prodotto regolato da normativa di armonizzazione settoriale (es. dispositivi medici, macchine, ecc.)."
+    },
+    "art6_3_exception": {
+      "plausible": true,
+      "reason": "Anche qualora si ipotizzasse un'applicabilità marginale all'Allegato III, il chatbot esegue un compito procedurale limitato (rispondere a domande su prodotti/assistenza) e non influenza materialmente decisioni umane rilevanti, rientrando potenzialmente nella deroga ex art. 6(3) per sistemi che non presentano rischio significativo per salute, sicurezza o diritti fondamentali."
+    }
+  },
+  "card": {
+    "verdict": "Non risulta alto rischio (né Allegato III né altra via nei riferimenti). Decisione finale al DPO.",
+    "prohibited_flag": false,
+    "annex_iii_category": null,
+    "art6_3_exception": null,
+    "declared_limits": [],
+    "disclaimer": "Questa card raccoglie evidenza normativa a supporto della classificazione effettuata dal DPO / titolare; non è un verdetto vincolante né una consulenza legale. La decisione finale spetta al DPO."
+  }
+}

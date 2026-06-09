@@ -204,6 +204,42 @@ class HybridRetriever:
             with_payload=True,
         ).points
 
+    def fetch_by_chunk_ids(self, chunk_ids: list[str]) -> RetrievalResult:
+        """Recupero DETERMINISTICO per chunk_id (no semantica, no rerank).
+
+        Converte ogni chunk_id nel suo point id (uuid5 stabile) e fa un
+        retrieve-by-id su Qdrant. L'ordine di ritorno segue `chunk_ids`; gli id
+        assenti dalla collection sono saltati. `score=0.0` (non c'è ranking).
+        Usato dall'intake di classificazione per caricare il set fisso di norme.
+        """
+        from core.vector_store import chunk_id_to_point_id
+
+        if not chunk_ids:
+            return RetrievalResult([])
+        pid_to_cid = {chunk_id_to_point_id(c): c for c in chunk_ids}
+        points = self._client.retrieve(
+            collection_name=self._collection,
+            ids=list(pid_to_cid.keys()),
+            with_payload=True,
+        )
+        by_cid: dict[str, dict] = {}
+        for p in points:
+            payload = dict(p.payload or {})
+            cid = payload.get("chunk_id") or pid_to_cid.get(str(p.id), "")
+            if cid:
+                by_cid[cid] = payload
+        hits: list[RetrievalHit] = []
+        rank = 1
+        for cid in chunk_ids:
+            payload = by_cid.get(cid)
+            if payload is None:
+                logger.warning("fetch_by_chunk_ids: chunk_id assente in %s: %s",
+                               self._collection, cid)
+                continue
+            hits.append(RetrievalHit(chunk_id=cid, score=0.0, payload=payload, rank=rank))
+            rank += 1
+        return RetrievalResult(hits)
+
     @staticmethod
     def _point_to_hit(point, rank: int) -> RetrievalHit:
         payload = dict(point.payload or {})
