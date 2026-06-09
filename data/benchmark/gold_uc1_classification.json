@@ -1,0 +1,1064 @@
+{
+  "schema": "uc1_classification_gold_v1",
+  "source": "data/benchmark/gold_set_uc1.md",
+  "gold_verified_date": "2026-06-09",
+  "verdict_classes": [
+    "vietato",
+    "alto rischio (Allegato III)",
+    "possibile alto rischio (art. 6(1))",
+    "non alto rischio"
+  ],
+  "retypings_applied": [
+    "S07",
+    "S18",
+    "S19",
+    "S20",
+    "S21",
+    "S23"
+  ],
+  "n_scenarios": 50,
+  "scenarios": [
+    {
+      "id": "S01",
+      "settore": "PA",
+      "tipo": "positive",
+      "tipo_originale": "positive",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Un comune intende installare nelle stazioni della metropolitana un sistema di IA che confronta i volti dei passanti, ripresi a distanza e senza loro partecipazione attiva, con una watchlist per identificare soggetti ricercati. L'uso è previsto a fini di sicurezza urbana dalla polizia locale.",
+      "verdetto_atteso": "vietato",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [
+          "h"
+        ],
+        "art6_1": false
+      },
+      "base_giuridica": "art. 5(1)(h); in subordine Allegato III, punto 1(a)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "RBI real-time a fini di contrasto → vietato 5(1)(h). In subordine (se differita/non-contrasto) sarebbe alto rischio 1(a)."
+    },
+    {
+      "id": "S02",
+      "settore": "banking",
+      "tipo": "negative",
+      "tipo_originale": "negative",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Una banca implementa nell'app mobile il riconoscimento facciale per consentire al cliente già registrato di sbloccare il proprio conto: il cliente presenta attivamente il volto e il sistema effettua un confronto 1:1 con il template salvato per confermare che è chi dichiara di essere.",
+      "verdetto_atteso": "non alto rischio",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "Allegato III, punto 1(a), seconda frase (esclusione della verifica/autenticazione biometrica)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Verifica/autenticazione 1:1 attiva esclusa dall'alto rischio (1(a) seconda frase)."
+    },
+    {
+      "id": "S03",
+      "settore": "insurance",
+      "tipo": "edge",
+      "tipo_originale": "edge",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Una compagnia assicurativa usa, per ricerche di mercato sul gradimento dei propri spot pubblicitari, un sistema di IA che analizza le espressioni facciali di un panel di volontari reclutati esternamente (non dipendenti) per inferire emozioni (gioia, irritazione) durante la visione.",
+      "verdetto_atteso": "alto rischio (Allegato III)",
+      "gold_candidates": {
+        "annex_iii_points": [
+          1
+        ],
+        "annex_iii_subletters": [
+          "1c"
+        ],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "Allegato III, punto 1(c) (riconoscimento delle emozioni)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Context-flip emozioni: fuori lavoro/istruzione → alto rischio 1(c) (non vietato 5(f))."
+    },
+    {
+      "id": "S04",
+      "settore": "PA",
+      "tipo": "edge",
+      "tipo_originale": "edge",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Un gestore pubblico della rete idrica installa un sistema di IA che funge da componente di sicurezza nel controllo della pressione delle condotte: in caso di anomalia critica può comandare l'arresto per prevenire rotture e rischi per l'incolumità.",
+      "verdetto_atteso": "alto rischio (Allegato III)",
+      "gold_candidates": {
+        "annex_iii_points": [
+          2
+        ],
+        "annex_iii_subletters": [
+          "2"
+        ],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "Allegato III, punto 2 (componenti di sicurezza nella fornitura di acqua); art. 3(14)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Componente di sicurezza (protezione fisica diretta). Watch item Omnibus (test causale)."
+    },
+    {
+      "id": "S05",
+      "settore": "PA",
+      "tipo": "edge",
+      "tipo_originale": "edge",
+      "retyped_edge_to_positive": false,
+      "descrizione": "La stessa utility usa un sistema di IA che ottimizza la distribuzione idrica prevedendo la domanda per ridurre i costi energetici; le funzioni di sicurezza (arresto di emergenza, allarmi) sono gestite da sistemi indipendenti che non dipendono da questa IA.",
+      "verdetto_atteso": "non alto rischio",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "Allegato III, punto 2 (esclusione: non è componente di sicurezza); art. 3(14)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Mera ottimizzazione/efficienza → non componente di sicurezza (based on draft)."
+    },
+    {
+      "id": "S06",
+      "settore": "PA",
+      "tipo": "positive",
+      "tipo_originale": "positive",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Un'università pubblica adotta un sistema di IA che assegna un punteggio e ordina in graduatoria i candidati per determinare l'ammissione ai corsi a numero chiuso.",
+      "verdetto_atteso": "alto rischio (Allegato III)",
+      "gold_candidates": {
+        "annex_iii_points": [
+          3
+        ],
+        "annex_iii_subletters": [
+          "3a"
+        ],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "Allegato III, punto 3(a); art. 6(3) ultimo comma",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Ammissione + scoring = profilazione → filtro 6(3) precluso (positive)."
+    },
+    {
+      "id": "S07",
+      "settore": "PA",
+      "tipo": "positive",
+      "tipo_originale": "edge",
+      "retyped_edge_to_positive": true,
+      "descrizione": "Una scuola usa un sistema di IA di sorveglianza durante gli esami (proctoring) che monitora la webcam degli studenti per rilevare comportamenti vietati (consultazione di materiali non consentiti, presenza di terzi).",
+      "verdetto_atteso": "alto rischio (Allegato III)",
+      "gold_candidates": {
+        "annex_iii_points": [
+          3
+        ],
+        "annex_iii_subletters": [
+          "3d"
+        ],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "Allegato III, punto 3(d)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "RI-TIPIZZATO edge→positive (verdetto invariato). Nota di confine originale: poggia sui confini del caso 3(d) chiariti dalla bozza; se inferisse emozioni/attenzione scatterebbe 5(f)."
+    },
+    {
+      "id": "S08",
+      "settore": "PA",
+      "tipo": "edge",
+      "tipo_originale": "edge",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Un istituto di formazione professionale fornisce agli studenti un tutor virtuale di IA che dà feedback formativo continuo durante l'apprendimento, senza attribuire voti né incidere su valutazioni o sulla progressione di carriera scolastica.",
+      "verdetto_atteso": "non alto rischio",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "Allegato III, punto 3(b) (interpretato a contrario); art. 6(3)(a)/(d)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Discriminatore sommativo (alto rischio) vs formativo (fuori scope). Based on draft."
+    },
+    {
+      "id": "S09",
+      "settore": "insurance",
+      "tipo": "positive",
+      "tipo_originale": "positive",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Una compagnia assicurativa usa un sistema di IA che analizza, filtra e classifica in graduatoria i CV dei candidati a posizioni interne, assegnando un punteggio di idoneità usato dai recruiter per selezionare chi convocare.",
+      "verdetto_atteso": "alto rischio (Allegato III)",
+      "gold_candidates": {
+        "annex_iii_points": [
+          4
+        ],
+        "annex_iii_subletters": [
+          "4a"
+        ],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "Allegato III, punto 4(a); art. 6(3) ultimo comma",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Screening valutativo CV = profilazione → sempre alto rischio (positive)."
+    },
+    {
+      "id": "S10",
+      "settore": "insurance",
+      "tipo": "edge",
+      "tipo_originale": "edge",
+      "retyped_edge_to_positive": false,
+      "descrizione": "La stessa compagnia usa un diverso sistema di IA che si limita a riformattare e a estrarre in modo strutturato le informazioni dai CV (nome, titoli, esperienze) per popolare un database ricercabile dai recruiter, senza assegnare punteggi né ordinare i candidati.",
+      "verdetto_atteso": "non alto rischio",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "Allegato III, punto 4(a) + art. 6(3)(a) (compito procedurale limitato)",
+      "multi_categoria": false,
+      "art6_3_exemption": true,
+      "note": "Esenzione 6(3)(a): organizza il dato senza scoring/ranking. Based on draft."
+    },
+    {
+      "id": "S11",
+      "settore": "banking",
+      "tipo": "edge",
+      "tipo_originale": "edge",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Una banca usa un sistema di IA che monitora e valuta in continuo le prestazioni e il comportamento (puntualità, reattività alle richieste dei clienti, metriche di affidabilità) dei dipendenti di filiale, con output usato per decisioni su premi e assegnazione di compiti.",
+      "verdetto_atteso": "alto rischio (Allegato III)",
+      "gold_candidates": {
+        "annex_iii_points": [
+          4
+        ],
+        "annex_iii_subletters": [
+          "4b"
+        ],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "Allegato III, punto 4(b)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Monitoraggio/valutazione lavoratori 4(b); valutazione di persone = profilazione."
+    },
+    {
+      "id": "S12",
+      "settore": "PA",
+      "tipo": "positive",
+      "tipo_originale": "positive",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Un ente pubblico usa un sistema di IA per valutare l'ammissibilità dei cittadini a prestazioni essenziali di assistenza pubblica (sussidi sociali) e per decidere se concederle, ridurle o revocarle.",
+      "verdetto_atteso": "alto rischio (Allegato III)",
+      "gold_candidates": {
+        "annex_iii_points": [
+          5
+        ],
+        "annex_iii_subletters": [
+          "5a"
+        ],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "Allegato III, punto 5(a)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Ammissibilità a prestazioni essenziali da/per autorità pubbliche; profilazione."
+    },
+    {
+      "id": "S13",
+      "settore": "PA",
+      "tipo": "edge",
+      "tipo_originale": "edge",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Lo stesso ente offre sul portale un chatbot di IA che fornisce ai cittadini informazioni generali sui requisiti dei sussidi e li indirizza ai moduli pertinenti, senza valutare l'ammissibilità del singolo né incidere sulla decisione.",
+      "verdetto_atteso": "non alto rischio",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "Allegato III, punto 5(a) + art. 6(3)(a)/(d)",
+      "multi_categoria": false,
+      "art6_3_exemption": true,
+      "note": "Informazione/orientamento ≠ valutazione ammissibilità. Esenzione 6(3). Based on draft."
+    },
+    {
+      "id": "S14",
+      "settore": "banking",
+      "tipo": "positive",
+      "tipo_originale": "positive",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Una banca usa un sistema di IA per valutare l'affidabilità creditizia delle persone fisiche e stabilirne il merito di credito (credit scoring) nelle richieste di prestito al consumo.",
+      "verdetto_atteso": "alto rischio (Allegato III)",
+      "gold_candidates": {
+        "annex_iii_points": [
+          5
+        ],
+        "annex_iii_subletters": [
+          "5b"
+        ],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "Allegato III, punto 5(b); art. 6(3) ultimo comma",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Credit scoring di persone fisiche = profilazione (CGUE C-634/21) → sempre alto rischio."
+    },
+    {
+      "id": "S15",
+      "settore": "banking",
+      "tipo": "edge",
+      "tipo_originale": "edge",
+      "retyped_edge_to_positive": false,
+      "descrizione": "La stessa banca usa un sistema di IA la cui finalità principale è il riconoscimento di pattern e il rilevamento di anomalie per individuare frodi finanziarie sulle transazioni; l'output può occasionalmente alimentare valutazioni creditizie ma la funzione principale è antifrode.",
+      "verdetto_atteso": "non alto rischio",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "Allegato III, punto 5(b), inciso di esclusione (individuazione frodi finanziarie)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Carve-out antifrode (solo 5(b)). Based on draft; AML/CFT escluso dall'esenzione."
+    },
+    {
+      "id": "S16",
+      "settore": "insurance",
+      "tipo": "positive",
+      "tipo_originale": "positive",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Una compagnia usa un sistema di IA per la valutazione del rischio e la tariffazione di polizze vita e malattia rivolte a persone fisiche; il sistema incorpora anche una funzione di rilevamento frodi integrata nello stesso modello di pricing.",
+      "verdetto_atteso": "alto rischio (Allegato III)",
+      "gold_candidates": {
+        "annex_iii_points": [
+          5
+        ],
+        "annex_iii_subletters": [
+          "5c"
+        ],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "Allegato III, punto 5(c)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Asimmetria 5(b) vs 5(c): nessun carve-out antifrode in 5(c) (assicurazione vita/salute)."
+    },
+    {
+      "id": "S17",
+      "settore": "healthcare",
+      "tipo": "positive",
+      "tipo_originale": "positive",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Una centrale operativa del 118 usa un sistema di IA che valuta e classifica le chiamate di emergenza e stabilisce le priorità di invio dei mezzi di soccorso, incluso il triage dei pazienti per l'assistenza sanitaria d'emergenza.",
+      "verdetto_atteso": "alto rischio (Allegato III)",
+      "gold_candidates": {
+        "annex_iii_points": [
+          5
+        ],
+        "annex_iii_subletters": [
+          "5d",
+          "5a"
+        ],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "Allegato III, punto 5(d)",
+      "multi_categoria": true,
+      "art6_3_exemption": false,
+      "note": "Multi-categoria 5(d) + 5(a): ENTRAMBE sotto-lettere del PUNTO 5 → a granularità classificatore = punto 5."
+    },
+    {
+      "id": "S18",
+      "settore": "PA",
+      "tipo": "positive",
+      "tipo_originale": "edge",
+      "retyped_edge_to_positive": true,
+      "descrizione": "Una forza di polizia usa un sistema di IA come poligrafo digitale (\"macchina della verità\") per valutare l'attendibilità delle dichiarazioni di persone durante le indagini.",
+      "verdetto_atteso": "alto rischio (Allegato III)",
+      "gold_candidates": {
+        "annex_iii_points": [
+          6
+        ],
+        "annex_iii_subletters": [
+          "6b"
+        ],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "Allegato III, punto 6(b)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "RI-TIPIZZATO edge→positive (verdetto invariato). Nota di confine originale: dipende dai confini del caso del punto 6 (uso consentito dal diritto) chiariti dalla bozza."
+    },
+    {
+      "id": "S19",
+      "settore": "PA",
+      "tipo": "positive",
+      "tipo_originale": "edge",
+      "retyped_edge_to_positive": true,
+      "descrizione": "La stessa autorità usa un sistema di IA per valutare l'affidabilità degli elementi probatori raccolti nel corso delle indagini penali.",
+      "verdetto_atteso": "alto rischio (Allegato III)",
+      "gold_candidates": {
+        "annex_iii_points": [
+          6
+        ],
+        "annex_iii_subletters": [
+          "6c"
+        ],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "Allegato III, punto 6(c)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "RI-TIPIZZATO edge→positive (verdetto invariato). Nota di confine originale: la bozza esclude indicizzazione/traduzione/trascrizione; linea valutazione-vs-organizzazione interpretativa (¶365)."
+    },
+    {
+      "id": "S20",
+      "settore": "PA",
+      "tipo": "positive",
+      "tipo_originale": "edge",
+      "retyped_edge_to_positive": true,
+      "descrizione": "Una procura usa un sistema di IA che stima il rischio di recidiva di un imputato a supporto della valutazione del giudice/PM; la valutazione si fonda anche su fatti oggettivi e verificabili direttamente connessi all'attività criminosa, NON unicamente sulla profilazione.",
+      "verdetto_atteso": "alto rischio (Allegato III)",
+      "gold_candidates": {
+        "annex_iii_points": [
+          6
+        ],
+        "annex_iii_subletters": [
+          "6d"
+        ],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "Allegato III, punto 6(d)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "RI-TIPIZZATO edge→positive (verdetto invariato). Nota di confine originale: linea 5(1)(d) vietato vs 6(d) alto rischio dipende dalla soglia di intervento umano e dall'essere o meno 'unicamente' su profilazione."
+    },
+    {
+      "id": "S21",
+      "settore": "PA",
+      "tipo": "positive",
+      "tipo_originale": "edge",
+      "retyped_edge_to_positive": true,
+      "descrizione": "Un'autorità competente usa un sistema di IA per valutare il rischio (per la sicurezza, di immigrazione irregolare, per la salute) posto da una persona fisica che intende entrare nel territorio nazionale.",
+      "verdetto_atteso": "alto rischio (Allegato III)",
+      "gold_candidates": {
+        "annex_iii_points": [
+          7
+        ],
+        "annex_iii_subletters": [
+          "7b"
+        ],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "Allegato III, punto 7(b)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "RI-TIPIZZATO edge→positive (verdetto invariato). Nota di confine originale: confini del caso del punto 7 (uso consentito dal diritto) precisati dalla bozza; valutazione di rischio individuale = profilazione."
+    },
+    {
+      "id": "S22",
+      "settore": "PA",
+      "tipo": "edge",
+      "tipo_originale": "edge",
+      "retyped_edge_to_positive": false,
+      "descrizione": "La stessa autorità usa un sistema di IA per tradurre automaticamente dalla lingua originale i documenti allegati alle domande d'asilo, mettendo il testo tradotto a disposizione del funzionario che esamina la pratica, senza valutare l'ammissibilità.",
+      "verdetto_atteso": "non alto rischio",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "Allegato III, punto 7(c) + art. 6(3)(d) (compito preparatorio)",
+      "multi_categoria": false,
+      "art6_3_exemption": true,
+      "note": "Traduzione = compito preparatorio 6(3)(d). Based on draft."
+    },
+    {
+      "id": "S23",
+      "settore": "PA",
+      "tipo": "positive",
+      "tipo_originale": "edge",
+      "retyped_edge_to_positive": true,
+      "descrizione": "Un tribunale adotta un sistema di IA che assiste il giudice nella ricerca e interpretazione dei fatti e del diritto e nell'applicazione della legge a una serie concreta di fatti, producendo bozze argomentate di decisione.",
+      "verdetto_atteso": "alto rischio (Allegato III)",
+      "gold_candidates": {
+        "annex_iii_points": [
+          8
+        ],
+        "annex_iii_subletters": [
+          "8a"
+        ],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "Allegato III, punto 8(a)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "RI-TIPIZZATO edge→positive (verdetto invariato). Nota di confine originale: la bozza esclude da 8(a) strumenti interni di corte (trascrizione/anonimizzazione/ricerca senza significato, ¶419); linea assistenza-sostanziale vs amministrativo interpretativa."
+    },
+    {
+      "id": "S24",
+      "settore": "PA",
+      "tipo": "edge",
+      "tipo_originale": "edge",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Lo stesso tribunale usa un sistema di IA esclusivamente per la trascrizione delle udienze (speech-to-text) e per l'anonimizzazione delle sentenze prima della pubblicazione, senza alcuna funzione di ricerca/interpretazione giuridica.",
+      "verdetto_atteso": "non alto rischio",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "Allegato III, punto 8(a) (interpretato a contrario) + art. 6(3)(a)/(d)",
+      "multi_categoria": false,
+      "art6_3_exemption": true,
+      "note": "Strumento amministrativo di corte (¶419). Esenzione 6(3). Based on draft."
+    },
+    {
+      "id": "S25",
+      "settore": "PA",
+      "tipo": "positive",
+      "tipo_originale": "positive",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Un soggetto realizza un sistema di IA destinato a influenzare l'esito di elezioni/referendum o il comportamento di voto delle persone fisiche, con output destinato a essere utilizzato direttamente dagli elettori (es. micro-messaggi persuasivi personalizzati).",
+      "verdetto_atteso": "alto rischio (Allegato III)",
+      "gold_candidates": {
+        "annex_iii_points": [
+          8
+        ],
+        "annex_iii_subletters": [
+          "8b"
+        ],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "Allegato III, punto 8(b)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Influenza diretta sul voto (nucleo 8(b)). Se manipolativo/subliminale valutare anche 5(1)(a)."
+    },
+    {
+      "id": "S26",
+      "settore": "banking",
+      "tipo": "positive",
+      "tipo_originale": "positive",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Una banca implementa nell'app un sistema di IA che, analizzando in tempo reale lo stato di frustrazione del cliente, inserisce tecniche manipolative non percepibili per indurlo a sottoscrivere prodotti finanziari ad alto margine che non avrebbe altrimenti scelto, con rischio di danno economico significativo.",
+      "verdetto_atteso": "vietato",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [
+          "a"
+        ],
+        "art6_1": false
+      },
+      "base_giuridica": "art. 5(1)(a)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Tecniche subliminali/manipolative non percepibili + danno significativo (5(1)(a))."
+    },
+    {
+      "id": "S27",
+      "settore": "banking",
+      "tipo": "positive",
+      "tipo_originale": "positive",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Una società di credito al consumo usa un sistema di IA predittivo per individuare persone in grave difficoltà economica residenti in specifici quartieri a basso reddito e proporre loro prodotti finanziari predatori, sfruttandone la situazione socio-economica e causando danno finanziario significativo.",
+      "verdetto_atteso": "vietato",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [
+          "b"
+        ],
+        "art6_1": false
+      },
+      "base_giuridica": "art. 5(1)(b)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Sfruttamento vulnerabilità socio-economica (5(1)(b))."
+    },
+    {
+      "id": "S28",
+      "settore": "PA",
+      "tipo": "positive",
+      "tipo_originale": "positive",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Un ente pubblico realizza un sistema di IA che attribuisce ai cittadini un \"punteggio sociale\" basato sul comportamento sociale e su caratteristiche personali, usato poi per negare l'accesso a servizi in contesti non collegati e in modo sproporzionato.",
+      "verdetto_atteso": "vietato",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [
+          "c"
+        ],
+        "art6_1": false
+      },
+      "base_giuridica": "art. 5(1)(c)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Social scoring cross-contesto/sproporzionato (5(1)(c))."
+    },
+    {
+      "id": "S29",
+      "settore": "PA",
+      "tipo": "positive",
+      "tipo_originale": "positive",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Una forza di polizia usa un sistema di IA che predice il rischio che singole persone commettano reati unicamente sulla base della profilazione e della valutazione dei tratti della personalità, senza alcun fatto oggettivo verificabile connesso a un'attività criminosa.",
+      "verdetto_atteso": "vietato",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [
+          "d"
+        ],
+        "art6_1": false
+      },
+      "base_giuridica": "art. 5(1)(d)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Polizia predittiva UNICAMENTE su profilazione (5(1)(d)). Flip con S20 (6(d))."
+    },
+    {
+      "id": "S30",
+      "settore": "PA",
+      "tipo": "positive",
+      "tipo_originale": "positive",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Un fornitore realizza un sistema di IA che crea/amplia una banca dati di riconoscimento facciale tramite scraping non mirato di immagini facciali da internet e da filmati di telecamere a circuito chiuso, offerto poi ad enti per finalità di sicurezza.",
+      "verdetto_atteso": "vietato",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [
+          "e"
+        ],
+        "art6_1": false
+      },
+      "base_giuridica": "art. 5(1)(e)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Scraping facciale non mirato (5(1)(e)), vietato a prescindere dall'uso."
+    },
+    {
+      "id": "S31",
+      "settore": "banking",
+      "tipo": "positive",
+      "tipo_originale": "positive",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Una banca installa nei call center un sistema di IA che, dai segnali biometrici vocali, inferisce le emozioni dei propri dipendenti operatori (rabbia, stress) per monitorarne lo stato emotivo durante le chiamate, con risultati condivisi con l'HR per valutazioni.",
+      "verdetto_atteso": "vietato",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [
+          "f"
+        ],
+        "art6_1": false
+      },
+      "base_giuridica": "art. 5(1)(f)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Inferenza emozioni DIPENDENTI sul lavoro (5(1)(f)). Flip: clienti → 1(c) alto rischio."
+    },
+    {
+      "id": "S32",
+      "settore": "insurance",
+      "tipo": "positive",
+      "tipo_originale": "positive",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Una compagnia usa un sistema di IA di categorizzazione biometrica che, dai volti dei clienti, deduce convinzioni religiose e orientamento sessuale per segmentare l'offerta assicurativa.",
+      "verdetto_atteso": "vietato",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [
+          "g"
+        ],
+        "art6_1": false
+      },
+      "base_giuridica": "art. 5(1)(g)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Categorizzazione biometrica di attributi protetti (5(1)(g))."
+    },
+    {
+      "id": "S33",
+      "settore": "PA",
+      "tipo": "positive",
+      "tipo_originale": "positive",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Una questura intende usare l'identificazione biometrica remota \"in tempo reale\" in piazze e stazioni a fini di contrasto, senza che ricorra alcuna delle eccezioni tassative né un'autorizzazione giudiziaria/amministrativa, e senza una legge nazionale conforme che la abiliti.",
+      "verdetto_atteso": "vietato",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [
+          "h"
+        ],
+        "art6_1": false
+      },
+      "base_giuridica": "art. 5(1)(h)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "RBI real-time contrasto senza base conforme (5(1)(h))."
+    },
+    {
+      "id": "S34",
+      "settore": "healthcare",
+      "tipo": "positive",
+      "tipo_originale": "positive",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Un'azienda immette un software di IA per l'analisi di immagini mammografiche che rileva lesioni sospette; è un dispositivo medico classe IIb ai sensi del Regolamento (UE) 2017/745 (MDR), soggetto a valutazione di conformità con organismo notificato.",
+      "verdetto_atteso": "possibile alto rischio (art. 6(1))",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [],
+        "art6_1": true
+      },
+      "base_giuridica": "art. 6(1)(a)(b); Allegato I, sez. A (MDR Reg. 2017/745); art. 3(14)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Dispositivo medico classe IIb + organismo notificato → art. 6(1). MDR fuori corpus."
+    },
+    {
+      "id": "S35",
+      "settore": "healthcare",
+      "tipo": "negative",
+      "tipo_originale": "negative",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Una software house immette un'app di IA, qualificata come dispositivo medico di classe I ai sensi dell'MDR (autocertificata, senza organismo notificato), che si limita ad archiviare e comunicare dati clinici con rischio minimo; non svolge alcuna funzione dell'Allegato III.",
+      "verdetto_atteso": "non alto rischio",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "art. 6(1)(b) (a contrario: assenza di valutazione di terzi); Allegato I",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Classe I MDR = autocertificazione, manca la valutazione di terzi (2a condizione 6(1))."
+    },
+    {
+      "id": "S36",
+      "settore": "altro",
+      "tipo": "edge",
+      "tipo_originale": "edge",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Un costruttore integra in un macchinario industriale (coperto dal Regolamento Macchine, Allegato I) un sistema di visione IA la cui funzione prevista è arrestare in sicurezza la macchina al rilevamento della presenza di un operatore nella zona pericolosa; il prodotto è soggetto a valutazione di conformità.",
+      "verdetto_atteso": "possibile alto rischio (art. 6(1))",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [],
+        "art6_1": true
+      },
+      "base_giuridica": "art. 6(1)(a)(b); Allegato I (Regolamento Macchine, Reg. (UE) 2023/1230); art. 3(14)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Componente di sicurezza di prodotto Allegato I + valutazione terzi → art. 6(1). Watch item Omnibus."
+    },
+    {
+      "id": "S37",
+      "settore": "insurance",
+      "tipo": "edge",
+      "tipo_originale": "edge",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Una compagnia usa un sistema di IA che converte documenti non strutturati (email, PDF) dei sinistri in dati strutturati e li classifica in categorie predefinite per il fascicolo, senza assegnare punteggi né valutare la posizione del cliente.",
+      "verdetto_atteso": "non alto rischio",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "art. 6(3)(a)",
+      "multi_categoria": false,
+      "art6_3_exemption": true,
+      "note": "Filtro 6(3)(a): compito procedurale limitato (no scoring/ranking). Based on draft."
+    },
+    {
+      "id": "S38",
+      "settore": "PA",
+      "tipo": "edge",
+      "tipo_originale": "edge",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Un ente usa un sistema di IA che, su un provvedimento amministrativo già redatto e deciso da un funzionario, individua refusi ed errori formali per migliorarne la qualità, senza sostituire né modificare la valutazione di merito.",
+      "verdetto_atteso": "non alto rischio",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "art. 6(3)(b)",
+      "multi_categoria": false,
+      "art6_3_exemption": true,
+      "note": "Filtro 6(3)(b): migliora un'attività umana già completata. Based on draft."
+    },
+    {
+      "id": "S39",
+      "settore": "banking",
+      "tipo": "edge",
+      "tipo_originale": "edge",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Una banca usa un sistema di IA che, ex post, analizza le decisioni di affidamento già adottate dai gestori per rilevare deviazioni/anomalie rispetto agli schemi decisionali passati; le discrepanze sono sottoposte a revisione umana e non rientrano in tempo reale nel processo decisionale.",
+      "verdetto_atteso": "non alto rischio",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "art. 6(3)(c)",
+      "multi_categoria": false,
+      "art6_3_exemption": true,
+      "note": "Filtro 6(3)(c): rileva schemi/deviazioni ex post con revisione umana. Based on draft."
+    },
+    {
+      "id": "S40",
+      "settore": "banking",
+      "tipo": "edge",
+      "tipo_originale": "edge",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Una banca usa un sistema di IA che produce un riassunto strutturato e l'indicizzazione dei documenti di supporto (buste paga, estratti conto) per l'analista del credito, senza assegnare punteggi né raccomandare l'esito.",
+      "verdetto_atteso": "non alto rischio",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "art. 6(3)(d)",
+      "multi_categoria": false,
+      "art6_3_exemption": true,
+      "note": "Filtro 6(3)(d): compito preparatorio (indicizzazione/riassunto). Based on draft."
+    },
+    {
+      "id": "S41",
+      "settore": "insurance",
+      "tipo": "positive",
+      "tipo_originale": "positive",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Una compagnia sostiene che il proprio sistema di IA per la tariffazione vita svolga solo un \"compito preparatorio\", ma il sistema profila le persone fisiche elaborando dati personali per valutarne/prevederne aspetti (stato di salute, stile di vita) ai fini del prezzo.",
+      "verdetto_atteso": "alto rischio (Allegato III)",
+      "gold_candidates": {
+        "annex_iii_points": [
+          5
+        ],
+        "annex_iii_subletters": [
+          "5c"
+        ],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "art. 6(3), ultimo comma (caveat profilazione) + Allegato III p.5(c)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Caveat profilazione: profilazione → SEMPRE alto rischio, filtro 6(3) non invocabile (gold netto)."
+    },
+    {
+      "id": "S42",
+      "settore": "banking",
+      "tipo": "negative",
+      "tipo_originale": "negative",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Una banca usa un sistema di IA per ottimizzare la gestione energetica e la climatizzazione delle filiali, regolando il riscaldamento in base all'affluenza per ridurre i consumi.",
+      "verdetto_atteso": "non alto rischio",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "nessun punto Allegato III; nessun art. 6(1); nessun art. 5",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Negativo netto: nessun gancio normativo."
+    },
+    {
+      "id": "S43",
+      "settore": "insurance",
+      "tipo": "negative",
+      "tipo_originale": "negative",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Una compagnia usa un sistema di IA per valutare l'affidabilità creditizia di società (persone giuridiche), elaborandone bilanci e dati finanziari aziendali, senza valutare le finanze personali di alcuna persona fisica.",
+      "verdetto_atteso": "non alto rischio",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "Allegato III, punto 5(b) (a contrario — solo persone fisiche)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Persone GIURIDICHE → fuori 5(b) (¶74). Trappola persone fisiche vs giuridiche."
+    },
+    {
+      "id": "S44",
+      "settore": "banking",
+      "tipo": "negative",
+      "tipo_originale": "negative",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Una banca usa un chatbot di IA per assistenza clienti che risponde a domande su orari, sedi e funzionalità dell'app, dichiarando di essere un sistema automatizzato.",
+      "verdetto_atteso": "non alto rischio",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "nessun punto Allegato III; nessuna pratica vietata",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Assistenza informativa generica. Trasparenza art. 50 ≠ classificazione (fuori oggetto)."
+    },
+    {
+      "id": "S45",
+      "settore": "healthcare",
+      "tipo": "negative",
+      "tipo_originale": "negative",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Un ospedale usa un sistema di IA per ottimizzare la logistica del magazzino farmaceutico e prevedere il riapprovvigionamento delle scorte, senza alcun impatto su decisioni cliniche o su persone fisiche.",
+      "verdetto_atteso": "non alto rischio",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "nessun punto Allegato III; nessun art. 6(1)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Gestionale puro in sanità (contrasto con triage 5(d)/dispositivo medico 6(1))."
+    },
+    {
+      "id": "S46",
+      "settore": "PA",
+      "tipo": "negative",
+      "tipo_originale": "negative",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Un comune usa un sistema di IA per indirizzare e instradare le segnalazioni dei cittadini (buche, rifiuti) all'ufficio competente in base a parole chiave, senza valutare persone né incidere su prestazioni essenziali.",
+      "verdetto_atteso": "non alto rischio",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "nessun punto Allegato III",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Instradamento amministrativo (contrasto con 5(a)/5(d))."
+    },
+    {
+      "id": "S47",
+      "settore": "insurance",
+      "tipo": "edge",
+      "tipo_originale": "edge",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Una compagnia usa un sistema di IA che, dopo una decisione su una polizza, gestisce i reclami e simula prezzi alternativi (\"what-if\") a fini informativi per il cliente, senza determinare la tariffa effettiva né valutare il rischio della persona.",
+      "verdetto_atteso": "non alto rischio",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "Allegato III, punto 5(c) (a contrario); art. 6(3)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Simulazione informativa/reclami a valle ≠ valutazione/tariffazione 5(c). Based on draft."
+    },
+    {
+      "id": "S48",
+      "settore": "healthcare",
+      "tipo": "edge",
+      "tipo_originale": "edge",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Un ospedale usa un sistema di IA che, dai segnali fisiologici, inferisce la stanchezza/sonnolenza dei chirurghi per allertarli ed evitare incidenti in sala operatoria; non inferisce emozioni né stati psicologici.",
+      "verdetto_atteso": "non alto rischio",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "art. 5(1)(f) (a contrario) + Allegato III p.1(c) (a contrario)",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "Stato fisico (fatica) ≠ emozione (cons. 18); eccezione sicurezza. Based on draft."
+    },
+    {
+      "id": "S49",
+      "settore": "banking",
+      "tipo": "edge",
+      "tipo_originale": "edge",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Una banca usa un sistema di IA antiriciclaggio (AML/CFT) per individuare operazioni sospette ai fini degli obblighi di legge; l'output non è usato per valutare il merito creditizio dei clienti.",
+      "verdetto_atteso": "non alto rischio",
+      "gold_candidates": {
+        "annex_iii_points": [],
+        "annex_iii_subletters": [],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "Allegato III, punto 5(b) (a contrario); punto 6 (a contrario, \"per conto di\")",
+      "multi_categoria": false,
+      "art6_3_exemption": false,
+      "note": "AML/CFT: non carve-out frode 5(b) ma neppure automaticamente 5(b)/punto 6 (¶81). Based on draft."
+    },
+    {
+      "id": "S50",
+      "settore": "PA",
+      "tipo": "positive",
+      "tipo_originale": "positive",
+      "retyped_edge_to_positive": false,
+      "descrizione": "Un'azienda sanitaria pubblica adotta un unico sistema di IA che (i) valuta l'ammissibilità dei cittadini a prestazioni sanitarie essenziali e (ii) all'interno dello stesso flusso, in pronto soccorso, esegue il triage dei pazienti per stabilire la priorità di accesso alle cure d'emergenza.",
+      "verdetto_atteso": "alto rischio (Allegato III)",
+      "gold_candidates": {
+        "annex_iii_points": [
+          5
+        ],
+        "annex_iii_subletters": [
+          "5a",
+          "5d"
+        ],
+        "art5_letters": [],
+        "art6_1": false
+      },
+      "base_giuridica": "Allegato III, punto 5(a) e punto 5(d)",
+      "multi_categoria": true,
+      "art6_3_exemption": false,
+      "note": "Multi-categoria 5(a) + 5(d): ENTRAMBE sotto-lettere del PUNTO 5 → a granularità classificatore = punto 5."
+    }
+  ]
+}
